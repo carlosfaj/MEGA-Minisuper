@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T21:14:20.339Z",
+  "datos": "Ficticios; base aislada, agente de correo deshabilitado para no contactar servidores externos",
+  "casos": [
+    "configuración y credencial protegida sin devolver valor al formulario",
+    "deshabilitación conserva credencial protegida",
+    "reporte solicitado queda pendiente",
+    "archivo congelado conserva hash después de un gasto nuevo",
+    "móvil sin desbordamiento"
+  ],
+  "reporteHash": "8e29176476508c552cb92697550a5d45fa962f2f9014ddfa504a28945c7cee18",
+  "erroresJavaScript": []
+}

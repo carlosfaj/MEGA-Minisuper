@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.17.0",
-  "updatedAt": "2026-11-12T21:01:29Z",
+  "version": "0.18.0",
+  "updatedAt": "2026-11-12T21:20:44Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 189,
+  "testsPassed": 200,
   "tasks": [
     {
       "id": "BD",
@@ -618,26 +618,26 @@
         {
           "id": "1",
           "label": "Configuración y secreto protegidos",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Correo.md"
         },
         {
           "id": "2",
           "label": "Cola con reportes congelados",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Correo.md"
         },
         {
           "id": "3",
           "label": "Reintentos seguros y estado incierto",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Correo.md"
         },
         {
           "id": "4",
           "label": "Pruebas sin conexión y errores",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Correo.md"
         }
       ]
     },

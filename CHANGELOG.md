@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.18.0 — 12 de noviembre de 2026
+
+- Correo de reportes PDF/Excel con archivo congelado, huella, Message-ID, permisos y cola persistente.
+- Configuración SMTP versionada con TLS obligatorio y credencial protegida por el perfil de Windows; no se devuelve al formulario ni se audita en claro.
+- Reserva previa, intentos por etapa, reintentos acotados solo ante no aceptación conocida y resultado incierto sin reenvío automático; resolución explícita y referencia del nuevo envío.
+- 200 pruebas acumuladas, transporte real contra SMTP TLS local y navegador. Aceptación SMTP diferenciada de entrega/lectura; cuenta real pendiente del negocio.
+
 ## 0.17.0 — 12 de noviembre de 2026
 
 - Reportes con filtros de ventas, inventario actual, caja y costos/gastos/resultados; lectura consistente y reglas de alcance visibles.

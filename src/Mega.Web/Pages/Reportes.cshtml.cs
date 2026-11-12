@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mega.Web.Pages;
 [Authorize(Policy="Inventario")]
-public sealed class ReportesModel(MegaDbContext db,ReportService service,Operations operations):ManagementPage
+public sealed class ReportesModel(MegaDbContext db,ReportService service,Operations operations,MailQueue mail):ManagementPage
 {
     [BindProperty(SupportsGet=true)]public string? Kind{get;set;}="inventario";
     [BindProperty(SupportsGet=true)]public string? From{get;set;}=DateTime.UtcNow.AddHours(-6).ToString("yyyy-MM-01",CultureInfo.InvariantCulture);
@@ -22,6 +22,8 @@ public sealed class ReportesModel(MegaDbContext db,ReportService service,Operati
     private ReportFilter Filter=>new(Kind??"",From??"",To??"",ProductId,OperatorId);
     public async Task OnGetAsync()
     {try{if(ModelState.IsValid)Report=await service.RunAsync(UserId,Filter);}catch(BusinessException e){ModelState.AddModelError("",e.Message);}await LoadAsync();}
+    public async Task<IActionResult> OnPostCorreoAsync(string key,string? recipient,string? format)
+    {try{if(ModelState.IsValid){await mail.EnqueueAsync(UserId,key,recipient??"",Filter,format??"");TempData["Message"]="Reporte conservado y correo en cola. Consulta sus intentos; la aceptación SMTP no acredita lectura ni entrega final.";return RedirectToPage("/Correos");}}catch(BusinessException e){ModelState.AddModelError("",e.Message);}await OnGetAsync();return Page();}
     public async Task<IActionResult> OnGetExportAsync(string format)
     {
         if(!ModelState.IsValid)return BadRequest("Revisa los filtros del reporte.");

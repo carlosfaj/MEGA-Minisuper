@@ -61,3 +61,7 @@ La autorización de anulaciones, valoración, promociones/impuestos, impresión 
 ## Ampliación v0.9.0–0.14.0
 
 162 pruebas acumuladas aprobadas. Valoración y lotes (`Valoracion.md`, `Inventario_Integrado.md`), promociones/impuestos (`Condiciones_Comerciales.md`), anulaciones/regularización (`Anulaciones.md`) y rechazos críticos T13 (`Auditoria.md`) cuentan con TRX y recorridos de navegador propios. El kanban muestra el alcance actual y distingue las validaciones reales pendientes.
+
+## Estado acumulado v0.18.0
+
+200 pruebas aprobadas y navegador por módulo. Las secciones anteriores conservan evidencia histórica de cada avance. Sus pendientes de valoración, anulaciones, rechazos y reportes se resolvieron en `Valoracion.md`, `Inventario_Integrado.md`, `Condiciones_Comerciales.md`, `Anulaciones.md`, `Auditoria.md`, `Impresion.md`, `Gastos.md`, `Reportes.md` y `Correo.md`. T07/T11/T12/T13 se verifican en su alcance implementado; equipo físico, SMTP real, respaldo/restauración y aceptación permanecen en el kanban.

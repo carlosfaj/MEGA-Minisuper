@@ -1,38 +1,27 @@
 # Estado del cuarto corte de MEGA
 
-Avance 01 del 11 de noviembre de 2026. Se implementó y comprobó el recorrido de acceso, apertura de caja, venta en efectivo, comprobante y cierre. Se utiliza la revisión del modelo del 11 de noviembre; los documentos académicos previos no se modificaron.
+Estado comprobado al 12 de noviembre de 2026: **0.18.0**, 200 pruebas acumuladas aprobadas y recorridos de navegador en bases aisladas. El [kanban](KANBAN.md) es la referencia del porcentaje y de todos los criterios, incluidos entregables y validaciones reales. La implementación es local; los recursos del núcleo no requieren Internet.
 
-Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migración conservadora desde esquema 1, corrección de claves compuestas, diagnóstico integral y dos vistas utilizadas por la aplicación. Se conservan las 39 tablas, 499 columnas y 103 FK del diseño. Los 21 triggers y los índices agregados refuerzan integridad e historia; los módulos funcionales pendientes de la tabla siguiente conservan su alcance. [Detalle de base de datos](Base_Datos.md).
-
-| Requisito | Estado del avance | Trabajo restante |
+| Requisito | Implementado y comprobado | Pendiente real |
 |---|---|---|
-| RF01 Catálogo | Alta, edición, desactivación, categorías, presentaciones, códigos y precios versionados (v0.3.0) | Promociones e impuestos según políticas validadas |
-| RF02 Abastecimiento | Proveedores, recepción pendiente, recibido/aceptado, costos y lotes; revisión de versión/contenido y entrada única autorizada (v0.6.0) | Aceptación del negocio e integración de salidas con valoración |
-| RF03 Inventario | Existencias, lotes/alertas, conteos y solicitudes autorizadas de carga/ajuste/salida sin lotes a costo desconocido (v0.7.0/0.8.0); costo declarado de carga conservado | Regularizaciones con lotes/costo conocido; asignación y valoración de salidas |
-| RF04 Ventas | Preparación, cobro efectivo, comprobante, recuperación de reintento y consulta del turno | Anulación autorizada, agente de impresión, reimpresión y contingencia |
-| RF05 Caja | Apertura y cierre propios con fondo real, esperado y diferencias | Integración con devoluciones autorizadas y comprobación en operación real |
-| RF06 Acceso y autorización | Cuentas/delegación y soporte (v0.5.0); revisión por versión/contenido para recepciones e inventario (v0.6.0/0.8.0) | Autorización de anulaciones; restauración autorizada al integrar continuidad |
-| RF07 Gestión | Sin módulo operativo | Valoración, gastos, reportes/exportaciones y correo con estados verificables |
-| RF08 Auditoría | Eventos de inicialización, acceso, venta y caja; consulta para gestión | Completar todas las operaciones y rechazos críticos, detalle antes/después |
-| RF09 Continuidad | Esquema disponible | Copia consistente, destino externo, comprobación, recuperación y cuarentena de colas |
+| RF01 Catálogo | Categorías, productos, presentaciones, equivalencias, códigos, precios históricos, promociones e impuestos configurables | Datos maestros y fiscalidad del negocio |
+| RF02 Abastecimiento | Proveedores, recibido/aceptado, costos/lotes y revisión por otra cuenta | Aceptación y conciliación con documentos reales |
+| RF03 Inventario | Existencias, conteos, lotes/alertas, cargas, ajustes/salidas autorizados y costos/lotes integrados | Comprobación física y políticas operativas reales |
+| RF04 Ventas | Efectivo, recuperación sin doble cobro, promociones/impuestos, costos históricos, anulaciones, impresión/copias y contingencia | Impresora física, entrega real y validez del comprobante |
+| RF05 Caja | Fondo real, cierre esperado/contado/diferencia y devolución posterior sin alterar cierres | Ensayo con responsables y efectivo reales |
+| RF06 Acceso/autorización | Cuentas, roles/delegación, soporte temporal de diagnóstico y revisiones exactas | Restauración autorizada y aceptación del negocio |
+| RF07 Gestión | Gastos, reportes, costos/márgenes, PDF/Excel, vista limitada de Inventario y correo congelado | Cuenta SMTP real y aceptación de resultados |
+| RF08 Auditoría | Eventos transaccionales, rechazos críticos, fallos, intentos y resoluciones | Ampliar regresión con respaldo/restauración |
+| RF09 Continuidad | Migración con copia previa, diagnóstico e integridad | Respaldo desde interfaz, destino externo, restauración, conciliación y cuarentena |
 
-Actualización funcional **0.8.0**: catálogo, configuración, cuentas y soporte temporal, proveedores/recepciones, revisión de contenido/versiones, conteos, lotes y solicitudes básicas de inventario. 120 pruebas automatizadas aprobadas y recorridos de navegador por módulo. El [roadmap](ROADMAP.md) y los documentos de operación detallan los límites de valoración y los pendientes reales.
+El modelo original conserva 39 tablas, 499 columnas y 103 claves externas. Sus bytes y procedencia se mantienen; el esquema 2 agrega restricciones y vistas sin sustituir el diseño. El usuario confirmó promedio ponderado móvil el 12 de noviembre. Efectivo es el medio habilitado.
 
-## Siguiente secuencia de implementación
+## Trabajo siguiente
 
-1. Validar con el negocio unidades, valoración/costo de salida, fiscalidad y política de excepciones; conservar las restricciones de los módulos afectados mientras no se resuelvan.
-2. Integrar valoración/asignación de lotes en ventas y regularizaciones; promociones e impuestos con historia (T01/T03/T04/T05).
-3. Anulación autorizada y regularización de fondos sin alterar cierres históricos (T06).
-4. Agente local de impresión, estados inciertos y reimpresión sin repetir cobro (T07).
-5. Gastos, reportes/exportaciones y correo (T11/T12); completar la auditoría y sus rechazos críticos (T13).
-6. Respaldo externo y restauración con conciliación/cuarentena (T14/T15).
-7. Aceptación del negocio, regresión integral, consolidación académica, manuales PDF, matriz final PDF/Excel, presentación y ensayo de demostración.
+1. Respaldo consistente y verificado de base y archivos asociados; destino externo y errores visibles.
+2. Restauración autorizada con preservación del estado actual, actividad posterior identificada, conciliación y cuarentena de impresiones/correos.
+3. Regresión integrada y distribución reproducible sin bases operativas ni credenciales.
+4. Consolidación de capítulos I–IV, manuales, matriz final, diagramas editables y presentación.
+5. Ensayo con equipo, cuenta SMTP y personal del negocio; demostración y aceptación documentadas.
 
-Se debe documentar cada cambio de alcance en los capítulos anteriores y conservar evidencia real. La prioridad de desarrollo y pruebas responde al 35 % y 20 % de la rúbrica, respectivamente. La guía exige un documento consolidado, no un cuarto informe independiente.
-
-## Evidencia del avance
-
-- `Matriz_Pruebas.md` y `evidencias/pruebas/avance01.trx`: resultados automatizados con bases separadas.
-- `Evidencias_Avance01.md`: capturas de la aplicación ejecutada con datos ficticios.
-- `evidencias/resultado_navegador.json`: comprobación de interfaz y ausencia de errores JavaScript durante el recorrido.
-- No se atribuyen aceptación del negocio, entrevistas nuevas, impresión física ni despliegue comercial.
+Los [documentos por módulo](../README.md) contienen alcance y evidencias. Los ensayos usan datos ficticios, impresora PDF y SMTP TLS local; no acreditan impresión física, mensajes a personas, entrevistas nuevas, fiscalidad, aceptación del negocio ni despliegue comercial. La guía exige un documento académico consolidado.

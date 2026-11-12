@@ -67,6 +67,8 @@ builder.Services.AddSingleton<IPrintTransport,WindowsPrintTransport>();
 builder.Services.AddScoped<PrintQueue>();builder.Services.AddSingleton<PrintDispatcher>();builder.Services.AddHostedService<PrintWorker>();
 builder.Services.AddScoped<ExpenseService>();
 builder.Services.AddScoped<ReportService>();
+builder.Services.AddSingleton<OperationalFiles>();builder.Services.AddSingleton<ISecretVault,WindowsSecretVault>();
+builder.Services.AddScoped<MailConfiguration>();builder.Services.AddScoped<MailQueue>();builder.Services.AddSingleton<IMailTransport,MailTransport>();builder.Services.AddSingleton<MailDispatcher>();builder.Services.AddHostedService<MailWorker>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));

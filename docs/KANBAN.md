@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 67.7% — 90/133 criterios.**
-Versión 0.17.0 · actualizado 2026-11-12T21:01:29Z · 189 pruebas aprobadas.
+**Avance global: 70.7% — 94/133 criterios.**
+Versión 0.18.0 · actualizado 2026-11-12T21:20:44Z · 200 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 70/83 | 84.3% |
+| Software | 74/83 | 89.2% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,15 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### CORREO · Envío de reportes — 0%
-
-Área: Software.
-Depende de: REPORTES.
-
-- [ ] Configuración y secreto protegidos
-- [ ] Cola con reportes congelados
-- [ ] Reintentos seguros y estado incierto
-- [ ] Pruebas sin conexión y errores
 ### BACKUP · Respaldo verificable — 0%
 
 Área: Software.
@@ -290,6 +281,15 @@ Depende de: COSTOS, GASTOS, ANULA.
 - [x] Costos y márgenes históricos ([evidencia](../docs/Reportes.md))
 - [x] Exportación PDF y Excel ([evidencia](../docs/Reportes.md))
 - [x] Vista de Inventario sin márgenes ([evidencia](../docs/Reportes.md))
+### CORREO · Envío de reportes — 100%
+
+Área: Software.
+Depende de: REPORTES.
+
+- [x] Configuración y secreto protegidos ([evidencia](../docs/Correo.md))
+- [x] Cola con reportes congelados ([evidencia](../docs/Correo.md))
+- [x] Reintentos seguros y estado incierto ([evidencia](../docs/Correo.md))
+- [x] Pruebas sin conexión y errores ([evidencia](../docs/Correo.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.

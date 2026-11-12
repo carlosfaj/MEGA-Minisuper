@@ -4,7 +4,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.17.0**, con reportes y exportaciones PDF/Excel, gastos e impresión trazable. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.18.0**, con correo de reportes, exportaciones PDF/Excel, gastos e impresión trazable. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -40,9 +40,10 @@ Módulos incorporados y sus instrucciones/evidencias:
 
 - [Catálogo y precios](docs/Catalogo.md), [configuración](docs/Configuracion.md) y [cuentas/delegación/soporte](docs/Cuentas.md).
 - [Proveedores, recepciones y revisiones](docs/Abastecimiento.md).
+- [Valoración](docs/Valoracion.md), [condiciones comerciales](docs/Condiciones_Comerciales.md), [anulaciones](docs/Anulaciones.md), [auditoría](docs/Auditoria.md), [impresión](docs/Impresion.md), [gastos](docs/Gastos.md), [reportes](docs/Reportes.md) y [correo](docs/Correo.md).
 - [Conteos y lotes](docs/Conteos_y_Lotes.md) y [cargas, ajustes y salidas autorizadas](docs/Solicitudes_Inventario.md).
 
-La suite actual contiene **189 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación.
+La suite actual contiene **200 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación.
 
 - `src/Mega.Web`: aplicación y copia del esquema corregido de 39 tablas.
 - `src/Mega.Web/App_Data/mega-demo.db`: base persistente de demostración, creada automáticamente; no se incluye en control de versiones.

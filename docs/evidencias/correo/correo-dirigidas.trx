@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="0bdd477f-d086-44e9-aee8-af711e0bf32d" name="SOF.IA@SOFTIA 2026-11-12 15:17:53" runUser="SOFTIA\SOF.IA" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-12T15:17:53.1583643-06:00" queuing="2026-11-12T15:17:53.1583647-06:00" start="2026-11-12T15:17:51.0010710-06:00" finish="2026-11-12T15:18:03.8277504-06:00" />
+  <TestSettings name="default" id="f2de1490-bff2-4d8f-9357-2d2f2535124b">
+    <Deployment runDeploymentRoot="SOF.IA_SOFTIA_2026-11-12_15_17_53" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d7126a72-8cb9-4e0f-8b57-1863fc2491df" testId="d8a1fcfc-ba4b-1b2e-0d13-50516ece2d79" testName="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;accept&quot;)" computerName="SOFTIA" duration="00:00:00.1031090" startTime="2026-11-12T15:17:52.3342698-06:00" endTime="2026-11-12T15:17:52.4266294-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7126a72-8cb9-4e0f-8b57-1863fc2491df" />
+    <UnitTestResult executionId="5ebfff29-733a-4243-a47a-36958c023bb7" testId="58ae9035-0cd2-ad62-d6fd-641467ee6f56" testName="Mega.Tests.MailTests.uncertain_send_requires_explicit_new_request_and_never_blindly_retries" computerName="SOFTIA" duration="00:00:01.1216732" startTime="2026-11-12T15:17:56.4878010-06:00" endTime="2026-11-12T15:17:57.6085790-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ebfff29-733a-4243-a47a-36958c023bb7" />
+    <UnitTestResult executionId="49d4c99c-98d7-4692-94ae-3d11db83d81c" testId="be4e24d8-65b1-ee32-687c-17fc4a2384f0" testName="Mega.Tests.MailTests.smtp_credentials_are_protected_and_never_stored_in_audit_or_database_values" computerName="SOFTIA" duration="00:00:00.7792415" startTime="2026-11-12T15:18:02.0678971-06:00" endTime="2026-11-12T15:18:02.8475202-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49d4c99c-98d7-4692-94ae-3d11db83d81c" />
+    <UnitTestResult executionId="94674568-9e07-4769-bcb0-2487ec414c5c" testId="7ae7bab5-de87-e1db-6f4f-2c46b519510a" testName="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;reject&quot;)" computerName="SOFTIA" duration="00:00:00.0841049" startTime="2026-11-12T15:17:52.4273222-06:00" endTime="2026-11-12T15:17:52.5111615-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94674568-9e07-4769-bcb0-2487ec414c5c" />
+    <UnitTestResult executionId="7e9a5343-7fcf-4d90-adf0-c7ac4709e9c2" testId="7c7ad6ee-84b8-40e6-7ce1-33a2332cad8a" testName="Mega.Tests.MailTests.changing_server_requires_new_secret_while_reenabling_same_target_preserves_it" computerName="SOFTIA" duration="00:00:00.9084718" startTime="2026-11-12T15:17:59.9712070-06:00" endTime="2026-11-12T15:18:00.8797297-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e9a5343-7fcf-4d90-adf0-c7ac4709e9c2" />
+    <UnitTestResult executionId="2f410506-9afa-4f89-a90f-57ad132e1306" testId="dd23c030-385c-3717-b84d-28fe470ddd37" testName="Mega.Tests.MailTests.expired_reservation_and_late_acceptance_preserve_manual_resolution" computerName="SOFTIA" duration="00:00:00.8615918" startTime="2026-11-12T15:18:02.8482156-06:00" endTime="2026-11-12T15:18:03.7096356-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f410506-9afa-4f89-a90f-57ad132e1306" />
+    <UnitTestResult executionId="7cced285-07b5-4cc1-9837-281af004a9bb" testId="f982e5f7-2f07-6ea3-86f9-97af66feea2a" testName="Mega.Tests.MailTests.concurrent_enqueue_and_dispatch_create_one_request_and_attempt" computerName="SOFTIA" duration="00:00:01.1871484" startTime="2026-11-12T15:18:00.8802037-06:00" endTime="2026-11-12T15:18:02.0674755-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cced285-07b5-4cc1-9837-281af004a9bb" />
+    <UnitTestResult executionId="ed8ece0e-e43c-45f4-bdf8-8f9aa0b4fad3" testId="6f689c81-b854-fcce-01f8-cf443d4bdb1a" testName="Mega.Tests.MailTests.known_connection_failure_retries_three_times_with_same_message_and_attachment" computerName="SOFTIA" duration="00:00:01.2604937" startTime="2026-11-12T15:17:57.6088917-06:00" endTime="2026-11-12T15:17:58.8696800-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed8ece0e-e43c-45f4-bdf8-8f9aa0b4fad3" />
+    <UnitTestResult executionId="dacf8060-c9df-4338-a119-d5b404cc4afa" testId="970b1d51-5f65-3d5f-cdcb-154b6d4091a2" testName="Mega.Tests.MailTests.permissions_integrity_and_late_failure_leave_no_partial_or_untrusted_send" computerName="SOFTIA" duration="00:00:03.9735046" startTime="2026-11-12T15:17:52.5128204-06:00" endTime="2026-11-12T15:17:56.4861824-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dacf8060-c9df-4338-a119-d5b404cc4afa" />
+    <UnitTestResult executionId="408103db-5fab-46d9-842a-c07e5489cb2c" testId="3761081f-f332-c04a-b1f9-3f89e01ff4a0" testName="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;drop&quot;)" computerName="SOFTIA" duration="00:00:00.3627376" startTime="2026-11-12T15:17:51.9506828-06:00" endTime="2026-11-12T15:17:52.3223259-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="408103db-5fab-46d9-842a-c07e5489cb2c" />
+    <UnitTestResult executionId="bc188411-57cd-4ee0-a82d-ce46f9786225" testId="daf486af-045a-6407-07e3-067c3733537f" testName="Mega.Tests.MailTests.T12_disabled_mail_keeps_frozen_report_without_internet_or_commercial_effects" computerName="SOFTIA" duration="00:00:01.1002658" startTime="2026-11-12T15:17:58.8700897-06:00" endTime="2026-11-12T15:17:59.9707431-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc188411-57cd-4ee0-a82d-ce46f9786225" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Mega.Tests.MailTests.concurrent_enqueue_and_dispatch_create_one_request_and_attempt" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f982e5f7-2f07-6ea3-86f9-97af66feea2a">
+      <Execution id="7cced285-07b5-4cc1-9837-281af004a9bb" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="concurrent_enqueue_and_dispatch_create_one_request_and_attempt" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.T12_disabled_mail_keeps_frozen_report_without_internet_or_commercial_effects" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="daf486af-045a-6407-07e3-067c3733537f">
+      <Execution id="bc188411-57cd-4ee0-a82d-ce46f9786225" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="T12_disabled_mail_keeps_frozen_report_without_internet_or_commercial_effects" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;reject&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="7ae7bab5-de87-e1db-6f4f-2c46b519510a">
+      <Execution id="94674568-9e07-4769-bcb0-2487ec414c5c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.permissions_integrity_and_late_failure_leave_no_partial_or_untrusted_send" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="970b1d51-5f65-3d5f-cdcb-154b6d4091a2">
+      <Execution id="dacf8060-c9df-4338-a119-d5b404cc4afa" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="permissions_integrity_and_late_failure_leave_no_partial_or_untrusted_send" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.expired_reservation_and_late_acceptance_preserve_manual_resolution" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="dd23c030-385c-3717-b84d-28fe470ddd37">
+      <Execution id="2f410506-9afa-4f89-a90f-57ad132e1306" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="expired_reservation_and_late_acceptance_preserve_manual_resolution" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;drop&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="3761081f-f332-c04a-b1f9-3f89e01ff4a0">
+      <Execution id="408103db-5fab-46d9-842a-c07e5489cb2c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: &quot;accept&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="d8a1fcfc-ba4b-1b2e-0d13-50516ece2d79">
+      <Execution id="d7126a72-8cb9-4e0f-8b57-1863fc2491df" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.smtp_credentials_are_protected_and_never_stored_in_audit_or_database_values" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="be4e24d8-65b1-ee32-687c-17fc4a2384f0">
+      <Execution id="49d4c99c-98d7-4692-94ae-3d11db83d81c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="smtp_credentials_are_protected_and_never_stored_in_audit_or_database_values" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.uncertain_send_requires_explicit_new_request_and_never_blindly_retries" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="58ae9035-0cd2-ad62-d6fd-641467ee6f56">
+      <Execution id="5ebfff29-733a-4243-a47a-36958c023bb7" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="uncertain_send_requires_explicit_new_request_and_never_blindly_retries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.changing_server_requires_new_secret_while_reenabling_same_target_preserves_it" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="7c7ad6ee-84b8-40e6-7ce1-33a2332cad8a">
+      <Execution id="7e9a5343-7fcf-4d90-adf0-c7ac4709e9c2" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="changing_server_requires_new_secret_while_reenabling_same_target_preserves_it" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.MailTests.known_connection_failure_retries_three_times_with_same_message_and_attachment" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="6f689c81-b854-fcce-01f8-cf443d4bdb1a">
+      <Execution id="ed8ece0e-e43c-45f4-bdf8-8f9aa0b4fad3" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.MailTests" name="known_connection_failure_retries_three_times_with_same_message_and_attachment" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d8a1fcfc-ba4b-1b2e-0d13-50516ece2d79" executionId="d7126a72-8cb9-4e0f-8b57-1863fc2491df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58ae9035-0cd2-ad62-d6fd-641467ee6f56" executionId="5ebfff29-733a-4243-a47a-36958c023bb7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be4e24d8-65b1-ee32-687c-17fc4a2384f0" executionId="49d4c99c-98d7-4692-94ae-3d11db83d81c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ae7bab5-de87-e1db-6f4f-2c46b519510a" executionId="94674568-9e07-4769-bcb0-2487ec414c5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c7ad6ee-84b8-40e6-7ce1-33a2332cad8a" executionId="7e9a5343-7fcf-4d90-adf0-c7ac4709e9c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd23c030-385c-3717-b84d-28fe470ddd37" executionId="2f410506-9afa-4f89-a90f-57ad132e1306" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f982e5f7-2f07-6ea3-86f9-97af66feea2a" executionId="7cced285-07b5-4cc1-9837-281af004a9bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f689c81-b854-fcce-01f8-cf443d4bdb1a" executionId="ed8ece0e-e43c-45f4-bdf8-8f9aa0b4fad3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="970b1d51-5f65-3d5f-cdcb-154b6d4091a2" executionId="dacf8060-c9df-4338-a119-d5b404cc4afa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3761081f-f332-c04a-b1f9-3f89e01ff4a0" executionId="408103db-5fab-46d9-842a-c07e5489cb2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="daf486af-045a-6407-07e3-067c3733537f" executionId="bc188411-57cd-4ee0-a82d-ce46f9786225" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)&#xD;
+[xUnit.net 00:00:00.14]   Discovering: Mega.Tests&#xD;
+[xUnit.net 00:00:00.23]   Discovered:  Mega.Tests&#xD;
+[xUnit.net 00:00:00.27]   Starting:    Mega.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]&#xD;
+      Failed executing DbCommand (2ms) [Parameters=[@p0='?' (Size = 27), @p1='?' (DbType = Int64), @p2='?' (Size = 36), @p3='?' (Size = 329), @p4='?' (Size = 15), @p5='?' (Size = 1), @p6='?' (DbType = Int64), @p7='?' (Size = 24), @p8='?' (Size = 7), @p9='?' (Size = 5), @p10='?' (DbType = Int64), @p11='?' (DbType = Int64)], CommandType='Text', CommandTimeout='15']&#xD;
+      INSERT INTO "EventoAuditoria" ("accion", "autorizacionId", "claveOperacion", "datosCambio", "entidad", "entidadId", "eventoOrigenId", "fecha", "origen", "resultado", "usuarioId", "versionFormato")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)&#xD;
+      RETURNING "id";&#xD;
+fail: Microsoft.EntityFrameworkCore.Update[10000]&#xD;
+      An exception occurred in the database while saving changes for context type 'Mega.Web.Data.MegaDbContext'.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'Fallo tardio correo'.&#xD;
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'Fallo tardio correo'.&#xD;
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:12.06]   Finished:    Mega.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
