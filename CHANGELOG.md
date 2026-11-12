@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.17.0 — 12 de noviembre de 2026
+
+- Reportes con filtros de ventas, inventario actual, caja y costos/gastos/resultados; lectura consistente y reglas de alcance visibles.
+- Costos históricos por línea, impuesto separado del ingreso y margen no calculable ante costo desconocido. Anuladas excluidas comercialmente sin borrar cobros/devoluciones ni cierres.
+- Descargas PDF y Excel, paginación y fuente incluida; datos como texto seguro y números con precisión controlada. Inventario conserva su vista limitada en pantalla y descargas.
+- 189 pruebas acumuladas, nueve dirigidas y navegador; caso 60 − 20 − 10 = 30, permisos, exportaciones y formato móvil comprobados. Dependencias fijadas y auditoría sin vulnerabilidades reportadas.
+
 ## 0.16.0 — 12 de noviembre de 2026
 
 - Gastos operativos con fecha, concepto, comprobante y permisos de gestión. No se inventa salida de caja.

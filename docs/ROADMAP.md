@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 12 de noviembre de 2026, con la versión de código 0.16.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 12 de noviembre de 2026, con la versión de código 0.17.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -8,7 +8,7 @@ Están implementados el acceso por rol, apertura/cierre de caja, preparación y 
 
 La consulta de existencias y la estructura de una tabla no equivalen a un módulo operativo completo. Siguen pendientes los recorridos de negocio que se detallan a continuación.
 
-Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 180 pruebas aprobadas, además de recorridos de navegador por módulo. Las restricciones de valoración y validación del negocio continúan explícitas.
+Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 189 pruebas aprobadas, además de recorridos de navegador por módulo. Las restricciones de valoración y validación del negocio continúan explícitas.
 
 ## Secuencia de implementación
 
@@ -22,7 +22,7 @@ Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0)
 | 6 | Promociones, impuestos e integración de ventas — implementado en 0.12.0 | Promociones exclusivas, vigencias, tasas/exenciones configurables y condiciones históricas; costo/lotes integrados | 145 pruebas y navegador aprobados; fiscalidad real y aceptación operativa permanecen pendientes |
 | 7 | Anulaciones y regularización de caja — implementado en 0.13.0 | Solicitud/versiones, otra cuenta, reincorporación declarada y devolución efectiva en caja actual | 156 pruebas y navegador; T06/T08/T09/T10, costo histórico, cierres conservados y estados pendientes comprobados |
 | 8 | Impresión y reimpresión — implementado en 0.15.0 | Agente local, impresión automática tras confirmar, intentos y estados, copia del mismo folio y contingencia | La falla de impresora no repite venta/cobro. La aceptación de la cola no se confunde con papel físico. T07, 175 pruebas y controlador PDF comprobados; ensayo de impresora física pendiente |
-| 9 | Gastos implementados en 0.16.0; reportes pendientes | Gastos con corrección/anulación trazable y 180 pruebas; ventas, inventario, costos/márgenes y caja; filtros; exportación PDF/Excel; vista limitada para Inventario | Reportes reconciliados con operaciones; costo desconocido muestra margen no calculable; permisos y T11 comprobados |
+| 9 | Gastos y reportes implementados en 0.16.0/0.17.0 | Gastos con corrección/anulación, reportes y descargas con 189 pruebas; ventas, inventario, costos/márgenes y caja; filtros; exportación PDF/Excel; vista limitada para Inventario | Reportes reconciliados con operaciones; costo desconocido muestra margen no calculable; permisos y T11 comprobados |
 | 10 | Correo | Configuración protegida, envío de reportes, pendientes sin conexión, intentos y resultado incierto | El núcleo funciona sin Internet; no hay reenvío automático de un correo posiblemente aceptado. T12 comprobado |
 | 11 | Respaldo y recuperación | Copia consistente a medio externo, verificación y errores visibles; restauración autorizada; preservación, conciliación y cuarentena de colas | Restaurar una copia de prueba sin duplicar impresiones/correos y con revisión de actividad posterior. T14/T15 y objetivos acordados ensayados |
 | 12 | Validación integral y ejecución final | Regresión de todos los módulos; datos válidos/inválidos; permisos, rendimiento y operación sin Internet; periféricos; instalación/arranque local y aceptación con el negocio | Sistema reproducible en el equipo objetivo, matriz completa con resultados/evidencias, incidencias resueltas o limitaciones explícitas y demostración ensayada |

@@ -66,6 +66,7 @@ builder.Services.AddSingleton<RejectionAuditWriter>();
 builder.Services.AddSingleton<IPrintTransport,WindowsPrintTransport>();
 builder.Services.AddScoped<PrintQueue>();builder.Services.AddSingleton<PrintDispatcher>();builder.Services.AddHostedService<PrintWorker>();
 builder.Services.AddScoped<ExpenseService>();
+builder.Services.AddScoped<ReportService>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));

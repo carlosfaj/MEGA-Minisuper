@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T21:01:25.403Z",
+  "datos": "Ficticios; base aislada, sin aceptación contable/fiscal",
+  "casos": [
+    "recepción 10 unidades a costo 10",
+    "venta 2 unidades a precio 30",
+    "ingreso 60, costo histórico 20, margen 40, gasto 10, resultado 30",
+    "PDF y Excel descargados desde el sistema",
+    "Inventario con cinco columnas sin costos y exportaciones limitadas",
+    "móvil sin desbordamiento"
+  ],
+  "erroresJavaScript": []
+}

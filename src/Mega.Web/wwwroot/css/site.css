@@ -12,3 +12,7 @@
 .option-picker{max-height:280px;overflow-y:auto;padding:10px;border:1px solid var(--border);border-radius:6px}.option-picker .check-row{margin:6px 0}
 
 .audit-detail{white-space:pre-wrap;overflow-wrap:anywhere;max-width:550px;font-size:11px;background:var(--bg);padding:12px;border-radius:6px}
+
+.report-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.report-metrics>div{padding:14px;background:var(--bg);border-radius:6px}.report-metrics span{display:block;color:var(--muted);font-size:12px}.report-metrics strong{display:block;font-size:20px;margin-top:8px}
+
+@media(min-width:761px){.sidebar nav{min-height:0;overflow-y:auto;flex:1}.sidebar-bottom{flex-shrink:0}}

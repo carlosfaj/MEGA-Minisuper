@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 63.9% — 85/133 criterios.**
-Versión 0.16.0 · actualizado 2026-11-12T20:41:07Z · 180 pruebas aprobadas.
+**Avance global: 67.7% — 90/133 criterios.**
+Versión 0.17.0 · actualizado 2026-11-12T21:01:29Z · 189 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 65/83 | 78.3% |
+| Software | 70/83 | 84.3% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,16 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### REPORTES · Reportes y exportaciones — 0%
-
-Área: Software.
-Depende de: COSTOS, GASTOS, ANULA.
-
-- [ ] Ventas y caja reconciliados
-- [ ] Existencias y valoración
-- [ ] Costos y márgenes históricos
-- [ ] Exportación PDF y Excel
-- [ ] Vista de Inventario sin márgenes
 ### CORREO · Envío de reportes — 0%
 
 Área: Software.
@@ -290,6 +280,16 @@ Depende de: ACCESO.
 - [x] Registro y corrección trazable ([evidencia](../docs/Gastos.md))
 - [x] Anulación con motivo ([evidencia](../docs/Gastos.md))
 - [x] Permisos y pruebas ([evidencia](../docs/Gastos.md))
+### REPORTES · Reportes y exportaciones — 100%
+
+Área: Software.
+Depende de: COSTOS, GASTOS, ANULA.
+
+- [x] Ventas y caja reconciliados ([evidencia](../docs/Reportes.md))
+- [x] Existencias y valoración ([evidencia](../docs/Reportes.md))
+- [x] Costos y márgenes históricos ([evidencia](../docs/Reportes.md))
+- [x] Exportación PDF y Excel ([evidencia](../docs/Reportes.md))
+- [x] Vista de Inventario sin márgenes ([evidencia](../docs/Reportes.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.

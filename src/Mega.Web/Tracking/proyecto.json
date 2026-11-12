@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.16.0",
-  "updatedAt": "2026-11-12T20:41:07Z",
+  "version": "0.17.0",
+  "updatedAt": "2026-11-12T21:01:29Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 180,
+  "testsPassed": 189,
   "tasks": [
     {
       "id": "BD",
@@ -576,32 +576,32 @@
         {
           "id": "1",
           "label": "Ventas y caja reconciliados",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Reportes.md"
         },
         {
           "id": "2",
           "label": "Existencias y valoración",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Reportes.md"
         },
         {
           "id": "3",
           "label": "Costos y márgenes históricos",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Reportes.md"
         },
         {
           "id": "4",
           "label": "Exportación PDF y Excel",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Reportes.md"
         },
         {
           "id": "5",
           "label": "Vista de Inventario sin márgenes",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Reportes.md"
         }
       ]
     },
