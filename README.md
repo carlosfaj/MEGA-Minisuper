@@ -8,6 +8,8 @@ Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisu
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
+El [roadmap pendiente](docs/ROADMAP.md) ordena las próximas funcionalidades, sus criterios de cierre y los entregables académicos.
+
 ## Abrir la aplicación
 
 1. Ejecutar **Iniciar_MEGA.cmd** desde esta carpeta y conservar su ventana abierta.
