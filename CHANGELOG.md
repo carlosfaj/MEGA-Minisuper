@@ -1,5 +1,15 @@
 # Historial de versiones de MEGA
 
+## 0.3.0 — 12 de noviembre de 2026
+
+- Catálogo operativo para gestión: categorías, productos, desactivación, presentaciones/equivalencias, códigos y precios con vigencias.
+- Códigos con ceros iniciales y rechazo de reasignación de códigos desactivados; unidades y equivalencias usadas se conservan.
+- Control de ediciones desactualizadas y auditoría de cambios en la misma transacción.
+- Precios inmediatos o programados, intervalos adyacentes y comprobantes anteriores conservados (T01).
+- Límite de acceso aplicado solo a intentos de contraseña, sin consumir intentos al consultar el formulario. Mensaje y plazo de reintento ante 429.
+- 65 pruebas automatizadas y recorrido de navegador aislado: alta completa, venta, cambio de precio, historia conservada y nuevo precio efectivo.
+- Promociones, impuestos y venta con lotes/costos conocidos permanecen en los hitos posteriores.
+
 ## 0.2.0 — 12 de noviembre de 2026
 
 ### Base de datos

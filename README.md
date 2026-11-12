@@ -4,7 +4,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.2.0**, que añade la implementación y comprobación de la base de datos. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.3.0**, con catálogo operativo y precios históricos. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -45,6 +45,7 @@ Ejemplo: abrir con **480.00**, motivo **Fondo recibido C$20 menor**, vender **2.
 - `docs/Documento_Final_Estructura.md`: organización del documento consolidado.
 - `docs/Decisiones_y_Pendientes.md`: decisiones técnicas y validaciones del negocio.
 - `docs/Base_Datos.md`: estructura, migraciones, diagnóstico y controles del esquema 2.
+- `docs/Catalogo.md`: operación de productos, categorías, presentaciones, códigos y precios.
 
 La fuente SQL y el modelo JSON se copiaron de `../../00_OFICIALES/Tercer_Corte/Correccion_20261111/`; los originales se conservan con sus hashes. El esquema actual es **2**: se crea de forma atómica o se migra desde el esquema 1 con copia previa, sin recrear ni borrar datos. EF mapea las 39 tablas, incluidas las claves compuestas, y dos vistas de lectura. No se usa EnsureCreated. El generador `tools/generate_model.py` permite regenerar clases y mapeos desde el JSON incluido.
 

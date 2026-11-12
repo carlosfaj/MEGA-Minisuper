@@ -8,13 +8,19 @@ public static class Formats
     public static string Now() => DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss.fff'Z'", CultureInfo.InvariantCulture);
     public static string Money(long cents) => "C$ " + (cents / 100m).ToString("N2", CultureInfo.GetCultureInfo("es-NI"));
     public static string Date(string utc) => DateTimeOffset.Parse(utc, CultureInfo.InvariantCulture).ToOffset(TimeSpan.FromHours(-6)).ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+    public static string DateWithSeconds(string utc) => DateTimeOffset.Parse(utc, CultureInfo.InvariantCulture).ToOffset(TimeSpan.FromHours(-6)).ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
     public static string Json<T>(T value) => JsonSerializer.Serialize(value, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
     public static string Hash(string value) => Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
     public static long Scaled(decimal value, int scale)
     {
-        var factor = (decimal)Math.Pow(10, scale);
-        if (value < 0 || value * factor != decimal.Truncate(value * factor)) throw new BusinessException($"El valor admite hasta {scale} decimales.");
-        try { return checked((long)(value * factor)); } catch (OverflowException) { throw new BusinessException("El valor supera la capacidad de registro."); }
+        try
+        {
+            var factor = (decimal)Math.Pow(10, scale);
+            var scaled = checked(value * factor);
+            if (value < 0 || scaled != decimal.Truncate(scaled)) throw new BusinessException($"El valor admite hasta {scale} decimales.");
+            return checked((long)scaled);
+        }
+        catch (OverflowException) { throw new BusinessException("El valor supera la capacidad de registro."); }
     }
     public static decimal Parse(string? text)
     {

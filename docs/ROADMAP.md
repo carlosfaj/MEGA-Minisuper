@@ -12,7 +12,7 @@ La consulta de existencias y la estructura de una tabla no equivalen a un módul
 
 | Orden | Hito | Funciones pendientes | Resultado para darlo por terminado |
 |---|---|---|---|
-| 1 | Catálogo — próxima entrega 0.3.0 | Categorías; crear/editar/desactivar productos; presentaciones, equivalencias y códigos; precios con vigencias | Un producto puede registrarse, recibir precio y usarse en venta. Cambiar precio o desactivarlo conserva las condiciones de ventas anteriores. Permisos y T01 comprobados |
+| 1 | Catálogo — completado en 0.3.0 | Categorías; productos; presentaciones, equivalencias y códigos; precios con vigencias | Alta y venta real en base de prueba, cambios conservando historia y permisos comprobados; 65 pruebas aprobadas y recorrido de navegador |
 | 2 | Configuración y cuentas | Datos del negocio, fondo y parámetros; gestión de cuentas y credenciales; roles/delegación y acceso temporal de soporte | Se configura el negocio sin alterar historia y se administran accesos con las facultades previstas. No se habilitan medios o políticas pendientes de validar |
 | 3 | Autorizaciones | Preparar, enviar, revisar, aprobar/rechazar; otra cuenta autorizadora; contenido y versión revisados | Cambiar una solicitud exige una nueva revisión. Una aprobación anterior no produce efectos sobre un contenido nuevo. T10 comprobado |
 | 4 | Proveedores y recepciones | Alta/desactivación de proveedores; recepción pendiente con documento y detalle; aceptación de cantidades/costos; lotes y vencimientos; aprobación y entrada única | Guardar pendiente no cambia stock; la recepción autorizada registra entrada una sola vez y conserva procedencia. T02 comprobado |

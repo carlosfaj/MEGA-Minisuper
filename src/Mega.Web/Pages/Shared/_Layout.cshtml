@@ -12,7 +12,7 @@
 <a class="@(current=="/Index"?"active":"")" asp-page="/Index">Inicio</a>
 @if(cash){<a class="@(current=="/Venta"?"active":"")" asp-page="/Venta">Nueva venta <span>+</span></a><a class="@(current=="/Caja"?"active":"")" asp-page="/Caja">Mi caja</a><a class="@(current=="/Ventas"?"active":"")" asp-page="/Ventas">Ventas del turno</a>}
 @if(inventory){<a class="@(current=="/Existencias"?"active":"")" asp-page="/Existencias">Existencias</a>}
-@if(management){<div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}
+@if(management){<div class="nav-label">GESTIÓN</div><a class="@(current?.StartsWith("/Catalogo")==true?"active":"")" asp-page="/Catalogo/Index">Catálogo</a><div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}
 </nav><div class="sidebar-bottom"><span class="status-dot"></span> Servicio local disponible<small>Estación @Configuration["MEGA:Station"]</small></div></aside>
 }
 <div class="shell @(signed?"":"anonymous")"><header class="topbar"><span class="topbar-title">Minisúper MEGA</span><div class="topbar-right">

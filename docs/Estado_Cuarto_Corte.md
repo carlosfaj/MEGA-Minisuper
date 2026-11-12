@@ -6,7 +6,7 @@ Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migra
 
 | Requisito | Estado del avance | Trabajo restante |
 |---|---|---|
-| RF01 Catálogo | Lectura de productos/presentaciones/precios vigentes para vender | Alta, edición, desactivación, precios versionados, promociones e impuestos |
+| RF01 Catálogo | Alta, edición, desactivación, categorías, presentaciones, códigos y precios versionados (v0.3.0) | Promociones e impuestos según políticas validadas |
 | RF02 Abastecimiento | Esquema y carga ficticia inicial trazada | Proveedores, recepción, revisión y autorización de entrada |
 | RF03 Inventario | Consulta de existencias y alertas de mínimo/discrepancia; descuento transaccional por venta | Lotes/vencimiento, conteos, cargas, ajustes y salidas autorizadas |
 | RF04 Ventas | Preparación, cobro efectivo, comprobante, recuperación de reintento y consulta del turno | Anulación autorizada, agente de impresión, reimpresión y contingencia |

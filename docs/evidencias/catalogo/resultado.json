@@ -1,0 +1,15 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T13:25:48.516Z",
+  "casos": [
+    "categoría y producto reales",
+    "presentación y código con ceros",
+    "precio inicial y venta",
+    "cambio de precio con historia",
+    "búsqueda por código",
+    "comprobante anterior inmutable",
+    "venta nueva con precio vigente"
+  ],
+  "erroresJavaScript": [],
+  "datos": "Ficticios; base aislada de prueba"
+}
