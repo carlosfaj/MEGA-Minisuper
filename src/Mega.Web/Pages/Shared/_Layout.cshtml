@@ -10,6 +10,7 @@
 <aside class="sidebar"><a class="brand" asp-page="/Index"><span class="brand-icon">M</span><span>MEGA<small>GESTIÓN LOCAL</small></span></a>
 <div class="nav-label">OPERACIÓN</div><nav aria-label="Navegación principal">
 <a class="@(current=="/Index"?"active":"")" asp-page="/Index">Inicio</a>
+@if(User.HasClaim("tipo","comercial")){<a class="@(current=="/Proyecto"?"active":"")" asp-page="/Proyecto">Avance del proyecto</a>}
 @if(cash){<a class="@(current=="/Venta"?"active":"")" asp-page="/Venta">Nueva venta <span>+</span></a><a class="@(current=="/Caja"?"active":"")" asp-page="/Caja">Mi caja</a><a class="@(current=="/Ventas"?"active":"")" asp-page="/Ventas">Ventas del turno</a>}
 @if(inventory){<a class="@(current=="/Existencias"?"active":"")" asp-page="/Existencias">Existencias</a>}
 @if(inventory){<a class="@(current?.StartsWith("/Recepciones")==true || current=="/Proveedores"?"active":"")" asp-page="/Recepciones/Index">Recepciones</a>}

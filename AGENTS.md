@@ -14,6 +14,7 @@ El usuario autorizó el 12 de noviembre de 2026 usar Git y su conexión personal
 6. Preferir las herramientas de la conexión GitHub **Personal / carlosfaj** para publicar. Si la integración carece de permiso de escritura, puede utilizarse la sesión Git ya autenticada de **la misma cuenta carlosfaj**, verificando su identidad sin imprimir ni guardar credenciales. No pedir tokens o contraseñas al usuario. Si se publica mediante la API conectada, sincronizar después los mismos commits y árbol con la copia Git local; no dejar dos historias diferentes.
 7. Verificar que el commit publicado corresponde al árbol local y comprobar el resultado de GitHub Actions. El flujo crea `v<VERSION>` en main después de compilar y aprobar pruebas. No mover ni reutilizar etiquetas existentes.
 8. Informar al usuario la versión, enlace al commit o etiqueta, validación y limitaciones materiales.
+9. Mantener el kanban de todo el proyecto solicitado por el usuario: `src/Mega.Web/Tracking/proyecto.json` es la fuente y `docs/KANBAN.md` la vista generada. Registrar criterios terminados solo con evidencia real; no confundir implementación con aceptación del negocio o ensayo físico. Al publicar, sincronizar VERSION, pruebas y criterios con `tools/update_kanban.py`, ejecutar `--check` y conservar el porcentaje calculado. El tablero `/Proyecto` se actualiza desde esa fuente.
 
 ## Conservación y exclusiones
 

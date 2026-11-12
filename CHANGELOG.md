@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.11.0 — 12 de noviembre de 2026
+
+- Kanban de todo el proyecto: software, calidad, documentación, entrega, decisiones del negocio y periféricos, con cuatro columnas y filtros.
+- Porcentaje global, por área y por tarjeta calculado con criterios completados; implementación y aceptación real se mantienen separadas.
+- Fuente de seguimiento versionada y vista Markdown en GitHub; actualización automática de la pantalla al cambiar la fuente.
+- Herramienta para registrar criterios con evidencia y resultados TRX; GitHub Actions comprueba coherencia de versión y tablero.
+- 136 pruebas aprobadas y navegador de escritorio/móvil con filtros sin alterar el porcentaje global.
+
 ## 0.10.0 — 12 de noviembre de 2026
 
 - Cargas, ajustes y salidas integrados con costos y lotes; costos de salida tomados del promedio vigente y conservados con referencia histórica.

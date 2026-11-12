@@ -37,6 +37,8 @@ jobs:
           "value=$megaVersion" >> $env:GITHUB_OUTPUT
       - name: Restaurar dependencias fijadas
         run: dotnet restore MEGA.sln --locked-mode
+      - name: Verificar kanban y evidencias
+        run: python tools/update_kanban.py --check
       - name: Compilar
         run: dotnet build MEGA.sln --configuration Release --no-restore --nologo
       - name: Ejecutar pruebas

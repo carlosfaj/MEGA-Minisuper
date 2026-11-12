@@ -1,0 +1,1183 @@
+{
+  "name": "MEGA · Cuarto corte",
+  "version": "0.11.0",
+  "updatedAt": "2026-11-12T19:33:10Z",
+  "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
+  "testsPassed": 136,
+  "tasks": [
+    {
+      "id": "BD",
+      "title": "Base de datos e integridad",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Modelo original y procedencia conservados",
+          "done": true,
+          "evidence": "docs/Base_Datos.md"
+        },
+        {
+          "id": "2",
+          "label": "Migración consistente y diagnóstico",
+          "done": true,
+          "evidence": "docs/Base_Datos.md"
+        },
+        {
+          "id": "3",
+          "label": "Claves, restricciones y mapeo verificados",
+          "done": true,
+          "evidence": "docs/Base_Datos.md"
+        }
+      ]
+    },
+    {
+      "id": "ACCESO",
+      "title": "Acceso y seguridad de cuentas",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Acceso por rol y antifalsificación",
+          "done": true,
+          "evidence": "docs/Cuentas.md"
+        },
+        {
+          "id": "2",
+          "label": "Revocación y límite de intentos",
+          "done": true,
+          "evidence": "docs/Cuentas.md"
+        },
+        {
+          "id": "3",
+          "label": "Delegación y protección del último Propietario",
+          "done": true,
+          "evidence": "docs/Cuentas.md"
+        },
+        {
+          "id": "4",
+          "label": "Soporte temporal con vencimiento",
+          "done": true,
+          "evidence": "docs/Cuentas.md"
+        }
+      ]
+    },
+    {
+      "id": "CAT",
+      "title": "Catálogo y precios",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Categorías y productos",
+          "done": true,
+          "evidence": "docs/Catalogo.md"
+        },
+        {
+          "id": "2",
+          "label": "Presentaciones, equivalencias y códigos",
+          "done": true,
+          "evidence": "docs/Catalogo.md"
+        },
+        {
+          "id": "3",
+          "label": "Precios con vigencias e historia",
+          "done": true,
+          "evidence": "docs/Catalogo.md"
+        },
+        {
+          "id": "4",
+          "label": "Permisos y recorrido de alta hasta venta",
+          "done": true,
+          "evidence": "docs/Catalogo.md"
+        }
+      ]
+    },
+    {
+      "id": "CONFIG",
+      "title": "Configuración del negocio",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Configuración versionada",
+          "done": true,
+          "evidence": "docs/Configuracion.md"
+        },
+        {
+          "id": "2",
+          "label": "Fondos y comprobantes anteriores conservados",
+          "done": true,
+          "evidence": "docs/Configuracion.md"
+        },
+        {
+          "id": "3",
+          "label": "Conflictos de edición y permisos comprobados",
+          "done": true,
+          "evidence": "docs/Configuracion.md"
+        }
+      ]
+    },
+    {
+      "id": "PROV",
+      "title": "Proveedores",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Alta, edición y desactivación",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        },
+        {
+          "id": "2",
+          "label": "Procedencia y permisos conservados",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        }
+      ]
+    },
+    {
+      "id": "REC",
+      "title": "Recepciones autorizadas",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Preparación sin alterar existencias",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        },
+        {
+          "id": "2",
+          "label": "Revisión exacta por otra cuenta",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        },
+        {
+          "id": "3",
+          "label": "Aceptación, costos, lotes y entrada única",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        },
+        {
+          "id": "4",
+          "label": "Reintentos y reversión ante fallos",
+          "done": true,
+          "evidence": "docs/Abastecimiento.md"
+        }
+      ]
+    },
+    {
+      "id": "CONTEO",
+      "title": "Conteos físicos",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Observación física y saldo de referencia",
+          "done": true,
+          "evidence": "docs/Conteos_y_Lotes.md"
+        },
+        {
+          "id": "2",
+          "label": "Diferencias sin ajuste automático",
+          "done": true,
+          "evidence": "docs/Conteos_y_Lotes.md"
+        },
+        {
+          "id": "3",
+          "label": "Nuevos movimientos exigen nueva comprobación",
+          "done": true,
+          "evidence": "docs/Conteos_y_Lotes.md"
+        }
+      ]
+    },
+    {
+      "id": "LOTES",
+      "title": "Lotes y vencimientos",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Existencias y procedencia por lote",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "2",
+          "label": "Alertas configurables y vencidos",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "3",
+          "label": "Asignación en ventas sin sobreconsumo",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        }
+      ]
+    },
+    {
+      "id": "COSTOS",
+      "title": "Promedio ponderado móvil",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Política confirmada por el usuario",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "2",
+          "label": "Conocido, desconocido y cero diferenciados",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "3",
+          "label": "Costo histórico preservado en salidas",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "4",
+          "label": "Orden y precisión comprobados",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        }
+      ]
+    },
+    {
+      "id": "INV",
+      "title": "Cargas, ajustes y salidas",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Motivo, evidencia y revisión por otra cuenta",
+          "done": true,
+          "evidence": "docs/Inventario_Integrado.md"
+        },
+        {
+          "id": "2",
+          "label": "Ajustes desde conteo finalizado",
+          "done": true,
+          "evidence": "docs/Inventario_Integrado.md"
+        },
+        {
+          "id": "3",
+          "label": "Lotes y costo vigente en regularizaciones",
+          "done": true,
+          "evidence": "docs/Inventario_Integrado.md"
+        },
+        {
+          "id": "4",
+          "label": "Cancelación, concurrencia y atomicidad",
+          "done": true,
+          "evidence": "docs/Inventario_Integrado.md"
+        }
+      ]
+    },
+    {
+      "id": "CAJA",
+      "title": "Caja propia",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Apertura y exclusión de turnos simultáneos",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "2",
+          "label": "Fondo real y esperado",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "3",
+          "label": "Cierre, diferencias y versión",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        }
+      ]
+    },
+    {
+      "id": "VENTA",
+      "title": "Venta en efectivo",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Preparación y cobro en servidor",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "2",
+          "label": "Comprobante histórico",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "3",
+          "label": "Reintento sin duplicar venta o cobro",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "4",
+          "label": "Integración con costos y lotes",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        }
+      ]
+    },
+    {
+      "id": "PROMO",
+      "title": "Promociones",
+      "area": "Software",
+      "lane": "en_curso",
+      "dependsOn": [
+        "CAT",
+        "VENTA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Mantenimiento y vigencias",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Promoción exclusiva y prioridad",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Cálculo visible en venta",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Historia y pruebas de cambios",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "IMPUESTO",
+      "title": "Impuestos y exenciones",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "CONFIG",
+        "VENTA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Tasas configurables sin tasa inventada",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Vigencias y exenciones con motivo",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Base, redondeo y cálculo en venta",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Condiciones históricas y pruebas",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "ANULA",
+      "title": "Anulaciones y fondos",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "COSTOS",
+        "CAJA",
+        "VENTA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Solicitud y evidencia",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Otra cuenta decide versión exacta",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Reincorporación física comprobada",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Devolución o regularización sin alterar cierres",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "Reintentos, concurrencia y pruebas",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "PRINT",
+      "title": "Impresión y contingencia",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "VENTA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Agente e impresora configurables",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Cola e intentos verificables",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Resultado incierto sin reenvío ciego",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Reimpresión del mismo folio",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "Contingencia y pruebas",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "GASTOS",
+      "title": "Gastos operativos",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "ACCESO"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Registro y corrección trazable",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Anulación con motivo",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Permisos y pruebas",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "REPORTES",
+      "title": "Reportes y exportaciones",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "COSTOS",
+        "GASTOS",
+        "ANULA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Ventas y caja reconciliados",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Existencias y valoración",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Costos y márgenes históricos",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Exportación PDF y Excel",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "Vista de Inventario sin márgenes",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "CORREO",
+      "title": "Envío de reportes",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "REPORTES"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Configuración y secreto protegidos",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Cola con reportes congelados",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Reintentos seguros y estado incierto",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Pruebas sin conexión y errores",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "BACKUP",
+      "title": "Respaldo verificable",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "BD"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Copia consistente desde la aplicación",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Destino y pauta configurables",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Checksum, manifiesto y diagnóstico",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Fallos visibles y ensayo",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "RESTORE",
+      "title": "Restauración y conciliación",
+      "area": "Software",
+      "lane": "pendiente",
+      "dependsOn": [
+        "BACKUP",
+        "PRINT",
+        "CORREO"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Autorización y preservación de base actual",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Restauración comprobada",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Cuarentena de impresión y correo",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Conciliación y reapertura explícita",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "Ensayo sin duplicar trabajos",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "AUDIT",
+      "title": "Auditoría integral",
+      "area": "Calidad",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Bitácora y eventos de operaciones implementadas",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "2",
+          "label": "Responsable, cambios y autorización",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "3",
+          "label": "Todos los rechazos críticos",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Regresión integral T13",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "PRUEBAS",
+      "title": "Pruebas integrales",
+      "area": "Calidad",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Pruebas de integración con bases aisladas",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "2",
+          "label": "Recorridos de navegador con evidencias",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "3",
+          "label": "Datos válidos, inválidos y concurrencia",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "4",
+          "label": "Regresión T01–T15 de todo el alcance",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "Rendimiento y fallos en equipo objetivo",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "SEGURIDAD",
+      "title": "Revisión de seguridad final",
+      "area": "Calidad",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Roles, sesiones y antifalsificación comprobados",
+          "done": true,
+          "evidence": "AGENTS.md"
+        },
+        {
+          "id": "2",
+          "label": "Secretos y bases excluidos del repositorio",
+          "done": true,
+          "evidence": "AGENTS.md"
+        },
+        {
+          "id": "3",
+          "label": "Permisos de todos los módulos finales",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Dependencias y configuración final revisadas",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "GIT",
+      "title": "Versiones y GitHub",
+      "area": "Entrega",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Repositorio e historia conservados",
+          "done": true,
+          "evidence": "AGENTS.md"
+        },
+        {
+          "id": "2",
+          "label": "Push por funcionalidad estable",
+          "done": true,
+          "evidence": "AGENTS.md"
+        },
+        {
+          "id": "3",
+          "label": "Compilación, pruebas y etiquetas automáticas",
+          "done": true,
+          "evidence": "AGENTS.md"
+        }
+      ]
+    },
+    {
+      "id": "DIST",
+      "title": "Instalación y distribución",
+      "area": "Entrega",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Arranque local documentado",
+          "done": true,
+          "evidence": "README.md"
+        },
+        {
+          "id": "2",
+          "label": "Fuentes y dependencias fijadas",
+          "done": true,
+          "evidence": "README.md"
+        },
+        {
+          "id": "3",
+          "label": "Distribución reproducible preparada",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Instalación limpia en equipo objetivo",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "DOC",
+      "title": "Documento académico consolidado",
+      "area": "Documentación",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Estructura y fuentes anteriores localizadas",
+          "done": true,
+          "evidence": "docs/Documento_Final_Estructura.md"
+        },
+        {
+          "id": "2",
+          "label": "Capítulos I–IV alineados al sistema final",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Resultados, conclusiones y recomendaciones",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "APA 7 e índices automáticos",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "5",
+          "label": "PDF final revisado",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "MANUAL",
+      "title": "Manuales técnico y de usuario",
+      "area": "Documentación",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Guías de módulos implementados",
+          "done": true,
+          "evidence": "README.md"
+        },
+        {
+          "id": "2",
+          "label": "Instalación y operación final consolidadas",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Procedimientos de contingencia y recuperación",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "PDF de ambos manuales revisados",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "DIAGRAMAS",
+      "title": "Diagramas y prototipos",
+      "area": "Documentación",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Modelo de datos original conservado",
+          "done": true,
+          "evidence": "docs/Procedencia_Modelo.json"
+        },
+        {
+          "id": "2",
+          "label": "Fuentes editables actualizadas al sistema final",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Correspondencia RF/CU/pantalla revisada",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "MATRIZ",
+      "title": "Matriz y evidencias finales",
+      "area": "Documentación",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Matriz parcial con resultados reales",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "2",
+          "label": "TRX y capturas por módulo",
+          "done": true,
+          "evidence": "docs/Matriz_Pruebas.md"
+        },
+        {
+          "id": "3",
+          "label": "Cobertura completa T01–T15",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "PDF o Excel final revisado",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "SLIDES",
+      "title": "Presentación de defensa",
+      "area": "Documentación",
+      "lane": "pendiente",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Guion y resultados reales",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Presentación PowerPoint o PDF",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Ensayo y revisión visual",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "DEMO",
+      "title": "Demostración y aceptación",
+      "area": "Entrega",
+      "lane": "validacion",
+      "dependsOn": [],
+      "blocker": "La aceptación requiere participación real del negocio.",
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Recorrido integrado de todo el alcance",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Datos de demostración y contingencias",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Ensayo reproducible",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Aceptación del personal del negocio",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "NEGOCIO",
+      "title": "Validaciones del negocio",
+      "area": "Validación",
+      "lane": "validacion",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Política de costo confirmada",
+          "done": true,
+          "evidence": "docs/Valoracion.md"
+        },
+        {
+          "id": "2",
+          "label": "Unidades, redondeos y discrepancias validados",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Fiscalidad y transferencia definidas",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "4",
+          "label": "Pauta de respaldo y recuperación aceptada",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "EQUIPO",
+      "title": "Periféricos y servicios reales",
+      "area": "Validación",
+      "lane": "validacion",
+      "dependsOn": [],
+      "blocker": "Actualmente solo se detectaron impresoras virtuales; faltan equipo y configuración reales.",
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Impresora física instalada y ensayada",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "2",
+          "label": "Correo real configurado y probado",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "3",
+          "label": "Medio externo y recuperación ensayados",
+          "done": false,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "KANBAN",
+      "title": "Kanban y avance del proyecto",
+      "area": "Software",
+      "lane": "en_curso",
+      "dependsOn": [],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Tablero de todo el alcance",
+          "done": true,
+          "evidence": "docs/evidencias/kanban/resultado.json"
+        },
+        {
+          "id": "2",
+          "label": "Porcentajes calculados y filtros comprobados",
+          "done": true,
+          "evidence": "docs/evidencias/kanban/resultado.json"
+        },
+        {
+          "id": "3",
+          "label": "Actualización y registro en GitHub",
+          "done": true,
+          "evidence": "docs/evidencias/kanban/resultado.json"
+        }
+      ]
+    }
+  ]
+}
