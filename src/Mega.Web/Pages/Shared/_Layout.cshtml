@@ -13,6 +13,7 @@
 @if(cash){<a class="@(current=="/Venta"?"active":"")" asp-page="/Venta">Nueva venta <span>+</span></a><a class="@(current=="/Caja"?"active":"")" asp-page="/Caja">Mi caja</a><a class="@(current=="/Ventas"?"active":"")" asp-page="/Ventas">Ventas del turno</a>}
 @if(inventory){<a class="@(current=="/Existencias"?"active":"")" asp-page="/Existencias">Existencias</a>}
 @if(inventory){<a class="@(current?.StartsWith("/Recepciones")==true || current=="/Proveedores"?"active":"")" asp-page="/Recepciones/Index">Recepciones</a>}
+@if(inventory){<a class="@(current?.StartsWith("/Conteos")==true?"active":"")" asp-page="/Conteos/Index">Conteos físicos</a><a class="@(current=="/Lotes"?"active":"")" asp-page="/Lotes">Lotes y vencimientos</a>}
 @if(User.HasClaim("tipo","soporte_temporal")){<a class="@(current=="/Soporte"?"active":"")" asp-page="/Soporte">Diagnóstico técnico</a>}
 @if(User.HasClaim("tipo","comercial")){<a class="@(current=="/MiCuenta"?"active":"")" asp-page="/MiCuenta">Mi contraseña</a>}
 @if(management){<div class="nav-label">GESTIÓN</div><a class="@(current?.StartsWith("/Catalogo")==true?"active":"")" asp-page="/Catalogo/Index">Catálogo</a><a class="@(current=="/Configuracion"?"active":"")" asp-page="/Configuracion">Configuración</a><div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}

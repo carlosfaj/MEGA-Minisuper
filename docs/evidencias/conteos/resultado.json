@@ -1,0 +1,13 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T14:06:45.921Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "conteo físico 28 frente a registrado 30",
+    "finalización sin ajustar existencias",
+    "registro finalizado sin edición",
+    "lote recibido con procedencia y saldo propio",
+    "Inventario sin costos o márgenes"
+  ],
+  "erroresJavaScript": []
+}

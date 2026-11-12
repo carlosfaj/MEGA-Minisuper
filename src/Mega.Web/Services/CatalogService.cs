@@ -45,6 +45,8 @@ public sealed class CatalogService(MegaDbContext db, AccessControl access, Opera
         {
             AccessControl.Version(product.Version, input.Version);
             var used = await db.Set<MovimientoInventario>().AnyAsync(x => x.ProductoId == product.Id) ||
+                await db.Set<ConteoDetalle>().AnyAsync(x => x.ProductoId == product.Id) ||
+                await db.Set<SolicitudInventarioDetalle>().AnyAsync(x => x.ProductoId == product.Id) ||
                 await db.Set<RecepcionDetalle>().AnyAsync(x => db.Set<Presentacion>().Any(p => p.Id == x.PresentacionId && p.ProductoId == product.Id));
             if (used && (product.UnidadControl != input.Control || product.UnidadBase != unit || product.EscalaCantidad != scale))
                 throw new BusinessException("Este producto tiene historia. Conserva su unidad y escala; registra otro producto para una unidad diferente.");

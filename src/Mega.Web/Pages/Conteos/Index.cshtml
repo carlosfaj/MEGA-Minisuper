@@ -1,0 +1,6 @@
+@page
+@model Mega.Web.Pages.Conteos.IndexModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Conteos físicos";}
+<div class="page-heading"><div><span class="eyebrow">INVENTARIO</span><h1>Conteos físicos</h1><p class="muted">Registrar una observación física no aplica ajustes automáticos.</p></div><a class="button primary" asp-page="Editar">Registrar conteo</a></div><partial name="_Notice"/>
+<div class="card table-card"><table><thead><tr><th>Referencia</th><th>Última comprobación declarada</th><th>Estado</th><th>Versión</th><th></th></tr></thead><tbody>@foreach(var c in Model.Counts){<tr><td>@c.Referencia</td><td>@Formats.DateWithSeconds(c.FechaConteo)</td><td>@(c.Estado=="Finalizado"?"Finalizado":"En registro")</td><td>@c.Version</td><td><a asp-page="Editar" asp-route-id="@c.Id">Consultar →</a></td></tr>}</tbody></table>@if(Model.Counts.Count==0){<p class="empty">Todavía no hay conteos físicos.</p>}</div>

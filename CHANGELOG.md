@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.7.0 — 12 de noviembre de 2026
+
+- Conteos físicos por total de producto o lote: cantidades declaradas, referencia consistente de existencias, diferencias, versiones e historia auditada.
+- Guardar y finalizar no generan ajustes. Movimientos posteriores de los productos contados impiden finalizar hasta comprobar físicamente y guardar una versión nueva.
+- Protección de conteos finalizados, autor del registro, precisión, alcances superpuestos y unidades de productos ya contados.
+- Lotes con saldo, procedencia y alertas de vencido/próximo según umbral configurado; detección de existencias controladas sin lote y filtro de agotados. Inventario consulta cantidades sin costos/márgenes.
+- 108 pruebas automatizadas y recorrido de navegador con tres capturas; los ajustes autorizados y la valoración continúan pendientes.
+
 ## 0.6.0 — 12 de noviembre de 2026
 
 - Proveedores con mantenimiento por gestión, desactivación, versión y auditoría; consulta de Inventario.

@@ -54,6 +54,7 @@ builder.Services.AddScoped<AccessControl>(); builder.Services.AddScoped<CatalogS
 builder.Services.AddScoped<SettingsService>();
 builder.Services.AddScoped<AccountService>(); builder.Services.AddScoped<SessionAccess>();
 builder.Services.AddScoped<ReceivingService>();
+builder.Services.AddScoped<CountingService>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));
