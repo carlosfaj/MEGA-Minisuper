@@ -179,7 +179,7 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
         await db.SaveChangesAsync();
         db.Add(new MovimientoCaja {TurnoId=shift.Id,VentaId=sale.Id,OperacionId=operation.Id,Tipo="cobro_efectivo",ImporteCentavos=quote.Total,RegistradoPor=userId,Fecha=now});
         db.Add(new SolicitudImpresion {VentaId=sale.Id,SolicitadoPor=userId,Tipo="original",CopiaNumero=0,Estado="Pendiente",ClaveSolicitud="original-"+input.Key,
-            Fecha=now,ImpresoraHistorica=config.ImpresoraNombre??"Sin impresora configurada",ContenidoHash=sale.ComprobanteHash,UltimoError=config.ImpresionHabilitada==0?"Impresión automática pendiente de integrar en este avance.":null});
+            Fecha=now,ImpresoraHistorica=config.ImpresoraNombre??"Sin impresora configurada",ContenidoHash=sale.ComprobanteHash,UltimoError=config.ImpresionHabilitada==0?"Impresión automática deshabilitada. La venta está confirmada.":null});
         shift.Version++;
         Audit(userId,"Confirmar venta","Venta",sale.Id.ToString(),input.Key,new {sale.Folio,totalCentavos=quote.Total,turnoId=shift.Id,comprobanteHash=sale.ComprobanteHash,discrepanciaFisicaConfirmada=quote.NeedsPhysicalCheck && input.PhysicalStockChecked});
         await db.SaveChangesAsync(); await tx.CommitAsync(); return sale.Id;

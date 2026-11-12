@@ -21,6 +21,7 @@ public sealed class SettingsInput
     [Required] public string UsualFund { get; set; } = "0";
     public long? ExpirationDays { get; set; }
     [StringLength(200)] public string? Printer { get; set; }
+    public bool EnablePrint{get;set;}
 }
 
 [Authorize(Policy = "Gestion")]
@@ -33,7 +34,7 @@ public sealed class ConfiguracionModel(MegaDbContext db, SettingsService service
         var c = await service.CurrentAsync();
         Input = new() { Id = c.Id, Version = c.Version, Name = c.Nombre, Address = c.Direccion, Phone = c.Telefono,
             Issuer = c.Emisor, IssuerId = c.IdentificacionEmisor, FiscalRegime = c.RegimenFiscal,
-            UsualFund = (c.FondoHabitualCentavos / 100m).ToString("0.00", CultureInfo.InvariantCulture), ExpirationDays = c.DiasAlertaVencimiento, Printer = c.ImpresoraNombre };
+            UsualFund = (c.FondoHabitualCentavos / 100m).ToString("0.00", CultureInfo.InvariantCulture), ExpirationDays = c.DiasAlertaVencimiento, Printer = c.ImpresoraNombre,EnablePrint=c.ImpresionHabilitada==1 };
         await LoadHistoryAsync();
     }
     public async Task<IActionResult> OnPostAsync()
@@ -43,7 +44,7 @@ public sealed class ConfiguracionModel(MegaDbContext db, SettingsService service
             if (ModelState.IsValid)
             {
                 await service.SaveAsync(UserId, new(Input.Id, Input.Version, Input.Name, Input.Address, Input.Phone, Input.Issuer,
-                    Input.IssuerId, Input.FiscalRegime, Input.UsualFund, Input.ExpirationDays, Input.Printer));
+                    Input.IssuerId, Input.FiscalRegime, Input.UsualFund, Input.ExpirationDays, Input.Printer,Input.EnablePrint));
                 TempData["Message"] = "Configuración actualizada. Las ventas y turnos anteriores conservan sus condiciones.";
                 return RedirectToPage();
             }

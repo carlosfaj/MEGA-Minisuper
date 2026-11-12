@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.14.0",
-  "updatedAt": "2026-11-12T20:22:13Z",
+  "version": "0.15.0",
+  "updatedAt": "2026-11-12T20:35:46Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 162,
+  "testsPassed": 175,
   "tasks": [
     {
       "id": "BD",
@@ -502,32 +502,32 @@
         {
           "id": "1",
           "label": "Agente e impresora configurables",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Impresion.md"
         },
         {
           "id": "2",
           "label": "Cola e intentos verificables",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Impresion.md"
         },
         {
           "id": "3",
           "label": "Resultado incierto sin reenvío ciego",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Impresion.md"
         },
         {
           "id": "4",
           "label": "Reimpresión del mismo folio",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Impresion.md"
         },
         {
           "id": "5",
           "label": "Contingencia y pruebas",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Impresion.md"
         }
       ]
     },

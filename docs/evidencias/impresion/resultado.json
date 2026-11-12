@@ -1,0 +1,15 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T20:33:59.117Z",
+  "datos": "Ficticios; base aislada; controlador virtual de Windows, sin entrega física",
+  "casos": [
+    "configuración y habilitación explícitas",
+    "original aceptado por Windows",
+    "ninguna entrega física inventada",
+    "copia del mismo folio sin nuevo cobro",
+    "caja esperada 538 tras una sola venta de 38",
+    "pantalla móvil sin desbordamiento"
+  ],
+  "saleId": "1",
+  "erroresJavaScript": []
+}

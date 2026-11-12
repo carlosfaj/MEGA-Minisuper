@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Services;
 
 public sealed record SettingsChange(long Id, long Version, string Name, string Address, string? Phone,
-    string? Issuer, string? IssuerId, string? FiscalRegime, string UsualFund, long? ExpirationDays, string? Printer);
+    string? Issuer, string? IssuerId, string? FiscalRegime, string UsualFund, long? ExpirationDays, string? Printer,bool EnablePrint=false);
 
-public sealed class SettingsService(MegaDbContext db, AccessControl access, Operations operations)
+public sealed class SettingsService(MegaDbContext db, AccessControl access, Operations operations,IPrintTransport printing)
 {
     public async Task<ConfiguracionNegocio> CurrentAsync()
     {
@@ -28,6 +28,7 @@ public sealed class SettingsService(MegaDbContext db, AccessControl access, Oper
         var issuerId = AccessControl.Optional(input.IssuerId, "Identificación del emisor", 100);
         var regime = AccessControl.Optional(input.FiscalRegime, "Régimen fiscal", 200);
         var printer = AccessControl.Optional(input.Printer, "Impresora", 200);
+        if(input.EnablePrint&&(printer is null||!printing.Printers().Contains(printer)||printer.Contains("OneNote",StringComparison.OrdinalIgnoreCase)))throw new BusinessException("Selecciona una impresora instalada compatible antes de habilitar la impresión automática.");
         var fund = Formats.Scaled(Formats.Parse(input.UsualFund), 2);
         if (input.ExpirationDays < 0) throw new BusinessException("Los días de próximo vencimiento no pueden ser negativos.");
         var old = await db.Set<ConfiguracionNegocio>().SingleAsync(x => x.Id == current.Id);
@@ -40,7 +41,7 @@ public sealed class SettingsService(MegaDbContext db, AccessControl access, Oper
         next.Nombre = name; next.Direccion = address; next.Telefono = phone; next.Emisor = issuer; next.IdentificacionEmisor = issuerId;
         next.RegimenFiscal = regime; next.FondoHabitualCentavos = fund; next.DiasAlertaVencimiento = input.ExpirationDays; next.ImpresoraNombre = printer;
         if (issuer != current.Emisor || issuerId != current.IdentificacionEmisor || regime != current.RegimenFiscal) next.FiscalidadValidada = 0;
-        if (printer is null || printer != current.ImpresoraNombre) next.ImpresionHabilitada = 0;
+        next.ImpresionHabilitada=input.EnablePrint?1:0;
         // Medios, secretos y autorizaciones de respaldo no son campos editables de esta pantalla.
         db.Add(next); await db.SaveChangesAsync();
         operations.Audit(userId, "Actualizar configuración", "ConfiguracionNegocio", next.Id.ToString(), Guid.NewGuid().ToString(),

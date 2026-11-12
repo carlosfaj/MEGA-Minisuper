@@ -16,10 +16,12 @@ public sealed class MegaFactory:WebApplicationFactory<Program>
     private readonly string dbPath=Path.Combine(Path.GetTempPath(),"mega-tests-"+Guid.NewGuid()+".db");
     private readonly bool demoData;
     private readonly string? bootstrapPassword;
-    public MegaFactory(bool demoData=true,string? bootstrapPassword=null) { this.demoData=demoData; this.bootstrapPassword=bootstrapPassword; }
+    private readonly Action<IServiceCollection>? services;
+    public MegaFactory(bool demoData=true,string? bootstrapPassword=null,Action<IServiceCollection>? services=null) { this.demoData=demoData; this.bootstrapPassword=bootstrapPassword;this.services=services; }
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("Testing");
+        if(services is not null)builder.ConfigureServices(services);
         builder.ConfigureAppConfiguration((_,c)=>c.AddInMemoryCollection(new Dictionary<string,string?> { ["MEGA:DatabasePath"]=dbPath,["MEGA:DemoData"]=demoData.ToString(),["MEGA_BOOTSTRAP_PASSWORD"]=bootstrapPassword }));
     }
     public HttpClient Client()=>CreateClient(new WebApplicationFactoryClientOptions {BaseAddress=new Uri("https://localhost"),AllowAutoRedirect=false});

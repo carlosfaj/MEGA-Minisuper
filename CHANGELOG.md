@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.15.0 — 12 de noviembre de 2026
+
+- Agente local de impresión con habilitación explícita, cola persistente, reserva previa e intentos verificables; aceptación de Windows separada de entrega física.
+- Fallo conocido permite reintento revisado; reserva vencida o resultado incierto bloquean reenvío automático. Resolución de gestión, copia del mismo folio y contingencia documentada.
+- Comprobante inmutable, sin nuevo cobro por imprimir; venta anulada o huella inválida se pausan. Resultado tardío conserva la resolución y su evidencia.
+- 175 pruebas y navegador de escritorio/móvil; controlador Microsoft Print to PDF produjo original y copia comprobados. Impresora física y aceptación del negocio pendientes.
+
 ## 0.14.0 — 12 de noviembre de 2026
 
 - Rechazos críticos y fallos HTTP con cuenta, ruta y correlación, sin guardar contraseñas ni cuerpos de solicitud.

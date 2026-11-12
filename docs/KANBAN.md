@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 57.9% — 77/133 criterios.**
-Versión 0.14.0 · actualizado 2026-11-12T20:22:13Z · 162 pruebas aprobadas.
+**Avance global: 61.7% — 82/133 criterios.**
+Versión 0.15.0 · actualizado 2026-11-12T20:35:46Z · 175 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 57/83 | 68.7% |
+| Software | 62/83 | 74.7% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,16 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### PRINT · Impresión y contingencia — 0%
-
-Área: Software.
-Depende de: VENTA.
-
-- [ ] Agente e impresora configurables
-- [ ] Cola e intentos verificables
-- [ ] Resultado incierto sin reenvío ciego
-- [ ] Reimpresión del mismo folio
-- [ ] Contingencia y pruebas
 ### GASTOS · Gastos operativos — 0%
 
 Área: Software.
@@ -290,6 +280,16 @@ Depende de: COSTOS, CAJA, VENTA.
 - [x] Reincorporación condicionada a verificación física declarada ([evidencia](../docs/Anulaciones.md))
 - [x] Devolución o regularización sin alterar cierres ([evidencia](../docs/Anulaciones.md))
 - [x] Reintentos, concurrencia y pruebas ([evidencia](../docs/Anulaciones.md))
+### PRINT · Impresión y contingencia — 100%
+
+Área: Software.
+Depende de: VENTA.
+
+- [x] Agente e impresora configurables ([evidencia](../docs/Impresion.md))
+- [x] Cola e intentos verificables ([evidencia](../docs/Impresion.md))
+- [x] Resultado incierto sin reenvío ciego ([evidencia](../docs/Impresion.md))
+- [x] Reimpresión del mismo folio ([evidencia](../docs/Impresion.md))
+- [x] Contingencia y pruebas ([evidencia](../docs/Impresion.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.
