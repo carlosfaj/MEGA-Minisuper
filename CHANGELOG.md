@@ -1,5 +1,14 @@
 # Historial de versiones de MEGA
 
+## 0.8.0 — 12 de noviembre de 2026
+
+- Solicitudes de carga, ajuste desde conteo finalizado y salida justificada, con motivo/evidencia, versiones, cancelación e historia.
+- Los ajustes toman exclusivamente las diferencias del conteo; movimientos posteriores exigen un conteo nuevo. Preparar/enviar/cancelar no modifica existencias.
+- Revisión de contenido, versión y saldo por otra cuenta de gestión; aprobación transaccional con movimiento y autorización, sin duplicar efectos por reintento concurrente.
+- Costos desconocidos conservados como NULL; costo de carga conocido solo si se introduce explícitamente. Regularizaciones de productos con costo conocido o lotes bloqueadas hasta integrar valoración.
+- Causas de salida y devolución a proveedor validadas; rechazo de cantidades que dejarían saldo negativo; consulta de la carga histórica demo preservada.
+- 120 pruebas aprobadas. Recorrido de navegador con ajuste 30→28, carga 28→31, salida 31→30 y cancelación que invalida la revisión abierta; cuatro capturas sin errores JavaScript.
+
 ## 0.7.0 — 12 de noviembre de 2026
 
 - Conteos físicos por total de producto o lote: cantidades declaradas, referencia consistente de existencias, diferencias, versiones e historia auditada.

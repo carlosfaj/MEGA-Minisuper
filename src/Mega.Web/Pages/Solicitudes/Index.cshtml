@@ -1,0 +1,7 @@
+@page
+@model Mega.Web.Pages.Solicitudes.IndexModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Solicitudes de inventario";}
+<div class="page-heading"><div><span class="eyebrow">INVENTARIO · SEGUNDA CUENTA</span><h1>Solicitudes de inventario</h1><p class="muted">Preparar, justificar y revisar antes de alterar existencias.</p></div></div><partial name="_Notice"/>
+<div class="toolbar"><a class="button primary" asp-page="Editar" asp-route-type="carga">Preparar carga</a><a class="button secondary" asp-page="Editar" asp-route-type="ajuste">Ajuste desde conteo</a><a class="button secondary" asp-page="Editar" asp-route-type="salida_justificada">Salida justificada</a></div>
+<div class="card table-card"><table><thead><tr><th>Referencia</th><th>Tipo</th><th>Fecha</th><th>Estado</th><th></th></tr></thead><tbody>@foreach(var r in Model.Requests){<tr><td><a asp-page="Editar" asp-route-id="@r.Id">@r.Referencia</a></td><td>@r.Tipo.Replace('_',' ')</td><td>@Formats.Date(r.CreadoEn)</td><td>@r.Estado.Replace('_',' ')</td><td>@if(Model.Pending.TryGetValue(r.Id,out var a)){<a asp-page="Revision" asp-route-id="@a">Revisar →</a>}else{<a asp-page="Editar" asp-route-id="@r.Id">Consultar →</a>}</td></tr>}</tbody></table></div>

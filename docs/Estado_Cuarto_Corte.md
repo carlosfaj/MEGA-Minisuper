@@ -8,10 +8,10 @@ Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migra
 |---|---|---|
 | RF01 Catálogo | Alta, edición, desactivación, categorías, presentaciones, códigos y precios versionados (v0.3.0) | Promociones e impuestos según políticas validadas |
 | RF02 Abastecimiento | Proveedores, recepción pendiente, recibido/aceptado, costos y lotes; revisión de versión/contenido y entrada única autorizada (v0.6.0) | Aceptación del negocio e integración de salidas con valoración |
-| RF03 Inventario | Existencias/mínimos, lotes/vencimientos/procedencia y conteos físicos sin ajustes automáticos (v0.7.0); descuento de venta básica | Cargas, ajustes y salidas autorizadas; asignación de lotes y valoración de salidas |
+| RF03 Inventario | Existencias, lotes/alertas, conteos y solicitudes autorizadas de carga/ajuste/salida sin lotes a costo desconocido (v0.7.0/0.8.0); costo declarado de carga conservado | Regularizaciones con lotes/costo conocido; asignación y valoración de salidas |
 | RF04 Ventas | Preparación, cobro efectivo, comprobante, recuperación de reintento y consulta del turno | Anulación autorizada, agente de impresión, reimpresión y contingencia |
 | RF05 Caja | Apertura y cierre propios con fondo real, esperado y diferencias | Integración con devoluciones autorizadas y comprobación en operación real |
-| RF06 Acceso y autorización | Cuentas/delegación, soporte de diagnóstico y revocación (v0.5.0); revisión por versión/contenido para recepciones (v0.6.0) | Extender autorizaciones a inventario/anulaciones; restauración autorizada al integrar continuidad |
+| RF06 Acceso y autorización | Cuentas/delegación y soporte (v0.5.0); revisión por versión/contenido para recepciones e inventario (v0.6.0/0.8.0) | Autorización de anulaciones; restauración autorizada al integrar continuidad |
 | RF07 Gestión | Sin módulo operativo | Valoración, gastos, reportes/exportaciones y correo con estados verificables |
 | RF08 Auditoría | Eventos de inicialización, acceso, venta y caja; consulta para gestión | Completar todas las operaciones y rechazos críticos, detalle antes/después |
 | RF09 Continuidad | Esquema disponible | Copia consistente, destino externo, comprobación, recuperación y cuarentena de colas |

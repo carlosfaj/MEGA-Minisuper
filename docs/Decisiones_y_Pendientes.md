@@ -19,7 +19,7 @@ La implementación parte del modelo corregido del 11 de noviembre de 2026: 39 ta
 | Revisión de condiciones | El hash de cotización incluye configuración, productos/presentaciones versionados, precios, cantidades y total; un cambio exige revisión antes de confirmar |
 | Existencia negativa | No bloquea únicamente por signo. Exige comprobación física explícita y conserva incidencia en auditoría |
 | Impresión | Solo se guarda la solicitud Pendiente dentro de la transacción. No se afirma integración con impresora ni salida física |
-| Costos | Los datos de este avance son desconocidos y se conservan NULL, sin presentar margen. La valoración se implementará con inventario |
+| Costos | Ventas básicas conservan costo desconocido NULL. Recepciones y cargas conservan costo conocido declarado por unidad base. El POS y regularizaciones de productos con costo conocido/lotes se bloquean hasta integrar su valoración; no se presenta margen inventado |
 | Seguridad local | HTTPS, equipo local, cookies HttpOnly/Secure/SameSite Strict, antifalsificación, contraseñas con PasswordHasher, rol en servidor, sesión de 30 minutos y revocación por versión |
 | Recuperación de confirmación incierta | La pestaña conserva clave, intención y cotización en sessionStorage por cuenta; permite reintentar sin otro cobro. No sustituye la continuidad ante pérdida completa del equipo/navegador |
 | Zona horaria provisional | UTC en persistencia; UTC−6 en pantalla por ubicación del negocio en Managua. La zona operativa debe confirmarse con él |

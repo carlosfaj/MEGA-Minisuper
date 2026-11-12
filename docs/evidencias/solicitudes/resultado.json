@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T14:18:15.226Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "conteo sin efecto hasta aprobación",
+    "ajuste 30 → 28 por segunda cuenta",
+    "carga 28 → 31",
+    "salida justificada 31 → 30",
+    "cancelación invalida revisión abierta",
+    "costo desconocido conservado"
+  ],
+  "erroresJavaScript": []
+}

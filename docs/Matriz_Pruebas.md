@@ -41,3 +41,19 @@ El registro está en [resultado del navegador](evidencias/resultado_navegador.js
 ## Incidencia corregida
 
 La primera ejecución encontró que abrir caja pedía validar también el campo del formulario de cierre. Se separó la obligatoriedad por operación: cada manejador exige únicamente sus datos. La segunda ejecución aprobó el flujo HTTP completo. Las 20 pruebas restantes de la primera ejecución ya habían aprobado. El resultado final reemplaza al preliminar y conserva el registro de la corrección aquí.
+
+## Ampliación comprobada al 12 de noviembre — v0.8.0
+
+Los 23 casos anteriores conservan el registro del avance inicial. La suite acumulada actual tiene 120 pruebas aprobadas. Esta tabla resume las familias nuevas; sus documentos contienen el alcance y las capturas explicadas. Cada TRX conserva el nombre y resultado individual de las pruebas ejecutadas.
+
+| Familia / requisito | Resultado comprobado | Evidencia | Estado |
+|---|---|---|---|
+| Base / RF03 RF06 RF09 | Contrato físico/EF, claves compuestas, integridad, migración sin pérdida y diagnóstico de solo lectura | `evidencias/base_datos`, `Base_Datos.md` | Aprobado en alcance implementado |
+| Catálogo / RF01 T01 | Alta hasta venta; precios históricos, código no reutilizado y permisos | `evidencias/catalogo`, `Catalogo.md` | Aprobado |
+| Configuración / RF05 RF06 | Nueva vigencia sin alterar turno abierto ni comprobantes anteriores | `evidencias/configuracion`, `Configuracion.md` | Aprobado |
+| Cuentas / RF06 | Delegación explícita, último Propietario, turno abierto, credenciales, revocación y soporte vencido/revocado | `evidencias/cuentas`, `Cuentas.md` | Aprobado |
+| Recepción / RF02 T02 T10 | Pendiente sin stock; revisión obsoleta rechazada; entrada única, costo declarado, lote y fallo tardío atómico | `evidencias/abastecimiento`, `Abastecimiento.md` | Aprobado |
+| Conteos y lotes / RF03 T03 T04 parcial | Conteo no ajusta; movimientos posteriores exigen nueva comprobación; lotes/alertas sin márgenes | `evidencias/conteos`, `Conteos_y_Lotes.md` | Aprobado |
+| Solicitudes / RF03 RF06 T04 T10 | Ajuste desde conteo, carga, salida y cancelación; misma versión/contenido/saldo, otra cuenta, concurrencia y reversión ante fallo | `evidencias/solicitudes/solicitudes.trx`, `Solicitudes_Inventario.md` | Aprobado para productos sin lotes y regularización a costo desconocido |
+
+La autorización de anulaciones, valoración, promociones/impuestos, impresión física, reportes/exportaciones, correo y recuperación integral conservan sus pruebas pendientes en `ROADMAP.md`. La auditoría tiene eventos de los módulos nuevos; completar todos los rechazos críticos y T13 integral sigue pendiente. Ningún resultado ficticio se presenta como aceptación del negocio.

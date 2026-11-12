@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 12 de noviembre de 2026, con la versión de código 0.7.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 12 de noviembre de 2026, con la versión de código 0.8.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -8,15 +8,17 @@ Están implementados el acceso por rol, apertura/cierre de caja, preparación y 
 
 La consulta de existencias y la estructura de una tabla no equivalen a un módulo operativo completo. Siguen pendientes los recorridos de negocio que se detallan a continuación.
 
+Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 120 pruebas aprobadas, además de recorridos de navegador por módulo. Las restricciones de valoración y validación del negocio continúan explícitas.
+
 ## Secuencia de implementación
 
 | Orden | Hito | Funciones pendientes | Resultado para darlo por terminado |
 |---|---|---|---|
 | 1 | Catálogo — completado en 0.3.0 | Categorías; productos; presentaciones, equivalencias y códigos; precios con vigencias | Alta y venta real en base de prueba, cambios conservando historia y permisos comprobados; 65 pruebas aprobadas y recorrido de navegador |
 | 2 | Configuración y cuentas — completado en 0.4.0/0.5.0 | Configuración versionada, cuentas/credenciales, roles/delegación y soporte temporal de diagnóstico | 83 pruebas y recorridos de navegador aprobados. Restauración por soporte continúa en el hito 11; aceptación del negocio pendiente |
-| 3 | Autorizaciones — recepciones completadas en 0.6.0 | Extender revisión por contenido/versión a solicitudes de inventario y anulaciones | T10 comprobado en recepciones: la versión anterior se rechaza sin efectos; las demás familias se prueban al implementar sus módulos |
+| 3 | Autorizaciones — recepciones e inventario en 0.6.0/0.8.0 | Extender revisión por contenido/versión a anulaciones | T10 comprobado en recepciones e inventario: versiones y saldos anteriores se rechazan sin efectos; anulaciones se prueban en su módulo |
 | 4 | Proveedores y recepciones — completado en 0.6.0 | Mantenimiento, borradores, aceptación, costo de entrada, lotes, revisión y entrada única | T02 comprobado con 99 pruebas totales y navegador; integración de costo/lotes con salidas se conserva en los hitos 5/6 |
-| 5 | Inventario operativo y valoración — conteos y consulta de lotes en 0.7.0 | Pendientes carga/ajustes/salidas autorizados, costo de salida y valoración según política validada | Conteos sin ajustes y lotes/alertas comprobados con 108 pruebas totales y navegador; completar los efectos autorizados y T04 |
+| 5 | Inventario operativo y valoración — conteos/lotes y solicitudes básicas en 0.7.0/0.8.0 | Pendientes regularizaciones con lotes/costo conocido, costo de salida y valoración según política validada | T04 comprobado para ajuste desde conteo a costo desconocido, carga y salida sin lotes; 120 pruebas totales y navegador. Completar valoración y alcances restringidos |
 | 6 | Promociones, impuestos e integración de ventas | Condiciones comerciales vigentes, promoción exclusiva, fiscalidad configurada; venta integrada con lotes, cantidades y costos | La venta calcula y conserva correctamente las condiciones aplicadas. Se comprueban T01/T05 y los casos nuevos de productos antes restringidos. No se inventan tasas ni reglas fiscales |
 | 7 | Anulaciones y regularización de caja | Solicitud con motivo/evidencia, aprobación, mercadería físicamente reincorporada, devolución de fondos y estados pendientes | Conservar venta original y cierre antiguo; no devolver stock o dinero sin evidencia ni repetir efectos. T06 y regresiones T08/T09 comprobados |
 | 8 | Impresión y reimpresión | Agente local, impresión automática tras confirmar, intentos y estados, copia del mismo folio y contingencia | La falla de impresora no repite venta/cobro. La aceptación de la cola no se confunde con papel físico. T07 y pruebas con equipo real comprobados |
