@@ -16,15 +16,17 @@ Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migra
 | RF08 Auditoría | Eventos de inicialización, acceso, venta y caja; consulta para gestión | Completar todas las operaciones y rechazos críticos, detalle antes/después |
 | RF09 Continuidad | Esquema disponible | Copia consistente, destino externo, comprobación, recuperación y cuarentena de colas |
 
+Actualización funcional **0.8.0**: catálogo, configuración, cuentas y soporte temporal, proveedores/recepciones, revisión de contenido/versiones, conteos, lotes y solicitudes básicas de inventario. 120 pruebas automatizadas aprobadas y recorridos de navegador por módulo. El [roadmap](ROADMAP.md) y los documentos de operación detallan los límites de valoración y los pendientes reales.
+
 ## Siguiente secuencia de implementación
 
-1. Catálogo/configuración/cuentas y mantenimiento de precios conservando historia, con pruebas T01 y de permisos.
-2. Proveedores, recepciones y aprobación por otra cuenta; versión/hash revisados en la misma transacción (T02/T10).
-3. Conteos, carga/ajuste/salida y lotes; valoración y costos desconocidos explícitos (T03/T04).
-4. Anulación y regularización de fondos sin alterar cierres históricos (T06).
-5. Agente local de impresión, estados inciertos y reimpresión sin repetir cobro (T07).
-6. Gastos, reportes y correo (T11/T12), ampliación de auditoría (T13), respaldo/recuperación (T14/T15).
-7. Aceptación con el negocio, consolidación académica, manuales PDF, matriz final PDF/Excel, presentación y ensayo de demostración.
+1. Validar con el negocio unidades, valoración/costo de salida, fiscalidad y política de excepciones; conservar las restricciones de los módulos afectados mientras no se resuelvan.
+2. Integrar valoración/asignación de lotes en ventas y regularizaciones; promociones e impuestos con historia (T01/T03/T04/T05).
+3. Anulación autorizada y regularización de fondos sin alterar cierres históricos (T06).
+4. Agente local de impresión, estados inciertos y reimpresión sin repetir cobro (T07).
+5. Gastos, reportes/exportaciones y correo (T11/T12); completar la auditoría y sus rechazos críticos (T13).
+6. Respaldo externo y restauración con conciliación/cuarentena (T14/T15).
+7. Aceptación del negocio, regresión integral, consolidación académica, manuales PDF, matriz final PDF/Excel, presentación y ensayo de demostración.
 
 Se debe documentar cada cambio de alcance en los capítulos anteriores y conservar evidencia real. La prioridad de desarrollo y pruebas responde al 35 % y 20 % de la rúbrica, respectivamente. La guía exige un documento consolidado, no un cuarto informe independiente.
 

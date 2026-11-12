@@ -4,7 +4,7 @@ Inventario, Administrador y Propietario pueden consultar **Conteos físicos** y 
 
 Cada guardado exige declarar una comprobación física y conserva, dentro de la misma transacción, el saldo de referencia y la última operación de inventario confirmada. Permite reabrir el registro y revisar la diferencia (físico menos registrado). Vacío no se convierte en cero y una unidad indivisible no admite fracciones. Los cambios de unidades de productos ya contados se bloquean.
 
-**Guardar y finalizar no ajustan existencias.** Si hay movimientos posteriores de los productos/lotes contados, la finalización se rechaza: se debe volver a contar físicamente y guardar una versión nueva. Los movimientos de otros productos no invalidan el conteo. Finalizar conserva el contenido; repetir la finalización no repite efectos. La auditoría mantiene versiones y responsable. La solicitud y aprobación de un eventual ajuste son operaciones independientes todavía pendientes.
+**Guardar y finalizar no ajustan existencias.** Si hay movimientos posteriores de los productos/lotes contados, la finalización se rechaza: se debe volver a contar físicamente y guardar una versión nueva. Los movimientos de otros productos no invalidan el conteo. Finalizar conserva el contenido; repetir la finalización no repite efectos. La auditoría mantiene versiones y responsable. Desde 0.8.0, el ajuste se prepara como [solicitud independiente](Solicitudes_Inventario.md) y requiere aprobación por otra cuenta; conserva las restricciones de valoración/lotes descritas allí.
 
 ## Lotes y vencimientos
 
@@ -14,7 +14,7 @@ Los productos con control de vencimiento y saldo sin lote se muestran por separa
 
 ## Verificación
 
-108 pruebas automatizadas aprobadas en `evidencias/conteos/conteos.trx`. Las nuevas pruebas comprueban diferencias sin ajustes, movimientos posteriores, unidades, alcances, lote/producto, permisos, autor, edición obsoleta, finalización repetida, formularios y alertas. La parte de T04 referente a que un conteo no ajusta por sí mismo está comprobada; falta su solicitud de ajuste autorizada.
+108 pruebas automatizadas aprobadas en `evidencias/conteos/conteos.trx` para 0.7.0. Comprueban diferencias sin ajustes, movimientos posteriores, unidades, alcances, lote/producto, permisos, autor, edición obsoleta, finalización repetida, formularios y alertas. La solicitud de ajuste autorizada y las 120 pruebas acumuladas de 0.8.0 se documentan en `Solicitudes_Inventario.md`.
 
 `tools/counting-check.cjs` ejecuta un recorrido en una base aislada, con datos ficticios:
 

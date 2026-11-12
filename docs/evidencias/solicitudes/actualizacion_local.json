@@ -1,0 +1,22 @@
+{
+  "estado": "Aprobado",
+  "version": "0.8.0",
+  "tablasVerificadas": 39,
+  "filasAnterioresConservadas": true,
+  "filasAgregadas": {
+    "EventoAuditoria": 1,
+    "Usuario": 1
+  },
+  "ventasConservadas": 2,
+  "turnosConservados": 3,
+  "nota": "Actualizacion de la base local de demostracion; se agrega una cuenta Propietario ficticia y su evento, sin operaciones de prueba en esta base.",
+  "respaldoPrevioCreado": true,
+  "diagnostico": {
+    "Healthy": true,
+    "UpToDate": true,
+    "SchemaVersion": 2,
+    "Columnas": 499,
+    "ClavesForaneas": 103,
+    "Errores": []
+  }
+}
