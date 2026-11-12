@@ -29,7 +29,10 @@ public static class Formats
         return value;
     }
 }
-public sealed class BusinessException(string message) : Exception(message);
+public sealed class BusinessException:Exception
+{
+    public BusinessException(string message):base(message)=>RejectionCapture.Record(message);
+}
 public sealed record LineInput(long PresentationId, string Mode, string Value);
 public sealed record SaleInput(string Key, string QuoteHash, string Received, bool PhysicalStockChecked, List<LineInput> Lines);
 public sealed record ProductOption(long Id, string Name, string Presentation, string Code, string Unit, string Control, long QuantityScale, long Price, decimal Stock);

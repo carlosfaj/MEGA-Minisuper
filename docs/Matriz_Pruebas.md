@@ -57,3 +57,7 @@ Los 23 casos anteriores conservan el registro del avance inicial. La suite acumu
 | Solicitudes / RF03 RF06 T04 T10 | Ajuste desde conteo, carga, salida y cancelación; misma versión/contenido/saldo, otra cuenta, concurrencia y reversión ante fallo | `evidencias/solicitudes/solicitudes.trx`, `Solicitudes_Inventario.md` | Aprobado para productos sin lotes y regularización a costo desconocido |
 
 La autorización de anulaciones, valoración, promociones/impuestos, impresión física, reportes/exportaciones, correo y recuperación integral conservan sus pruebas pendientes en `ROADMAP.md`. La auditoría tiene eventos de los módulos nuevos; completar todos los rechazos críticos y T13 integral sigue pendiente. Ningún resultado ficticio se presenta como aceptación del negocio.
+
+## Ampliación v0.9.0–0.14.0
+
+162 pruebas acumuladas aprobadas. Valoración y lotes (`Valoracion.md`, `Inventario_Integrado.md`), promociones/impuestos (`Condiciones_Comerciales.md`), anulaciones/regularización (`Anulaciones.md`) y rechazos críticos T13 (`Auditoria.md`) cuentan con TRX y recorridos de navegador propios. El kanban muestra el alcance actual y distingue las validaciones reales pendientes.

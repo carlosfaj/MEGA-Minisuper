@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.13.0",
-  "updatedAt": "2026-11-12T19:59:05Z",
+  "version": "0.14.0",
+  "updatedAt": "2026-11-12T20:22:13Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 155,
+  "testsPassed": 162,
   "tasks": [
     {
       "id": "BD",
@@ -733,25 +733,25 @@
           "id": "1",
           "label": "Bitácora y eventos de operaciones implementadas",
           "done": true,
-          "evidence": "docs/Matriz_Pruebas.md"
+          "evidence": "docs/Auditoria.md"
         },
         {
           "id": "2",
           "label": "Responsable, cambios y autorización",
           "done": true,
-          "evidence": "docs/Matriz_Pruebas.md"
+          "evidence": "docs/Auditoria.md"
         },
         {
           "id": "3",
           "label": "Todos los rechazos críticos",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Auditoria.md"
         },
         {
           "id": "4",
           "label": "Regresión integral T13",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Auditoria.md"
         }
       ]
     },

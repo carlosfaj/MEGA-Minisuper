@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 56.4% — 75/133 criterios.**
-Versión 0.13.0 · actualizado 2026-11-12T19:59:05Z · 155 pruebas aprobadas.
+**Avance global: 57.9% — 77/133 criterios.**
+Versión 0.14.0 · actualizado 2026-11-12T20:22:13Z · 162 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -12,7 +12,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 | Área | Criterios | Avance |
 |---|---|---|
 | Software | 57/83 | 68.7% |
-| Calidad | 7/13 | 53.8% |
+| Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
 | Validación | 1/7 | 14.3% |
@@ -85,14 +85,6 @@ Depende de: BACKUP, PRINT, CORREO.
 
 ## En curso
 
-### AUDIT · Auditoría integral — 50%
-
-Área: Calidad.
-
-- [x] Bitácora y eventos de operaciones implementadas ([evidencia](../docs/Matriz_Pruebas.md))
-- [x] Responsable, cambios y autorización ([evidencia](../docs/Matriz_Pruebas.md))
-- [ ] Todos los rechazos críticos
-- [ ] Regresión integral T13
 ### PRUEBAS · Pruebas integrales — 60%
 
 Área: Calidad.
@@ -298,6 +290,14 @@ Depende de: COSTOS, CAJA, VENTA.
 - [x] Reincorporación condicionada a verificación física declarada ([evidencia](../docs/Anulaciones.md))
 - [x] Devolución o regularización sin alterar cierres ([evidencia](../docs/Anulaciones.md))
 - [x] Reintentos, concurrencia y pruebas ([evidencia](../docs/Anulaciones.md))
+### AUDIT · Auditoría integral — 100%
+
+Área: Calidad.
+
+- [x] Bitácora y eventos de operaciones implementadas ([evidencia](../docs/Auditoria.md))
+- [x] Responsable, cambios y autorización ([evidencia](../docs/Auditoria.md))
+- [x] Todos los rechazos críticos ([evidencia](../docs/Auditoria.md))
+- [x] Regresión integral T13 ([evidencia](../docs/Auditoria.md))
 ### GIT · Versiones y GitHub — 100%
 
 Área: Entrega.

@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 12 de noviembre de 2026, con la versión de código 0.13.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 12 de noviembre de 2026, con la versión de código 0.14.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -8,7 +8,7 @@ Están implementados el acceso por rol, apertura/cierre de caja, preparación y 
 
 La consulta de existencias y la estructura de una tabla no equivalen a un módulo operativo completo. Siguen pendientes los recorridos de negocio que se detallan a continuación.
 
-Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 132 pruebas aprobadas, además de recorridos de navegador por módulo. Las restricciones de valoración y validación del negocio continúan explícitas.
+Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 162 pruebas aprobadas, además de recorridos de navegador por módulo. Las restricciones de valoración y validación del negocio continúan explícitas.
 
 ## Secuencia de implementación
 
@@ -31,7 +31,7 @@ Los hitos 2 y 3 habilitan las autorizaciones de recepciones, inventario y anulac
 
 ## Trabajo continuo en cada hito
 
-- Ampliar la auditoría a la operación y a sus rechazos críticos, con responsable, referencia, cambios y autorización cuando corresponda (T13).
+- Auditoría y rechazos críticos de módulos actuales comprobados en 0.14.0 (T13); ampliar la regresión al incorporar los módulos siguientes.
 - Comprobar permisos del servidor y coherencia de datos; usar migraciones explícitas si cambia la estructura.
 - Ejecutar pruebas funcionales, de integración y de validación. Conservar capturas explicadas y trazabilidad RF/CU/pantalla.
 - Actualizar modelos, documentación técnica, manuales y matriz mientras se desarrolla.

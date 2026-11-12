@@ -1,0 +1,12 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T20:08:56.934Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "dato inválido sin venta parcial",
+    "rechazo auditado con cuenta y ruta",
+    "filtro y detalle de bitácora",
+    "sin cuerpo de solicitud ni contraseñas"
+  ],
+  "erroresJavaScript": []
+}

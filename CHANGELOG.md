@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.14.0 — 12 de noviembre de 2026
+
+- Rechazos críticos y fallos HTTP con cuenta, ruta y correlación, sin guardar contraseñas ni cuerpos de solicitud.
+- Escritura independiente de la operación revertida; serialización y reintento acotado ante bloqueo temporal, sin repetir efectos comerciales.
+- Filtro, búsqueda y consulta de detalles en la bitácora. Salida y cambio de contraseña exitosos no se registran como rechazos.
+- 162 pruebas acumuladas y recorrido de navegador con datos ficticios; T13 para los módulos implementados.
+
 ## 0.13.0 — 12 de noviembre de 2026
 
 - Anulación completa por solicitud, motivo/evidencia y revisión exacta de otra cuenta de gestión; edición, rechazo y cancelación sin efectos anticipados.

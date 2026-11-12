@@ -26,7 +26,7 @@ public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher
         var result=hasher.VerifyHashedPassword(probe,hash,Password);
         if(user is null || !await sessions.CanEnterAsync(user) || result==PasswordVerificationResult.Failed)
         {
-            if(user is not null) {operations.Audit(user.Id,"Acceso rechazado","Usuario",user.Id.ToString(),Guid.NewGuid().ToString(),new {motivo="Credenciales no válidas"},"rechazado");await db.SaveChangesAsync();}
+            if(user is not null) {operations.Audit(user.Id,"Acceso rechazado","Usuario",user.Id.ToString(),Guid.NewGuid().ToString(),new {motivo="Credenciales no válidas"},"rechazado");await db.SaveChangesAsync();HttpContext.Items["MEGA.RejectionAudited"]=true;}
             ModelState.AddModelError("","Usuario o contraseña no válidos."); return Page();
         }
         if(result==PasswordVerificationResult.SuccessRehashNeeded) user.PasswordHash=hasher.HashPassword(user,Password);

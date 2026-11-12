@@ -12,7 +12,7 @@ using Microsoft.Data.Sqlite;
 var databaseCommands = args.Where(a => a is "--db-check" or "--db-upgrade").ToArray();
 if (databaseCommands.Length > 1) throw new ArgumentException("Utiliza --db-check o --db-upgrade por separado.");
 var builder = WebApplication.CreateBuilder(args.Except(databaseCommands).ToArray());
-builder.Services.AddRazorPages(o => o.Conventions.AuthorizeFolder("/"));
+builder.Services.AddRazorPages(o => o.Conventions.AuthorizeFolder("/")).AddMvcOptions(o=>o.Filters.Add<RejectionPageFilter>());
 builder.Services.AddAntiforgery(o => { o.HeaderName = "X-CSRF-TOKEN"; o.Cookie.SecurePolicy = CookieSecurePolicy.Always; });
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(o =>
 {
@@ -47,6 +47,7 @@ builder.Services.AddRateLimiter(o =>
         context.HttpContext.Response.Headers.RetryAfter = "60";
         context.HttpContext.Response.ContentType = "text/plain; charset=utf-8";
         await context.HttpContext.Response.WriteAsync("Se alcanzó el límite de intentos de acceso. Espera un minuto y vuelve a intentarlo.", token);
+        await context.HttpContext.RequestServices.GetRequiredService<RejectionAuditWriter>().WriteAsync(context.HttpContext,"Se alcanzó el límite de intentos de acceso.");
     };
 });
 builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
@@ -61,6 +62,7 @@ builder.Services.AddScoped<ValuationService>();
 builder.Services.AddSingleton<ProjectBoardService>();
 builder.Services.AddScoped<CommercialService>(); builder.Services.AddScoped<CommercialCalculator>();
 builder.Services.AddScoped<CancellationService>();
+builder.Services.AddSingleton<RejectionAuditWriter>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));
@@ -87,5 +89,5 @@ app.Use(async (context, next) =>
 });
 if (!app.Environment.IsDevelopment()) { app.UseExceptionHandler("/Error"); app.UseHsts(); }
 app.UseHttpsRedirection(); app.UseStaticFiles(); app.UseRouting(); app.UseRateLimiter();
-app.UseAuthentication(); app.UseAuthorization(); app.MapRazorPages(); app.Run();
+app.UseAuthentication(); app.UseMiddleware<RejectionAuditMiddleware>(); app.UseAuthorization(); app.MapRazorPages(); app.Run();
 public partial class Program { }

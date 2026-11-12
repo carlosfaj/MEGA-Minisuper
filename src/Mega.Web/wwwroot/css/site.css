@@ -10,3 +10,5 @@
 .project-areas>section.card{margin:0}
 
 .option-picker{max-height:280px;overflow-y:auto;padding:10px;border:1px solid var(--border);border-radius:6px}.option-picker .check-row{margin:6px 0}
+
+.audit-detail{white-space:pre-wrap;overflow-wrap:anywhere;max-width:550px;font-size:11px;background:var(--bg);padding:12px;border-radius:6px}
