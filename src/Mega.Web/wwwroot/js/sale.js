@@ -48,13 +48,13 @@
       const text = document.createElement("div"), title = document.createElement("strong"), detail = document.createElement("small");
       title.textContent = line.name; const quantity = line.quantity / 10 ** line.quantityScale;
       detail.textContent = quantity.toLocaleString("es-NI", {maximumFractionDigits: 3}) + " × " + money(line.price) + " · " + line.presentation;
-      text.append(title, detail); const total = document.createElement("span"); total.textContent = money(line.subtotal);
+      if(line.promotion) detail.textContent += " · " + line.promotion.name + " −" + money(line.discount); if(line.tax) detail.textContent += " · impuestos " + money(line.tax); text.append(title, detail); const total = document.createElement("span"); total.textContent = money(line.total ?? line.subtotal);
       const remove = document.createElement("button"); remove.type = "button"; remove.className = "remove-line"; remove.textContent = "×"; remove.setAttribute("aria-label", "Retirar " + line.name);
       remove.disabled = checkingOut || busy || !!pendingConfirmation; remove.addEventListener("click", () => changeLines(lines.filter((_, i) => i !== index)));
       row.append(text, total, remove); list.append(row);
     });
     $("item-count").textContent = lines.length + (lines.length === 1 ? " línea" : " líneas");
-    $("subtotal").textContent = $("total").textContent = money(quote?.total || 0);
+    $("subtotal").textContent = money(quote?.subtotal || 0); $("discount-total").textContent = "−" + money(quote?.discount || 0); $("tax-total").textContent = money(quote?.tax || 0); $("total").textContent = money(quote?.total || 0);
     $("stock-warning").hidden = !quote?.needsPhysicalCheck;
     $("continue").disabled = !quote || busy; $("continue").hidden = checkingOut;
     $("checkout").hidden = $("confirm").hidden = $("back").hidden = !checkingOut;

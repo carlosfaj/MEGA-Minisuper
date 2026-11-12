@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 46.6% — 62/133 criterios.**
-Versión 0.11.0 · actualizado 2026-11-12T19:33:10Z · 136 pruebas aprobadas.
+**Avance global: 52.6% — 70/133 criterios.**
+Versión 0.12.0 · actualizado 2026-11-12T19:44:28Z · 145 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 44/83 | 53% |
+| Software | 52/83 | 62.7% |
 | Calidad | 7/13 | 53.8% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,15 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### IMPUESTO · Impuestos y exenciones — 0%
-
-Área: Software.
-Depende de: CONFIG, VENTA.
-
-- [ ] Tasas configurables sin tasa inventada
-- [ ] Vigencias y exenciones con motivo
-- [ ] Base, redondeo y cálculo en venta
-- [ ] Condiciones históricas y pruebas
 ### ANULA · Anulaciones y fondos — 0%
 
 Área: Software.
@@ -104,15 +95,6 @@ Depende de: BACKUP, PRINT, CORREO.
 
 ## En curso
 
-### PROMO · Promociones — 0%
-
-Área: Software.
-Depende de: CAT, VENTA.
-
-- [ ] Mantenimiento y vigencias
-- [ ] Promoción exclusiva y prioridad
-- [ ] Cálculo visible en venta
-- [ ] Historia y pruebas de cambios
 ### AUDIT · Auditoría integral — 50%
 
 Área: Calidad.
@@ -298,6 +280,24 @@ Actualmente solo se detectaron impresoras virtuales; faltan equipo y configuraci
 - [x] Comprobante histórico ([evidencia](../docs/Valoracion.md))
 - [x] Reintento sin duplicar venta o cobro ([evidencia](../docs/Valoracion.md))
 - [x] Integración con costos y lotes ([evidencia](../docs/Valoracion.md))
+### PROMO · Promociones — 100%
+
+Área: Software.
+Depende de: CAT, VENTA.
+
+- [x] Mantenimiento y vigencias ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Promoción exclusiva y prioridad ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Cálculo visible en venta ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Historia y pruebas de cambios ([evidencia](../docs/Condiciones_Comerciales.md))
+### IMPUESTO · Impuestos y exenciones — 100%
+
+Área: Software.
+Depende de: CONFIG, VENTA.
+
+- [x] Tasas configurables sin tasa inventada ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Vigencias y exenciones con motivo ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Base, redondeo y cálculo en venta ([evidencia](../docs/Condiciones_Comerciales.md))
+- [x] Condiciones históricas y pruebas ([evidencia](../docs/Condiciones_Comerciales.md))
 ### GIT · Versiones y GitHub — 100%
 
 Área: Entrega.

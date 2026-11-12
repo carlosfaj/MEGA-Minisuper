@@ -4,7 +4,7 @@ using Mega.Web.Data;
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Services;
 
-public sealed class Operations(MegaDbContext db, IConfiguration configuration, ValuationService valuation)
+public sealed class Operations(MegaDbContext db, IConfiguration configuration, ValuationService valuation, CommercialCalculator commercial)
 {
     public string Station => configuration["MEGA:Station"] ?? "MEGA-LOCAL-01";
     public async Task<Usuario> RequireCashAsync(long userId)
@@ -93,7 +93,6 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
             var p=await db.Set<Presentacion>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==input.PresentationId && x.Activo==1);
             var product=p is null?null:await db.Set<Producto>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==p.ProductoId && x.Activo==1);
             if(p is null || product is null) throw new BusinessException("Un producto o presentación dejó de estar disponible. Retíralo de la compra.");
-            if(await db.Set<ProductoImpuesto>().AnyAsync(x=>x.ProductoId==product.Id) || await db.Set<PromocionProducto>().AnyAsync(x=>x.PresentacionId==p.Id)) throw new BusinessException("Las condiciones de impuestos o promociones de este producto requieren el módulo pendiente.");
             var prices=await db.Set<PrecioProducto>().AsNoTracking().Where(x=>x.PresentacionId==p.Id && string.Compare(x.VigenteDesde,now)<=0 && (x.VigenteHasta==null || string.Compare(x.VigenteHasta,now)>0)).ToListAsync();
             if(prices.Count!=1 || prices[0].PrecioCentavos<=0) throw new BusinessException("El producto necesita un único precio vigente mayor que cero.");
             var price=prices[0]; var value=Formats.Parse(input.Value); if(value<=0) throw new BusinessException("La cantidad o importe debe ser mayor que cero.");
@@ -108,9 +107,9 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
             var baseQuantity=Formats.Scaled(quantity*factor,(int)product.EscalaCantidad);
             var subtotal=checked((long)decimal.Round(quantity*price.PrecioCentavos,0,MidpointRounding.AwayFromZero));
             if(subtotal<=0) throw new BusinessException("El importe de la línea debe ser mayor que cero.");
-            total=checked(total+subtotal);
+            var conditions=await commercial.CalculateAsync(p.Id,product.Id,quantity,subtotal,now);total=checked(total+conditions.Total);
             lines.Add(new(p.Id,product.Id,product.Nombre,p.Nombre,product.UnidadBase,input.Mode,scaled,quantityScale,baseQuantity,p.FactorEscalado,p.EscalaFactor,
-                requested,requestedScale,price.PrecioCentavos,subtotal,product.Version,p.Version,price.Id,stocks.GetValueOrDefault(product.Id)));
+                requested,requestedScale,price.PrecioCentavos,subtotal,product.Version,p.Version,price.Id,stocks.GetValueOrDefault(product.Id)){Discount=conditions.Discount,Tax=conditions.Tax,Total=conditions.Total,Promotion=conditions.Promotion,Taxes=conditions.Taxes});
         }
         foreach(var group in lines.Select((line,index)=>new {line,index}).GroupBy(x=>x.line.ProductId))
         {
@@ -119,6 +118,7 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
             var allocations=await valuation.AllocateAsync(product,items.Select(x=>x.line.BaseQuantity).ToArray());
             for(var i=0;i<items.Count;i++) lines[items[i].index]=items[i].line with {CostState=state.State,BaseCost=state.Cost,CostReferenceId=state.ReferenceId,ValuationHash=state.Fingerprint,Allocations=allocations[i]};
         }
+        if(total<=0)throw new BusinessException("Una compra con total cero está deshabilitada. Revisa las promociones.");
         var needsCheck=lines.GroupBy(x=>x.ProductId).Any(g=>g.Sum(x=>x.BaseQuantity/(decimal)Math.Pow(10,x.QuantityScale))>stocks.GetValueOrDefault(g.Key));
         var hash=Formats.Hash(Formats.Json(new {versionFormato=1,configuracionId=config.Id,config.Version,lineas=lines.Select(x=>x with {Stock=0}),total}));
         return new(lines,total,hash,config.Id,needsCheck);
@@ -158,11 +158,11 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
         var folio=$"MEGA-{operation.SecuenciaConfirmacion:00000000}";
         var snapshot=Formats.Json(new {versionFormato=1,intentHash,folio,fecha=now,negocio=config.Nombre,direccion=config.Direccion,telefono=config.Telefono,
             emisor=config.Emisor,identificacionEmisor=config.IdentificacionEmisor,moneda=config.Moneda,operador=user.NombreVisible,configuracionId=config.Id,
-            fiscalidadValidada=config.FiscalidadValidada==1,politicaValoracion=ValuationService.Policy,lineas=quote.Lines.Select(x=>new {x.Name,x.Presentation,x.Unit,x.Quantity,x.QuantityScale,x.Factor,x.FactorScale,x.BaseQuantity,x.Price,x.Subtotal,impuestos=Array.Empty<object>(),promocion=(object?)null}),
-            subtotalCentavos=quote.Total,impuestoCentavos=0,descuentoCentavos=0,totalCentavos=quote.Total,
+            fiscalidadValidada=config.FiscalidadValidada==1,politicaValoracion=ValuationService.Policy,lineas=quote.Lines.Select(x=>new {x.Name,x.Presentation,x.Unit,x.Quantity,x.QuantityScale,x.Factor,x.FactorScale,x.BaseQuantity,x.Price,x.Subtotal,x.Total,x.Tax,x.Discount,impuestos=x.Taxes,promocion=x.Promotion}),
+            subtotalCentavos=quote.Subtotal,impuestoCentavos=quote.Tax,descuentoCentavos=quote.Discount,totalCentavos=quote.Total,
             pagos=new[]{new {medio="efectivo",importeCentavos=quote.Total,recibidoCentavos=received,cambioCentavos=received-quote.Total}}});
-        var sale=new Venta {Folio=folio,Fecha=now,TurnoId=shift.Id,OperacionId=operation.Id,ConfiguracionId=config.Id,Estado="Confirmada",SubtotalCentavos=quote.Total,
-            TotalCentavos=quote.Total,Moneda=config.Moneda,ClaveOperacion=input.Key,ComprobanteSnapshot=snapshot,ComprobanteHash=Formats.Hash(snapshot),Version=1};
+        var sale=new Venta {Folio=folio,Fecha=now,TurnoId=shift.Id,OperacionId=operation.Id,ConfiguracionId=config.Id,Estado="Confirmada",SubtotalCentavos=quote.Subtotal,
+            ImpuestoCentavos=quote.Tax,DescuentoCentavos=quote.Discount,TotalCentavos=quote.Total,Moneda=config.Moneda,ClaveOperacion=input.Key,ComprobanteSnapshot=snapshot,ComprobanteHash=Formats.Hash(snapshot),Version=1};
         db.Add(sale); await db.SaveChangesAsync(); var number=0; var stockSequence=0;
         foreach(var line in quote.Lines)
         {
@@ -170,7 +170,7 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
                 DescripcionHistorica=line.Name,PresentacionHistorica=line.Presentation,UnidadBaseHistorica=line.Unit,CantidadEscalada=line.Quantity,
                 EscalaCantidad=line.QuantityScale,FactorHistoricoEscalado=line.Factor,EscalaFactor=line.FactorScale,CantidadBaseEscalada=line.BaseQuantity,
                 ModalidadVenta=line.Mode,ValorSolicitadoEscalado=line.Requested,EscalaValorSolicitado=line.RequestedScale,PrecioUnitEscalado=line.Price,
-                EscalaPrecio=2,EstadoCosto=line.CostState,CostoUnitEscalado=line.BaseCost,EscalaCosto=line.BaseCost is null?null:6,CostoReferenciaId=line.CostReferenceId,SubtotalCentavos=line.Subtotal,TotalCentavos=line.Subtotal,ImpuestosSnapshot="[]"};
+                EscalaPrecio=2,EstadoCosto=line.CostState,CostoUnitEscalado=line.BaseCost,EscalaCosto=line.BaseCost is null?null:6,CostoReferenciaId=line.CostReferenceId,SubtotalCentavos=line.Subtotal,TotalCentavos=line.Total,ImpuestoCentavos=line.Tax,DescuentoCentavos=line.Discount,ImpuestosSnapshot=Formats.Json(line.Taxes),PromocionSnapshot=line.Promotion is null?null:Formats.Json(line.Promotion)};
             db.Add(detail); await db.SaveChangesAsync();
             foreach(var allocation in line.Allocations) db.Add(new MovimientoInventario {OperacionId=operation.Id,ProductoId=line.ProductId,LoteId=allocation.LotId,Secuencia=++stockSequence,VentaDetalleId=detail.Id,
                 CantidadEscalada=-allocation.Quantity,Escala=line.QuantityScale,EstadoCosto=line.CostState,CostoUnitEscalado=line.BaseCost,EscalaCosto=line.BaseCost is null?null:6,CostoReferenciaId=line.CostReferenceId});

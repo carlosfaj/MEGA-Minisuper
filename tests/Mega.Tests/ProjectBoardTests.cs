@@ -41,8 +41,8 @@ public sealed class ProjectBoardTests
         {
             var options=new JsonSerializerOptions(JsonSerializerDefaults.Web);File.WriteAllText(path,JsonSerializer.Serialize(source,options));
             var config=new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string,string?>{["MEGA:ProjectPlanPath"]=path}).Build();var service=new ProjectBoardService(env,config);var before=service.Read();
-            var task=source.Tasks.Single(x=>x.Id=="PROMO");var changed=task with{Criteria=task.Criteria.Select(x=>x with{Done=true,Evidence="docs/Valoracion.md"}).ToList()};source.Tasks[source.Tasks.IndexOf(task)]=changed;
-            File.WriteAllText(path,JsonSerializer.Serialize(source,options));var after=service.Read();Assert.NotEqual(before.Hash,after.Hash);Assert.True(after.Percent>before.Percent);Assert.Equal("completado",after.Tasks.Single(x=>x.Id=="PROMO").Status);
+            var task=source.Tasks.First(x=>x.Criteria.Any(c=>!c.Done));var changed=task with{Criteria=task.Criteria.Select(x=>x with{Done=true,Evidence="docs/Valoracion.md"}).ToList()};source.Tasks[source.Tasks.IndexOf(task)]=changed;
+            File.WriteAllText(path,JsonSerializer.Serialize(source,options));var after=service.Read();Assert.NotEqual(before.Hash,after.Hash);Assert.True(after.Percent>before.Percent);Assert.Equal("completado",after.Tasks.Single(x=>x.Id==task.Id).Status);
         }
         finally{File.Delete(path);}
     }

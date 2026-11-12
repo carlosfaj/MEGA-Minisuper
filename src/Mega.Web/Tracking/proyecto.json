@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.11.0",
-  "updatedAt": "2026-11-12T19:33:10Z",
+  "version": "0.12.0",
+  "updatedAt": "2026-11-12T19:44:28Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 136,
+  "testsPassed": 145,
   "tasks": [
     {
       "id": "BD",
@@ -385,26 +385,26 @@
         {
           "id": "1",
           "label": "Mantenimiento y vigencias",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "2",
           "label": "Promoción exclusiva y prioridad",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "3",
           "label": "Cálculo visible en venta",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "4",
           "label": "Historia y pruebas de cambios",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         }
       ]
     },
@@ -422,26 +422,26 @@
         {
           "id": "1",
           "label": "Tasas configurables sin tasa inventada",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "2",
           "label": "Vigencias y exenciones con motivo",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "3",
           "label": "Base, redondeo y cálculo en venta",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         },
         {
           "id": "4",
           "label": "Condiciones históricas y pruebas",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Condiciones_Comerciales.md"
         }
       ]
     },

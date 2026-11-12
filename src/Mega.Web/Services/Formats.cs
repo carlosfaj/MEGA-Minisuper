@@ -42,6 +42,16 @@ public sealed record QuoteLine(long PresentationId, long ProductId, string Name,
     public long? CostReferenceId { get; init; }
     public string ValuationHash { get; init; } = "";
     public List<StockAllocation> Allocations { get; init; } = [];
+    public long Discount { get; init; }
+    public long Tax { get; init; }
+    public long Total { get; init; }
+    public AppliedPromotion? Promotion { get; init; }
+    public List<AppliedTax> Taxes { get; init; } = [];
 }
-public sealed record Quote(List<QuoteLine> Lines, long Total, string Hash, long ConfigurationId, bool NeedsPhysicalCheck);
+public sealed record Quote(List<QuoteLine> Lines, long Total, string Hash, long ConfigurationId, bool NeedsPhysicalCheck)
+{
+    public long Subtotal=>Lines.Sum(x=>x.Subtotal);
+    public long Tax=>Lines.Sum(x=>x.Tax);
+    public long Discount=>Lines.Sum(x=>x.Discount);
+}
 public sealed record CashSummary(Mega.Web.Data.TurnoCaja? Shift, long Net, long Expected, long Usual, bool StationOccupied);

@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.12.0 — 12 de noviembre de 2026
+
+- Promociones de porcentaje/importe fijo por presentación, vigencias, prioridad y exclusividad; condiciones configurables sobre múltiples presentaciones.
+- Tasas y exenciones por producto con vigencias y motivo; sin tasas predeterminadas ni atribución de validez fiscal. Base después del descuento, sin cascada y redondeo por línea.
+- Carrito y comprobante muestran subtotal, descuento, impuesto y total. Se congelan las condiciones aplicadas; editar o desactivar no altera ventas anteriores.
+- Cambios posteriores a cotizar exigen revisión. Conflictos de exención, porcentajes inválidos y total cero se rechazan.
+- 145 pruebas aprobadas y navegador con datos fiscales ficticios: 38 − 3.80 + 5.13 = 39.33; cambio 10.67 al recibir 50.
+
 ## 0.11.0 — 12 de noviembre de 2026
 
 - Kanban de todo el proyecto: software, calidad, documentación, entrega, decisiones del negocio y periféricos, con cuatro columnas y filtros.

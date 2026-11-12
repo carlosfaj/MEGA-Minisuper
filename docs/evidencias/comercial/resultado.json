@@ -1,0 +1,13 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T19:43:22.367Z",
+  "datos": "Tasas, promoción y datos ficticios; no acredita fiscalidad real",
+  "casos": [
+    "promoción 10% exclusiva configurada",
+    "tasa ficticia 15% configurada",
+    "subtotal 38, descuento 3.80, impuesto 5.13, total 39.33",
+    "cobro 50, cambio 10.67",
+    "condiciones visibles antes de cobrar y conservadas"
+  ],
+  "erroresJavaScript": []
+}
