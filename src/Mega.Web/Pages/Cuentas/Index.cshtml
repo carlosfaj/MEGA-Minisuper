@@ -1,0 +1,9 @@
+@page
+@model Mega.Web.Pages.Cuentas.IndexModel
+@{ViewData["Title"]="Cuentas";}
+<div class="page-heading"><div><span class="eyebrow">GESTIÓN DE ACCESOS</span><h1>Cuentas del negocio</h1><p class="muted">Los cambios conservan responsables e historia de operaciones.</p></div><a class="button primary" asp-page="Editar">Crear cuenta</a></div>
+<partial name="_Notice"/>
+@if(User.IsInRole("Propietario")){<div class="toolbar"><a class="button secondary" asp-page="Temporal">Soporte temporal →</a></div>}
+<div class="card table-card"><table><thead><tr><th>Usuario</th><th>Nombre</th><th>Rol</th><th>Permisos</th><th>Estado</th><th></th></tr></thead><tbody>
+@foreach(var u in Model.Accounts){<tr><td>@u.NombreCuenta</td><td>@u.NombreVisible</td><td>@Model.Roles[u.RolId!.Value]</td><td>@(u.PermisoOperativoCaja==1?"Caja ":"") @(u.DelegacionCuentas==1?"Gestión de cuentas delegada":"")</td><td><span class="badge @(u.Activo==1?"success":"neutral")">@(u.Activo==1?"Activa":"Desactivada")</span></td><td>@if(User.IsInRole("Propietario") || Model.Roles[u.RolId.Value]!="Propietario" && u.DelegacionCuentas==0){<a asp-page="Editar" asp-route-id="@u.Id">Administrar →</a>}</td></tr>}
+</tbody></table></div>

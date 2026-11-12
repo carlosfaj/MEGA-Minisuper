@@ -1,5 +1,15 @@
 # Historial de versiones de MEGA
 
+## 0.5.0 — 12 de noviembre de 2026
+
+- Cuentas comerciales: alta, edición, desactivación, roles, permiso de caja y restablecimiento de contraseña; no se eliminan identidades históricas.
+- Gestión del Propietario y delegación explícita al Administrador, sin facultad delegada para modificar Propietarios o volver a delegar.
+- Protección del último Propietario activo, del operador con turno abierto y de formularios desactualizados. Cada edición revoca sesiones anteriores.
+- Cambio de contraseña propia con comprobación de la actual y cierre de sesiones; auditoría sin contraseñas ni hashes.
+- Acceso temporal autorizado/revocable por Propietario, limitado a diagnóstico de integridad de lectura, sin rol comercial; vigencia comprobada en cada acceso.
+- Quinta cuenta ficticia `propietario`; incorporación conservadora a las bases demo anteriores. El modo sin demostración conserva su inicialización privada.
+- 83 pruebas aprobadas; seis comprobaciones en navegador sin errores JavaScript, con tres capturas.
+
 ## 0.4.0 — 12 de noviembre de 2026
 
 - Configuración versionada de nombre, dirección, contacto, fondo habitual, alerta de vencimiento y datos de emisor/impresora previstos.

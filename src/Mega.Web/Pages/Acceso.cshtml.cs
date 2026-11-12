@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Pages;
 [AllowAnonymous,EnableRateLimiting("acceso")]
-public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher,Operations operations,IConfiguration config):PageModel
+public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher,Operations operations,IConfiguration config,SessionAccess sessions):PageModel
 {
     [BindProperty] public string Account {get;set;}="";
     [BindProperty] public string Password {get;set;}="";
@@ -24,18 +24,16 @@ public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher
         // A dummy hash keeps unknown usernames on the password verification path.
         var probe=user??new Usuario(); var hash=user?.PasswordHash??DummyHash;
         var result=hasher.VerifyHashedPassword(probe,hash,Password);
-        if(user is null || user.Activo!=1 || user.TipoCuenta!="comercial" || result==PasswordVerificationResult.Failed)
+        if(user is null || !await sessions.CanEnterAsync(user) || result==PasswordVerificationResult.Failed)
         {
             if(user is not null) {operations.Audit(user.Id,"Acceso rechazado","Usuario",user.Id.ToString(),Guid.NewGuid().ToString(),new {motivo="Credenciales no válidas"},"rechazado");await db.SaveChangesAsync();}
             ModelState.AddModelError("","Usuario o contraseña no válidos."); return Page();
         }
-        var role=await db.Set<Rol>().SingleAsync(x=>x.Id==user.RolId);
         if(result==PasswordVerificationResult.SuccessRehashNeeded) user.PasswordHash=hasher.HashPassword(user,Password);
-        var claims=new[]{new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),new Claim(ClaimTypes.Name,user.NombreVisible),new Claim(ClaimTypes.Role,role.Nombre),
-            new Claim("caja",user.PermisoOperativoCaja.ToString()),new Claim("version",user.CredencialesVersion.ToString())};
+        var claims=await sessions.ClaimsAsync(user);
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,new ClaimsPrincipal(new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme)));
         operations.Audit(user.Id,"Iniciar sesión","Usuario",user.Id.ToString(),Guid.NewGuid().ToString(),new {cuenta=user.NombreCuenta});await db.SaveChangesAsync();
-        return RedirectToPage("/Index");
+        return RedirectToPage(user.TipoCuenta == "soporte_temporal" ? "/Soporte" : "/Index");
     }
     private static readonly string DummyHash=new PasswordHasher<Usuario>().HashPassword(new Usuario(),Guid.NewGuid().ToString());
 }

@@ -11,7 +11,7 @@ Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migra
 | RF03 Inventario | Consulta de existencias y alertas de mínimo/discrepancia; descuento transaccional por venta | Lotes/vencimiento, conteos, cargas, ajustes y salidas autorizadas |
 | RF04 Ventas | Preparación, cobro efectivo, comprobante, recuperación de reintento y consulta del turno | Anulación autorizada, agente de impresión, reimpresión y contingencia |
 | RF05 Caja | Apertura y cierre propios con fondo real, esperado y diferencias | Integración con devoluciones autorizadas y comprobación en operación real |
-| RF06 Acceso y autorización | Inicio de sesión, roles, permisos operativos, revocación por versión y límite de intentos | Gestión de cuentas/delegación, soporte temporal y autorizaciones de objetos/versiones |
+| RF06 Acceso y autorización | Inicio de sesión, cuentas y credenciales, roles/delegación, soporte temporal de diagnóstico, revocación y límite de intentos (v0.5.0) | Autorizaciones de objetos/versiones; restauración autorizada al integrar continuidad |
 | RF07 Gestión | Sin módulo operativo | Valoración, gastos, reportes/exportaciones y correo con estados verificables |
 | RF08 Auditoría | Eventos de inicialización, acceso, venta y caja; consulta para gestión | Completar todas las operaciones y rechazos críticos, detalle antes/después |
 | RF09 Continuidad | Esquema disponible | Copia consistente, destino externo, comprobación, recuperación y cuarentena de colas |

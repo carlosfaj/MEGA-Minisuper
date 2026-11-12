@@ -1,0 +1,15 @@
+@page
+@model Mega.Web.Pages.Cuentas.EditarModel
+@{ViewData["Title"]=Model.Input.Id is null?"Crear cuenta":"Administrar cuenta";}
+<div class="page-heading"><div><span class="eyebrow">CUENTAS</span><h1>@ViewData["Title"]</h1><p class="muted">Los permisos se comprueban en cada operación.</p></div><a class="button secondary" asp-page="Index">Volver</a></div>
+<partial name="_Notice"/>
+<form method="post" class="card form-card"><input asp-for="Input.Id" type="hidden"/><input asp-for="Input.Version" type="hidden"/>
+<label asp-for="Input.Account">Usuario para entrar</label><input asp-for="Input.Account" readonly="@(Model.Input.Id is not null)" autocomplete="off" required maxlength="100"/>
+<label asp-for="Input.Name">Nombre visible</label><input asp-for="Input.Name" required maxlength="100"/>
+<label asp-for="Input.RoleId">Rol</label><select asp-for="Input.RoleId">@foreach(var r in Model.Roles){<option value="@r.Id">@r.Nombre</option>}</select>
+<label class="check-row"><input asp-for="Input.Cash"/> Permiso para operar caja propia</label>
+@if(Model.Owner){<label class="check-row"><input asp-for="Input.Delegated"/> Delegar gestión de cuentas al Administrador</label>}
+<label class="check-row"><input asp-for="Input.Active"/> Cuenta activa</label>
+<label asp-for="Input.Password">@(Model.Input.Id is null?"Contraseña inicial":"Nueva contraseña (opcional)")</label><input asp-for="Input.Password" type="password" autocomplete="new-password" minlength="12" maxlength="200"/>
+<p class="help">De 12 a 200 caracteres. Al editar, deja vacío para conservar la contraseña. Cada cambio exige iniciar sesión de nuevo. Cierra el turno antes de retirar permisos de caja.</p>
+<button class="button primary">Guardar cuenta</button></form>

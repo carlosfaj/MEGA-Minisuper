@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T13:45:14.418Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "alta por Propietario",
+    "delegación a Administrador",
+    "acceso del nuevo Inventario",
+    "cambio propio de contraseña",
+    "soporte sin permisos comerciales",
+    "revocación inmediata"
+  ],
+  "erroresJavaScript": []
+}

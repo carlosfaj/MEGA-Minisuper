@@ -1,0 +1,5 @@
+@page
+@model Mega.Web.Pages.MiCuentaModel
+@{ViewData["Title"]="Mi contraseña";}
+<div class="page-heading"><div><span class="eyebrow">MI CUENTA</span><h1>Cambiar contraseña</h1><p class="muted">Al guardar, debes iniciar sesión de nuevo en todos tus dispositivos.</p></div></div><partial name="_Notice"/>
+<form method="post" class="card form-card"><label asp-for="CurrentPassword">Contraseña actual</label><input asp-for="CurrentPassword" type="password" autocomplete="current-password" required maxlength="200"/><label asp-for="NewPassword">Contraseña nueva</label><input asp-for="NewPassword" type="password" autocomplete="new-password" required minlength="12" maxlength="200"/><label asp-for="Confirmation">Confirmar contraseña nueva</label><input asp-for="Confirmation" type="password" autocomplete="new-password" required maxlength="200"/><button class="button primary">Cambiar contraseña y salir</button></form>

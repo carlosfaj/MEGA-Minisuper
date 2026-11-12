@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="c81f9fc1-16ee-4f7b-b094-7ff0e6eb5f95" name="SOF.IA@SOFTIA 2026-11-12 07:43:49" runUser="SOFTIA\SOF.IA" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-12T07:43:49.7954314-06:00" queuing="2026-11-12T07:43:49.7954323-06:00" start="2026-11-12T07:43:37.3397123-06:00" finish="2026-11-12T07:44:55.8823396-06:00" />
+  <TestSettings name="default" id="cdd80760-c3c9-42d7-8fc2-43be872e9223">
+    <Deployment runDeploymentRoot="SOF.IA_SOFTIA_2026-11-12_07_43_49" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="902ffd0b-791f-43dc-98da-812b679c4236" testId="932dd510-d64b-7fb5-4dd6-e94e80590f76" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;-1&quot;, presentation: 1)" computerName="SOFTIA" duration="00:00:02.6197590" startTime="2026-11-12T07:43:50.9231932-06:00" endTime="2026-11-12T07:43:53.5405682-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="902ffd0b-791f-43dc-98da-812b679c4236" />
+    <UnitTestResult executionId="c85a3c4c-4ccc-47b5-894c-d5644b45140e" testId="1a4c3bed-7468-83cb-e9f5-e2e3990736b0" testName="Mega.Tests.FlowTests.credential_version_change_invalidates_existing_session" computerName="SOFTIA" duration="00:00:02.7627360" startTime="2026-11-12T07:44:24.8405876-06:00" endTime="2026-11-12T07:44:27.6032391-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c85a3c4c-4ccc-47b5-894c-d5644b45140e" />
+    <UnitTestResult executionId="9e6560c2-e2b2-477e-89ba-07cf82210341" testId="37591ced-c3fd-63c3-bc0d-338d50b49366" testName="Mega.Tests.DatabaseTests.readonly_diagnosis_keeps_file_and_business_records_unchanged" computerName="SOFTIA" duration="00:00:02.0443216" startTime="2026-11-12T07:44:43.1997471-06:00" endTime="2026-11-12T07:44:45.2436088-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e6560c2-e2b2-477e-89ba-07cf82210341" />
+    <UnitTestResult executionId="78003402-68a0-4be0-883b-b1f89f4d0c5c" testId="f7fdf032-17a4-4db9-334b-8ce8b040e11f" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM VentaDetalle&quot;, message: &quot;detalle&quot;)" computerName="SOFTIA" duration="00:00:03.1284472" startTime="2026-11-12T07:44:03.2582634-06:00" endTime="2026-11-12T07:44:06.3865411-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78003402-68a0-4be0-883b-b1f89f4d0c5c" />
+    <UnitTestResult executionId="8b48a72c-1c07-46fd-aeab-c6d3bf5a8441" testId="b6615b0b-18e7-dc26-4e5b-540ad0271288" testName="Mega.Tests.DatabaseTests.composite_keys_allow_multiple_products_in_one_promotion_and_multiple_tax_periods" computerName="SOFTIA" duration="00:00:02.5464953" startTime="2026-11-12T07:44:12.0055180-06:00" endTime="2026-11-12T07:44:14.5518771-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b48a72c-1c07-46fd-aeab-c6d3bf5a8441" />
+    <UnitTestResult executionId="b8500f5d-0497-4a68-b49e-8d2604a67507" testId="7133e7e7-285b-233a-d937-9e629ca9ce57" testName="Mega.Tests.SettingsTests.settings_form_is_operational_and_rejects_inventory_access" computerName="SOFTIA" duration="00:00:05.0208586" startTime="2026-11-12T07:43:52.0225175-06:00" endTime="2026-11-12T07:43:57.0551188-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8500f5d-0497-4a68-b49e-8d2604a67507" />
+    <UnitTestResult executionId="5f0f0c03-cd4d-41da-a20c-20b30bc6e888" testId="28ca0afb-d282-bb07-c536-41078ddbf63e" testName="Mega.Tests.AccountTests.open_shift_keeps_operator_permissions_but_password_reset_remains_possible" computerName="SOFTIA" duration="00:00:02.9445062" startTime="2026-11-12T07:44:14.1771702-06:00" endTime="2026-11-12T07:44:17.1216062-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f0f0c03-cd4d-41da-a20c-20b30bc6e888" />
+    <UnitTestResult executionId="5b5bc382-868f-4ea6-b4ff-77068466da59" testId="5d71be9a-6927-8835-8873-dcaed6afd4e4" testName="Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 2)" computerName="SOFTIA" duration="00:00:02.3617863" startTime="2026-11-12T07:44:11.9523757-06:00" endTime="2026-11-12T07:44:14.3135774-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b5bc382-868f-4ea6-b4ff-77068466da59" />
+    <UnitTestResult executionId="da0d5a37-1eb3-491c-a91b-e59fb9dcf4ff" testId="dd48a319-8fc6-df92-6925-8be5820e8a2d" testName="Mega.Tests.CatalogTests.catalog_can_create_category_product_presentation_code_price_and_sell_it" computerName="SOFTIA" duration="00:00:03.3480636" startTime="2026-11-12T07:44:03.2933595-06:00" endTime="2026-11-12T07:44:06.6409033-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da0d5a37-1eb3-491c-a91b-e59fb9dcf4ff" />
+    <UnitTestResult executionId="fcbfa494-525a-4ddc-8b0f-f8914733c9fa" testId="eb673ad3-bf8f-9700-f248-f80865b08258" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM MovimientoCaja&quot;, message: &quot;caja&quot;)" computerName="SOFTIA" duration="00:00:02.9994250" startTime="2026-11-12T07:43:51.5467984-06:00" endTime="2026-11-12T07:43:54.5461539-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fcbfa494-525a-4ddc-8b0f-f8914733c9fa" />
+    <UnitTestResult executionId="a4123c6f-1126-415a-ae49-8decc9145b0a" testId="274006a1-c349-09c4-626d-483c8343e9a5" testName="Mega.Tests.CatalogTests.repeated_wrong_passwords_are_still_limited" computerName="SOFTIA" duration="00:00:05.8886282" startTime="2026-11-12T07:44:21.6283154-06:00" endTime="2026-11-12T07:44:27.5170822-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4123c6f-1126-415a-ae49-8decc9145b0a" />
+    <UnitTestResult executionId="07bf26be-75b2-433d-bf15-e627ac0d8040" testId="3a244973-611a-8559-0ea1-b8bab385b7ca" testName="Mega.Tests.DatabaseTests.unrecognized_version_or_unversioned_existing_data_is_never_overwritten" computerName="SOFTIA" duration="00:00:02.2710022" startTime="2026-11-12T07:44:36.5053171-06:00" endTime="2026-11-12T07:44:38.7757477-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07bf26be-75b2-433d-bf15-e627ac0d8040" />
+    <UnitTestResult executionId="7116a58d-8198-4c4a-abf4-7710ca04940c" testId="f513dcb8-5d0d-8a7d-97f3-02da9d6ef793" testName="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;UPDATE MovimientoInventario SET cantidadEscalada=1&quot;···, message: &quot;cantidad&quot;)" computerName="SOFTIA" duration="00:00:02.0097739" startTime="2026-11-12T07:44:26.4875019-06:00" endTime="2026-11-12T07:44:28.4969315-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7116a58d-8198-4c4a-abf4-7710ca04940c" />
+    <UnitTestResult executionId="d77640b9-20f9-4f40-9999-f30534435695" testId="8bee83ff-bfca-8bef-1727-c31f2a88be77" testName="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;DELETE FROM EventoAuditoria WHERE id=1&quot;, message: &quot;auditoria&quot;)" computerName="SOFTIA" duration="00:00:02.2249662" startTime="2026-11-12T07:44:24.2620722-06:00" endTime="2026-11-12T07:44:26.4868869-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d77640b9-20f9-4f40-9999-f30534435695" />
+    <UnitTestResult executionId="b3918ece-0c4f-4ff9-94a2-e5a98e7dadfd" testId="59a57bd5-8a4b-147f-5e16-e666cd3387cf" testName="Mega.Tests.DatabaseTests.price_intervals_reject_overlap_and_accept_adjacent_periods" computerName="SOFTIA" duration="00:00:02.3407770" startTime="2026-11-12T07:44:14.5526501-06:00" endTime="2026-11-12T07:44:16.8929060-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3918ece-0c4f-4ff9-94a2-e5a98e7dadfd" />
+    <UnitTestResult executionId="bfa49127-cc65-4ed1-a16f-2063c47599df" testId="2c760bcd-409b-7fd0-d3b6-79ee753bf35d" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;0&quot;, presentation: 1)" computerName="SOFTIA" duration="00:00:02.2764337" startTime="2026-11-12T07:44:01.0460766-06:00" endTime="2026-11-12T07:44:03.3222442-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfa49127-cc65-4ed1-a16f-2063c47599df" />
+    <UnitTestResult executionId="ac26b950-73a9-4c2a-ba5a-96190ddef909" testId="0340723e-ef98-d894-28ff-a5ffe619b440" testName="Mega.Tests.AccountTests.password_change_revokes_other_sessions_and_requires_current_password" computerName="SOFTIA" duration="00:00:04.5311179" startTime="2026-11-12T07:44:19.7890633-06:00" endTime="2026-11-12T07:44:24.3206191-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac26b950-73a9-4c2a-ba5a-96190ddef909" />
+    <UnitTestResult executionId="a40d8fc7-da2c-410c-b0dd-3d6ab6a44151" testId="89ae6296-2636-5877-9e90-756cf2c235e4" testName="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;DELETE FROM MovimientoInventario WHERE id=1&quot;, message: &quot;inventario&quot;)" computerName="SOFTIA" duration="00:00:01.9447881" startTime="2026-11-12T07:44:28.4976357-06:00" endTime="2026-11-12T07:44:30.4418382-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a40d8fc7-da2c-410c-b0dd-3d6ab6a44151" />
+    <UnitTestResult executionId="c4551328-457f-440a-870a-4fe27560c223" testId="dc767a8c-2ebd-93b4-6b26-59cf31c4c48d" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;9999999999999999999999999999&quot;, presentation: 1)" computerName="SOFTIA" duration="00:00:02.7465609" startTime="2026-11-12T07:44:05.9001779-06:00" endTime="2026-11-12T07:44:08.6465903-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4551328-457f-440a-870a-4fe27560c223" />
+    <UnitTestResult executionId="94ca477e-3ed4-43d6-bb37-f0005c6f3237" testId="b832c492-4781-ef6a-b133-a8f6fcb828d1" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM Pago&quot;, message: &quot;pagos&quot;)" computerName="SOFTIA" duration="00:00:11.6594772" startTime="2026-11-12T07:43:39.8714048-06:00" endTime="2026-11-12T07:43:51.5459019-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94ca477e-3ed4-43d6-bb37-f0005c6f3237" />
+    <UnitTestResult executionId="81142e23-a21a-4cfc-ba37-8d9901bb7513" testId="2b98541c-93ac-64a3-f95f-d4bf0f5b2839" testName="Mega.Tests.FlowTests.stale_close_cannot_hide_a_new_sale" computerName="SOFTIA" duration="00:00:02.7764256" startTime="2026-11-12T07:44:17.3154387-06:00" endTime="2026-11-12T07:44:20.0913331-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81142e23-a21a-4cfc-ba37-8d9901bb7513" />
+    <UnitTestResult executionId="05959a73-5d37-47a6-a3de-d80bab1c376a" testId="20f26c67-d075-e3a8-427e-84549428e1c6" testName="Mega.Tests.FlowTests.known_cost_product_waits_for_valuation_instead_of_discarding_cost" computerName="SOFTIA" duration="00:00:02.4208575" startTime="2026-11-12T07:44:20.0915516-06:00" endTime="2026-11-12T07:44:22.5126677-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05959a73-5d37-47a6-a3de-d80bab1c376a" />
+    <UnitTestResult executionId="0f94dbf9-2859-4d83-b991-368e70c96a88" testId="32695832-7521-825a-b620-95b983257fce" testName="Mega.Tests.FlowTests.database_foreign_keys_and_39_tables_match_reference" computerName="SOFTIA" duration="00:00:01.9453234" startTime="2026-11-12T07:44:39.1816929-06:00" endTime="2026-11-12T07:44:41.1262668-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f94dbf9-2859-4d83-b991-368e70c96a88" />
+    <UnitTestResult executionId="ab94a623-8c8f-4709-b7dc-6f44648f12f1" testId="6344bb5b-30a8-fd3a-7d2b-5612bb575112" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;desconocida&quot;, value: &quot;1&quot;, presentation: 1)" computerName="SOFTIA" duration="00:00:02.5917178" startTime="2026-11-12T07:43:53.5411355-06:00" endTime="2026-11-12T07:43:56.1326009-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab94a623-8c8f-4709-b7dc-6f44648f12f1" />
+    <UnitTestResult executionId="35f3f977-616e-4a2e-8bc1-3ecfda415e1e" testId="8a9485d9-371d-f616-3bca-e418db53e21b" testName="Mega.Tests.AccountTests.last_owner_cannot_be_disabled_or_demoted_and_stale_edits_fail" computerName="SOFTIA" duration="00:00:02.6291197" startTime="2026-11-12T07:44:17.1601562-06:00" endTime="2026-11-12T07:44:19.7884970-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35f3f977-616e-4a2e-8bc1-3ecfda415e1e" />
+    <UnitTestResult executionId="fb868a96-102b-41c2-819e-468f2f24d99c" testId="0e741cf1-5dad-cb9a-c157-7943fde88b96" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;importe&quot;, value: &quot;2&quot;, presentation: 2)" computerName="SOFTIA" duration="00:00:02.4367502" startTime="2026-11-12T07:43:58.6092368-06:00" endTime="2026-11-12T07:44:01.0456540-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb868a96-102b-41c2-819e-468f2f24d99c" />
+    <UnitTestResult executionId="ae40d30a-ed54-4f33-b0cd-8376a1373eab" testId="ae2a6363-961b-e702-57fb-006eae89d05b" testName="Mega.Tests.FlowTests.real_http_flow_checks_login_csrf_sale_and_role_boundaries" computerName="SOFTIA" duration="00:00:04.4668295" startTime="2026-11-12T07:44:32.4614619-06:00" endTime="2026-11-12T07:44:36.9286434-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae40d30a-ed54-4f33-b0cd-8376a1373eab" />
+    <UnitTestResult executionId="ca9c5abb-18e7-4ec7-85c1-91d263dffc6a" testId="58642448-73d2-8b70-e566-74c436648727" testName="Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 2)" computerName="SOFTIA" duration="00:00:09.8009352" startTime="2026-11-12T07:43:39.8642235-06:00" endTime="2026-11-12T07:43:49.6971231-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca9c5abb-18e7-4ec7-85c1-91d263dffc6a" />
+    <UnitTestResult executionId="677b344f-6d84-4706-b487-58b302a528fc" testId="2cc36edc-bbdd-010b-c908-edca3de35715" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE MovimientoCaja SET importeCentavos=1&quot;, message: &quot;caja&quot;)" computerName="SOFTIA" duration="00:00:02.9537878" startTime="2026-11-12T07:43:54.5467434-06:00" endTime="2026-11-12T07:43:57.5000783-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="677b344f-6d84-4706-b487-58b302a528fc" />
+    <UnitTestResult executionId="c29d4143-9554-4242-a99d-54686ed11dd0" testId="3e370d72-4171-6ad3-f6f7-ce96a2edcef2" testName="Mega.Tests.DatabaseTests.non_demo_initialization_uses_supplied_password_owner_and_no_fictitious_products" computerName="SOFTIA" duration="00:00:01.1393521" startTime="2026-11-12T07:44:35.3666651-06:00" endTime="2026-11-12T07:44:36.5045233-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c29d4143-9554-4242-a99d-54686ed11dd0" />
+    <UnitTestResult executionId="af6f33fb-eef5-402a-811d-d89c60d62e4d" testId="45c1f0d8-3d4c-6f72-c8f6-d70c1b7beb1d" testName="Mega.Tests.AccountTests.delegation_is_explicit_and_admin_cannot_promote_owner_or_delegate" computerName="SOFTIA" duration="00:00:02.6294610" startTime="2026-11-12T07:44:24.3212531-06:00" endTime="2026-11-12T07:44:26.9505148-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af6f33fb-eef5-402a-811d-d89c60d62e4d" />
+    <UnitTestResult executionId="24a699f3-2b1e-4d12-b8e2-9991405bf188" testId="5e3fb1ed-b6bd-842b-9862-46ee764d78c4" testName="Mega.Tests.CatalogTests.opening_login_page_does_not_consume_password_attempt_limit" computerName="SOFTIA" duration="00:00:02.9772276" startTime="2026-11-12T07:44:06.6416390-06:00" endTime="2026-11-12T07:44:09.6201707-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24a699f3-2b1e-4d12-b8e2-9991405bf188" />
+    <UnitTestResult executionId="1d875f33-1f1d-458d-a387-d7cf035e2619" testId="b6053579-2802-c724-8d23-4e9a8a187614" testName="Mega.Tests.AccountTests.delegation_change_revokes_cookie_and_policy_rechecks_after_login" computerName="SOFTIA" duration="00:00:03.8750809" startTime="2026-11-12T07:43:58.1444774-06:00" endTime="2026-11-12T07:44:02.0532078-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d875f33-1f1d-458d-a387-d7cf035e2619" />
+    <UnitTestResult executionId="4bc18fdb-cd10-4866-b137-9b37d08839bb" testId="fbd93e29-4e2c-c5e1-ab35-d4f9865b4331" testName="Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 2)" computerName="SOFTIA" duration="00:00:02.4308338" startTime="2026-11-12T07:43:57.0774519-06:00" endTime="2026-11-12T07:43:59.5085016-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bc18fdb-cd10-4866-b137-9b37d08839bb" />
+    <UnitTestResult executionId="226f18d5-9cc2-4b4c-9278-3eef82841005" testId="460b1f1a-cd22-1a0f-bee6-acecf58fe424" testName="Mega.Tests.FlowTests.sales_by_amount_show_actual_rounded_quantity_and_total" computerName="SOFTIA" duration="00:00:01.8789395" startTime="2026-11-12T07:44:43.6734064-06:00" endTime="2026-11-12T07:44:45.5516389-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="226f18d5-9cc2-4b4c-9278-3eef82841005" />
+    <UnitTestResult executionId="7cedac0b-eece-4cc4-9087-80c007a883a3" testId="7f89efb9-8045-4a63-3b88-b86e674638e7" testName="Mega.Tests.FlowTests.T08_one_station_rejects_two_open_shifts_and_requires_difference_reason" computerName="SOFTIA" duration="00:00:01.8995199" startTime="2026-11-12T07:44:45.5519333-06:00" endTime="2026-11-12T07:44:47.4515763-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cedac0b-eece-4cc4-9087-80c007a883a3" />
+    <UnitTestResult executionId="828ae463-f028-4629-bbbf-48a51044ef04" testId="3161a630-799e-17d3-72e2-da52c70bb293" testName="Mega.Tests.DatabaseTests.closed_shift_cannot_be_rewritten_and_view_preserves_expected" computerName="SOFTIA" duration="00:00:01.9881587" startTime="2026-11-12T07:44:51.9826074-06:00" endTime="2026-11-12T07:44:53.9698296-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="828ae463-f028-4629-bbbf-48a51044ef04" />
+    <UnitTestResult executionId="51bc3898-ed2d-4e63-b964-fe53c91eaca0" testId="738325f1-a3bf-d04f-24f7-0da09191a8f0" testName="Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 3)" computerName="SOFTIA" duration="00:00:02.3330774" startTime="2026-11-12T07:43:49.7564932-06:00" endTime="2026-11-12T07:43:52.0297372-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51bc3898-ed2d-4e63-b964-fe53c91eaca0" />
+    <UnitTestResult executionId="34305904-7fd2-4abd-a6a9-e857daa55ff6" testId="bae60b49-0d2e-4112-37fb-daedbdda9625" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE Venta SET comprobanteSnapshot='{}'&quot;, message: &quot;comprobante&quot;)" computerName="SOFTIA" duration="00:00:02.8506220" startTime="2026-11-12T07:43:57.5005828-06:00" endTime="2026-11-12T07:44:00.3508996-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34305904-7fd2-4abd-a6a9-e857daa55ff6" />
+    <UnitTestResult executionId="e786f9d0-106b-476c-a17d-ad89eb8aff6f" testId="f2489b8b-a1f4-66c4-b6fa-f65911334a0b" testName="Mega.Tests.DatabaseTests.upgrade_preserves_legacy_sales_and_makes_a_valid_previous_copy" computerName="SOFTIA" duration="00:00:04.9228314" startTime="2026-11-12T07:44:30.4428218-06:00" endTime="2026-11-12T07:44:35.3649404-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e786f9d0-106b-476c-a17d-ad89eb8aff6f" />
+    <UnitTestResult executionId="4de479e3-1528-495d-80ca-b730aecd50b6" testId="149998b0-a26d-dc39-eaa6-e1dbca57cf65" testName="Mega.Tests.FlowTests.price_change_requires_review_before_payment" computerName="SOFTIA" duration="00:00:11.0339023" startTime="2026-11-12T07:43:39.8720599-06:00" endTime="2026-11-12T07:43:50.9204828-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4de479e3-1528-495d-80ca-b730aecd50b6" />
+    <UnitTestResult executionId="784cdfdb-ef97-419d-b001-5c146995ae89" testId="1b5d496f-0d4c-37b8-030f-fc5d09a9c30a" testName="Mega.Tests.AccountTests.owner_creates_account_hashed_and_deactivated_names_are_not_reused" computerName="SOFTIA" duration="00:00:03.5118737" startTime="2026-11-12T07:43:52.0306775-06:00" endTime="2026-11-12T07:43:55.5421189-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="784cdfdb-ef97-419d-b001-5c146995ae89" />
+    <UnitTestResult executionId="2e2c30ab-9892-4091-9bb8-e8d3d27c2e27" testId="4af0dda0-7799-7ab1-fa99-57794e498d3b" testName="Mega.Tests.CatalogTests.stale_product_version_and_reused_disabled_codes_are_rejected" computerName="SOFTIA" duration="00:00:02.1772693" startTime="2026-11-12T07:44:27.5179010-06:00" endTime="2026-11-12T07:44:29.6949522-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e2c30ab-9892-4091-9bb8-e8d3d27c2e27" />
+    <UnitTestResult executionId="19463d05-7924-4358-9268-ceb32f75a62a" testId="6a6eecc5-9b95-cad9-ec66-af5112f077e7" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;1.0001&quot;, presentation: 1)" computerName="SOFTIA" duration="00:00:02.4758268" startTime="2026-11-12T07:43:56.1332601-06:00" endTime="2026-11-12T07:43:58.6086983-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19463d05-7924-4358-9268-ceb32f75a62a" />
+    <UnitTestResult executionId="5b135285-60ca-4550-aa0a-d8ba4eb1cdac" testId="fb9c578b-2531-56ae-f297-33620d22fdff" testName="Mega.Tests.AccountTests.support_expiration_is_checked_on_every_request_and_login" computerName="SOFTIA" duration="00:00:03.3829470" startTime="2026-11-12T07:44:10.7934876-06:00" endTime="2026-11-12T07:44:14.1768802-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b135285-60ca-4550-aa0a-d8ba4eb1cdac" />
+    <UnitTestResult executionId="1709f2d8-c8dd-474c-86b1-118bda44c818" testId="9518df5b-dffe-aaee-64d3-9d89827b1700" testName="Mega.Tests.DatabaseTests.overlapping_legacy_prices_block_upgrade_before_modifying_data" computerName="SOFTIA" duration="00:00:02.2915836" startTime="2026-11-12T07:44:38.7760602-06:00" endTime="2026-11-12T07:44:41.0675782-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1709f2d8-c8dd-474c-86b1-118bda44c818" />
+    <UnitTestResult executionId="ce2a0bbb-3ec1-4263-a44a-800219914f10" testId="f15699d1-1fc1-ec65-a6d6-cc06bc9fc6f4" testName="Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 3)" computerName="SOFTIA" duration="00:00:02.3704584" startTime="2026-11-12T07:44:14.3142214-06:00" endTime="2026-11-12T07:44:16.6842678-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce2a0bbb-3ec1-4263-a44a-800219914f10" />
+    <UnitTestResult executionId="816b42c6-14e1-481b-aa7f-99b823685cbb" testId="a5249640-cf07-a0a4-caba-a96b9430796d" testName="Mega.Tests.FlowTests.T09_close_saves_expected_count_difference_and_keeps_snapshot" computerName="SOFTIA" duration="00:00:03.3024318" startTime="2026-11-12T07:44:14.0140732-06:00" endTime="2026-11-12T07:44:17.3147813-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="816b42c6-14e1-481b-aa7f-99b823685cbb" />
+    <UnitTestResult executionId="cbf3a2f5-8712-4d8a-9fa7-ff575fea6c23" testId="c357bbb2-dd62-184d-95ee-afc2169dc3c1" testName="Mega.Tests.FlowTests.concurrent_retries_create_a_single_business_operation" computerName="SOFTIA" duration="00:00:02.5511436" startTime="2026-11-12T07:44:27.6038948-06:00" endTime="2026-11-12T07:44:30.1559474-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbf3a2f5-8712-4d8a-9fa7-ff575fea6c23" />
+    <UnitTestResult executionId="348fae0d-721f-431b-ac6b-f529d67f2459" testId="7ab86aa6-ee60-8bba-b588-431756093687" testName="Mega.Tests.DatabaseTests.foreign_keys_alone_do_not_allow_a_lot_from_another_product" computerName="SOFTIA" duration="00:00:02.3978878" startTime="2026-11-12T07:44:45.2451511-06:00" endTime="2026-11-12T07:44:47.6417251-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="348fae0d-721f-431b-ac6b-f529d67f2459" />
+    <UnitTestResult executionId="deef8520-274e-4bf9-8395-0a02f4ba0e33" testId="fd326901-926b-625b-fc38-fbd1b1a0d3a0" testName="Mega.Tests.SettingsTests.settings_change_invalidates_prior_quote_and_stale_edit" computerName="SOFTIA" duration="00:00:02.5840172" startTime="2026-11-12T07:44:01.8577123-06:00" endTime="2026-11-12T07:44:04.4396977-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="deef8520-274e-4bf9-8395-0a02f4ba0e33" />
+    <UnitTestResult executionId="5963feb7-d62f-4c34-b01f-bf1790c35fab" testId="8425c417-c132-d3e5-7868-dbcfd67e04b3" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE VentaDetalle SET totalCentavos=1&quot;, message: &quot;detalle&quot;)" computerName="SOFTIA" duration="00:00:02.9065798" startTime="2026-11-12T07:44:00.3513731-06:00" endTime="2026-11-12T07:44:03.2576909-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5963feb7-d62f-4c34-b01f-bf1790c35fab" />
+    <UnitTestResult executionId="eecae03d-9b44-41e2-9ee9-55a298542fe1" testId="6d0d6471-4d1c-789d-e030-00431da0afe6" testName="Mega.Tests.AccountTests.real_account_form_creates_and_self_password_form_signs_out" computerName="SOFTIA" duration="00:00:05.0117513" startTime="2026-11-12T07:44:05.7799368-06:00" endTime="2026-11-12T07:44:10.7931004-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eecae03d-9b44-41e2-9ee9-55a298542fe1" />
+    <UnitTestResult executionId="b5e6fd38-8022-4086-8d70-3e52decabdf2" testId="1da8e333-c2aa-f47c-0251-1c8310a84eea" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM Venta&quot;, message: &quot;ventas&quot;)" computerName="SOFTIA" duration="00:00:02.8812856" startTime="2026-11-12T07:44:06.3871484-06:00" endTime="2026-11-12T07:44:09.2680471-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5e6fd38-8022-4086-8d70-3e52decabdf2" />
+    <UnitTestResult executionId="49979991-258e-4656-af1a-0d291d56d340" testId="c5cde545-8a77-924b-2326-5a48919b05b7" testName="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE Pago SET recibidoCentavos=99999&quot;, message: &quot;pagos&quot;)" computerName="SOFTIA" duration="00:00:02.7367201" startTime="2026-11-12T07:44:09.2684239-06:00" endTime="2026-11-12T07:44:12.0050265-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49979991-258e-4656-af1a-0d291d56d340" />
+    <UnitTestResult executionId="b781a349-30fa-4e45-a42d-6ef6ad931da9" testId="74cea75f-5b70-e24d-ab89-ad26209b4176" testName="Mega.Tests.CatalogTests.scheduled_prices_preserve_neighbors_and_cannot_be_backdated" computerName="SOFTIA" duration="00:00:02.3310962" startTime="2026-11-12T07:44:09.6209010-06:00" endTime="2026-11-12T07:44:11.9516188-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b781a349-30fa-4e45-a42d-6ef6ad931da9" />
+    <UnitTestResult executionId="bfe007b9-9508-4aaf-94df-a5dd58491de1" testId="481a75d5-fe40-e9b0-6d8a-5cf79977b129" testName="Mega.Tests.CatalogTests.used_units_and_factors_cannot_be_rewritten" computerName="SOFTIA" duration="00:00:02.3813466" startTime="2026-11-12T07:44:29.6957228-06:00" endTime="2026-11-12T07:44:32.0764117-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfe007b9-9508-4aaf-94df-a5dd58491de1" />
+    <UnitTestResult executionId="c8945a2f-a6c2-4202-a5a8-8707284b4be3" testId="c23496fa-10a3-5bc3-eefc-7c3c1f802e47" testName="Mega.Tests.DatabaseTests.failed_migration_rolls_back_objects_version_and_rows" computerName="SOFTIA" duration="00:00:02.2892366" startTime="2026-11-12T07:44:47.6420746-06:00" endTime="2026-11-12T07:44:49.9324330-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8945a2f-a6c2-4202-a5a8-8707284b4be3" />
+    <UnitTestResult executionId="2a0213e4-3934-4808-a31b-6e8b8a08e06c" testId="049b9891-0d72-2dce-a794-1432f5ad855d" testName="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;unidad&quot;, value: &quot;1.5&quot;, presentation: 2)" computerName="SOFTIA" duration="00:00:02.5772764" startTime="2026-11-12T07:44:03.3227188-06:00" endTime="2026-11-12T07:44:05.8997289-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a0213e4-3934-4808-a31b-6e8b8a08e06c" />
+    <UnitTestResult executionId="b8819a3b-f4b5-498e-98ac-4d3b58a0dcc0" testId="c567f574-b0ef-3f3c-9894-ce86946fb3e6" testName="Mega.Tests.FlowTests.existing_demo_database_cannot_be_switched_to_real_mode" computerName="SOFTIA" duration="00:00:02.4144708" startTime="2026-11-12T07:44:08.6471950-06:00" endTime="2026-11-12T07:44:11.0612442-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8819a3b-f4b5-498e-98ac-4d3b58a0dcc0" />
+    <UnitTestResult executionId="77e81d8c-dfdb-4878-a385-4a1cb7ad53cc" testId="20625f15-6416-8458-1cee-1f8f824d77e2" testName="Mega.Tests.DatabaseTests.inspector_detects_missing_guards_and_does_not_repair_them_silently" computerName="SOFTIA" duration="00:00:02.1303619" startTime="2026-11-12T07:44:41.0681402-06:00" endTime="2026-11-12T07:44:43.1980740-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77e81d8c-dfdb-4878-a385-4a1cb7ad53cc" />
+    <UnitTestResult executionId="84cae28e-e2a5-4ee3-971a-885905b18070" testId="cff55165-ae9f-97ee-9eef-e4f332cbb8da" testName="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;9999999999999999999999999999&quot;)" computerName="SOFTIA" duration="00:00:02.4862127" startTime="2026-11-12T07:43:55.0219721-06:00" endTime="2026-11-12T07:43:57.5077044-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84cae28e-e2a5-4ee3-971a-885905b18070" />
+    <UnitTestResult executionId="1320b53f-c7a4-490e-b60b-39ba2e47f5a4" testId="3770f562-1c01-1d57-efc0-78d994b9fd52" testName="Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 3)" computerName="SOFTIA" duration="00:00:02.3468901" startTime="2026-11-12T07:43:59.5090041-06:00" endTime="2026-11-12T07:44:01.8555049-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1320b53f-c7a4-490e-b60b-39ba2e47f5a4" />
+    <UnitTestResult executionId="653f5899-c1da-45f1-ae3e-857706783dea" testId="d683af27-df73-ef95-640a-4f00f5a43975" testName="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;1.123&quot;)" computerName="SOFTIA" duration="00:00:02.4159274" startTime="2026-11-12T07:43:57.5082143-06:00" endTime="2026-11-12T07:43:59.9239392-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="653f5899-c1da-45f1-ae3e-857706783dea" />
+    <UnitTestResult executionId="72950aa4-dfa2-4788-adef-f5b7807ed8cf" testId="a2311acd-cce4-58ff-5cdb-b51a21043ccb" testName="Mega.Tests.FlowTests.same_key_with_other_content_or_account_is_rejected" computerName="SOFTIA" duration="00:00:02.2517731" startTime="2026-11-12T07:44:36.9290131-06:00" endTime="2026-11-12T07:44:39.1808755-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72950aa4-dfa2-4788-adef-f5b7807ed8cf" />
+    <UnitTestResult executionId="307d88b8-eabc-434b-a654-7fbbee001c68" testId="dff78831-bf6d-66fa-7776-43beb189bcf8" testName="Mega.Tests.SettingsTests.new_settings_preserve_existing_sales_and_opening_fund" computerName="SOFTIA" duration="00:00:12.1351493" startTime="2026-11-12T07:43:39.8722124-06:00" endTime="2026-11-12T07:43:52.0216281-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="307d88b8-eabc-434b-a654-7fbbee001c68" />
+    <UnitTestResult executionId="548ff193-f5e1-4e7e-87a0-553afb01cc0f" testId="0e733134-edcd-ec8e-0d38-63b3c2b7e52f" testName="Mega.Tests.CatalogTests.category_names_are_normalized_and_stale_edits_are_rejected" computerName="SOFTIA" duration="00:00:10.0239505" startTime="2026-11-12T07:43:39.8717887-06:00" endTime="2026-11-12T07:43:49.9105023-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="548ff193-f5e1-4e7e-87a0-553afb01cc0f" />
+    <UnitTestResult executionId="ab8a172e-f7e5-4813-a1c9-cd9b9d0f8ddb" testId="acf238da-fbc6-cb60-e9a1-32a672337254" testName="Mega.Tests.FlowTests.negative_stock_requires_physical_check_without_blocking_by_sign" computerName="SOFTIA" duration="00:00:02.3270452" startTime="2026-11-12T07:44:22.5135019-06:00" endTime="2026-11-12T07:44:24.8398325-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab8a172e-f7e5-4813-a1c9-cd9b9d0f8ddb" />
+    <UnitTestResult executionId="2df29547-c603-4b1f-b3ef-e2127f39bbfb" testId="a423af97-84e3-ed93-ed7b-ffd29538025a" testName="Mega.Tests.CatalogTests.management_forms_create_real_records_and_enforce_http_permissions" computerName="SOFTIA" duration="00:00:04.9420211" startTime="2026-11-12T07:44:16.6852078-06:00" endTime="2026-11-12T07:44:21.6274846-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2df29547-c603-4b1f-b3ef-e2127f39bbfb" />
+    <UnitTestResult executionId="4c3cb131-145e-4bdd-a503-1200120fafd0" testId="ab3664c6-f69c-de1a-34a4-53b46e380cda" testName="Mega.Tests.DatabaseTests.extra_payment_cannot_exceed_sale_total" computerName="SOFTIA" duration="00:00:02.8152523" startTime="2026-11-12T07:44:16.8937118-06:00" endTime="2026-11-12T07:44:19.7084472-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c3cb131-145e-4bdd-a503-1200120fafd0" />
+    <UnitTestResult executionId="142eaf48-8938-43bd-ab63-09ad0be4d85b" testId="2b4a186b-1320-a189-9681-d7b721b04e80" testName="Mega.Tests.SettingsTests.invalid_fund_or_alert_does_not_close_current_settings" computerName="SOFTIA" duration="00:00:02.1473569" startTime="2026-11-12T07:44:04.4404303-06:00" endTime="2026-11-12T07:44:06.5873773-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="142eaf48-8938-43bd-ab63-09ad0be4d85b" />
+    <UnitTestResult executionId="a18cef86-9d8d-4d04-921b-f89a28f9b87d" testId="14bc5a82-daa2-6266-6154-e6d44ec62370" testName="Mega.Tests.FlowTests.T05_insufficient_payment_leaves_no_partial_effects" computerName="SOFTIA" duration="00:00:02.3045068" startTime="2026-11-12T07:44:30.1565120-06:00" endTime="2026-11-12T07:44:32.4607254-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a18cef86-9d8d-4d04-921b-f89a28f9b87d" />
+    <UnitTestResult executionId="86042bdb-2698-4a90-992c-ed873a15226a" testId="8223265c-581b-0612-684a-a579c5112c7f" testName="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;UPDATE EventoAuditoria SET accion='alterado' WHERE&quot;···, message: &quot;auditoria&quot;)" computerName="SOFTIA" duration="00:00:02.0891027" startTime="2026-11-12T07:44:22.1733421-06:00" endTime="2026-11-12T07:44:24.2616794-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86042bdb-2698-4a90-992c-ed873a15226a" />
+    <UnitTestResult executionId="d6f8ae61-9675-499b-8b8f-fc0b5cfa588e" testId="c2b2487f-b5a0-1126-dcc0-7e4013b91fbe" testName="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;0&quot;)" computerName="SOFTIA" duration="00:00:02.4112781" startTime="2026-11-12T07:43:52.6105837-06:00" endTime="2026-11-12T07:43:55.0213671-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6f8ae61-9675-499b-8b8f-fc0b5cfa588e" />
+    <UnitTestResult executionId="2aeceb4b-4b07-46f1-990e-92d1b715d663" testId="e2696d80-6747-5737-706e-1de4f6db0b6a" testName="Mega.Tests.AccountTests.invalid_role_permissions_or_weak_password_create_nothing" computerName="SOFTIA" duration="00:00:02.6005084" startTime="2026-11-12T07:43:55.5429157-06:00" endTime="2026-11-12T07:43:58.1438059-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2aeceb4b-4b07-46f1-990e-92d1b715d663" />
+    <UnitTestResult executionId="76168a12-389d-46e2-be78-4b4b2c280a71" testId="c0469a8e-3a68-99de-267d-96a9ef86b8b3" testName="Mega.Tests.CatalogTests.T01_price_and_name_changes_preserve_receipt_and_disable_only_future_sales" computerName="SOFTIA" duration="00:00:03.3684296" startTime="2026-11-12T07:43:59.9246329-06:00" endTime="2026-11-12T07:44:03.2925948-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76168a12-389d-46e2-be78-4b4b2c280a71" />
+    <UnitTestResult executionId="27387dcb-136f-435e-a203-1443df9dac4f" testId="5e1f34b5-64ba-16e5-81fd-64e6106fac35" testName="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;-1&quot;)" computerName="SOFTIA" duration="00:00:02.6981726" startTime="2026-11-12T07:43:49.9165542-06:00" endTime="2026-11-12T07:43:52.6098450-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="27387dcb-136f-435e-a203-1443df9dac4f" />
+    <UnitTestResult executionId="d2e2fd25-bd00-49af-bf34-ea87e9ece212" testId="8d40d60b-da73-31b7-f697-76d63cd195c0" testName="Mega.Tests.FlowTests.T05_sale_is_atomic_and_repeat_recovers_one_sale" computerName="SOFTIA" duration="00:00:02.9505693" startTime="2026-11-12T07:44:11.0618438-06:00" endTime="2026-11-12T07:44:14.0121897-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2e2fd25-bd00-49af-bf34-ea87e9ece212" />
+    <UnitTestResult executionId="d86f7c2e-d8e8-40d1-b0fb-3a54b4b1626e" testId="e0676a90-0ec3-1dd6-218a-9fe3066e4ae8" testName="Mega.Tests.DatabaseTests.detail_cannot_use_a_presentation_belonging_to_another_product" computerName="SOFTIA" duration="00:00:02.0487369" startTime="2026-11-12T07:44:49.9341925-06:00" endTime="2026-11-12T07:44:51.9814372-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d86f7c2e-d8e8-40d1-b0fb-3a54b4b1626e" />
+    <UnitTestResult executionId="53f58df5-2e2a-459c-82ef-4a722f7938e8" testId="9e29f7be-7c05-ca88-6482-2bc36d0bd19a" testName="Mega.Tests.FlowTests.rollback_after_late_database_failure_removes_sale_payment_and_stock_effects" computerName="SOFTIA" duration="00:00:02.5459798" startTime="2026-11-12T07:44:41.1271184-06:00" endTime="2026-11-12T07:44:43.6726052-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53f58df5-2e2a-459c-82ef-4a722f7938e8" />
+    <UnitTestResult executionId="66de8c01-f30d-4f3a-b317-507aee178b80" testId="b4f2c1ea-c620-2609-d386-edcefe0ad80e" testName="Mega.Tests.DatabaseTests.complete_schema_and_ef_mapping_match_39_tables_499_columns_103_relations" computerName="SOFTIA" duration="00:00:02.4637471" startTime="2026-11-12T07:44:19.7089298-06:00" endTime="2026-11-12T07:44:22.1724885-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66de8c01-f30d-4f3a-b317-507aee178b80" />
+    <UnitTestResult executionId="5f19c73c-eeb4-4ee4-8bb6-fc03a772cad4" testId="5ea46c7b-9e68-ae03-93f5-f113ac3f8344" testName="Mega.Tests.DatabaseTests.repeated_initialization_does_not_duplicate_seed_or_migration_events" computerName="SOFTIA" duration="00:00:01.7141060" startTime="2026-11-12T07:44:53.9709310-06:00" endTime="2026-11-12T07:44:55.6841494-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f19c73c-eeb4-4ee4-8bb6-fc03a772cad4" />
+    <UnitTestResult executionId="123a7a12-ba69-45bf-9c43-1c63a90946d5" testId="21dfe984-a589-3f48-d422-28048e4010d6" testName="Mega.Tests.AccountTests.support_has_explicit_scope_no_commercial_role_and_revocation_kills_cookie" computerName="SOFTIA" duration="00:00:03.7238618" startTime="2026-11-12T07:44:02.0541351-06:00" endTime="2026-11-12T07:44:05.7784534-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="123a7a12-ba69-45bf-9c43-1c63a90946d5" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Mega.Tests.CatalogTests.opening_login_page_does_not_consume_password_attempt_limit" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="5e3fb1ed-b6bd-842b-9862-46ee764d78c4">
+      <Execution id="24a699f3-2b1e-4d12-b8e2-9991405bf188" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="opening_login_page_does_not_consume_password_attempt_limit" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;-1&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="5e1f34b5-64ba-16e5-81fd-64e6106fac35">
+      <Execution id="27387dcb-136f-435e-a203-1443df9dac4f" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="prices_reject_invalid_money_without_changing_existing_condition" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.scheduled_prices_preserve_neighbors_and_cannot_be_backdated" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="74cea75f-5b70-e24d-ab89-ad26209b4176">
+      <Execution id="b781a349-30fa-4e45-a42d-6ef6ad931da9" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="scheduled_prices_preserve_neighbors_and_cannot_be_backdated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.detail_cannot_use_a_presentation_belonging_to_another_product" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e0676a90-0ec3-1dd6-218a-9fe3066e4ae8">
+      <Execution id="d86f7c2e-d8e8-40d1-b0fb-3a54b4b1626e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="detail_cannot_use_a_presentation_belonging_to_another_product" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;unidad&quot;, value: &quot;1.5&quot;, presentation: 2)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="049b9891-0d72-2dce-a794-1432f5ad855d">
+      <Execution id="2a0213e4-3934-4808-a31b-6e8b8a08e06c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.settings_form_is_operational_and_rejects_inventory_access" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="7133e7e7-285b-233a-d937-9e629ca9ce57">
+      <Execution id="b8500f5d-0497-4a68-b49e-8d2604a67507" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="settings_form_is_operational_and_rejects_inventory_access" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.negative_stock_requires_physical_check_without_blocking_by_sign" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="acf238da-fbc6-cb60-e9a1-32a672337254">
+      <Execution id="ab8a172e-f7e5-4813-a1c9-cd9b9d0f8ddb" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="negative_stock_requires_physical_check_without_blocking_by_sign" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.T05_sale_is_atomic_and_repeat_recovers_one_sale" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8d40d60b-da73-31b7-f697-76d63cd195c0">
+      <Execution id="d2e2fd25-bd00-49af-bf34-ea87e9ece212" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="T05_sale_is_atomic_and_repeat_recovers_one_sale" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE VentaDetalle SET totalCentavos=1&quot;, message: &quot;detalle&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8425c417-c132-d3e5-7868-dbcfd67e04b3">
+      <Execution id="5963feb7-d62f-4c34-b01f-bf1790c35fab" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.used_units_and_factors_cannot_be_rewritten" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="481a75d5-fe40-e9b0-6d8a-5cf79977b129">
+      <Execution id="bfe007b9-9508-4aaf-94df-a5dd58491de1" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="used_units_and_factors_cannot_be_rewritten" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;-1&quot;, presentation: 1)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="932dd510-d64b-7fb5-4dd6-e94e80590f76">
+      <Execution id="902ffd0b-791f-43dc-98da-812b679c4236" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 2)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="5d71be9a-6927-8835-8873-dcaed6afd4e4">
+      <Execution id="5b5bc382-868f-4ea6-b4ff-77068466da59" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="cashier_and_inventory_cannot_change_catalog" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.foreign_keys_alone_do_not_allow_a_lot_from_another_product" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="7ab86aa6-ee60-8bba-b588-431756093687">
+      <Execution id="348fae0d-721f-431b-ac6b-f529d67f2459" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="foreign_keys_alone_do_not_allow_a_lot_from_another_product" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.price_change_requires_review_before_payment" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="149998b0-a26d-dc39-eaa6-e1dbca57cf65">
+      <Execution id="4de479e3-1528-495d-80ca-b730aecd50b6" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="price_change_requires_review_before_payment" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.credential_version_change_invalidates_existing_session" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="1a4c3bed-7468-83cb-e9f5-e2e3990736b0">
+      <Execution id="c85a3c4c-4ccc-47b5-894c-d5644b45140e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="credential_version_change_invalidates_existing_session" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.T01_price_and_name_changes_preserve_receipt_and_disable_only_future_sales" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c0469a8e-3a68-99de-267d-96a9ef86b8b3">
+      <Execution id="76168a12-389d-46e2-be78-4b4b2c280a71" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="T01_price_and_name_changes_preserve_receipt_and_disable_only_future_sales" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.real_account_form_creates_and_self_password_form_signs_out" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="6d0d6471-4d1c-789d-e030-00431da0afe6">
+      <Execution id="eecae03d-9b44-41e2-9ee9-55a298542fe1" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="real_account_form_creates_and_self_password_form_signs_out" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.T05_insufficient_payment_leaves_no_partial_effects" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="14bc5a82-daa2-6266-6154-e6d44ec62370">
+      <Execution id="a18cef86-9d8d-4d04-921b-f89a28f9b87d" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="T05_insufficient_payment_leaves_no_partial_effects" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE MovimientoCaja SET importeCentavos=1&quot;, message: &quot;caja&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2cc36edc-bbdd-010b-c908-edca3de35715">
+      <Execution id="677b344f-6d84-4706-b487-58b302a528fc" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 2)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="58642448-73d2-8b70-e566-74c436648727">
+      <Execution id="ca9c5abb-18e7-4ec7-85c1-91d263dffc6a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="operational_roles_cannot_manage_accounts" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.last_owner_cannot_be_disabled_or_demoted_and_stale_edits_fail" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8a9485d9-371d-f616-3bca-e418db53e21b">
+      <Execution id="35f3f977-616e-4a2e-8bc1-3ecfda415e1e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="last_owner_cannot_be_disabled_or_demoted_and_stale_edits_fail" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.support_has_explicit_scope_no_commercial_role_and_revocation_kills_cookie" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="21dfe984-a589-3f48-d422-28048e4010d6">
+      <Execution id="123a7a12-ba69-45bf-9c43-1c63a90946d5" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="support_has_explicit_scope_no_commercial_role_and_revocation_kills_cookie" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.existing_demo_database_cannot_be_switched_to_real_mode" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c567f574-b0ef-3f3c-9894-ce86946fb3e6">
+      <Execution id="b8819a3b-f4b5-498e-98ac-4d3b58a0dcc0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="existing_demo_database_cannot_be_switched_to_real_mode" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.invalid_role_permissions_or_weak_password_create_nothing" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e2696d80-6747-5737-706e-1de4f6db0b6a">
+      <Execution id="2aeceb4b-4b07-46f1-990e-92d1b715d663" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="invalid_role_permissions_or_weak_password_create_nothing" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.stale_close_cannot_hide_a_new_sale" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2b98541c-93ac-64a3-f95f-d4bf0f5b2839">
+      <Execution id="81142e23-a21a-4cfc-ba37-8d9901bb7513" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="stale_close_cannot_hide_a_new_sale" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 3)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="738325f1-a3bf-d04f-24f7-0da09191a8f0">
+      <Execution id="51bc3898-ed2d-4e63-b964-fe53c91eaca0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="operational_roles_cannot_manage_accounts" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.settings_change_invalidates_prior_quote_and_stale_edit" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="fd326901-926b-625b-fc38-fbd1b1a0d3a0">
+      <Execution id="deef8520-274e-4bf9-8395-0a02f4ba0e33" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="settings_change_invalidates_prior_quote_and_stale_edit" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.T08_one_station_rejects_two_open_shifts_and_requires_difference_reason" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="7f89efb9-8045-4a63-3b88-b86e674638e7">
+      <Execution id="7cedac0b-eece-4cc4-9087-80c007a883a3" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="T08_one_station_rejects_two_open_shifts_and_requires_difference_reason" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM Pago&quot;, message: &quot;pagos&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b832c492-4781-ef6a-b133-a8f6fcb828d1">
+      <Execution id="94ca477e-3ed4-43d6-bb37-f0005c6f3237" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM VentaDetalle&quot;, message: &quot;detalle&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f7fdf032-17a4-4db9-334b-8ce8b040e11f">
+      <Execution id="78003402-68a0-4be0-883b-b1f89f4d0c5c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;1.123&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="d683af27-df73-ef95-640a-4f00f5a43975">
+      <Execution id="653f5899-c1da-45f1-ae3e-857706783dea" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="prices_reject_invalid_money_without_changing_existing_condition" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.real_http_flow_checks_login_csrf_sale_and_role_boundaries" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="ae2a6363-961b-e702-57fb-006eae89d05b">
+      <Execution id="ae40d30a-ed54-4f33-b0cd-8376a1373eab" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="real_http_flow_checks_login_csrf_sale_and_role_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM MovimientoCaja&quot;, message: &quot;caja&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="eb673ad3-bf8f-9700-f248-f80865b08258">
+      <Execution id="fcbfa494-525a-4ddc-8b0f-f8914733c9fa" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE Venta SET comprobanteSnapshot='{}'&quot;, message: &quot;comprobante&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="bae60b49-0d2e-4112-37fb-daedbdda9625">
+      <Execution id="34305904-7fd2-4abd-a6a9-e857daa55ff6" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;1.0001&quot;, presentation: 1)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="6a6eecc5-9b95-cad9-ec66-af5112f077e7">
+      <Execution id="19463d05-7924-4358-9268-ceb32f75a62a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.price_intervals_reject_overlap_and_accept_adjacent_periods" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="59a57bd5-8a4b-147f-5e16-e666cd3387cf">
+      <Execution id="b3918ece-0c4f-4ff9-94a2-e5a98e7dadfd" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="price_intervals_reject_overlap_and_accept_adjacent_periods" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.unrecognized_version_or_unversioned_existing_data_is_never_overwritten" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="3a244973-611a-8559-0ea1-b8bab385b7ca">
+      <Execution id="07bf26be-75b2-433d-bf15-e627ac0d8040" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="unrecognized_version_or_unversioned_existing_data_is_never_overwritten" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.support_expiration_is_checked_on_every_request_and_login" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="fb9c578b-2531-56ae-f297-33620d22fdff">
+      <Execution id="5b135285-60ca-4550-aa0a-d8ba4eb1cdac" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="support_expiration_is_checked_on_every_request_and_login" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;0&quot;, presentation: 1)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2c760bcd-409b-7fd0-d3b6-79ee753bf35d">
+      <Execution id="bfa49127-cc65-4ed1-a16f-2063c47599df" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.sales_by_amount_show_actual_rounded_quantity_and_total" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="460b1f1a-cd22-1a0f-bee6-acecf58fe424">
+      <Execution id="226f18d5-9cc2-4b4c-9278-3eef82841005" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="sales_by_amount_show_actual_rounded_quantity_and_total" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.inspector_detects_missing_guards_and_does_not_repair_them_silently" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="20625f15-6416-8458-1cee-1f8f824d77e2">
+      <Execution id="77e81d8c-dfdb-4878-a385-4a1cb7ad53cc" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="inspector_detects_missing_guards_and_does_not_repair_them_silently" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.rollback_after_late_database_failure_removes_sale_payment_and_stock_effects" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="9e29f7be-7c05-ca88-6482-2bc36d0bd19a">
+      <Execution id="53f58df5-2e2a-459c-82ef-4a722f7938e8" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="rollback_after_late_database_failure_removes_sale_payment_and_stock_effects" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;DELETE FROM Venta&quot;, message: &quot;ventas&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="1da8e333-c2aa-f47c-0251-1c8310a84eea">
+      <Execution id="b5e6fd38-8022-4086-8d70-3e52decabdf2" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.known_cost_product_waits_for_valuation_instead_of_discarding_cost" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="20f26c67-d075-e3a8-427e-84549428e1c6">
+      <Execution id="05959a73-5d37-47a6-a3de-d80bab1c376a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="known_cost_product_waits_for_valuation_instead_of_discarding_cost" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.open_shift_keeps_operator_permissions_but_password_reset_remains_possible" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="28ca0afb-d282-bb07-c536-41078ddbf63e">
+      <Execution id="5f0f0c03-cd4d-41da-a20c-20b30bc6e888" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="open_shift_keeps_operator_permissions_but_password_reset_remains_possible" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: &quot;UPDATE Pago SET recibidoCentavos=99999&quot;, message: &quot;pagos&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c5cde545-8a77-924b-2326-5a48919b05b7">
+      <Execution id="49979991-258e-4656-af1a-0d291d56d340" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="confirmed_sale_payment_and_cash_history_are_preserved" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.readonly_diagnosis_keeps_file_and_business_records_unchanged" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="37591ced-c3fd-63c3-bc0d-338d50b49366">
+      <Execution id="9e6560c2-e2b2-477e-89ba-07cf82210341" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="readonly_diagnosis_keeps_file_and_business_records_unchanged" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.closed_shift_cannot_be_rewritten_and_view_preserves_expected" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="3161a630-799e-17d3-72e2-da52c70bb293">
+      <Execution id="828ae463-f028-4629-bbbf-48a51044ef04" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="closed_shift_cannot_be_rewritten_and_view_preserves_expected" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.T09_close_saves_expected_count_difference_and_keeps_snapshot" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="a5249640-cf07-a0a4-caba-a96b9430796d">
+      <Execution id="816b42c6-14e1-481b-aa7f-99b823685cbb" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="T09_close_saves_expected_count_difference_and_keeps_snapshot" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.owner_creates_account_hashed_and_deactivated_names_are_not_reused" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="1b5d496f-0d4c-37b8-030f-fc5d09a9c30a">
+      <Execution id="784cdfdb-ef97-419d-b001-5c146995ae89" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="owner_creates_account_hashed_and_deactivated_names_are_not_reused" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;desconocida&quot;, value: &quot;1&quot;, presentation: 1)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="6344bb5b-30a8-fd3a-7d2b-5612bb575112">
+      <Execution id="ab94a623-8c8f-4709-b7dc-6f44648f12f1" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.complete_schema_and_ef_mapping_match_39_tables_499_columns_103_relations" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b4f2c1ea-c620-2609-d386-edcefe0ad80e">
+      <Execution id="66de8c01-f30d-4f3a-b317-507aee178b80" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="complete_schema_and_ef_mapping_match_39_tables_499_columns_103_relations" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.non_demo_initialization_uses_supplied_password_owner_and_no_fictitious_products" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="3e370d72-4171-6ad3-f6f7-ce96a2edcef2">
+      <Execution id="c29d4143-9554-4242-a99d-54686ed11dd0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="non_demo_initialization_uses_supplied_password_owner_and_no_fictitious_products" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 2)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="fbd93e29-4e2c-c5e1-ab35-d4f9865b4331">
+      <Execution id="4bc18fdb-cd10-4866-b137-9b37d08839bb" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="operational_roles_cannot_change_settings" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.upgrade_preserves_legacy_sales_and_makes_a_valid_previous_copy" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f2489b8b-a1f4-66c4-b6fa-f65911334a0b">
+      <Execution id="e786f9d0-106b-476c-a17d-ad89eb8aff6f" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="upgrade_preserves_legacy_sales_and_makes_a_valid_previous_copy" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;DELETE FROM MovimientoInventario WHERE id=1&quot;, message: &quot;inventario&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="89ae6296-2636-5877-9e90-756cf2c235e4">
+      <Execution id="a40d8fc7-da2c-410c-b0dd-3d6ab6a44151" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="database_rejects_mutation_of_audit_and_stock_history" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;DELETE FROM EventoAuditoria WHERE id=1&quot;, message: &quot;auditoria&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8bee83ff-bfca-8bef-1727-c31f2a88be77">
+      <Execution id="d77640b9-20f9-4f40-9999-f30534435695" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="database_rejects_mutation_of_audit_and_stock_history" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 3)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="3770f562-1c01-1d57-efc0-78d994b9fd52">
+      <Execution id="1320b53f-c7a4-490e-b60b-39ba2e47f5a4" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="operational_roles_cannot_change_settings" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.same_key_with_other_content_or_account_is_rejected" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="a2311acd-cce4-58ff-5cdb-b51a21043ccb">
+      <Execution id="72950aa4-dfa2-4788-adef-f5b7807ed8cf" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="same_key_with_other_content_or_account_is_rejected" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 3)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f15699d1-1fc1-ec65-a6d6-cc06bc9fc6f4">
+      <Execution id="ce2a0bbb-3ec1-4263-a44a-800219914f10" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="cashier_and_inventory_cannot_change_catalog" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;peso_manual&quot;, value: &quot;9999999999999999999999999999&quot;, presentation: 1)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="dc767a8c-2ebd-93b4-6b26-59cf31c4c48d">
+      <Execution id="c4551328-457f-440a-870a-4fe27560c223" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.database_foreign_keys_and_39_tables_match_reference" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="32695832-7521-825a-b620-95b983257fce">
+      <Execution id="0f94dbf9-2859-4d83-b991-368e70c96a88" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="database_foreign_keys_and_39_tables_match_reference" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.extra_payment_cannot_exceed_sale_total" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="ab3664c6-f69c-de1a-34a4-53b46e380cda">
+      <Execution id="4c3cb131-145e-4bdd-a503-1200120fafd0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="extra_payment_cannot_exceed_sale_total" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.password_change_revokes_other_sessions_and_requires_current_password" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="0340723e-ef98-d894-28ff-a5ffe619b440">
+      <Execution id="ac26b950-73a9-4c2a-ba5a-96190ddef909" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="password_change_revokes_other_sessions_and_requires_current_password" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.management_forms_create_real_records_and_enforce_http_permissions" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="a423af97-84e3-ed93-ed7b-ffd29538025a">
+      <Execution id="2df29547-c603-4b1f-b3ef-e2127f39bbfb" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="management_forms_create_real_records_and_enforce_http_permissions" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.delegation_change_revokes_cookie_and_policy_rechecks_after_login" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b6053579-2802-c724-8d23-4e9a8a187614">
+      <Execution id="1d875f33-1f1d-458d-a387-d7cf035e2619" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="delegation_change_revokes_cookie_and_policy_rechecks_after_login" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.invalid_fund_or_alert_does_not_close_current_settings" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2b4a186b-1320-a189-9681-d7b721b04e80">
+      <Execution id="142eaf48-8938-43bd-ab63-09ad0be4d85b" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="invalid_fund_or_alert_does_not_close_current_settings" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.category_names_are_normalized_and_stale_edits_are_rejected" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="0e733134-edcd-ec8e-0d38-63b3c2b7e52f">
+      <Execution id="548ff193-f5e1-4e7e-87a0-553afb01cc0f" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="category_names_are_normalized_and_stale_edits_are_rejected" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.repeated_initialization_does_not_duplicate_seed_or_migration_events" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="5ea46c7b-9e68-ae03-93f5-f113ac3f8344">
+      <Execution id="5f19c73c-eeb4-4ee4-8bb6-fc03a772cad4" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="repeated_initialization_does_not_duplicate_seed_or_migration_events" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.failed_migration_rolls_back_objects_version_and_rows" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c23496fa-10a3-5bc3-eefc-7c3c1f802e47">
+      <Execution id="c8945a2f-a6c2-4202-a5a8-8707284b4be3" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="failed_migration_rolls_back_objects_version_and_rows" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.overlapping_legacy_prices_block_upgrade_before_modifying_data" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="9518df5b-dffe-aaee-64d3-9d89827b1700">
+      <Execution id="1709f2d8-c8dd-474c-86b1-118bda44c818" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="overlapping_legacy_prices_block_upgrade_before_modifying_data" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.SettingsTests.new_settings_preserve_existing_sales_and_opening_fund" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="dff78831-bf6d-66fa-7776-43beb189bcf8">
+      <Execution id="307d88b8-eabc-434b-a654-7fbbee001c68" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.SettingsTests" name="new_settings_preserve_existing_sales_and_opening_fund" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.repeated_wrong_passwords_are_still_limited" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="274006a1-c349-09c4-626d-483c8343e9a5">
+      <Execution id="a4123c6f-1126-415a-ae49-8decc9145b0a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="repeated_wrong_passwords_are_still_limited" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;0&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c2b2487f-b5a0-1126-dcc0-7e4013b91fbe">
+      <Execution id="d6f8ae61-9675-499b-8b8f-fc0b5cfa588e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="prices_reject_invalid_money_without_changing_existing_condition" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.catalog_can_create_category_product_presentation_code_price_and_sell_it" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="dd48a319-8fc6-df92-6925-8be5820e8a2d">
+      <Execution id="da0d5a37-1eb3-491c-a91b-e59fb9dcf4ff" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="catalog_can_create_category_product_presentation_code_price_and_sell_it" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.composite_keys_allow_multiple_products_in_one_promotion_and_multiple_tax_periods" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b6615b0b-18e7-dc26-4e5b-540ad0271288">
+      <Execution id="8b48a72c-1c07-46fd-aeab-c6d3bf5a8441" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="composite_keys_allow_multiple_products_in_one_promotion_and_multiple_tax_periods" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.AccountTests.delegation_is_explicit_and_admin_cannot_promote_owner_or_delegate" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="45c1f0d8-3d4c-6f72-c8f6-d70c1b7beb1d">
+      <Execution id="af6f33fb-eef5-402a-811d-d89c60d62e4d" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.AccountTests" name="delegation_is_explicit_and_admin_cannot_promote_owner_or_delegate" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: &quot;9999999999999999999999999999&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="cff55165-ae9f-97ee-9eef-e4f332cbb8da">
+      <Execution id="84cae28e-e2a5-4ee3-971a-885905b18070" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="prices_reject_invalid_money_without_changing_existing_condition" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;UPDATE EventoAuditoria SET accion='alterado' WHERE&quot;···, message: &quot;auditoria&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8223265c-581b-0612-684a-a579c5112c7f">
+      <Execution id="86042bdb-2698-4a90-992c-ed873a15226a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="database_rejects_mutation_of_audit_and_stock_history" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: &quot;importe&quot;, value: &quot;2&quot;, presentation: 2)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="0e741cf1-5dad-cb9a-c157-7943fde88b96">
+      <Execution id="fb868a96-102b-41c2-819e-468f2f24d99c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="quantity_mode_and_overflow_are_validated" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.CatalogTests.stale_product_version_and_reused_disabled_codes_are_rejected" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="4af0dda0-7799-7ab1-fa99-57794e498d3b">
+      <Execution id="2e2c30ab-9892-4091-9bb8-e8d3d27c2e27" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.CatalogTests" name="stale_product_version_and_reused_disabled_codes_are_rejected" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.FlowTests.concurrent_retries_create_a_single_business_operation" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="c357bbb2-dd62-184d-95ee-afc2169dc3c1">
+      <Execution id="cbf3a2f5-8712-4d8a-9fa7-ff575fea6c23" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.FlowTests" name="concurrent_retries_create_a_single_business_operation" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: &quot;UPDATE MovimientoInventario SET cantidadEscalada=1&quot;···, message: &quot;cantidad&quot;)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f513dcb8-5d0d-8a7d-97f3-02da9d6ef793">
+      <Execution id="7116a58d-8198-4c4a-abf4-7710ca04940c" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.DatabaseTests" name="database_rejects_mutation_of_audit_and_stock_history" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="932dd510-d64b-7fb5-4dd6-e94e80590f76" executionId="902ffd0b-791f-43dc-98da-812b679c4236" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a4c3bed-7468-83cb-e9f5-e2e3990736b0" executionId="c85a3c4c-4ccc-47b5-894c-d5644b45140e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37591ced-c3fd-63c3-bc0d-338d50b49366" executionId="9e6560c2-e2b2-477e-89ba-07cf82210341" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7fdf032-17a4-4db9-334b-8ce8b040e11f" executionId="78003402-68a0-4be0-883b-b1f89f4d0c5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b6615b0b-18e7-dc26-4e5b-540ad0271288" executionId="8b48a72c-1c07-46fd-aeab-c6d3bf5a8441" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7133e7e7-285b-233a-d937-9e629ca9ce57" executionId="b8500f5d-0497-4a68-b49e-8d2604a67507" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="28ca0afb-d282-bb07-c536-41078ddbf63e" executionId="5f0f0c03-cd4d-41da-a20c-20b30bc6e888" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d71be9a-6927-8835-8873-dcaed6afd4e4" executionId="5b5bc382-868f-4ea6-b4ff-77068466da59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd48a319-8fc6-df92-6925-8be5820e8a2d" executionId="da0d5a37-1eb3-491c-a91b-e59fb9dcf4ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb673ad3-bf8f-9700-f248-f80865b08258" executionId="fcbfa494-525a-4ddc-8b0f-f8914733c9fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="274006a1-c349-09c4-626d-483c8343e9a5" executionId="a4123c6f-1126-415a-ae49-8decc9145b0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a244973-611a-8559-0ea1-b8bab385b7ca" executionId="07bf26be-75b2-433d-bf15-e627ac0d8040" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f513dcb8-5d0d-8a7d-97f3-02da9d6ef793" executionId="7116a58d-8198-4c4a-abf4-7710ca04940c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8bee83ff-bfca-8bef-1727-c31f2a88be77" executionId="d77640b9-20f9-4f40-9999-f30534435695" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59a57bd5-8a4b-147f-5e16-e666cd3387cf" executionId="b3918ece-0c4f-4ff9-94a2-e5a98e7dadfd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c760bcd-409b-7fd0-d3b6-79ee753bf35d" executionId="bfa49127-cc65-4ed1-a16f-2063c47599df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0340723e-ef98-d894-28ff-a5ffe619b440" executionId="ac26b950-73a9-4c2a-ba5a-96190ddef909" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89ae6296-2636-5877-9e90-756cf2c235e4" executionId="a40d8fc7-da2c-410c-b0dd-3d6ab6a44151" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc767a8c-2ebd-93b4-6b26-59cf31c4c48d" executionId="c4551328-457f-440a-870a-4fe27560c223" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b832c492-4781-ef6a-b133-a8f6fcb828d1" executionId="94ca477e-3ed4-43d6-bb37-f0005c6f3237" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b98541c-93ac-64a3-f95f-d4bf0f5b2839" executionId="81142e23-a21a-4cfc-ba37-8d9901bb7513" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20f26c67-d075-e3a8-427e-84549428e1c6" executionId="05959a73-5d37-47a6-a3de-d80bab1c376a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32695832-7521-825a-b620-95b983257fce" executionId="0f94dbf9-2859-4d83-b991-368e70c96a88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6344bb5b-30a8-fd3a-7d2b-5612bb575112" executionId="ab94a623-8c8f-4709-b7dc-6f44648f12f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a9485d9-371d-f616-3bca-e418db53e21b" executionId="35f3f977-616e-4a2e-8bc1-3ecfda415e1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e741cf1-5dad-cb9a-c157-7943fde88b96" executionId="fb868a96-102b-41c2-819e-468f2f24d99c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae2a6363-961b-e702-57fb-006eae89d05b" executionId="ae40d30a-ed54-4f33-b0cd-8376a1373eab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58642448-73d2-8b70-e566-74c436648727" executionId="ca9c5abb-18e7-4ec7-85c1-91d263dffc6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2cc36edc-bbdd-010b-c908-edca3de35715" executionId="677b344f-6d84-4706-b487-58b302a528fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e370d72-4171-6ad3-f6f7-ce96a2edcef2" executionId="c29d4143-9554-4242-a99d-54686ed11dd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45c1f0d8-3d4c-6f72-c8f6-d70c1b7beb1d" executionId="af6f33fb-eef5-402a-811d-d89c60d62e4d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e3fb1ed-b6bd-842b-9862-46ee764d78c4" executionId="24a699f3-2b1e-4d12-b8e2-9991405bf188" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b6053579-2802-c724-8d23-4e9a8a187614" executionId="1d875f33-1f1d-458d-a387-d7cf035e2619" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbd93e29-4e2c-c5e1-ab35-d4f9865b4331" executionId="4bc18fdb-cd10-4866-b137-9b37d08839bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="460b1f1a-cd22-1a0f-bee6-acecf58fe424" executionId="226f18d5-9cc2-4b4c-9278-3eef82841005" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f89efb9-8045-4a63-3b88-b86e674638e7" executionId="7cedac0b-eece-4cc4-9087-80c007a883a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3161a630-799e-17d3-72e2-da52c70bb293" executionId="828ae463-f028-4629-bbbf-48a51044ef04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="738325f1-a3bf-d04f-24f7-0da09191a8f0" executionId="51bc3898-ed2d-4e63-b964-fe53c91eaca0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bae60b49-0d2e-4112-37fb-daedbdda9625" executionId="34305904-7fd2-4abd-a6a9-e857daa55ff6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2489b8b-a1f4-66c4-b6fa-f65911334a0b" executionId="e786f9d0-106b-476c-a17d-ad89eb8aff6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="149998b0-a26d-dc39-eaa6-e1dbca57cf65" executionId="4de479e3-1528-495d-80ca-b730aecd50b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b5d496f-0d4c-37b8-030f-fc5d09a9c30a" executionId="784cdfdb-ef97-419d-b001-5c146995ae89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4af0dda0-7799-7ab1-fa99-57794e498d3b" executionId="2e2c30ab-9892-4091-9bb8-e8d3d27c2e27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a6eecc5-9b95-cad9-ec66-af5112f077e7" executionId="19463d05-7924-4358-9268-ceb32f75a62a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb9c578b-2531-56ae-f297-33620d22fdff" executionId="5b135285-60ca-4550-aa0a-d8ba4eb1cdac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9518df5b-dffe-aaee-64d3-9d89827b1700" executionId="1709f2d8-c8dd-474c-86b1-118bda44c818" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f15699d1-1fc1-ec65-a6d6-cc06bc9fc6f4" executionId="ce2a0bbb-3ec1-4263-a44a-800219914f10" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5249640-cf07-a0a4-caba-a96b9430796d" executionId="816b42c6-14e1-481b-aa7f-99b823685cbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c357bbb2-dd62-184d-95ee-afc2169dc3c1" executionId="cbf3a2f5-8712-4d8a-9fa7-ff575fea6c23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ab86aa6-ee60-8bba-b588-431756093687" executionId="348fae0d-721f-431b-ac6b-f529d67f2459" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd326901-926b-625b-fc38-fbd1b1a0d3a0" executionId="deef8520-274e-4bf9-8395-0a02f4ba0e33" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8425c417-c132-d3e5-7868-dbcfd67e04b3" executionId="5963feb7-d62f-4c34-b01f-bf1790c35fab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d0d6471-4d1c-789d-e030-00431da0afe6" executionId="eecae03d-9b44-41e2-9ee9-55a298542fe1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1da8e333-c2aa-f47c-0251-1c8310a84eea" executionId="b5e6fd38-8022-4086-8d70-3e52decabdf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5cde545-8a77-924b-2326-5a48919b05b7" executionId="49979991-258e-4656-af1a-0d291d56d340" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74cea75f-5b70-e24d-ab89-ad26209b4176" executionId="b781a349-30fa-4e45-a42d-6ef6ad931da9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="481a75d5-fe40-e9b0-6d8a-5cf79977b129" executionId="bfe007b9-9508-4aaf-94df-a5dd58491de1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c23496fa-10a3-5bc3-eefc-7c3c1f802e47" executionId="c8945a2f-a6c2-4202-a5a8-8707284b4be3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="049b9891-0d72-2dce-a794-1432f5ad855d" executionId="2a0213e4-3934-4808-a31b-6e8b8a08e06c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c567f574-b0ef-3f3c-9894-ce86946fb3e6" executionId="b8819a3b-f4b5-498e-98ac-4d3b58a0dcc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20625f15-6416-8458-1cee-1f8f824d77e2" executionId="77e81d8c-dfdb-4878-a385-4a1cb7ad53cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cff55165-ae9f-97ee-9eef-e4f332cbb8da" executionId="84cae28e-e2a5-4ee3-971a-885905b18070" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3770f562-1c01-1d57-efc0-78d994b9fd52" executionId="1320b53f-c7a4-490e-b60b-39ba2e47f5a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d683af27-df73-ef95-640a-4f00f5a43975" executionId="653f5899-c1da-45f1-ae3e-857706783dea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2311acd-cce4-58ff-5cdb-b51a21043ccb" executionId="72950aa4-dfa2-4788-adef-f5b7807ed8cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dff78831-bf6d-66fa-7776-43beb189bcf8" executionId="307d88b8-eabc-434b-a654-7fbbee001c68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e733134-edcd-ec8e-0d38-63b3c2b7e52f" executionId="548ff193-f5e1-4e7e-87a0-553afb01cc0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acf238da-fbc6-cb60-e9a1-32a672337254" executionId="ab8a172e-f7e5-4813-a1c9-cd9b9d0f8ddb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a423af97-84e3-ed93-ed7b-ffd29538025a" executionId="2df29547-c603-4b1f-b3ef-e2127f39bbfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab3664c6-f69c-de1a-34a4-53b46e380cda" executionId="4c3cb131-145e-4bdd-a503-1200120fafd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b4a186b-1320-a189-9681-d7b721b04e80" executionId="142eaf48-8938-43bd-ab63-09ad0be4d85b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="14bc5a82-daa2-6266-6154-e6d44ec62370" executionId="a18cef86-9d8d-4d04-921b-f89a28f9b87d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8223265c-581b-0612-684a-a579c5112c7f" executionId="86042bdb-2698-4a90-992c-ed873a15226a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2b2487f-b5a0-1126-dcc0-7e4013b91fbe" executionId="d6f8ae61-9675-499b-8b8f-fc0b5cfa588e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2696d80-6747-5737-706e-1de4f6db0b6a" executionId="2aeceb4b-4b07-46f1-990e-92d1b715d663" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0469a8e-3a68-99de-267d-96a9ef86b8b3" executionId="76168a12-389d-46e2-be78-4b4b2c280a71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e1f34b5-64ba-16e5-81fd-64e6106fac35" executionId="27387dcb-136f-435e-a203-1443df9dac4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d40d60b-da73-31b7-f697-76d63cd195c0" executionId="d2e2fd25-bd00-49af-bf34-ea87e9ece212" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0676a90-0ec3-1dd6-218a-9fe3066e4ae8" executionId="d86f7c2e-d8e8-40d1-b0fb-3a54b4b1626e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e29f7be-7c05-ca88-6482-2bc36d0bd19a" executionId="53f58df5-2e2a-459c-82ef-4a722f7938e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4f2c1ea-c620-2609-d386-edcefe0ad80e" executionId="66de8c01-f30d-4f3a-b317-507aee178b80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ea46c7b-9e68-ae03-93f5-f113ac3f8344" executionId="5f19c73c-eeb4-4ee4-8bb6-fc03a772cad4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21dfe984-a589-3f48-d422-28048e4010d6" executionId="123a7a12-ba69-45bf-9c43-1c63a90946d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="83" executed="83" passed="83" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)&#xD;
+[xUnit.net 00:00:00.36]   Discovering: Mega.Tests&#xD;
+[xUnit.net 00:00:00.57]   Discovered:  Mega.Tests&#xD;
+[xUnit.net 00:00:00.74]   Starting:    Mega.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]&#xD;
+      Failed executing DbCommand (1ms) [Parameters=[@p0='?', @p1='?' (Size = 45), @p2='?' (Size = 64), @p3='?' (DbType = Int64), @p4='?' (Size = 9), @p5='?', @p6='?' (Size = 24), @p7='?' (Size = 25), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Int64), @p14='?', @p15='?' (DbType = Int64), @p16='?' (DbType = Int64), @p17='?' (Size = 8), @p18='?' (Size = 58), @p19='?' (DbType = Int64)], CommandType='Text', CommandTimeout='15']&#xD;
+      INSERT INTO "SolicitudImpresion" ("aceptadaEn", "claveSolicitud", "contenidoHash", "copiaNumero", "estado", "estadoAntesCuarentena", "fecha", "impresoraHistorica", "leaseHasta", "leaseToken", "motivoResolucion", "proximoIntentoEn", "resolucion", "restauracionId", "resueltoEn", "resueltoPor", "solicitadoPor", "tipo", "ultimoError", "ventaId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)&#xD;
+      RETURNING "id";&#xD;
+fail: Microsoft.EntityFrameworkCore.Update[10000]&#xD;
+      An exception occurred in the database while saving changes for context type 'Mega.Web.Data.MegaDbContext'.&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'Prueba fallo tardio'.&#xD;
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+       ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'Prueba fallo tardio'.&#xD;
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         --- End of inner exception stack trace ---&#xD;
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:01:16.65]   Finished:    Mega.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -24,6 +24,7 @@ public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment en
             }
             var connection = (SqliteConnection)db.Database.GetDbConnection();
             await DatabaseSchema.ValidateModeAsync(connection, demo);
+            if (demo) await EnsureDemoOwnerAsync();
             DatabaseInspector.RequireHealthy(await inspector.InspectAsync(connection, db.Model));
         }
         finally { await db.Database.CloseConnectionAsync(); }
@@ -40,7 +41,7 @@ public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment en
             u.PasswordHash = hasher.HashPassword(u, password); return u;
         }
         db.Add(User(1,"admin",demo ? "Administración · demo" : "Propietario",demo ? 2 : 1,1));
-        if (demo) db.AddRange(User(2,"cajero","Caja · demo",3,1), User(3,"inventario","Inventario · demo",4,0), User(4,"cajero2","Segunda caja · demo",3,1));
+        if (demo) db.AddRange(User(2,"cajero","Caja · demo",3,1), User(3,"inventario","Inventario · demo",4,0), User(4,"cajero2","Segunda caja · demo",3,1), User(5,"propietario","Propietario · demo",1,0));
         await db.SaveChangesAsync();
         db.Add(new ConfiguracionNegocio { Id=1, Nombre=demo ? "Minisúper MEGA · demostración" : "Minisúper MEGA", Direccion=demo ? "Managua · dirección ficticia para pruebas" : "Pendiente de configurar", Moneda="NIO", FiscalidadValidada=0, FondoHabitualCentavos=50000, ImpresionHabilitada=0, EfectivoHabilitado=1, TransferenciaHabilitada=0, TarjetaHabilitada=0, Version=1, VigenteDesde=now, CambiadoPor=1 });
         await db.SaveChangesAsync();
@@ -73,5 +74,16 @@ public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment en
         }
         db.Add(new EventoAuditoria {Fecha=now,Origen="tarea_automatica",Accion="Inicializar base",Entidad="Sistema",ClaveOperacion="inicializacion",Resultado="exito",DatosCambio=Formats.Json(new {versionFormato=1,demostracion=demo,servicio="Inicializador"}),VersionFormato=1});
         await db.SaveChangesAsync(); await transaction.CommitAsync();
+    }
+    private async Task EnsureDemoOwnerAsync()
+    {
+        // Ampliación de las bases ficticias anteriores; nunca modifica cuentas existentes.
+        await using var tx = await db.Database.BeginTransactionAsync();
+        var ownerRole = await db.Set<Rol>().Where(x => x.Nombre == "Propietario").Select(x => x.Id).SingleAsync();
+        if (await db.Set<Usuario>().AnyAsync(x => x.RolId == ownerRole || x.NombreNormalizado == "PROPIETARIO")) return;
+        var u = new Usuario { NombreCuenta = "propietario", NombreNormalizado = "PROPIETARIO", NombreVisible = "Propietario · demo", Activo = 1, TipoCuenta = "comercial", RolId = ownerRole, CreadoEn = Formats.Now(), CredencialesVersion = 1 };
+        u.PasswordHash = hasher.HashPassword(u, "MegaDemo2026!"); db.Add(u); await db.SaveChangesAsync();
+        db.Add(new EventoAuditoria { Fecha = Formats.Now(), Origen = "tarea_automatica", Accion = "Agregar Propietario de demostración", Entidad = "Usuario", EntidadId = u.Id.ToString(), ClaveOperacion = "demo-propietario", Resultado = "exito", DatosCambio = Formats.Json(new { demostracion = true, cuenta = u.NombreCuenta }), VersionFormato = 1 });
+        await db.SaveChangesAsync(); await tx.CommitAsync();
     }
 }

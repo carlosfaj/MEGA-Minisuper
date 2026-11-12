@@ -136,7 +136,7 @@ public sealed class DatabaseTests
         using var f = new Fixture(); var events = await f.Db.Set<EventoAuditoria>().CountAsync();
         await f.Scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
         await f.Scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
-        Assert.Equal(4, await f.Db.Set<Usuario>().CountAsync()); Assert.Equal(6, await f.Db.Set<Producto>().CountAsync());
+        Assert.Equal(5, await f.Db.Set<Usuario>().CountAsync()); Assert.Equal(6, await f.Db.Set<Producto>().CountAsync());
         Assert.Equal(events, await f.Db.Set<EventoAuditoria>().CountAsync());
     }
 

@@ -1,0 +1,15 @@
+@page
+@model Mega.Web.Pages.Cuentas.TemporalModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Soporte temporal";}
+<div class="page-heading"><div><span class="eyebrow">AUTORIZACIÓN DEL PROPIETARIO</span><h1>Soporte temporal</h1><p class="muted">Acceso de solo diagnóstico, con vencimiento y revocación inmediata.</p></div><a class="button secondary" asp-page="Index">Volver a cuentas</a></div>
+<partial name="_Notice"/>
+<div class="editor-grid"><form method="post" class="card"><h2>Autorizar un acceso</h2><p class="muted">Solo permite consultar integridad técnica de la base. No concede un rol comercial ni acceso a ventas, caja, inventario o cuentas.</p>
+<label asp-for="Input.Account">Usuario temporal nuevo</label><input asp-for="Input.Account" required maxlength="100" autocomplete="off"/>
+<label asp-for="Input.Password">Contraseña temporal</label><input asp-for="Input.Password" type="password" required minlength="12" maxlength="200" autocomplete="new-password"/>
+<label asp-for="Input.Hours">Duración en horas (máximo técnico: 24)</label><input asp-for="Input.Hours" type="number" min="1" max="24" required/>
+<label asp-for="Input.Reason">Motivo</label><textarea asp-for="Input.Reason" required maxlength="1000"></textarea><button class="button primary">Autorizar acceso temporal</button></form>
+<section class="card"><h2>Autorizaciones recientes</h2>@if(Model.Grants.Count==0){<p class="empty">Todavía no hay accesos temporales.</p>}
+@foreach(var g in Model.Grants){<div class="subsection"><h3>@Model.Names[g.UsuarioId]</h3><p>Desde @Formats.DateWithSeconds(g.Inicio)<br/>Hasta @Formats.DateWithSeconds(g.Fin)</p><p>@g.Motivo</p><span class="badge">@(g.RevocadoEn is not null?"Revocado":string.CompareOrdinal(g.Fin,Formats.Now())<=0?"Vencido":"Vigente")</span>
+@if(g.RevocadoEn is null && string.CompareOrdinal(g.Fin,Formats.Now())>0){<form method="post" asp-page-handler="Revoke"><input name="GrantId" type="hidden" value="@g.Id"/><label for="reason-@g.Id">Motivo de revocación</label><input id="reason-@g.Id" name="RevokeReason" required maxlength="1000"/><button class="button secondary">Revocar acceso</button></form>}</div>}
+</section></div>

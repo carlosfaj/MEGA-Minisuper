@@ -22,14 +22,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     o.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     o.Events.OnValidatePrincipal = async context =>
     {
-        var db = context.HttpContext.RequestServices.GetRequiredService<MegaDbContext>();
-        var id = long.TryParse(context.Principal?.FindFirstValue(ClaimTypes.NameIdentifier), out var parsed) ? parsed : 0;
-        var user = await db.Set<Usuario>().AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
-        var role = user?.RolId is long roleId ? await db.Set<Rol>().AsNoTracking().SingleOrDefaultAsync(x => x.Id == roleId) : null;
-        if (user is null || user.Activo != 1 || user.TipoCuenta != "comercial" ||
-            user.CredencialesVersion.ToString(CultureInfo.InvariantCulture) != context.Principal?.FindFirstValue("version") ||
-            role?.Nombre != context.Principal?.FindFirstValue(ClaimTypes.Role) ||
-            user.PermisoOperativoCaja.ToString(CultureInfo.InvariantCulture) != context.Principal?.FindFirstValue("caja")) context.RejectPrincipal();
+        if (!await context.HttpContext.RequestServices.GetRequiredService<SessionAccess>().ValidateAsync(context.Principal)) context.RejectPrincipal();
     };
 });
 builder.Services.AddAuthorization(o =>
@@ -37,6 +30,9 @@ builder.Services.AddAuthorization(o =>
     o.AddPolicy("Caja", p => p.RequireAuthenticatedUser().RequireClaim("caja", "1").RequireRole("Cajero", "Administrador", "Propietario"));
     o.AddPolicy("Inventario", p => p.RequireRole("Inventario", "Administrador", "Propietario"));
     o.AddPolicy("Gestion", p => p.RequireRole("Administrador", "Propietario"));
+    o.AddPolicy("Cuentas", p => p.RequireAuthenticatedUser().RequireAssertion(c => c.User.IsInRole("Propietario") || c.User.IsInRole("Administrador") && c.User.HasClaim("cuentas", "1")));
+    o.AddPolicy("Comercial", p => p.RequireClaim("tipo", "comercial"));
+    o.AddPolicy("Soporte", p => p.RequireClaim("tipo", "soporte_temporal"));
 });
 builder.Services.AddRateLimiter(o =>
 {
@@ -56,6 +52,7 @@ builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>
 builder.Services.AddScoped<Operations>(); builder.Services.AddScoped<DatabaseInitializer>();
 builder.Services.AddScoped<AccessControl>(); builder.Services.AddScoped<CatalogService>();
 builder.Services.AddScoped<SettingsService>();
+builder.Services.AddScoped<AccountService>(); builder.Services.AddScoped<SessionAccess>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));

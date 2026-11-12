@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 12 de noviembre de 2026, con la versión de código 0.4.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 12 de noviembre de 2026, con la versión de código 0.5.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -13,7 +13,7 @@ La consulta de existencias y la estructura de una tabla no equivalen a un módul
 | Orden | Hito | Funciones pendientes | Resultado para darlo por terminado |
 |---|---|---|---|
 | 1 | Catálogo — completado en 0.3.0 | Categorías; productos; presentaciones, equivalencias y códigos; precios con vigencias | Alta y venta real en base de prueba, cambios conservando historia y permisos comprobados; 65 pruebas aprobadas y recorrido de navegador |
-| 2 | Configuración y cuentas — configuración completada en 0.4.0 | Pendiente gestión de cuentas y credenciales; roles/delegación y acceso temporal de soporte | Configuración comprobada con 71 pruebas y navegador; falta completar la administración de accesos |
+| 2 | Configuración y cuentas — completado en 0.4.0/0.5.0 | Configuración versionada, cuentas/credenciales, roles/delegación y soporte temporal de diagnóstico | 83 pruebas y recorridos de navegador aprobados. Restauración por soporte continúa en el hito 11; aceptación del negocio pendiente |
 | 3 | Autorizaciones | Preparar, enviar, revisar, aprobar/rechazar; otra cuenta autorizadora; contenido y versión revisados | Cambiar una solicitud exige una nueva revisión. Una aprobación anterior no produce efectos sobre un contenido nuevo. T10 comprobado |
 | 4 | Proveedores y recepciones | Alta/desactivación de proveedores; recepción pendiente con documento y detalle; aceptación de cantidades/costos; lotes y vencimientos; aprobación y entrada única | Guardar pendiente no cambia stock; la recepción autorizada registra entrada una sola vez y conserva procedencia. T02 comprobado |
 | 5 | Inventario operativo y valoración | Conteos físicos; carga inicial, ajustes y salidas justificadas; lotes, alertas y trazabilidad; costos conocidos/desconocidos y valoración según política validada | Un conteo no altera saldos automáticamente. Los efectos requieren aprobación y mantienen unidades, evidencia y costo. T03/T04 comprobados |
