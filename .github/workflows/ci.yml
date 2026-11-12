@@ -1,0 +1,78 @@
+name: Comprobar y registrar version
+
+on:
+  push:
+    branches: [main, 'feature/**', 'fix/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mega-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: Compilar y probar
+    runs-on: windows-latest
+    timeout-minutes: 15
+    outputs:
+      version: ${{ steps.version.outputs.value }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - name: Validar version
+        id: version
+        shell: pwsh
+        run: |
+          $megaVersion = (Get-Content -LiteralPath VERSION -Raw).Trim()
+          if ($megaVersion -notmatch '^\d+\.\d+\.\d+$') { throw 'VERSION debe usar mayor.menor.parche' }
+          "value=$megaVersion" >> $env:GITHUB_OUTPUT
+      - name: Restaurar dependencias fijadas
+        run: dotnet restore MEGA.sln --locked-mode
+      - name: Compilar
+        run: dotnet build MEGA.sln --configuration Release --no-restore --nologo
+      - name: Ejecutar pruebas
+        run: dotnet test MEGA.sln --configuration Release --no-build --no-restore --nologo --logger "trx;LogFileName=mega.trx" --results-directory TestResults
+      - name: Conservar resultado de pruebas
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pruebas-${{ github.sha }}
+          path: TestResults/**/*.trx
+          if-no-files-found: ignore
+          retention-days: 30
+
+  etiquetar:
+    name: Registrar version aprobada
+    needs: verificar
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Crear etiqueta sin reemplazar versiones anteriores
+        shell: pwsh
+        env:
+          MEGA_VERSION: ${{ needs.verificar.outputs.version }}
+        run: |
+          $megaTag = "v$env:MEGA_VERSION"
+          $megaExisting = git tag --list $megaTag
+          if ($megaExisting) { Write-Host "La etiqueta $megaTag ya se conserva en el historial."; exit 0 }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a $megaTag -m "MEGA $megaTag - compilacion y pruebas aprobadas"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git push origin "refs/tags/$megaTag"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

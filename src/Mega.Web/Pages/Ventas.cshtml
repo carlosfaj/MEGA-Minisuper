@@ -1,0 +1,9 @@
+@page
+@model Mega.Web.Pages.VentasModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Ventas del turno";}
+<div class="page-heading"><div><span class="eyebrow">CAJA PROPIA</span><h1>Ventas del turno</h1><p class="muted">Ventas confirmadas de tu turno abierto.</p></div><a class="button primary" asp-page="/Venta">＋ Nueva venta</a></div>
+<section class="card"><div class="card-heading"><h2>@Model.Sales.Count ventas</h2><strong>@Formats.Money(Model.Sales.Sum(x=>x.TotalCentavos))</strong></div>
+@if(Model.Sales.Count==0){<div class="empty"><h3>Aún no hay ventas en tu turno</h3><p class="muted">Las ventas confirmadas aparecerán aquí.</p></div>}
+else{<div class="table-wrap"><table><thead><tr><th>Folio</th><th>Fecha y hora</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody>@foreach(var sale in Model.Sales){<tr><td><strong>@sale.Folio</strong></td><td>@Formats.Date(sale.Fecha)</td><td>@Formats.Money(sale.TotalCentavos)</td><td><span class="badge success">@sale.Estado</span></td><td><a asp-page="/Comprobante" asp-route-id="@sale.Id">Ver comprobante →</a></td></tr>}</tbody></table></div>}
+</section>

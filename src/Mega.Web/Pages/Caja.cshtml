@@ -1,0 +1,18 @@
+@page
+@model Mega.Web.Pages.CajaModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Mi caja"; var cash=Model.Cash;}
+<div class="page-heading"><div><span class="eyebrow">CAJA PROPIA</span><h1>Mi caja</h1><p class="muted">Controla el efectivo de tu turno.</p></div><span class="badge @(cash.Shift is null?"neutral":"success")">@(cash.Shift is null?"Sin turno abierto":"Turno abierto")</span></div>
+<div asp-validation-summary="ModelOnly" class="alert error" role="alert"></div>
+@if(TempData["Message"] is string message){<div class="alert success">@message</div>}
+@if(cash.Shift is null){
+<section class="card form-card"><h2>Abrir turno</h2><p class="muted">Cuenta el fondo recibido antes de comenzar. Fondo habitual: <strong>@Formats.Money(cash.Usual)</strong>.</p>
+@if(cash.StationOccupied){<div class="alert warning">Otra cuenta tiene un turno abierto en esta estación. Su operador debe cerrarlo antes de cambiar de cuenta.</div>}
+else{<form method="post" asp-page-handler="Abrir"><label asp-for="Fund">Fondo real recibido (C$)</label><input asp-for="Fund" inputmode="decimal" required placeholder="500.00"/><label asp-for="Reason">Motivo de diferencia con el fondo habitual</label><textarea asp-for="Reason" maxlength="1000" placeholder="Obligatorio si el fondo recibido es diferente."></textarea><button class="button primary" type="submit">Abrir mi turno →</button></form>}
+</section>
+}else{
+<div class="stats"><div class="card stat"><span>Fondo real de apertura</span><strong>@Formats.Money(cash.Shift.FondoRealCentavos)</strong><small>@(cash.Shift.MotivoDiferenciaFondo??"Sin diferencia con el fondo habitual")</small></div><div class="card stat"><span>Ventas netas en efectivo</span><strong>@Formats.Money(cash.Net)</strong><small>Importe aplicado, después del cambio</small></div><div class="card stat"><span>Efectivo esperado</span><strong id="cash-expected">@Formats.Money(cash.Expected)</strong><small>Fondo real + movimientos de caja</small></div></div>
+<section class="card"><div class="card-heading"><h2>Turno T-@cash.Shift.Id.ToString("0000")</h2><span class="badge success">Abierto</span></div><div class="detail-grid"><div><span>Operador</span><strong>@User.Identity?.Name</strong></div><div><span>Apertura</span><strong>@Formats.Date(cash.Shift.Apertura)</strong></div><div><span>Estación</span><strong>@cash.Shift.EstacionId</strong></div></div></section>
+@if(!Model.Review){<div class="button-row"><a class="button primary" asp-page="/Venta">Nueva venta →</a><a class="button secondary" asp-page="/Caja" asp-route-Review="true">Revisar cierre</a></div>}
+else{<section class="card form-card"><h2>Revisar cierre de caja</h2><p class="muted">Cuenta el efectivo físico. Esperado: <strong>@Formats.Money(cash.Expected)</strong>. El cierre conservará este resultado.</p><form method="post" asp-page-handler="Cerrar"><input type="hidden" name="ShiftId" value="@cash.Shift.Id"/><input type="hidden" name="Version" value="@cash.Shift.Version"/><label asp-for="Counted">Efectivo contado (C$)</label><input asp-for="Counted" inputmode="decimal" required placeholder="0.00"/><label asp-for="Reason">Motivo de diferencia de cierre</label><textarea asp-for="Reason" maxlength="1000" placeholder="Obligatorio si el conteo no coincide con el esperado."></textarea><div class="button-row"><button type="submit" class="button primary">Confirmar cierre</button><a class="button secondary" asp-page="/Caja">Volver a mi caja</a></div></form></section>}
+}

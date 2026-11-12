@@ -1,0 +1,7 @@
+@page
+@model Mega.Web.Pages.AccesoModel
+@{ViewData["Title"]="Iniciar sesión";}
+<section class="login-grid"><div class="login-intro"><span class="eyebrow">MINISÚPER MEGA</span><h1>Tu operación,<br/>en un solo lugar.</h1><p>Ventas, caja e inventario desde la computadora del negocio.</p><div class="local-note"><span class="status-dot"></span> El núcleo funciona sin Internet.</div></div>
+<div class="card login-card"><span class="eyebrow">ACCESO LOCAL</span><h2>Iniciar sesión</h2><p class="muted">Ingresa con tu cuenta del negocio.</p>
+<form method="post"><div asp-validation-summary="ModelOnly" class="alert error" role="alert"></div><label asp-for="Account">Usuario</label><input asp-for="Account" autocomplete="username" required maxlength="100" autofocus/><label asp-for="Password">Contraseña</label><input asp-for="Password" type="password" autocomplete="current-password" required maxlength="200"/><button type="submit" class="button primary full">Entrar a MEGA <span>→</span></button></form>
+@if(Model.Demo){<div class="demo-help"><strong>Cuentas de demostración</strong><p>cajero · admin · inventario</p><p>Contraseña: <code>MegaDemo2026!</code></p><small>Solo para pruebas académicas con datos ficticios.</small></div>}</div></section>

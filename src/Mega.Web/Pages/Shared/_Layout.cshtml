@@ -1,0 +1,23 @@
+@using System.Security.Claims
+@inject IConfiguration Configuration
+@{ var signed = User.Identity?.IsAuthenticated == true; var cash = User.HasClaim("caja", "1"); var management = User.IsInRole("Administrador") || User.IsInRole("Propietario"); var inventory = management || User.IsInRole("Inventario"); var current=ViewContext.RouteData.Values["page"]?.ToString(); }
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>@ViewData["Title"] · MEGA</title><link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/></head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+@if(signed){
+<aside class="sidebar"><a class="brand" asp-page="/Index"><span class="brand-icon">M</span><span>MEGA<small>GESTIÓN LOCAL</small></span></a>
+<div class="nav-label">OPERACIÓN</div><nav aria-label="Navegación principal">
+<a class="@(current=="/Index"?"active":"")" asp-page="/Index">Inicio</a>
+@if(cash){<a class="@(current=="/Venta"?"active":"")" asp-page="/Venta">Nueva venta <span>+</span></a><a class="@(current=="/Caja"?"active":"")" asp-page="/Caja">Mi caja</a><a class="@(current=="/Ventas"?"active":"")" asp-page="/Ventas">Ventas del turno</a>}
+@if(inventory){<a class="@(current=="/Existencias"?"active":"")" asp-page="/Existencias">Existencias</a>}
+@if(management){<div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}
+</nav><div class="sidebar-bottom"><span class="status-dot"></span> Servicio local disponible<small>Estación @Configuration["MEGA:Station"]</small></div></aside>
+}
+<div class="shell @(signed?"":"anonymous")"><header class="topbar"><span class="topbar-title">Minisúper MEGA</span><div class="topbar-right">
+@if(Configuration.GetValue<bool>("MEGA:DemoData")){<span class="badge demo">Demostración · datos ficticios</span>}
+@if(signed){<span class="account">@User.Identity?.Name<small>@User.FindFirstValue(ClaimTypes.Role)</small></span><form method="post" asp-page="/Salir"><button class="button text-button" type="submit">Salir</button></form>}
+</div></header><main id="contenido">@RenderBody()</main><footer>MEGA · Desarrollo del cuarto corte <span>Operación local · hora UTC−6 provisional</span></footer></div>
+@await RenderSectionAsync("Scripts", required:false)
+</body></html>

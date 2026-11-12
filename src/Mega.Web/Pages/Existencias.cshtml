@@ -1,0 +1,5 @@
+@page
+@model Mega.Web.Pages.ExistenciasModel
+@{ViewData["Title"]="Existencias";}
+<div class="page-heading"><div><span class="eyebrow">INVENTARIO</span><h1>Existencias</h1><p class="muted">Cantidades calculadas desde los movimientos definitivos.</p></div><span class="badge neutral">Consulta</span></div>
+<section class="card"><div class="card-heading"><h2>Productos</h2><span class="muted">@Model.Rows.Count productos activos</span></div><div class="table-wrap"><table><thead><tr><th>Producto</th><th>Existencia</th><th>Unidad</th><th>Mínimo</th><th>Estado</th></tr></thead><tbody>@foreach(var row in Model.Rows){<tr><td><strong>@row.Name</strong></td><td>@row.Stock.ToString("0.###")</td><td>@row.Unit</td><td>@row.Minimum.ToString("0.###")</td><td><span class="badge @(row.Stock<0?"danger":row.Stock<=row.Minimum?"warning":"success")">@(row.Stock<0?"Revisar discrepancia":row.Stock<=row.Minimum?"Mínimo":"Disponible")</span></td></tr>}</tbody></table></div></section><div class="alert info">Los conteos, recepciones y ajustes se incorporarán en los siguientes avances. El umbral de próximo vencimiento sigue pendiente de validación.</div>

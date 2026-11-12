@@ -1,0 +1,3 @@
+@page
+@{ViewData["Title"]="Acceso restringido"; Response.StatusCode=403;}
+<section class="card empty"><h1>Tu cuenta no tiene acceso a esta función.</h1><p>Vuelve al inicio para consultar las tareas disponibles para tu rol.</p><a class="button primary" asp-page="/Index">Volver al inicio</a></section>

@@ -1,0 +1,9 @@
+{
+  "fecha": "2026-11-12T05:31:14.741Z",
+  "estado": "Aprobado",
+  "escenario": "Respuesta perdida después de confirmar; recarga de pestaña; recuperación de la misma venta sin otro cobro",
+  "ventasEnTurno": 1,
+  "totalCentavos": 2500,
+  "cajaEsperadaCentavos": 52500,
+  "tipo": "Prueba automatizada con datos ficticios"
+}

@@ -1,0 +1,11 @@
+@page
+@model Mega.Web.Pages.IndexModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Inicio";}
+<div class="page-heading"><div><span class="eyebrow">TU ESPACIO DE TRABAJO</span><h1>Todo listo para empezar.</h1><p class="muted">Elige una tarea para continuar con la operación.</p></div><span class="badge success"><span class="status-dot"></span> Servicio disponible</span></div>
+@if(Model.Cash is {} cash){
+<div class="stats"><div class="card stat"><span>Mi turno</span><strong>@(cash.Shift is null?"Sin abrir":"Abierto")</strong><small>@(cash.Shift is null?"Abre caja para comenzar a vender.":$"T-{cash.Shift.Id:0000} · fondo {Formats.Money(cash.Shift.FondoRealCentavos)}")</small></div><div class="card stat"><span>Ventas netas en efectivo</span><strong>@Formats.Money(cash.Net)</strong><small>Del turno propio actual</small></div><div class="card stat"><span>Efectivo esperado</span><strong>@Formats.Money(cash.Expected)</strong><small>Fondo real más ventas netas</small></div></div>
+<div class="section-heading"><h2>Accesos rápidos</h2><span class="muted">Tu caja y tus ventas</span></div><div class="action-grid"><a class="card action-card featured" asp-page="/Venta"><span class="tile-icon">＋</span><h2>Nueva venta</h2><p>Prepara la compra y registra el cobro en efectivo.</p><span>Comenzar venta →</span></a><a class="card action-card" asp-page="/Caja"><span class="tile-icon">▤</span><h2>Mi caja</h2><p>Abre tu turno, revisa el efectivo o prepara el cierre.</p><span>Revisar caja →</span></a><a class="card action-card" asp-page="/Ventas"><span class="tile-icon">≡</span><h2>Ventas del turno</h2><p>Consulta ventas confirmadas y sus comprobantes.</p><span>Ver ventas →</span></a></div>
+}
+@if(User.IsInRole("Inventario") || User.IsInRole("Administrador") || User.IsInRole("Propietario")){<div class="card callout"><div><h2>Existencias del negocio</h2><p class="muted">Consulta cantidades y alertas a partir de los movimientos registrados.</p></div><a class="button secondary" asp-page="/Existencias">Consultar existencias →</a></div>}
+<div class="alert info"><strong>Primer avance funcional.</strong> Acceso, caja propia, ventas en efectivo y consulta de existencias. Impresión automática y los demás módulos siguen en desarrollo.</div>

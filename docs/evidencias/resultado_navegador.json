@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-11-12T05:26:21.517Z",
+  "estado": "Aprobado",
+  "tipo": "Prueba automatizada de interfaz; datos ficticios, sin usuarios del negocio",
+  "pasos": [
+    "01_acceso",
+    "02_caja_abierta",
+    "03_compra_preparacion",
+    "04_pago_insuficiente",
+    "05_cobro_efectivo",
+    "06_comprobante",
+    "07_caja_despues_venta",
+    "08_revision_cierre",
+    "09_existencias",
+    "10_existencias_movil"
+  ],
+  "erroresJavaScript": []
+}

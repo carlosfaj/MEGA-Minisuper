@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.png -text
+*.ico -text
+# Mantener las huellas de procedencia de las fuentes académicas.
+src/Mega.Web/Data/Schema.sql -text
+src/Mega.Web/Data/Modelo_Datos_MEGA.json -text

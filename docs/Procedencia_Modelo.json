@@ -1,0 +1,10 @@
+{
+  "revision": "2026-11-11",
+  "fuente_relativa": "../../../00_OFICIALES/Tercer_Corte/Correccion_20261111",
+  "schema_sql_sha256": "b570d8937cdbd9f7299f925db13998694b29a5d3820d6e75fb100eba33d11589",
+  "modelo_json_sha256": "73e1f5b04b3080b627fafa4f60afc27b54fbfe65a4d5d43fbcb2b4ba0e285a34",
+  "tablas": 39,
+  "atributos": 499,
+  "claves_foraneas": 103,
+  "nota": "Copias verificadas contra los originales; mapeo EF generado desde el JSON. El DDL conserva sus restricciones."
+}

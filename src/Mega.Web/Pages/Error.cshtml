@@ -1,0 +1,18 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<section class="card empty"><h1>No se pudo completar la operación.</h1>
+<p>Si estabas confirmando una venta, recupera su resultado desde Nueva venta o revisa Ventas del turno antes de repetir el cobro.</p>
+<a class="button primary" asp-page="/Index">Volver al inicio</a>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Referencia de revisión:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+</section>
