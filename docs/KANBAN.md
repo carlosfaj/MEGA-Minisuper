@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 52.6% — 70/133 criterios.**
-Versión 0.12.0 · actualizado 2026-11-12T19:44:28Z · 145 pruebas aprobadas.
+**Avance global: 56.4% — 75/133 criterios.**
+Versión 0.13.0 · actualizado 2026-11-12T19:59:05Z · 155 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 52/83 | 62.7% |
+| Software | 57/83 | 68.7% |
 | Calidad | 7/13 | 53.8% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,16 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### ANULA · Anulaciones y fondos — 0%
-
-Área: Software.
-Depende de: COSTOS, CAJA, VENTA.
-
-- [ ] Solicitud y evidencia
-- [ ] Otra cuenta decide versión exacta
-- [ ] Reincorporación física comprobada
-- [ ] Devolución o regularización sin alterar cierres
-- [ ] Reintentos, concurrencia y pruebas
 ### PRINT · Impresión y contingencia — 0%
 
 Área: Software.
@@ -298,6 +288,16 @@ Depende de: CONFIG, VENTA.
 - [x] Vigencias y exenciones con motivo ([evidencia](../docs/Condiciones_Comerciales.md))
 - [x] Base, redondeo y cálculo en venta ([evidencia](../docs/Condiciones_Comerciales.md))
 - [x] Condiciones históricas y pruebas ([evidencia](../docs/Condiciones_Comerciales.md))
+### ANULA · Anulaciones y fondos — 100%
+
+Área: Software.
+Depende de: COSTOS, CAJA, VENTA.
+
+- [x] Solicitud y evidencia ([evidencia](../docs/Anulaciones.md))
+- [x] Otra cuenta decide versión exacta ([evidencia](../docs/Anulaciones.md))
+- [x] Reincorporación condicionada a verificación física declarada ([evidencia](../docs/Anulaciones.md))
+- [x] Devolución o regularización sin alterar cierres ([evidencia](../docs/Anulaciones.md))
+- [x] Reintentos, concurrencia y pruebas ([evidencia](../docs/Anulaciones.md))
 ### GIT · Versiones y GitHub — 100%
 
 Área: Entrega.

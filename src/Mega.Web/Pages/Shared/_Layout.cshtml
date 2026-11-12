@@ -16,6 +16,7 @@
 @if(inventory){<a class="@(current?.StartsWith("/Recepciones")==true || current=="/Proveedores"?"active":"")" asp-page="/Recepciones/Index">Recepciones</a>}
 @if(inventory){<a class="@(current?.StartsWith("/Conteos")==true?"active":"")" asp-page="/Conteos/Index">Conteos físicos</a><a class="@(current=="/Lotes"?"active":"")" asp-page="/Lotes">Lotes y vencimientos</a>}
 @if(inventory){<a class="@(current?.StartsWith("/Solicitudes")==true?"active":"")" asp-page="/Solicitudes/Index">Ajustes y salidas</a>}
+@if(User.IsInRole("Cajero") || management){<a class="@(current?.StartsWith("/Anulaciones")==true?"active":"")" asp-page="/Anulaciones/Index">Anulaciones y devoluciones</a>}
 @if(User.HasClaim("tipo","soporte_temporal")){<a class="@(current=="/Soporte"?"active":"")" asp-page="/Soporte">Diagnóstico técnico</a>}
 @if(User.HasClaim("tipo","comercial")){<a class="@(current=="/MiCuenta"?"active":"")" asp-page="/MiCuenta">Mi contraseña</a>}
 @if(management){<div class="nav-label">GESTIÓN</div><a class="@(current?.StartsWith("/Catalogo")==true?"active":"")" asp-page="/Catalogo/Index">Catálogo</a><a class="@(current=="/Configuracion"?"active":"")" asp-page="/Configuracion">Configuración</a><a class="@(current?.StartsWith("/Comercial")==true?"active":"")" asp-page="/Comercial/Index">Promociones e impuestos</a><div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}

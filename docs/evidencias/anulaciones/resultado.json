@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T19:57:49.907Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "venta 38 y cierre original 538",
+    "solicitud con evidencia física declarada",
+    "aprobación por segunda cuenta sin egreso ficticio",
+    "comprobante original 38 conservado",
+    "devolución real declarada en turno nuevo",
+    "fondo nuevo 500 → esperado 462"
+  ],
+  "erroresJavaScript": []
+}

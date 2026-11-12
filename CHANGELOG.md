@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.13.0 — 12 de noviembre de 2026
+
+- Anulación completa por solicitud, motivo/evidencia y revisión exacta de otra cuenta de gestión; edición, rechazo y cancelación sin efectos anticipados.
+- Reincorporación solo con comprobación física declarada; cantidades, lotes y costos históricos originales. Venta, comprobante y cierre anterior conservados.
+- Aprobación comercial separada de devolución efectiva: queda pendiente hasta entregar y registrar dinero en caja propia abierta, con evidencia y saldo suficiente.
+- Regularización en turno nuevo sin modificar el cierre original. Decisiones y devoluciones concurrentes no repiten movimientos; fallos tardíos revierten todo.
+- 156 pruebas y navegador con cierre original 538 conservado y devolución 38 en turno nuevo de fondo 500, esperado 462.
+
 ## 0.12.0 — 12 de noviembre de 2026
 
 - Promociones de porcentaje/importe fijo por presentación, vigencias, prioridad y exclusividad; condiciones configurables sobre múltiples presentaciones.

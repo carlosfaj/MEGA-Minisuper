@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.12.0",
-  "updatedAt": "2026-11-12T19:44:28Z",
+  "version": "0.13.0",
+  "updatedAt": "2026-11-12T19:59:05Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 145,
+  "testsPassed": 155,
   "tasks": [
     {
       "id": "BD",
@@ -460,32 +460,32 @@
         {
           "id": "1",
           "label": "Solicitud y evidencia",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Anulaciones.md"
         },
         {
           "id": "2",
           "label": "Otra cuenta decide versión exacta",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Anulaciones.md"
         },
         {
           "id": "3",
-          "label": "Reincorporación física comprobada",
-          "done": false,
-          "evidence": null
+          "label": "Reincorporación condicionada a verificación física declarada",
+          "done": true,
+          "evidence": "docs/Anulaciones.md"
         },
         {
           "id": "4",
           "label": "Devolución o regularización sin alterar cierres",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Anulaciones.md"
         },
         {
           "id": "5",
           "label": "Reintentos, concurrencia y pruebas",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Anulaciones.md"
         }
       ]
     },

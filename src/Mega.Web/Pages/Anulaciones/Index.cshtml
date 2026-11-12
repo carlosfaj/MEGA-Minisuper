@@ -1,0 +1,6 @@
+@page
+@model Mega.Web.Pages.Anulaciones.IndexModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Anulaciones";}
+<div class="page-heading"><div><span class="eyebrow">VENTAS · REVISIÓN POR OTRA CUENTA</span><h1>Anulaciones y devoluciones</h1><p class="muted">La aprobación comercial y la entrega efectiva del dinero son registros distintos.</p></div><a class="button primary" asp-page="Editar">Preparar anulación</a></div><partial name="_Notice"/>
+<div class="card table-card"><table><thead><tr><th>Referencia / venta</th><th>Estado</th><th>Reincorporación</th><th>Efectivo pendiente</th><th></th></tr></thead><tbody>@foreach(var r in Model.Rows){<tr><td><a asp-page="Editar" asp-route-id="@r.Id">@r.Referencia</a><small>@Model.Folios[r.VentaId]</small></td><td>@r.Estado.Replace('_',' ')</td><td>@r.ReincorporacionEstado.Replace('_',' ')</td><td>@(r.Estado=="Autorizada"?Formats.Money(r.EfectivoADevolverCentavos-r.EfectivoDevueltoCentavos):"Por decidir")</td><td>@if(Model.Pending.TryGetValue(r.Id,out var a)){<a asp-page="Revision" asp-route-id="@a">Revisar →</a>}else{<a asp-page="Editar" asp-route-id="@r.Id">Consultar →</a>}</td></tr>}</tbody></table></div>

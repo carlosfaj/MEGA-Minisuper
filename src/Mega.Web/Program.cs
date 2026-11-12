@@ -33,6 +33,7 @@ builder.Services.AddAuthorization(o =>
     o.AddPolicy("Cuentas", p => p.RequireAuthenticatedUser().RequireAssertion(c => c.User.IsInRole("Propietario") || c.User.IsInRole("Administrador") && c.User.HasClaim("cuentas", "1")));
     o.AddPolicy("Comercial", p => p.RequireClaim("tipo", "comercial"));
     o.AddPolicy("Soporte", p => p.RequireClaim("tipo", "soporte_temporal"));
+    o.AddPolicy("Anulaciones",p=>p.RequireRole("Cajero","Administrador","Propietario"));
 });
 builder.Services.AddRateLimiter(o =>
 {
@@ -59,6 +60,7 @@ builder.Services.AddScoped<InventoryRequestService>();
 builder.Services.AddScoped<ValuationService>();
 builder.Services.AddSingleton<ProjectBoardService>();
 builder.Services.AddScoped<CommercialService>(); builder.Services.AddScoped<CommercialCalculator>();
+builder.Services.AddScoped<CancellationService>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));
