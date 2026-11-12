@@ -35,7 +35,10 @@ public sealed class RequestLineInput
 {
     public long ProductId {get;set;} public string? Quantity {get;set;} public string? BaseCost {get;set;} public string? Cause {get;set;} public long? ReturnSupplierId {get;set;}
     [StringLength(1000)] public string? Evidence {get;set;}
-    public bool Empty=>ProductId==0&&string.IsNullOrWhiteSpace(Quantity)&&string.IsNullOrWhiteSpace(BaseCost)&&string.IsNullOrWhiteSpace(Cause)&&ReturnSupplierId==null&&string.IsNullOrWhiteSpace(Evidence);
+    public long? LotId {get;set;}
+    [StringLength(100)] public string? NewLot {get;set;}
+    public string? Expiry {get;set;}
+    public bool Empty=>ProductId==0&&LotId==null&&string.IsNullOrWhiteSpace(NewLot)&&string.IsNullOrWhiteSpace(Expiry)&&string.IsNullOrWhiteSpace(Quantity)&&string.IsNullOrWhiteSpace(BaseCost)&&string.IsNullOrWhiteSpace(Cause)&&ReturnSupplierId==null&&string.IsNullOrWhiteSpace(Evidence);
 }
 [Authorize(Policy="Inventario")]
 public sealed class EditarModel(MegaDbContext db,InventoryRequestService service):ManagementPage
@@ -45,6 +48,7 @@ public sealed class EditarModel(MegaDbContext db,InventoryRequestService service
     public SolicitudInventario? Saved {get;private set;}
     public List<Producto> Products {get;private set;}=[];
     public List<Proveedor> Suppliers {get;private set;}=[];
+    public List<LoteExistencia> Lots {get;private set;}=[];
     public List<Conteo> Counts {get;private set;}=[];
     public List<Autorizacion> Reviews {get;private set;}=[];
     public bool Editable=>Saved is null||Saved.SolicitadoPor==UserId&&Saved.Estado is not("Autorizada" or "Cancelada");
@@ -52,6 +56,7 @@ public sealed class EditarModel(MegaDbContext db,InventoryRequestService service
     private async Task LoadAsync()
     {
         Products=await db.Set<Producto>().AsNoTracking().OrderBy(x=>x.Nombre).ToListAsync();Suppliers=await db.Set<Proveedor>().AsNoTracking().OrderBy(x=>x.Nombre).ToListAsync();Counts=await db.Set<Conteo>().AsNoTracking().Where(x=>x.Estado=="Finalizado").OrderByDescending(x=>x.Id).ToListAsync();
+        Lots=await db.Set<LoteExistencia>().AsNoTracking().OrderBy(x=>x.ProductoId).ThenBy(x=>x.Id).ToListAsync();
         if(Input.Id is long id){Saved=await db.Set<SolicitudInventario>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==id);Reviews=await db.Set<Autorizacion>().AsNoTracking().Where(x=>x.SolicitudInventarioId==id).OrderByDescending(x=>x.Id).ToListAsync();}
     }
     public async Task<IActionResult> OnGetAsync(long? id,string? type,long? countId)
@@ -61,7 +66,7 @@ public sealed class EditarModel(MegaDbContext db,InventoryRequestService service
             var r=await db.Set<SolicitudInventario>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==key);if(r is null)return NotFound();
             Input=new(){Id=r.Id,Version=r.Version,Key=r.ClaveSolicitud,Type=r.Tipo,CountId=r.ConteoId,Reference=r.Referencia,Reason=r.Motivo??"",Evidence=r.EvidenciaReferencia??"",Lines=[]};
             foreach(var d in await db.Set<SolicitudInventarioDetalle>().AsNoTracking().Where(x=>x.SolicitudId==key).OrderBy(x=>x.NumeroLinea).ToListAsync())
-                Input.Lines.Add(new(){ProductId=d.ProductoId,Quantity=((r.Tipo=="salida_justificada"?-d.CantidadEscalada:d.CantidadEscalada)/ReceivingService.Power(d.Escala)).ToString("0.######",CultureInfo.InvariantCulture),BaseCost=d.CostoUnitEscalado is long cost?(cost/ReceivingService.Power(d.EscalaCosto!.Value)).ToString("0.######",CultureInfo.InvariantCulture):null,Cause=d.Causa,ReturnSupplierId=d.ProveedorDevolucionId,Evidence=d.EvidenciaReferencia});
+                Input.Lines.Add(new(){ProductId=d.ProductoId,LotId=d.LoteId,Quantity=((r.Tipo=="salida_justificada"?-d.CantidadEscalada:d.CantidadEscalada)/ReceivingService.Power(d.Escala)).ToString("0.######",CultureInfo.InvariantCulture),BaseCost=d.CostoUnitEscalado is long cost?(cost/ReceivingService.Power(d.EscalaCosto!.Value)).ToString("0.######",CultureInfo.InvariantCulture):null,Cause=d.Causa,ReturnSupplierId=d.ProveedorDevolucionId,Evidence=d.EvidenciaReferencia});
         }
         else {Input.Type=type is "ajuste" or "salida_justificada"?type:"carga";Input.CountId=Input.Type=="ajuste"?countId:null;}
         await LoadAsync();return Page();
@@ -72,7 +77,7 @@ public sealed class EditarModel(MegaDbContext db,InventoryRequestService service
         {
             if(ModelState.IsValid)
             {
-                var lines=Input.Type=="ajuste"?new List<InventoryLine>():Input.Lines.Where(x=>!x.Empty).Select(x=>new InventoryLine(x.ProductId,x.Quantity??"",x.BaseCost,x.Cause,x.ReturnSupplierId,x.Evidence)).ToList();
+                var lines=Input.Type=="ajuste"?new List<InventoryLine>():Input.Lines.Where(x=>!x.Empty).Select(x=>new InventoryLine(x.ProductId,x.Quantity??"",x.BaseCost,x.Cause,x.ReturnSupplierId,x.Evidence,x.LotId,x.NewLot,x.Expiry)).ToList();
                 var id=await service.SaveAsync(UserId,new(Input.Id,Input.Version,Input.Key,Input.Reference,Input.Type,Input.CountId,Input.Reason,Input.Evidence,lines));TempData["Message"]="Solicitud guardada sin modificar existencias. Envía la versión guardada para revisión.";return RedirectToPage(new{id});
             }
         }

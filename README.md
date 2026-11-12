@@ -4,7 +4,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.9.0**, con ventas integradas a promedio ponderado móvil y lotes. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.10.0**, con ventas y regularizaciones integradas a promedio ponderado móvil y lotes. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -70,7 +70,7 @@ El registro histórico del avance 01 y sus capturas están en `docs/evidencias`;
 
 ## Límites de este avance
 
-Este es un avance del cuarto corte. Siguen pendientes valoración y regularizaciones con lotes/costo conocido, anulaciones, valoración de costos, reportes, correo, impresión automática y respaldo/restauración. Las ventas asignan lotes y conservan costos históricos; impuestos y promociones configurados siguen pendientes de integrar. La venta actual conserva costo desconocido; no presenta márgenes ni inventa tasas fiscales. Tarjeta y transferencia no están habilitadas.
+Este es un avance del cuarto corte. Siguen pendientes condiciones comerciales, anulaciones, valoración de costos, reportes, correo, impresión automática y respaldo/restauración. Las ventas asignan lotes y conservan costos históricos; impuestos y promociones configurados siguen pendientes de integrar. La venta actual conserva costo desconocido; no presenta márgenes ni inventa tasas fiscales. Tarjeta y transferencia no están habilitadas.
 
 Las pruebas realizadas son automatizadas y usan datos ficticios; la aceptación con el negocio y los periféricos reales sigue pendiente. El documento final, manuales definitivos, presentación y demostración de todo el alcance se completarán con los siguientes avances.
 

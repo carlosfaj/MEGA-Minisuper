@@ -61,7 +61,8 @@ public sealed class InventoryRequestTests
         var unknown=await f.Db.Set<MovimientoInventario>().SingleAsync(x=>x.SolicitudInventarioDetalleId!=null&&x.OperacionId!=1);Assert.Equal("desconocido",unknown.EstadoCosto);Assert.Null(unknown.CostoUnitEscalado);
         auth=await f.Send(f.Input() with{Lines=[new(6,"2","10.123456",null,null,null)]});await f.Apply(auth);f.Db.ChangeTracker.Clear();
         var known=await f.Db.Set<MovimientoInventario>().SingleAsync(x=>x.ProductoId==6&&x.EstadoCosto=="conocido");Assert.Equal(10123456,known.CostoUnitEscalado);
-        await Assert.ThrowsAsync<BusinessException>(()=>f.Service.SaveAsync(3,f.Input("salida_justificada",[new(6,"1",null,"perdida",null,null)])));
+        auth=await f.Send(f.Input("salida_justificada",[new(6,"1",null,"perdida",null,null)]));await f.Apply(auth);f.Db.ChangeTracker.Clear();
+        var output=await f.Db.Set<MovimientoInventario>().SingleAsync(x=>x.ProductoId==6 && x.CantidadEscalada<0);Assert.Equal("desconocido",output.EstadoCosto);Assert.Null(output.CostoUnitEscalado);
     }
     [Theory]
     [InlineData(2)] [InlineData(3)]

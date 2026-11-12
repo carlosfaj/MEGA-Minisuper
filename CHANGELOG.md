@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.10.0 — 12 de noviembre de 2026
+
+- Cargas, ajustes y salidas integrados con costos y lotes; costos de salida tomados del promedio vigente y conservados con referencia histórica.
+- Lotes nuevos para carga sin afectar stock hasta aprobar; conteos por lote para ajustar sin adivinar la distribución de un total.
+- Revisión vinculada también a valoración y metadatos de lote; costo cambiado exige guardar otra versión. Control de saldos por lote y producto.
+- Costo desconocido sigue explícito; no se transforma en cero ni se altera la historia. Las revisiones pendientes de formatos anteriores requieren guardado/revisión nuevos.
+- 132 pruebas aprobadas y ocho comprobaciones en navegador, incluidas carga con lote nuevo y salida del lote de 3 a 2.
+
 ## 0.9.0 — 12 de noviembre de 2026
 
 - Ventas integradas con promedio ponderado móvil, política confirmada por el usuario, y asignación de lotes por vencimiento más próximo e identidad estable.
