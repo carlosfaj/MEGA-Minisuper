@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.16.0 — 12 de noviembre de 2026
+
+- Gastos operativos con fecha, concepto, comprobante y permisos de gestión. No se inventa salida de caja.
+- Correcciones enlazadas conservan importes anteriores; anulación con motivo sin reactivar registros sustituidos.
+- Claves recuperables, revisión de estado, concurrencia y reversión ante fallo tardío.
+- 180 pruebas aprobadas y recorrido de navegador con registro 100, corrección 120 y anulación trazable.
+
 ## 0.15.0 — 12 de noviembre de 2026
 
 - Agente local de impresión con habilitación explícita, cola persistente, reserva previa e intentos verificables; aceptación de Windows separada de entrega física.

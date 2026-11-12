@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 61.7% — 82/133 criterios.**
-Versión 0.15.0 · actualizado 2026-11-12T20:35:46Z · 175 pruebas aprobadas.
+**Avance global: 63.9% — 85/133 criterios.**
+Versión 0.16.0 · actualizado 2026-11-12T20:41:07Z · 180 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 62/83 | 74.7% |
+| Software | 65/83 | 78.3% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,14 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### GASTOS · Gastos operativos — 0%
-
-Área: Software.
-Depende de: ACCESO.
-
-- [ ] Registro y corrección trazable
-- [ ] Anulación con motivo
-- [ ] Permisos y pruebas
 ### REPORTES · Reportes y exportaciones — 0%
 
 Área: Software.
@@ -290,6 +282,14 @@ Depende de: VENTA.
 - [x] Resultado incierto sin reenvío ciego ([evidencia](../docs/Impresion.md))
 - [x] Reimpresión del mismo folio ([evidencia](../docs/Impresion.md))
 - [x] Contingencia y pruebas ([evidencia](../docs/Impresion.md))
+### GASTOS · Gastos operativos — 100%
+
+Área: Software.
+Depende de: ACCESO.
+
+- [x] Registro y corrección trazable ([evidencia](../docs/Gastos.md))
+- [x] Anulación con motivo ([evidencia](../docs/Gastos.md))
+- [x] Permisos y pruebas ([evidencia](../docs/Gastos.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.

@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.15.0",
-  "updatedAt": "2026-11-12T20:35:46Z",
+  "version": "0.16.0",
+  "updatedAt": "2026-11-12T20:41:07Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 175,
+  "testsPassed": 180,
   "tasks": [
     {
       "id": "BD",
@@ -544,20 +544,20 @@
         {
           "id": "1",
           "label": "Registro y corrección trazable",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Gastos.md"
         },
         {
           "id": "2",
           "label": "Anulación con motivo",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Gastos.md"
         },
         {
           "id": "3",
           "label": "Permisos y pruebas",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Gastos.md"
         }
       ]
     },

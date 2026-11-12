@@ -1,0 +1,11 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T20:39:38.132Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "registro 100",
+    "corrección a 120 conservando 100",
+    "anulación con motivo",
+    "sin errores JavaScript"
+  ]
+}
