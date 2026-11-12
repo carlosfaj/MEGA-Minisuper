@@ -1,0 +1,12 @@
+{
+  "estado": "Aprobado",
+  "datos": "Ficticios; base aislada",
+  "fecha": "2026-11-12T15:39:40.586Z",
+  "casos": [
+    "recepción con costo conocido y lote",
+    "venta antes restringida confirmada",
+    "salida asignada al lote",
+    "saldo del lote 3 → 2"
+  ],
+  "erroresJavaScript": []
+}

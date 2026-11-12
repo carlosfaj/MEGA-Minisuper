@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.9.0 — 12 de noviembre de 2026
+
+- Ventas integradas con promedio ponderado móvil, política confirmada por el usuario, y asignación de lotes por vencimiento más próximo e identidad estable.
+- Costos conocidos, desconocidos y cero diferenciados; saldo negativo o base incompleta no inventan promedio. Orden por secuencia de confirmación.
+- Salidas con costo y procedencia históricos; entradas posteriores no revalúan ventas anteriores. Una línea puede descontar varios lotes sin duplicar cobro.
+- Revisión obligatoria si cambian valoración o lotes; rechazo de lotes vencidos/no identificados y sobreasignación. Guardas de capacidad de inventario/caja.
+- 127 pruebas aprobadas y navegador: recepción con costo/lote, venta antes restringida y descuento del lote de 3 a 2.
+
 ## 0.8.0 — 12 de noviembre de 2026
 
 - Solicitudes de carga, ajuste desde conteo finalizado y salida justificada, con motivo/evidencia, versiones, cancelación e historia.

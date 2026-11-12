@@ -195,14 +195,14 @@ public sealed class FlowTests
         using var check=factory.Services.CreateScope();Assert.Equal(1,await check.ServiceProvider.GetRequiredService<MegaDbContext>().Set<Venta>().CountAsync());
     }
     [Fact]
-    public async Task known_cost_product_waits_for_valuation_instead_of_discarding_cost()
+    public async Task known_cost_product_preserves_valuation_when_sold()
     {
         using var factory=new MegaFactory();using var scope=factory.Services.CreateScope();var op=scope.ServiceProvider.GetRequiredService<Operations>();var db=scope.ServiceProvider.GetRequiredService<MegaDbContext>();
         await op.OpenCashAsync(2,"500",null);
         var movement=await db.Set<MovimientoInventario>().FirstAsync(x=>x.ProductoId==1);
         movement.EstadoCosto="conocido";movement.CostoUnitEscalado=18000000;movement.EscalaCosto=6;await db.SaveChangesAsync();
-        var error=await Assert.ThrowsAsync<BusinessException>(()=>op.QuoteAsync(2,Basket()));Assert.Contains("valoración",error.Message);
-        Assert.Equal(0,await db.Set<Venta>().CountAsync());
+        var quote=await op.QuoteAsync(2,Basket());await op.ConfirmAsync(2,Input(quote));
+        var detail=await db.Set<VentaDetalle>().SingleAsync(x=>x.ProductoId==1);Assert.Equal("conocido",detail.EstadoCosto);Assert.Equal(18000000,detail.CostoUnitEscalado);
     }
     [Fact]
     public async Task existing_demo_database_cannot_be_switched_to_real_mode()

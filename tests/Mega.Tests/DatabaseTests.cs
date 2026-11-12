@@ -122,7 +122,7 @@ public sealed class DatabaseTests
         Assert.Equal(before + 1, await context.Set<EventoAuditoria>().CountAsync());
         Assert.Equal(8600, (await context.Set<ResumenCajaVista>().SingleAsync()).NetoCentavos);
         Assert.Equal(48000, (await context.Set<ExistenciaVista>().SingleAsync(x => x.ProductoId == 1)).CantidadEscalada);
-        var operations = new Operations(context, f.Scope.ServiceProvider.GetRequiredService<Microsoft.Extensions.Configuration.IConfiguration>());
+        var operations = new Operations(context, f.Scope.ServiceProvider.GetRequiredService<Microsoft.Extensions.Configuration.IConfiguration>(), new ValuationService(context));
         List<LineInput> next = [new(2, "unidad", "1")];
         var quote = await operations.QuoteAsync(2, next);
         await operations.ConfirmAsync(2, new(Guid.NewGuid().ToString(), quote.Hash, "50", false, next));

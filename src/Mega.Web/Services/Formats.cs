@@ -35,6 +35,13 @@ public sealed record SaleInput(string Key, string QuoteHash, string Received, bo
 public sealed record ProductOption(long Id, string Name, string Presentation, string Code, string Unit, string Control, long QuantityScale, long Price, decimal Stock);
 public sealed record QuoteLine(long PresentationId, long ProductId, string Name, string Presentation, string Unit, string Mode,
     long Quantity, long QuantityScale, long BaseQuantity, long Factor, long FactorScale, long Requested, long RequestedScale,
-    long Price, long Subtotal, long ProductVersion, long PresentationVersion, long PriceId, decimal Stock);
+    long Price, long Subtotal, long ProductVersion, long PresentationVersion, long PriceId, decimal Stock)
+{
+    public string CostState { get; init; } = "desconocido";
+    public long? BaseCost { get; init; }
+    public long? CostReferenceId { get; init; }
+    public string ValuationHash { get; init; } = "";
+    public List<StockAllocation> Allocations { get; init; } = [];
+}
 public sealed record Quote(List<QuoteLine> Lines, long Total, string Hash, long ConfigurationId, bool NeedsPhysicalCheck);
 public sealed record CashSummary(Mega.Web.Data.TurnoCaja? Shift, long Net, long Expected, long Usual, bool StationOccupied);

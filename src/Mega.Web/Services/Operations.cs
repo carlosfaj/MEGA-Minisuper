@@ -4,7 +4,7 @@ using Mega.Web.Data;
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Services;
 
-public sealed class Operations(MegaDbContext db, IConfiguration configuration)
+public sealed class Operations(MegaDbContext db, IConfiguration configuration, ValuationService valuation)
 {
     public string Station => configuration["MEGA:Station"] ?? "MEGA-LOCAL-01";
     public async Task<Usuario> RequireCashAsync(long userId)
@@ -93,9 +93,6 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
             var p=await db.Set<Presentacion>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==input.PresentationId && x.Activo==1);
             var product=p is null?null:await db.Set<Producto>().AsNoTracking().SingleOrDefaultAsync(x=>x.Id==p.ProductoId && x.Activo==1);
             if(p is null || product is null) throw new BusinessException("Un producto o presentación dejó de estar disponible. Retíralo de la compra.");
-            // La primera entrega no procesa lotes, promociones ni condiciones tributarias.
-            if(product.ControlVencimiento==1 || await db.Set<LoteExistencia>().AnyAsync(x=>x.ProductoId==product.Id)) throw new BusinessException("Este producto requiere asignación por lotes, pendiente en este avance.");
-            if(await db.Set<MovimientoInventario>().AnyAsync(x=>x.ProductoId==product.Id && x.EstadoCosto=="conocido")) throw new BusinessException("Este producto requiere valoración de costo, pendiente en este avance.");
             if(await db.Set<ProductoImpuesto>().AnyAsync(x=>x.ProductoId==product.Id) || await db.Set<PromocionProducto>().AnyAsync(x=>x.PresentacionId==p.Id)) throw new BusinessException("Las condiciones de impuestos o promociones de este producto requieren el módulo pendiente.");
             var prices=await db.Set<PrecioProducto>().AsNoTracking().Where(x=>x.PresentacionId==p.Id && string.Compare(x.VigenteDesde,now)<=0 && (x.VigenteHasta==null || string.Compare(x.VigenteHasta,now)>0)).ToListAsync();
             if(prices.Count!=1 || prices[0].PrecioCentavos<=0) throw new BusinessException("El producto necesita un único precio vigente mayor que cero.");
@@ -114,6 +111,13 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
             total=checked(total+subtotal);
             lines.Add(new(p.Id,product.Id,product.Nombre,p.Nombre,product.UnidadBase,input.Mode,scaled,quantityScale,baseQuantity,p.FactorEscalado,p.EscalaFactor,
                 requested,requestedScale,price.PrecioCentavos,subtotal,product.Version,p.Version,price.Id,stocks.GetValueOrDefault(product.Id)));
+        }
+        foreach(var group in lines.Select((line,index)=>new {line,index}).GroupBy(x=>x.line.ProductId))
+        {
+            var product=await db.Set<Producto>().AsNoTracking().SingleAsync(x=>x.Id==group.Key);
+            var state=await valuation.StateAsync(group.Key); var items=group.ToList();
+            var allocations=await valuation.AllocateAsync(product,items.Select(x=>x.line.BaseQuantity).ToArray());
+            for(var i=0;i<items.Count;i++) lines[items[i].index]=items[i].line with {CostState=state.State,BaseCost=state.Cost,CostReferenceId=state.ReferenceId,ValuationHash=state.Fingerprint,Allocations=allocations[i]};
         }
         var needsCheck=lines.GroupBy(x=>x.ProductId).Any(g=>g.Sum(x=>x.BaseQuantity/(decimal)Math.Pow(10,x.QuantityScale))>stocks.GetValueOrDefault(g.Key));
         var hash=Formats.Hash(Formats.Json(new {versionFormato=1,configuracionId=config.Id,config.Version,lineas=lines.Select(x=>x with {Stock=0}),total}));
@@ -141,28 +145,35 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
         if(quote.NeedsPhysicalCheck && !input.PhysicalStockChecked) throw new BusinessException("Comprueba la disponibilidad física y confirma la discrepancia de existencias.");
         var shift=await db.Set<TurnoCaja>().SingleAsync(x=>x.OperadorId==userId && x.EstacionId==Station && x.Estado=="Abierto");
         var config=await ConfigAsync(); var now=Formats.Now();
+        try
+        {
+            foreach(var group in quote.Lines.GroupBy(x=>x.ProductId))
+            {var balance=(await valuation.StateAsync(group.Key)).Balance;foreach(var line in group)balance=checked(balance-line.BaseQuantity);}
+            var net=await db.Set<MovimientoCaja>().Where(x=>x.TurnoId==shift.Id).SumAsync(x=>(long?)x.ImporteCentavos)??0;
+            _=checked(checked(shift.FondoRealCentavos+net)+quote.Total);
+        }
+        catch(OverflowException){throw new BusinessException("La venta supera la capacidad de existencias o caja.");}
         var operation=new OperacionInventario {Tipo="venta",Fecha=now,ConfirmadoEn=now,SecuenciaConfirmacion=checked((await db.Set<OperacionInventario>().MaxAsync(x=>(long?)x.SecuenciaConfirmacion)??0)+1),CreadoPor=userId,EjecutadoPor=userId,ClaveOperacion=input.Key};
         db.Add(operation); await db.SaveChangesAsync();
         var folio=$"MEGA-{operation.SecuenciaConfirmacion:00000000}";
         var snapshot=Formats.Json(new {versionFormato=1,intentHash,folio,fecha=now,negocio=config.Nombre,direccion=config.Direccion,telefono=config.Telefono,
             emisor=config.Emisor,identificacionEmisor=config.IdentificacionEmisor,moneda=config.Moneda,operador=user.NombreVisible,configuracionId=config.Id,
-            fiscalidadValidada=config.FiscalidadValidada==1,lineas=quote.Lines.Select(x=>new {x.Name,x.Presentation,x.Unit,x.Quantity,x.QuantityScale,x.Factor,x.FactorScale,x.BaseQuantity,x.Price,x.Subtotal,impuestos=Array.Empty<object>(),promocion=(object?)null}),
+            fiscalidadValidada=config.FiscalidadValidada==1,politicaValoracion=ValuationService.Policy,lineas=quote.Lines.Select(x=>new {x.Name,x.Presentation,x.Unit,x.Quantity,x.QuantityScale,x.Factor,x.FactorScale,x.BaseQuantity,x.Price,x.Subtotal,impuestos=Array.Empty<object>(),promocion=(object?)null}),
             subtotalCentavos=quote.Total,impuestoCentavos=0,descuentoCentavos=0,totalCentavos=quote.Total,
             pagos=new[]{new {medio="efectivo",importeCentavos=quote.Total,recibidoCentavos=received,cambioCentavos=received-quote.Total}}});
         var sale=new Venta {Folio=folio,Fecha=now,TurnoId=shift.Id,OperacionId=operation.Id,ConfiguracionId=config.Id,Estado="Confirmada",SubtotalCentavos=quote.Total,
             TotalCentavos=quote.Total,Moneda=config.Moneda,ClaveOperacion=input.Key,ComprobanteSnapshot=snapshot,ComprobanteHash=Formats.Hash(snapshot),Version=1};
-        db.Add(sale); await db.SaveChangesAsync(); var number=0;
+        db.Add(sale); await db.SaveChangesAsync(); var number=0; var stockSequence=0;
         foreach(var line in quote.Lines)
         {
-            // Hasta implementar valoración, costo desconocido permanece explícito.
             var detail=new VentaDetalle {VentaId=sale.Id,NumeroLinea=++number,PresentacionId=line.PresentationId,ProductoId=line.ProductId,
                 DescripcionHistorica=line.Name,PresentacionHistorica=line.Presentation,UnidadBaseHistorica=line.Unit,CantidadEscalada=line.Quantity,
                 EscalaCantidad=line.QuantityScale,FactorHistoricoEscalado=line.Factor,EscalaFactor=line.FactorScale,CantidadBaseEscalada=line.BaseQuantity,
                 ModalidadVenta=line.Mode,ValorSolicitadoEscalado=line.Requested,EscalaValorSolicitado=line.RequestedScale,PrecioUnitEscalado=line.Price,
-                EscalaPrecio=2,EstadoCosto="desconocido",SubtotalCentavos=line.Subtotal,TotalCentavos=line.Subtotal,ImpuestosSnapshot="[]"};
+                EscalaPrecio=2,EstadoCosto=line.CostState,CostoUnitEscalado=line.BaseCost,EscalaCosto=line.BaseCost is null?null:6,CostoReferenciaId=line.CostReferenceId,SubtotalCentavos=line.Subtotal,TotalCentavos=line.Subtotal,ImpuestosSnapshot="[]"};
             db.Add(detail); await db.SaveChangesAsync();
-            db.Add(new MovimientoInventario {OperacionId=operation.Id,ProductoId=line.ProductId,Secuencia=number,VentaDetalleId=detail.Id,
-                CantidadEscalada=-line.BaseQuantity,Escala=line.QuantityScale,EstadoCosto="desconocido"});
+            foreach(var allocation in line.Allocations) db.Add(new MovimientoInventario {OperacionId=operation.Id,ProductoId=line.ProductId,LoteId=allocation.LotId,Secuencia=++stockSequence,VentaDetalleId=detail.Id,
+                CantidadEscalada=-allocation.Quantity,Escala=line.QuantityScale,EstadoCosto=line.CostState,CostoUnitEscalado=line.BaseCost,EscalaCosto=line.BaseCost is null?null:6,CostoReferenciaId=line.CostReferenceId});
         }
         db.Add(new Pago {VentaId=sale.Id,Secuencia=1,Medio="efectivo",ImporteCentavos=quote.Total,RecibidoCentavos=received,CambioCentavos=received-quote.Total,EstadoVerificacion="verificado",VerificadoPor=userId,VerificadoEn=now});
         await db.SaveChangesAsync();
