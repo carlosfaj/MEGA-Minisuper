@@ -1,0 +1,371 @@
+{
+  "CheckedAtUtc": "2026-11-12T12:54:06.997Z",
+  "SchemaVersion": 2,
+  "EngineVersion": "3.53.3",
+  "ForeignKeysEnabled": true,
+  "Integrity": "ok",
+  "Tables": [
+    {
+      "Name": "Categoria",
+      "Columns": 3,
+      "ForeignKeys": 0,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "Producto",
+      "Columns": 10,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "Presentacion",
+      "Columns": 7,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "CodigoProducto",
+      "Columns": 4,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "PrecioProducto",
+      "Columns": 7,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "Promocion",
+      "Columns": 11,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "PromocionProducto",
+      "Columns": 4,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "promocionId",
+        "presentacionId"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "Impuesto",
+      "Columns": 11,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "ProductoImpuesto",
+      "Columns": 4,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "productoId",
+        "impuestoId",
+        "vigenteDesde"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "ConfiguracionNegocio",
+      "Columns": 30,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "Proveedor",
+      "Columns": 8,
+      "ForeignKeys": 0,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "Recepcion",
+      "Columns": 14,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "RecepcionDetalle",
+      "Columns": 16,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "LoteExistencia",
+      "Columns": 6,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "OperacionInventario",
+      "Columns": 11,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "MovimientoInventario",
+      "Columns": 15,
+      "ForeignKeys": 8,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "Conteo",
+      "Columns": 10,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "ConteoDetalle",
+      "Columns": 8,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "SolicitudInventario",
+      "Columns": 14,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "SolicitudInventarioDetalle",
+      "Columns": 14,
+      "ForeignKeys": 5,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 6
+    },
+    {
+      "Name": "Venta",
+      "Columns": 16,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "VentaDetalle",
+      "Columns": 28,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "Pago",
+      "Columns": 12,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "TurnoCaja",
+      "Columns": 15,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "MovimientoCaja",
+      "Columns": 10,
+      "ForeignKeys": 5,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "GastoOperativo",
+      "Columns": 15,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "SolicitudAnulacion",
+      "Columns": 22,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "Usuario",
+      "Columns": 13,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 4
+    },
+    {
+      "Name": "Rol",
+      "Columns": 2,
+      "ForeignKeys": 0,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 4
+    },
+    {
+      "Name": "Autorizacion",
+      "Columns": 16,
+      "ForeignKeys": 5,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "AccesoSoporte",
+      "Columns": 11,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "EventoAuditoria",
+      "Columns": 13,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 1
+    },
+    {
+      "Name": "SolicitudImpresion",
+      "Columns": 21,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "IntentoImpresion",
+      "Columns": 12,
+      "ForeignKeys": 1,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "EntregaComprobante",
+      "Columns": 9,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "SolicitudCorreo",
+      "Columns": 23,
+      "ForeignKeys": 3,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "IntentoCorreo",
+      "Columns": 14,
+      "ForeignKeys": 2,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "RespaldoEjecucion",
+      "Columns": 20,
+      "ForeignKeys": 5,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    },
+    {
+      "Name": "Restauracion",
+      "Columns": 20,
+      "ForeignKeys": 4,
+      "PrimaryKey": [
+        "id"
+      ],
+      "Rows": 0
+    }
+  ],
+  "Views": 2,
+  "Triggers": 21,
+  "Indexes": 159,
+  "Errors": [],
+  "Healthy": true,
+  "UpToDate": true,
+  "ColumnCount": 499,
+  "ForeignKeyCount": 103
+}

@@ -1,0 +1,208 @@
+{
+  "version": "0.2.0",
+  "total": 50,
+  "passed": 50,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"UPDATE Venta SET comprobanteSnapshot='{}'\", message: \"comprobante\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.complete_schema_and_ef_mapping_match_39_tables_499_columns_103_relations",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"peso_manual\", value: \"-1\", presentation: 1)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"UPDATE Pago SET recibidoCentavos=99999\", message: \"pagos\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.stale_close_cannot_hide_a_new_sale",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.upgrade_preserves_legacy_sales_and_makes_a_valid_previous_copy",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.database_foreign_keys_and_39_tables_match_reference",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: \"DELETE FROM MovimientoInventario WHERE id=1\", message: \"inventario\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"DELETE FROM Pago\", message: \"pagos\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.T05_insufficient_payment_leaves_no_partial_effects",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.T05_sale_is_atomic_and_repeat_recovers_one_sale",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.existing_demo_database_cannot_be_switched_to_real_mode",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.composite_keys_allow_multiple_products_in_one_promotion_and_multiple_tax_periods",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"importe\", value: \"2\", presentation: 2)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"DELETE FROM MovimientoCaja\", message: \"caja\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.failed_migration_rolls_back_objects_version_and_rows",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.overlapping_legacy_prices_block_upgrade_before_modifying_data",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"peso_manual\", value: \"9999999999999999999999999999\", presentation: 1)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.readonly_diagnosis_keeps_file_and_business_records_unchanged",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.extra_payment_cannot_exceed_sale_total",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.unrecognized_version_or_unversioned_existing_data_is_never_overwritten",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.concurrent_retries_create_a_single_business_operation",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: \"UPDATE EventoAuditoria SET accion='alterado' WHERE\"···, message: \"auditoria\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.known_cost_product_waits_for_valuation_instead_of_discarding_cost",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"DELETE FROM Venta\", message: \"ventas\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.negative_stock_requires_physical_check_without_blocking_by_sign",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"peso_manual\", value: \"0\", presentation: 1)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.real_http_flow_checks_login_csrf_sale_and_role_boundaries",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"DELETE FROM VentaDetalle\", message: \"detalle\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.closed_shift_cannot_be_rewritten_and_view_preserves_expected",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: \"UPDATE MovimientoInventario SET cantidadEscalada=1\"···, message: \"cantidad\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"unidad\", value: \"1.5\", presentation: 2)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.inspector_detects_missing_guards_and_does_not_repair_them_silently",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.detail_cannot_use_a_presentation_belonging_to_another_product",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.credential_version_change_invalidates_existing_session",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"UPDATE MovimientoCaja SET importeCentavos=1\", message: \"caja\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.T09_close_saves_expected_count_difference_and_keeps_snapshot",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: \"DELETE FROM EventoAuditoria WHERE id=1\", message: \"auditoria\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.non_demo_initialization_uses_supplied_password_owner_and_no_fictitious_products",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"desconocida\", value: \"1\", presentation: 1)",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.price_change_requires_review_before_payment",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.rollback_after_late_database_failure_removes_sale_payment_and_stock_effects",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: \"UPDATE VentaDetalle SET totalCentavos=1\", message: \"detalle\")",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.T08_one_station_rejects_two_open_shifts_and_requires_difference_reason",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.foreign_keys_alone_do_not_allow_a_lot_from_another_product",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.sales_by_amount_show_actual_rounded_quantity_and_total",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.repeated_initialization_does_not_duplicate_seed_or_migration_events",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.same_key_with_other_content_or_account_is_rejected",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.DatabaseTests.price_intervals_reject_overlap_and_accept_adjacent_periods",
+      "result": "Passed"
+    },
+    {
+      "name": "Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: \"peso_manual\", value: \"1.0001\", presentation: 1)",
+      "result": "Passed"
+    }
+  ]
+}

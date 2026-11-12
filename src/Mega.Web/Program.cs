@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Sqlite;
 
-var builder = WebApplication.CreateBuilder(args);
+var databaseCommands = args.Where(a => a is "--db-check" or "--db-upgrade").ToArray();
+if (databaseCommands.Length > 1) throw new ArgumentException("Utiliza --db-check o --db-upgrade por separado.");
+var builder = WebApplication.CreateBuilder(args.Except(databaseCommands).ToArray());
 builder.Services.AddRazorPages(o => o.Conventions.AuthorizeFolder("/"));
 builder.Services.AddAntiforgery(o => { o.HeaderName = "X-CSRF-TOKEN"; o.Cookie.SecurePolicy = CookieSecurePolicy.Always; });
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(o =>
@@ -44,14 +46,21 @@ builder.Services.AddRateLimiter(o =>
 });
 builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
 builder.Services.AddScoped<Operations>(); builder.Services.AddScoped<DatabaseInitializer>();
-builder.Services.AddDbContext<MegaDbContext>(o =>
-{
-    var file = builder.Configuration.GetValue<bool>("MEGA:DemoData") ? "mega-demo.db" : "mega.db";
-    var path = builder.Configuration["MEGA:DatabasePath"] ?? Path.Combine(builder.Environment.ContentRootPath, "App_Data", file);
-    Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path))!);
-    o.UseSqlite(new SqliteConnectionStringBuilder { DataSource = path, ForeignKeys = true, Pooling = false, DefaultTimeout = 15 }.ToString());
-});
+builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
+builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
+builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));
 var app = builder.Build();
+if (databaseCommands.Length == 1)
+{
+    using var scope = app.Services.CreateScope();
+    if (databaseCommands[0] == "--db-upgrade") await scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
+    using var connection = new SqliteConnection(scope.ServiceProvider.GetRequiredService<DatabaseLocation>().ConnectionString(readOnly: true));
+    await connection.OpenAsync();
+    var report = await scope.ServiceProvider.GetRequiredService<DatabaseInspector>().InspectAsync(connection, scope.ServiceProvider.GetRequiredService<MegaDbContext>().Model);
+    Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(report, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
+    Environment.ExitCode = report.Healthy ? 0 : 1;
+    return;
+}
 using (var scope = app.Services.CreateScope()) await scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
 app.Use(async (context, next) =>
 {

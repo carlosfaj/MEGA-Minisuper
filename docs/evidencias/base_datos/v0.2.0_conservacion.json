@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 2,
+  "tablesPreserved": 39,
+  "allPreviousRowsPreserved": true,
+  "auditEventsAdded": 1,
+  "backupFile": "mega-demo.v1.20261112T125301097Z.8b3c7ae4a91f4dfa8f17850135aff26c.db",
+  "tables": {
+    "AccesoSoporte": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Autorizacion": {
+      "rowsBefore": 1,
+      "rowsPreserved": 1,
+      "sameDigest": true
+    },
+    "Categoria": {
+      "rowsBefore": 1,
+      "rowsPreserved": 1,
+      "sameDigest": true
+    },
+    "CodigoProducto": {
+      "rowsBefore": 6,
+      "rowsPreserved": 6,
+      "sameDigest": true
+    },
+    "ConfiguracionNegocio": {
+      "rowsBefore": 1,
+      "rowsPreserved": 1,
+      "sameDigest": true
+    },
+    "Conteo": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "ConteoDetalle": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "EntregaComprobante": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "EventoAuditoria": {
+      "rowsBefore": 13,
+      "rowsPreserved": 13,
+      "sameDigest": true
+    },
+    "GastoOperativo": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Impuesto": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "IntentoCorreo": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "IntentoImpresion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "LoteExistencia": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "MovimientoCaja": {
+      "rowsBefore": 2,
+      "rowsPreserved": 2,
+      "sameDigest": true
+    },
+    "MovimientoInventario": {
+      "rowsBefore": 9,
+      "rowsPreserved": 9,
+      "sameDigest": true
+    },
+    "OperacionInventario": {
+      "rowsBefore": 3,
+      "rowsPreserved": 3,
+      "sameDigest": true
+    },
+    "Pago": {
+      "rowsBefore": 2,
+      "rowsPreserved": 2,
+      "sameDigest": true
+    },
+    "PrecioProducto": {
+      "rowsBefore": 6,
+      "rowsPreserved": 6,
+      "sameDigest": true
+    },
+    "Presentacion": {
+      "rowsBefore": 6,
+      "rowsPreserved": 6,
+      "sameDigest": true
+    },
+    "Producto": {
+      "rowsBefore": 6,
+      "rowsPreserved": 6,
+      "sameDigest": true
+    },
+    "ProductoImpuesto": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Promocion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "PromocionProducto": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Proveedor": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Recepcion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "RecepcionDetalle": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "RespaldoEjecucion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Restauracion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "Rol": {
+      "rowsBefore": 4,
+      "rowsPreserved": 4,
+      "sameDigest": true
+    },
+    "SolicitudAnulacion": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "SolicitudCorreo": {
+      "rowsBefore": 0,
+      "rowsPreserved": 0,
+      "sameDigest": true
+    },
+    "SolicitudImpresion": {
+      "rowsBefore": 2,
+      "rowsPreserved": 2,
+      "sameDigest": true
+    },
+    "SolicitudInventario": {
+      "rowsBefore": 1,
+      "rowsPreserved": 1,
+      "sameDigest": true
+    },
+    "SolicitudInventarioDetalle": {
+      "rowsBefore": 6,
+      "rowsPreserved": 6,
+      "sameDigest": true
+    },
+    "TurnoCaja": {
+      "rowsBefore": 3,
+      "rowsPreserved": 3,
+      "sameDigest": true
+    },
+    "Usuario": {
+      "rowsBefore": 4,
+      "rowsPreserved": 4,
+      "sameDigest": true
+    },
+    "Venta": {
+      "rowsBefore": 2,
+      "rowsPreserved": 2,
+      "sameDigest": true
+    },
+    "VentaDetalle": {
+      "rowsBefore": 3,
+      "rowsPreserved": 3,
+      "sameDigest": true
+    }
+  }
+}

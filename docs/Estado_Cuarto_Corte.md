@@ -2,6 +2,8 @@
 
 Avance 01 del 11 de noviembre de 2026. Se implementó y comprobó el recorrido de acceso, apertura de caja, venta en efectivo, comprobante y cierre. Se utiliza la revisión del modelo del 11 de noviembre; los documentos académicos previos no se modificaron.
 
+Actualización del 12 de noviembre, **v0.2.0**: base SQLite con esquema 2, migración conservadora desde esquema 1, corrección de claves compuestas, diagnóstico integral y dos vistas utilizadas por la aplicación. Se conservan las 39 tablas, 499 columnas y 103 FK del diseño. Los 21 triggers y los índices agregados refuerzan integridad e historia; los módulos funcionales pendientes de la tabla siguiente conservan su alcance. [Detalle de base de datos](Base_Datos.md).
+
 | Requisito | Estado del avance | Trabajo restante |
 |---|---|---|
 | RF01 Catálogo | Lectura de productos/presentaciones/precios vigentes para vender | Alta, edición, desactivación, precios versionados, promociones e impuestos |

@@ -9,7 +9,7 @@ La implementación parte del modelo corregido del 11 de noviembre de 2026: 39 ta
 | Decisión | Aplicación y motivo |
 |---|---|
 | ASP.NET Core 10, Razor Pages, EF Core 10.0.14, SQLite | Continúa la arquitectura documentada y utiliza el SDK disponible 10.0.403. Las dependencias quedan fijadas en los proyectos |
-| DDL original y versión de esquema 1 | Conserva STRICT, CHECK, índices y FK; una evolución futura exige migración explícita |
+| DDL original conservado y esquema actual 2 | Conserva STRICT, CHECK y FK. La migración 002 agrega índices, vistas y triggers en una transacción; una evolución posterior requiere otra migración |
 | Dinero entero en centavos | Los cálculos autoritativos usan decimal; no se persisten valores monetarios REAL |
 | Cantidad de peso a tres decimales | Implementa la propuesta del diseño; mitades hacia arriba para cantidad por importe y total por línea. Debe aprobarse comercialmente |
 | Venta por importe | Muestra cantidad y total efectivos después del redondeo. C$10 de arroz a C$24/lb resulta en 0.417 lb y C$10.01; el usuario debe revisar ese total antes de cobrar |
@@ -24,6 +24,10 @@ La implementación parte del modelo corregido del 11 de noviembre de 2026: 39 ta
 | Recuperación de confirmación incierta | La pestaña conserva clave, intención y cotización en sessionStorage por cuenta; permite reintentar sin otro cobro. No sustituye la continuidad ante pérdida completa del equipo/navegador |
 | Zona horaria provisional | UTC en persistencia; UTC−6 en pantalla por ubicación del negocio en Managua. La zona operativa debe confirmarse con él |
 | Inicialización ficticia | Cuentas, catálogo y carga demo con dos identidades diferentes; constituye una preparación técnica de pruebas y no una aprobación real del negocio |
+| Claves compuestas | El mapeo identifica todas las columnas de PromocionProducto y ProductoImpuesto; permite asociaciones y periodos múltiples sin confundir identidades |
+| Contrato y diagnóstico | Verifica fuentes originales, definiciones SQL, columnas, nulabilidad, PK, FK y mapeo; revisa integridad física, referencias, saldos y hashes de comprobantes |
+| Copia previa de migración | Copia consistente local antes de modificar una base con esquema 1. No sustituye la política de respaldo externo y restauración de RF09 |
+| Base sin demostración | Requiere contraseña suministrada; la cuenta inicial tiene rol Propietario y no se crean productos o ventas ficticios |
 
 ## Decisiones que requieren al negocio
 

@@ -656,4 +656,3 @@ public sealed class Restauracion
     public long? ReaperturaAutorizadaPor { get; set; }
     public string ClaveIntervencion { get; set; } = "";
 }
-

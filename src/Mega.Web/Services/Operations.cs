@@ -26,9 +26,9 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
     {
         await RequireCashAsync(userId);
         var shift=await db.Set<TurnoCaja>().AsNoTracking().SingleOrDefaultAsync(x=>x.OperadorId==userId && x.Estado=="Abierto" && x.EstacionId==Station);
-        var net=shift is null ? 0 : await db.Set<MovimientoCaja>().Where(x=>x.TurnoId==shift.Id).SumAsync(x=>(long?)x.ImporteCentavos) ?? 0;
+        var balance=shift is null ? null : await db.Set<ResumenCajaVista>().AsNoTracking().SingleAsync(x=>x.TurnoId==shift.Id);
         var config=await ConfigAsync();
-        return new(shift,net,checked((shift?.FondoRealCentavos??0)+net),config.FondoHabitualCentavos,
+        return new(shift,balance?.NetoCentavos??0,balance?.EsperadoCentavos??0,config.FondoHabitualCentavos,
             await db.Set<TurnoCaja>().AnyAsync(x=>x.EstacionId==Station && x.Estado=="Abierto" && x.OperadorId!=userId));
     }
     public void Audit(long userId,string action,string entity,string? id,string key,object changes,string result="exito") =>
@@ -66,8 +66,8 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
     }
     public async Task<Dictionary<long,decimal>> StocksAsync()
     {
-        var rows=await db.Set<MovimientoInventario>().AsNoTracking().Select(x=>new {x.ProductoId,x.CantidadEscalada,x.Escala}).ToListAsync();
-        return rows.GroupBy(x=>x.ProductoId).ToDictionary(g=>g.Key,g=>g.Sum(x=>x.CantidadEscalada/(decimal)Math.Pow(10,x.Escala)));
+        var rows=await db.Set<ExistenciaVista>().AsNoTracking().ToListAsync();
+        return rows.ToDictionary(x=>x.ProductoId,x=>x.CantidadEscalada/(decimal)Math.Pow(10,x.EscalaCantidad));
     }
     public async Task<List<ProductOption>> ProductsAsync()
     {
@@ -165,6 +165,7 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
                 CantidadEscalada=-line.BaseQuantity,Escala=line.QuantityScale,EstadoCosto="desconocido"});
         }
         db.Add(new Pago {VentaId=sale.Id,Secuencia=1,Medio="efectivo",ImporteCentavos=quote.Total,RecibidoCentavos=received,CambioCentavos=received-quote.Total,EstadoVerificacion="verificado",VerificadoPor=userId,VerificadoEn=now});
+        await db.SaveChangesAsync();
         db.Add(new MovimientoCaja {TurnoId=shift.Id,VentaId=sale.Id,OperacionId=operation.Id,Tipo="cobro_efectivo",ImporteCentavos=quote.Total,RegistradoPor=userId,Fecha=now});
         db.Add(new SolicitudImpresion {VentaId=sale.Id,SolicitadoPor=userId,Tipo="original",CopiaNumero=0,Estado="Pendiente",ClaveSolicitud="original-"+input.Key,
             Fecha=now,ImpresoraHistorica=config.ImpresoraNombre??"Sin impresora configurada",ContenidoHash=sale.ComprobanteHash,UltimoError=config.ImpresionHabilitada==0?"Impresión automática pendiente de integrar en este avance.":null});

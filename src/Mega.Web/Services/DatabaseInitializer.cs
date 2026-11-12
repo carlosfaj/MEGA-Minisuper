@@ -2,40 +2,36 @@ using Mega.Web.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using Microsoft.Data.Sqlite;
 namespace Mega.Web.Services;
-public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment environment, IConfiguration config, IPasswordHasher<Usuario> hasher)
+public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment environment, IConfiguration config, IPasswordHasher<Usuario> hasher,
+    DatabaseSchema schema, DatabaseInspector inspector, DatabaseLocation location)
 {
     public async Task InitializeAsync()
     {
-        await db.Database.OpenConnectionAsync();
-        await using var command = db.Database.GetDbConnection().CreateCommand();
-        command.CommandText = "PRAGMA user_version";
-        var version = Convert.ToInt32(await command.ExecuteScalarAsync());
-        if (version == 0)
-        {
-            command.CommandText = await File.ReadAllTextAsync(Path.Combine(environment.ContentRootPath, "Data", "Schema.sql"));
-            await command.ExecuteNonQueryAsync(); command.CommandText = "PRAGMA user_version=1"; await command.ExecuteNonQueryAsync();
-        }
-        else if (version != 1) throw new InvalidOperationException("Versión de base no compatible. Se requiere una migración explícita.");
         var demo = config.GetValue<bool>("MEGA:DemoData");
         if (demo && !environment.IsDevelopment() && !environment.IsEnvironment("Testing")) throw new InvalidOperationException("Los datos de demostración solo se permiten en Development o Testing.");
-        var initialEvent=await db.Set<EventoAuditoria>().AsNoTracking().FirstOrDefaultAsync(x=>x.ClaveOperacion=="inicializacion");
-        if(initialEvent is not null)
+        Directory.CreateDirectory(Path.GetDirectoryName(location.Path)!);
+        await db.Database.OpenConnectionAsync();
+        try
         {
-            using var metadata=JsonDocument.Parse(initialEvent.DatosCambio);
-            if(metadata.RootElement.GetProperty("demostracion").GetBoolean()!=demo) throw new InvalidOperationException("La base pertenece a otro modo de operación. Selecciona una base separada; no se convierten datos ficticios en reales.");
+            await schema.EnsureAsync(demo);
+            if (!await db.Set<Usuario>().AnyAsync())
+            {
+                var password = demo ? "MegaDemo2026!" : config["MEGA_BOOTSTRAP_PASSWORD"];
+                if (string.IsNullOrWhiteSpace(password) || password.Length < 12) throw new InvalidOperationException("Define MEGA_BOOTSTRAP_PASSWORD de al menos 12 caracteres para inicializar una base sin demostración.");
+                await SeedAsync(password, demo);
+            }
+            var connection = (SqliteConnection)db.Database.GetDbConnection();
+            await DatabaseSchema.ValidateModeAsync(connection, demo);
+            DatabaseInspector.RequireHealthy(await inspector.InspectAsync(connection, db.Model));
         }
-        if (!await db.Set<Usuario>().AnyAsync())
-        {
-            var password = demo ? "MegaDemo2026!" : config["MEGA_BOOTSTRAP_PASSWORD"];
-            if (string.IsNullOrWhiteSpace(password) || password.Length < 12) throw new InvalidOperationException("Define MEGA_BOOTSTRAP_PASSWORD de al menos 12 caracteres para inicializar una base sin demostración.");
-            await SeedAsync(password, demo);
-        }
-        await db.Database.CloseConnectionAsync();
+        finally { await db.Database.CloseConnectionAsync(); }
     }
     private async Task SeedAsync(string password, bool demo)
     {
         await using var transaction = await db.Database.BeginTransactionAsync(); var now = Formats.Now();
+        if (await db.Set<Usuario>().AnyAsync()) return;
         db.AddRange(new Rol { Id=1, Nombre="Propietario" }, new Rol { Id=2, Nombre="Administrador" }, new Rol { Id=3, Nombre="Cajero" }, new Rol { Id=4, Nombre="Inventario" });
         await db.SaveChangesAsync();
         Usuario User(long id, string name, string visible, long role, long cash)
@@ -43,7 +39,7 @@ public sealed class DatabaseInitializer(MegaDbContext db, IWebHostEnvironment en
             var u = new Usuario { Id=id, NombreCuenta=name, NombreNormalizado=name.ToUpperInvariant(), NombreVisible=visible, Activo=1, TipoCuenta="comercial", RolId=role, PermisoOperativoCaja=cash, DelegacionCuentas=0, CreadoEn=now, CredencialesVersion=1 };
             u.PasswordHash = hasher.HashPassword(u, password); return u;
         }
-        db.Add(User(1,"admin",demo ? "Administración · demo" : "Administración",2,1));
+        db.Add(User(1,"admin",demo ? "Administración · demo" : "Propietario",demo ? 2 : 1,1));
         if (demo) db.AddRange(User(2,"cajero","Caja · demo",3,1), User(3,"inventario","Inventario · demo",4,0), User(4,"cajero2","Segunda caja · demo",3,1));
         await db.SaveChangesAsync();
         db.Add(new ConfiguracionNegocio { Id=1, Nombre=demo ? "Minisúper MEGA · demostración" : "Minisúper MEGA", Direccion=demo ? "Managua · dirección ficticia para pruebas" : "Pendiente de configurar", Moneda="NIO", FiscalidadValidada=0, FondoHabitualCentavos=50000, ImpresionHabilitada=0, EfectivoHabilitado=1, TransferenciaHabilitada=0, TarjetaHabilitada=0, Version=1, VigenteDesde=now, CambiadoPor=1 });

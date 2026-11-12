@@ -4,7 +4,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La primera versión es **0.1.0**. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.2.0**, que añade la implementación y comprobación de la base de datos. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -42,8 +42,11 @@ Ejemplo: abrir con **480.00**, motivo **Fondo recibido C$20 menor**, vender **2.
 - `docs/Evidencias_Avance01.md`: capturas reales explicadas.
 - `docs/Documento_Final_Estructura.md`: organización del documento consolidado.
 - `docs/Decisiones_y_Pendientes.md`: decisiones técnicas y validaciones del negocio.
+- `docs/Base_Datos.md`: estructura, migraciones, diagnóstico y controles del esquema 2.
 
-La fuente SQL y el modelo JSON se copiaron de `../../00_OFICIALES/Tercer_Corte/Correccion_20261111/`; los originales se conservan. El inicializador ejecuta el DDL y marca `PRAGMA user_version=1`. EF mapea las 39 tablas y no usa EnsureCreated ni reemplaza restricciones del esquema. El generador `tools/generate_model.py` permite regenerar clases y mapeos desde el JSON incluido.
+La fuente SQL y el modelo JSON se copiaron de `../../00_OFICIALES/Tercer_Corte/Correccion_20261111/`; los originales se conservan con sus hashes. El esquema actual es **2**: se crea de forma atómica o se migra desde el esquema 1 con copia previa, sin recrear ni borrar datos. EF mapea las 39 tablas, incluidas las claves compuestas, y dos vistas de lectura. No se usa EnsureCreated. El generador `tools/generate_model.py` permite regenerar clases y mapeos desde el JSON incluido.
+
+Para consultar el estado sin modificar la base, ejecutar **Revisar_Base_Datos.cmd**. También puede utilizarse `dotnet run --project src/Mega.Web --configuration Release -- --db-check`. La actualización se aplica al arrancar la nueva aplicación, o explícitamente con `--db-upgrade`. El diagnóstico distingue base íntegra (`Healthy`) de esquema actualizado (`UpToDate`). Detalles en [Base_Datos.md](docs/Base_Datos.md).
 
 ## Validación
 
@@ -52,7 +55,7 @@ dotnet build MEGA.sln
 dotnet test MEGA.sln --logger "trx;LogFileName=avance01.trx" --results-directory docs/evidencias/pruebas
 ```
 
-El registro TRX y las capturas están en `docs/evidencias`. El script opcional `tools/browser-check.cjs` requiere Playwright y Edge, una base de demostración sin turno abierto y ejecuta operaciones ficticias; no debe usarse sobre datos operativos. Puede recibir la ubicación de Playwright mediante `MEGA_PLAYWRIGHT`.
+El registro histórico del avance 01 y sus capturas están en `docs/evidencias`; la validación de la versión 0.2.0 está en `docs/evidencias/base_datos`. El script opcional `tools/browser-check.cjs` requiere Playwright y Edge, una base de demostración sin turno abierto y ejecuta operaciones ficticias; no debe usarse sobre datos operativos. Puede recibir la ubicación de Playwright mediante `MEGA_PLAYWRIGHT`.
 
 ## Límites de este avance
 

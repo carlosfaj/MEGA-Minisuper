@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Data;
 
-public sealed class MegaDbContext(DbContextOptions<MegaDbContext> options) : DbContext(options)
+public sealed partial class MegaDbContext(DbContextOptions<MegaDbContext> options) : DbContext(options)
 {
     protected override void OnModelCreating(ModelBuilder model)
     {
@@ -87,10 +87,12 @@ public sealed class MegaDbContext(DbContextOptions<MegaDbContext> options) : DbC
         model.Entity<PromocionProducto>(e =>
         {
             e.ToTable("PromocionProducto");
-            e.HasKey(x => x.PromocionId);
+            e.HasKey(x => new { x.PromocionId, x.PresentacionId });
             e.Property(x => x.PromocionId).HasColumnName("promocionId");
+            e.Property(x => x.PromocionId).ValueGeneratedNever();
             e.HasOne<Promocion>().WithMany().HasForeignKey(x => x.PromocionId).OnDelete(DeleteBehavior.Restrict);
             e.Property(x => x.PresentacionId).HasColumnName("presentacionId");
+            e.Property(x => x.PresentacionId).ValueGeneratedNever();
             e.HasOne<Presentacion>().WithMany().HasForeignKey(x => x.PresentacionId).OnDelete(DeleteBehavior.Restrict);
             e.Property(x => x.ReglaAplicacion).HasColumnName("reglaAplicacion");
             e.Property(x => x.Prioridad).HasColumnName("prioridad");
@@ -115,12 +117,15 @@ public sealed class MegaDbContext(DbContextOptions<MegaDbContext> options) : DbC
         model.Entity<ProductoImpuesto>(e =>
         {
             e.ToTable("ProductoImpuesto");
-            e.HasKey(x => x.ProductoId);
+            e.HasKey(x => new { x.ProductoId, x.ImpuestoId, x.VigenteDesde });
             e.Property(x => x.ProductoId).HasColumnName("productoId");
+            e.Property(x => x.ProductoId).ValueGeneratedNever();
             e.HasOne<Producto>().WithMany().HasForeignKey(x => x.ProductoId).OnDelete(DeleteBehavior.Restrict);
             e.Property(x => x.ImpuestoId).HasColumnName("impuestoId");
+            e.Property(x => x.ImpuestoId).ValueGeneratedNever();
             e.HasOne<Impuesto>().WithMany().HasForeignKey(x => x.ImpuestoId).OnDelete(DeleteBehavior.Restrict);
             e.Property(x => x.VigenteDesde).HasColumnName("vigenteDesde");
+            e.Property(x => x.VigenteDesde).ValueGeneratedNever();
             e.Property(x => x.VigenteHasta).HasColumnName("vigenteHasta");
         });
         model.Entity<ConfiguracionNegocio>(e =>
@@ -803,5 +808,7 @@ public sealed class MegaDbContext(DbContextOptions<MegaDbContext> options) : DbC
             e.HasOne<Usuario>().WithMany().HasForeignKey(x => x.ReaperturaAutorizadaPor).OnDelete(DeleteBehavior.Restrict);
             e.Property(x => x.ClaveIntervencion).HasColumnName("claveIntervencion");
         });
+        ConfigureViews(model);
     }
+    partial void ConfigureViews(ModelBuilder model);
 }

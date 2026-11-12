@@ -14,10 +14,13 @@ namespace Mega.Tests;
 public sealed class MegaFactory:WebApplicationFactory<Program>
 {
     private readonly string dbPath=Path.Combine(Path.GetTempPath(),"mega-tests-"+Guid.NewGuid()+".db");
+    private readonly bool demoData;
+    private readonly string? bootstrapPassword;
+    public MegaFactory(bool demoData=true,string? bootstrapPassword=null) { this.demoData=demoData; this.bootstrapPassword=bootstrapPassword; }
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("Testing");
-        builder.ConfigureAppConfiguration((_,c)=>c.AddInMemoryCollection(new Dictionary<string,string?> { ["MEGA:DatabasePath"]=dbPath,["MEGA:DemoData"]="true" }));
+        builder.ConfigureAppConfiguration((_,c)=>c.AddInMemoryCollection(new Dictionary<string,string?> { ["MEGA:DatabasePath"]=dbPath,["MEGA:DemoData"]=demoData.ToString(),["MEGA_BOOTSTRAP_PASSWORD"]=bootstrapPassword }));
     }
     public HttpClient Client()=>CreateClient(new WebApplicationFactoryClientOptions {BaseAddress=new Uri("https://localhost"),AllowAutoRedirect=false});
     protected override void Dispose(bool disposing){base.Dispose(disposing);if(disposing&&File.Exists(dbPath)) File.Delete(dbPath);}
