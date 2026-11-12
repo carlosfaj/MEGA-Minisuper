@@ -1,0 +1,12 @@
+@page
+@model Mega.Web.Pages.Recepciones.RevisionModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Revisar recepción";}
+<div class="page-heading"><div><span class="eyebrow">REVISIÓN POR OTRA CUENTA</span><h1>Revisar recepción</h1><p class="muted">Decidir sobre estas cantidades, costos y procedencia.</p></div><a class="button secondary" asp-page="Editar" asp-route-id="@Model.ReviewedContent.ReceiptId">Ver recepción</a></div><partial name="_Notice"/>
+<div class="alert @(Model.Current?"info":"warning")">Estado: <strong>@Model.Review.Decision</strong>. @(Model.Current?"El contenido coincide con la versión actual.":"El contenido cambió o la revisión fue invalidada. Se requiere guardar y enviar una versión nueva.")</div>
+<partial name="_ReceiptReview" model="Model.ReviewedContent"/>
+<section class="card receiving-line"><h2>Decisión</h2><p class="help">Revisión #@Model.Review.Id · versión @Model.Review.ObjetoVersion · solicitante #@Model.Review.SolicitanteId</p><p class="content-hash">Huella de contenido: @Model.Review.ContenidoHash</p>
+@if(Model.CanDecide){<form method="post"><input asp-for="Id" type="hidden"/><input asp-for="ExpectedVersion" type="hidden"/><input asp-for="ExpectedHash" type="hidden"/><label asp-for="Reason">Motivo de la decisión y comprobación realizada</label><textarea asp-for="Reason" required maxlength="1000"></textarea><div class="toolbar"><button class="button primary" asp-page-handler="Approve">Aprobar y registrar entrada</button><button class="button secondary" asp-page-handler="Reject">Rechazar recepción</button></div></form>}
+else if(Model.Review.Decision=="pendiente" && Model.Current){<p>Debe decidir otra cuenta con rol Administrador o Propietario. La responsabilidad directa del Propietario sigue pendiente de validación.</p>}
+else if(Model.Review.FechaDecision is not null){<p>Decidió la cuenta #@Model.Review.AutorizadorId, @Formats.DateWithSeconds(Model.Review.FechaDecision).</p><p>@Model.Review.Motivo</p>}
+</section>

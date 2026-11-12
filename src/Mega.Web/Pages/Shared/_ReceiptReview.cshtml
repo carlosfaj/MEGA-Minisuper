@@ -1,0 +1,6 @@
+@model Mega.Web.Services.ReceiptReview
+@using Mega.Web.Services
+@using System.Globalization
+<section class="card"><h2>@Model.Reference · versión @Model.Version</h2><div class="form-grid"><p><strong>Proveedor</strong><br/>@Model.Supplier</p><p><strong>Documento</strong><br/>@Model.Document · @Model.DocumentDate</p></div><p>@Model.Notes</p><p class="help">Moneda @Model.Currency. Preparó: cuenta #@Model.CreatorId. Las cifras y descripciones corresponden al contenido guardado para esta revisión.</p>
+@foreach(var d in Model.Lines){<div class="subsection"><h3>@d.Number. @d.Product · @d.Presentation</h3><p>Equivalencia: @(d.Factor/ReceivingService.Power(d.FactorScale)) @d.Unit por presentación.</p><div class="form-grid"><p>Recibido: <strong>@(d.Received/ReceivingService.Power(d.Scale))</strong><br/>Aceptado: <strong>@(d.Accepted/ReceivingService.Power(d.Scale))</strong></p><p>Entrada a existencias: <strong>@(d.BaseQuantity/ReceivingService.Power(d.Scale)) @d.Unit</strong><br/>Costo por @d.Unit: <strong>@(d.BaseCost is long cost?"C$ "+(cost/ReceivingService.Power(d.CostScale!.Value)).ToString("0.######",CultureInfo.InvariantCulture):"Desconocido")</strong></p></div><p>Lote: @(d.Lot??"Sin lote") · Vencimiento: @(d.Expiry??"Sin vencimiento")</p><p>@d.Note</p></div>}
+</section>

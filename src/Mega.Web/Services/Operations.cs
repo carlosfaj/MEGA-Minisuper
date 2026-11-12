@@ -31,9 +31,9 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration)
         return new(shift,balance?.NetoCentavos??0,balance?.EsperadoCentavos??0,config.FondoHabitualCentavos,
             await db.Set<TurnoCaja>().AnyAsync(x=>x.EstacionId==Station && x.Estado=="Abierto" && x.OperadorId!=userId));
     }
-    public void Audit(long userId,string action,string entity,string? id,string key,object changes,string result="exito") =>
+    public void Audit(long userId,string action,string entity,string? id,string key,object changes,string result="exito",long? authorizationId=null) =>
         db.Add(new EventoAuditoria {Fecha=Formats.Now(),UsuarioId=userId,Origen="persona",Accion=action,Entidad=entity,EntidadId=id,
-            ClaveOperacion=key,Resultado=result,DatosCambio=Formats.Json(changes),VersionFormato=1});
+            ClaveOperacion=key,Resultado=result,DatosCambio=Formats.Json(changes),VersionFormato=1,AutorizacionId=authorizationId});
     public async Task<long> OpenCashAsync(long userId,string fund,string? reason)
     {
         await using var tx=await db.Database.BeginTransactionAsync();

@@ -1,0 +1,14 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T13:57:35.379Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "proveedor registrado",
+    "preparación sin entrada",
+    "revisión exacta por segunda cuenta",
+    "cambio posterior rechaza revisión abierta",
+    "nueva revisión y entrada única",
+    "existencias de leche 30 → 40"
+  ],
+  "erroresJavaScript": []
+}

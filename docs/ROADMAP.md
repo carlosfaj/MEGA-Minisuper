@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 12 de noviembre de 2026, con la versión de código 0.5.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 12 de noviembre de 2026, con la versión de código 0.6.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -14,8 +14,8 @@ La consulta de existencias y la estructura de una tabla no equivalen a un módul
 |---|---|---|---|
 | 1 | Catálogo — completado en 0.3.0 | Categorías; productos; presentaciones, equivalencias y códigos; precios con vigencias | Alta y venta real en base de prueba, cambios conservando historia y permisos comprobados; 65 pruebas aprobadas y recorrido de navegador |
 | 2 | Configuración y cuentas — completado en 0.4.0/0.5.0 | Configuración versionada, cuentas/credenciales, roles/delegación y soporte temporal de diagnóstico | 83 pruebas y recorridos de navegador aprobados. Restauración por soporte continúa en el hito 11; aceptación del negocio pendiente |
-| 3 | Autorizaciones | Preparar, enviar, revisar, aprobar/rechazar; otra cuenta autorizadora; contenido y versión revisados | Cambiar una solicitud exige una nueva revisión. Una aprobación anterior no produce efectos sobre un contenido nuevo. T10 comprobado |
-| 4 | Proveedores y recepciones | Alta/desactivación de proveedores; recepción pendiente con documento y detalle; aceptación de cantidades/costos; lotes y vencimientos; aprobación y entrada única | Guardar pendiente no cambia stock; la recepción autorizada registra entrada una sola vez y conserva procedencia. T02 comprobado |
+| 3 | Autorizaciones — recepciones completadas en 0.6.0 | Extender revisión por contenido/versión a solicitudes de inventario y anulaciones | T10 comprobado en recepciones: la versión anterior se rechaza sin efectos; las demás familias se prueban al implementar sus módulos |
+| 4 | Proveedores y recepciones — completado en 0.6.0 | Mantenimiento, borradores, aceptación, costo de entrada, lotes, revisión y entrada única | T02 comprobado con 99 pruebas totales y navegador; integración de costo/lotes con salidas se conserva en los hitos 5/6 |
 | 5 | Inventario operativo y valoración | Conteos físicos; carga inicial, ajustes y salidas justificadas; lotes, alertas y trazabilidad; costos conocidos/desconocidos y valoración según política validada | Un conteo no altera saldos automáticamente. Los efectos requieren aprobación y mantienen unidades, evidencia y costo. T03/T04 comprobados |
 | 6 | Promociones, impuestos e integración de ventas | Condiciones comerciales vigentes, promoción exclusiva, fiscalidad configurada; venta integrada con lotes, cantidades y costos | La venta calcula y conserva correctamente las condiciones aplicadas. Se comprueban T01/T05 y los casos nuevos de productos antes restringidos. No se inventan tasas ni reglas fiscales |
 | 7 | Anulaciones y regularización de caja | Solicitud con motivo/evidencia, aprobación, mercadería físicamente reincorporada, devolución de fondos y estados pendientes | Conservar venta original y cierre antiguo; no devolver stock o dinero sin evidencia ni repetir efectos. T06 y regresiones T08/T09 comprobados |

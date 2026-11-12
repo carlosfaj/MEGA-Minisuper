@@ -1,0 +1,9 @@
+@page
+@model Mega.Web.Pages.Recepciones.IndexModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Recepciones";}
+<div class="page-heading"><div><span class="eyebrow">ABASTECIMIENTO</span><h1>Recepciones de mercadería</h1><p class="muted">Preparación, revisión por otra cuenta y entrada única.</p></div><a class="button primary" asp-page="Editar">Preparar recepción</a></div><partial name="_Notice"/>
+<div class="toolbar"><a class="button secondary" asp-page="/Proveedores">Proveedores →</a></div>
+<div class="card table-card"><table><thead><tr><th>Referencia</th><th>Proveedor / documento</th><th>Fecha</th><th>Versión</th><th>Estado</th><th></th></tr></thead><tbody>
+@foreach(var r in Model.Receipts){<tr><td><a asp-page="Editar" asp-route-id="@r.Id">@r.Referencia</a></td><td>@(r.ProveedorId is long p?Model.Suppliers.GetValueOrDefault(p):"Por completar")<small>@r.Documento</small></td><td>@Formats.Date(r.CreadoEn)</td><td>@r.Version</td><td><span class="badge @(r.Estado=="Confirmada"?"success":"neutral")">@(r.Estado=="Pendiente"?(Model.Pending.ContainsKey(r.Id)?"En revisión":"En preparación"):r.Estado)</span></td><td>@if(Model.Pending.TryGetValue(r.Id,out var id)){<a asp-page="Revision" asp-route-id="@id">Revisar →</a>}else{<a asp-page="Editar" asp-route-id="@r.Id">Consultar →</a>}</td></tr>}
+</tbody></table>@if(Model.Receipts.Count==0){<p class="empty">Todavía no hay recepciones. Guardar una preparación no modifica existencias.</p>}</div>

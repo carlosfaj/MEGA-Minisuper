@@ -1,5 +1,15 @@
 # Historial de versiones de MEGA
 
+## 0.6.0 — 12 de noviembre de 2026
+
+- Proveedores con mantenimiento por gestión, desactivación, versión y auditoría; consulta de Inventario.
+- Recepciones pendientes con documento, cantidades recibidas/aceptadas, equivalencias históricas, costo explícito por unidad base y lotes/vencimientos.
+- Revisión inmutable de contenido y versión por otra cuenta de gestión. Cambiar la recepción invalida revisiones; cambios de catálogo/proveedor también bloquean una revisión anterior.
+- Aprobación y entrada única en una transacción con trazabilidad de autorización, detalle, lote y costo. Reintentos concurrentes recuperan la misma operación.
+- Rechazos y borradores no alteran existencias. Costo vacío sigue desconocido y bloquea confirmación ordinaria de lo aceptado; aceptación parcial exige motivo.
+- 99 pruebas aprobadas, incluidos T02/T10, fallo tardío, concurrencia, permisos, lotes y capacidad numérica. Recorrido de navegador con cinco capturas y rechazo real de revisión obsoleta.
+- La salida por venta de productos con costo conocido o lotes sigue pendiente de integrar con valoración; se mantiene su bloqueo explícito.
+
 ## 0.5.0 — 12 de noviembre de 2026
 
 - Cuentas comerciales: alta, edición, desactivación, roles, permiso de caja y restablecimiento de contraseña; no se eliminan identidades históricas.
