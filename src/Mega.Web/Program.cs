@@ -55,6 +55,7 @@ builder.Services.AddRateLimiter(o =>
 builder.Services.AddSingleton<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
 builder.Services.AddScoped<Operations>(); builder.Services.AddScoped<DatabaseInitializer>();
 builder.Services.AddScoped<AccessControl>(); builder.Services.AddScoped<CatalogService>();
+builder.Services.AddScoped<SettingsService>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));

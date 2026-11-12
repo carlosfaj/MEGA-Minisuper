@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.4.0 — 12 de noviembre de 2026
+
+- Configuración versionada de nombre, dirección, contacto, fondo habitual, alerta de vencimiento y datos de emisor/impresora previstos.
+- Los cambios conservan comprobantes y fondos de turnos abiertos; se aplican a nuevas operaciones.
+- Ediciones obsoletas rechazadas, auditoría transaccional y permisos de gestión comprobados.
+- 71 pruebas automatizadas aprobadas; recorrido de navegador sobre una base aislada con cinco comprobaciones y tres capturas.
+- Fiscalidad, impresión física y medios adicionales siguen sujetos a integración y validación.
+
 ## 0.3.0 — 12 de noviembre de 2026
 
 - Catálogo operativo para gestión: categorías, productos, desactivación, presentaciones/equivalencias, códigos y precios con vigencias.

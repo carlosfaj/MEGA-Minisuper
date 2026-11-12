@@ -1,0 +1,12 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-12T13:33:39.893Z",
+  "datos": "Ficticios; base aislada",
+  "casos": [
+    "configuración versionada",
+    "comprobante anterior conservado",
+    "fondo abierto conservado",
+    "nuevo turno con fondo nuevo",
+    "comprobante con configuración nueva"
+  ]
+}
