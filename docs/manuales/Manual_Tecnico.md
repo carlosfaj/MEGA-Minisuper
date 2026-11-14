@@ -43,7 +43,7 @@ El núcleo no descarga recursos de interfaz ni necesita Internet tras instalarse
 ## Instalación del paquete
 
 1. Obtener el ZIP de una revisión registrada y su archivo SHA-256. Conservar la referencia del commit y comprobar la huella antes de extraer.
-2. Extraer todo el contenido en una carpeta local. Conservar App, Licencias, el iniciador y paquete.json juntos.
+2. Extraer todo el contenido en una carpeta local. Conservar completa la carpeta App, que incluye Licencias, junto al iniciador y paquete.json.
 3. Detener cualquier instancia anterior. Ejecutar **Iniciar_MEGA.cmd** con el mismo perfil de Windows que conservará los datos.
 4. Esperar el aviso de servicio y abrir https://localhost:7248. El iniciador rechaza un puerto ocupado antes de crear datos.
 5. Verificar acceso, permisos, estado de caja y consultas. En una demostración nueva, las existencias son ficticias y no existen ventas.

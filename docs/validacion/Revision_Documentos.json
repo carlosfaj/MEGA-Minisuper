@@ -96,7 +96,7 @@
       "orientacion": "vertical",
       "tamanoPagina": "Carta",
       "margenesPuntos": 72,
-      "sha256": "568f8ede34cf27b11e994091ff8bf58840781035a35cbe6a3e66b6596e1ea41f",
+      "sha256": "bdc91005a10363da160ebca1a5ad53a0a917dcf6726b54533f4af053ca749406",
       "fuentesUsadas": [
         "Arial-BoldMT",
         "Arial-ItalicMT",
@@ -162,7 +162,8 @@
           "titulo": "Referencias operativas",
           "pagina": 14
         }
-      ]
+      ],
+      "ajusteFinal": "Ubicación de Licencias dentro de App aclarada. Página 5 revisada; otras 13 páginas renderizadas idénticas a la revisión previa."
     },
     {
       "archivo": "docs/entregables/Matriz_Validacion_MEGA.pdf",
@@ -190,7 +191,7 @@
     },
     {
       "archivo": "docs/manuales/Manual_Tecnico.md",
-      "sha256": "3f1107e691b264fe8c7c209b7048d63570a5384793521964422d7f96bbfbc85e",
+      "sha256": "99843d758c2f8e2a17c2513d3dd5a7f4d21421c4811228107b6accbe67c7f800",
       "normalizacion": "LF"
     },
     {
