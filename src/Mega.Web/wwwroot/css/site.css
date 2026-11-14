@@ -18,3 +18,5 @@
 @media(min-width:761px){.sidebar nav{min-height:0;overflow-y:auto;flex:1}.sidebar-bottom{flex-shrink:0}}
 
 .backup-destination{overflow-wrap:anywhere}
+
+.recovery-card form,.recovery-card>details{margin-top:14px}.recovery-card h2+p{margin:8px 0 18px}

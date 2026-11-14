@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mega.Web.Services;
 
-public sealed class SessionAccess(MegaDbContext db)
+public sealed class SessionAccess(MegaDbContext db,RecoveryGate recovery)
 {
     public async Task<bool> CanEnterAsync(Usuario user)
     {
         if (user.Activo != 1) return false;
+        if(recovery.State.Mode=="conciliar"&&(user.RolId is not long ownerRole||!await db.Set<Rol>().AnyAsync(x=>x.Id==ownerRole&&x.Nombre=="Propietario")))return false;
         if (user.TipoCuenta == "comercial") return user.RolId is not null && await db.Set<Rol>().AnyAsync(x => x.Id == user.RolId);
         var now = Formats.Now();
         return user.TipoCuenta == "soporte_temporal" && user.RolId is null && user.PermisoOperativoCaja == 0 && user.DelegacionCuentas == 0 &&
@@ -18,7 +19,7 @@ public sealed class SessionAccess(MegaDbContext db)
     public async Task<List<Claim>> ClaimsAsync(Usuario user)
     {
         List<Claim> claims = [new(ClaimTypes.NameIdentifier, user.Id.ToString()), new(ClaimTypes.Name, user.NombreVisible), new("tipo", user.TipoCuenta),
-            new("caja", user.PermisoOperativoCaja.ToString()), new("cuentas", user.DelegacionCuentas.ToString()), new("version", user.CredencialesVersion.ToString())];
+            new("caja", user.PermisoOperativoCaja.ToString()), new("cuentas", user.DelegacionCuentas.ToString()), new("version", user.CredencialesVersion.ToString()),new("recuperacion",recovery.Epoch)];
         if (user.RolId is long id) claims.Add(new(ClaimTypes.Role, (await db.Set<Rol>().AsNoTracking().SingleAsync(x => x.Id == id)).Nombre));
         return claims;
     }

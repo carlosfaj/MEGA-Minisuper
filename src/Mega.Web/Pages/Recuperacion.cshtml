@@ -1,0 +1,33 @@
+@page
+@model Mega.Web.Pages.RecuperacionModel
+@using Mega.Web.Services
+@{ViewData["Title"]="Recuperación";var pending=Model.Rows.FirstOrDefault(x=>x.Id==Model.State.RestorationId&&x.NucleoReabiertoEn==null);}
+<div class="page-heading"><div><div class="eyebrow">CONTINUIDAD · PROPIETARIO</div><h1>Recuperación</h1><p>Recupera una copia comprobada y revisa las novedades antes de reabrir la operación.</p></div></div>
+<div asp-validation-summary="All" class="validation" role="alert"></div>
+@if(TempData["Message"] is string message){<div class="alert info" role="status">@message</div>}
+@if(pending is not null){
+<section class="card recovery-card"><h2>Operación pausada para conciliar</h2><p>Intervención #@pending.Id. La base fue comprobada. Los trabajos recuperados de impresión y correo están retenidos y no se enviarán automáticamente.</p><p>Las operaciones posteriores al punto recuperado permanecen en la preservación. Debes revisar su efecto real en inventario, efectivo y documentos; la recuperación no las vuelve a registrar.</p>
+<p><a class="button secondary" asp-page-handler="Preservation" asp-route-id="@pending.Id">Descargar estado anterior conservado</a></p>
+<details><summary>Comparación conservada para la revisión</summary><div class="table-wrap"><table><thead><tr><th>Registro</th><th>Antes de recuperar</th><th>Recuperado</th></tr></thead><tbody>@foreach(var item in Model.Comparison(pending)){<tr><td>@item.Label</td><td>@item.Before</td><td>@item.Recovered</td></tr>}</tbody></table></div></details>
+<form method="post" asp-page-handler="Reopen"><input type="hidden" name="id" value="@pending.Id"/>
+<label class="check-row"><input type="checkbox" name="inventory" value="true" required/> Revisé existencias y movimientos contra la situación física.</label>
+<label class="check-row"><input type="checkbox" name="cash" value="true" required/> Revisé caja, cobros, devoluciones y turnos abiertos o cerrados.</label>
+<label class="check-row"><input type="checkbox" name="changes" value="true" required/> Revisé las novedades posteriores a la copia y documenté su tratamiento.</label>
+<label class="check-row"><input type="checkbox" name="queues" value="true" required/> Mantengo los trabajos retenidos hasta comprobar papel, servidor y destinatarios.</label>
+<label>Resultado de conciliación y tratamiento de pendientes<textarea name="notes" maxlength="4000" required rows="5"></textarea></label>
+<p>La reapertura conservará la cuarentena. Después podrás reautorizar impresora, correo y pauta de respaldo, y resolver cada trabajo expresamente.</p><button class="button primary" type="submit">Autorizar reapertura</button></form></section>
+}else if(Model.State.Mode=="normal"){
+<section class="card recovery-card"><h2>Seleccionar una copia</h2><p>Se pausarán los procesos y se conservará el estado actual antes de aplicar la copia. Solo el Propietario puede autorizar esta intervención.</p>
+<form method="get"><label>Copia comprobada<select name="backup" required><option value="">Seleccionar</option>@foreach(var row in Model.Backups){<option value="@row.Id" selected="@(row.Id==Model.Input.BackupId)">#@row.Id · @Formats.DateWithSeconds(row.Inicio) · @row.MedioIdentificador</option>}</select></label><button class="button" type="submit">Comprobar y revisar punto</button></form></section>
+@if(Model.Review is {} review){
+<section class="card recovery-card"><h2>Revisar antes de recuperar</h2><p>Copia #@review.BackupId · punto: @Formats.DateWithSeconds(review.Manifest.Point.FinishedUtc). Última venta: #@review.Manifest.Point.LastSale; último movimiento: #@review.Manifest.Point.LastMovement.</p>
+<div class="table-wrap"><table><thead><tr><th>Registro</th><th>Actual</th><th>En la copia</th></tr></thead><tbody>@foreach(var table in review.Current.Rows.Where(x=>x.Value!=review.Recovered.Rows.GetValueOrDefault(x.Key)||new[]{"Venta","MovimientoInventario","MovimientoCaja","TurnoCaja","SolicitudImpresion","SolicitudCorreo"}.Contains(x.Key))){<tr><td>@RecuperacionModel.Label(table.Key)</td><td>@table.Value</td><td>@review.Recovered.Rows.GetValueOrDefault(table.Key)</td></tr>}</tbody></table></div>
+<p>Esta comparación cuenta registros. También pueden existir cambios sobre registros anteriores; la preservación conserva el estado completo para revisarlos. Se conservará la numeración alcanzada para evitar reutilizar folios.</p>
+@foreach(var warning in review.Manifest.Warnings){<p class="alert info">@warning</p>}
+<form method="post" asp-page-handler="Restore"><input asp-for="Input.BackupId" type="hidden"/><input asp-for="Input.Token" type="hidden"/><input asp-for="Input.Key" type="hidden"/>
+<label>Motivo de recuperación<textarea asp-for="Input.Reason" required maxlength="1000" rows="3"></textarea></label>
+<label>Contraseña actual del Propietario<input name="Input.Password" type="password" autocomplete="current-password" maxlength="200" required/></label>
+<label class="check-row"><input asp-for="Input.Acknowledged" required/> Autorizo recuperar este punto. Revisaré las novedades conservadas antes de reabrir y los trabajos externos antes de reenviarlos.</label>
+<button class="button primary" type="submit">Autorizar y recuperar copia</button></form></section>
+}}
+<section class="card recovery-card"><h2>Intervenciones registradas</h2><div class="table-wrap"><table><thead><tr><th>Intervención</th><th>Estado</th><th>Conciliación</th><th>Reapertura</th></tr></thead><tbody>@foreach(var row in Model.Rows){<tr><td>#@row.Id · @Formats.DateWithSeconds(row.Inicio)</td><td>@row.Estado</td><td>@row.ConciliacionEstado</td><td>@(row.NucleoReabiertoEn is null?"Pendiente":Formats.DateWithSeconds(row.NucleoReabiertoEn))</td></tr>}</tbody></table></div></section>

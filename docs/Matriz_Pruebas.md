@@ -1,4 +1,8 @@
-# Matriz de pruebas del avance 01
+# Matriz de pruebas — historial y estado actual
+
+Estado actual **0.20.0: 223/223 pruebas aprobadas**, con respaldo/restauración T14/T15 y recorridos de navegador aislados. [Suite completa](evidencias/restauracion/suite.trx), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+
+## Avance 01
 
 Ejecución finalizada en 2026-11-12T05:32:38.167068+00:00 (UTC). Resultado: **23/23 pruebas aprobadas**.
 
@@ -65,3 +69,15 @@ La autorización de anulaciones, valoración, promociones/impuestos, impresión 
 ## Estado acumulado v0.18.0
 
 200 pruebas aprobadas y navegador por módulo. Las secciones anteriores conservan evidencia histórica de cada avance. Sus pendientes de valoración, anulaciones, rechazos y reportes se resolvieron en `Valoracion.md`, `Inventario_Integrado.md`, `Condiciones_Comerciales.md`, `Anulaciones.md`, `Auditoria.md`, `Impresion.md`, `Gastos.md`, `Reportes.md` y `Correo.md`. T07/T11/T12/T13 se verifican en su alcance implementado; equipo físico, SMTP real, respaldo/restauración y aceptación permanecen en el kanban.
+
+## Ampliación de continuidad v0.19.0–0.20.0
+
+| Criterio | Comprobación | Evidencia | Resultado |
+|---|---|---|---|
+| RF09 T14 | SQLite/WAL consistente con venta y archivos congelados; pauta condicionada; medio ausente sin perder última copia; SHA-256, rutas y punto validados | [Respaldos](Respaldos.md), `evidencias/respaldo` | Aprobado en carpeta de ensayo |
+| RF09/RF06 T15 | Propietario, contraseña actual, revisión obsoleta rechazada y preservación comprobada/descargable | [Restauración](Restauracion.md), `RecoveryTests` | Aprobado en base aislada |
+| RF09/RF08 T15 | Fallo de instalación revierte; intervención interrumpida se reconoce al iniciar; falta de preservación mantiene pausa | `evidencias/restauracion/dirigidas.trx` | Aprobado con fallos simulados |
+| RF04/RF07/RF09 T15 | Colas recuperadas en cuarentena, intentos en curso inciertos, resolución sin reintento automático y reapertura explícita | `evidencias/restauracion/resultado.json` y capturas | Aprobado sin papel ni correo externo |
+| RF04/RF06/RF09 T15 | Identificadores y folios no se reutilizan; sesiones previas inválidas; credenciales/permisos actuales no retroceden; soporte y revisiones pendientes revocados | `RecoveryTests`, suite acumulada 223/223 | Aprobado |
+
+RTO/RPO con volumen y medios reales, rendimiento en equipo objetivo y aceptación por el negocio conservan sus criterios pendientes. La matriz final de todo T01–T15 y su exportación revisada siguen como entregables en el kanban.

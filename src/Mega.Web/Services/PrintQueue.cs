@@ -40,7 +40,8 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
         await using var tx=await db.Database.BeginTransactionAsync();await access.ManagerAsync(userId);
         var row=await db.Set<SolicitudImpresion>().SingleOrDefaultAsync(x=>x.Id==id)??throw new BusinessException("El trabajo no existe.");
         if(ReviewHash(row)!=hash)throw new BusinessException("El trabajo cambió. Revisa su estado actual.");
-        if(row.Estado is not ("Fallida" or "Incierta" or "Pendiente"))throw new BusinessException("Este estado no admite resolución manual. Los trabajos en proceso deben finalizar o vencer; la cuarentena requiere conciliación.");
+        if(row.Estado is not ("Fallida" or "Incierta" or "Pendiente" or "En_cuarentena"))throw new BusinessException("Este estado no admite resolución manual. Los trabajos en proceso deben finalizar o vencer; la cuarentena requiere conciliación.");
+        if(row.Estado=="En_cuarentena"&&!await db.Set<Restauracion>().AnyAsync(x=>x.Id==row.RestauracionId&&x.Estado=="Validada"&&x.ConciliacionEstado=="Completada"&&x.NucleoReabiertoEn!=null))throw new BusinessException("El Propietario debe conciliar y reabrir antes de resolver la cuarentena.");
         if(!checkedQueue)throw new BusinessException("Comprueba la cola de Windows y el papel antes de resolver.");
         reason=AccessControl.Text(reason,"Motivo de resolución",1000);evidence=AccessControl.Text(evidence,"Evidencia",1000);
         if(resolution is not ("reintentar_mismo" or "no_reenviar" or "emitir_copia" or "contingencia_manual"))throw new BusinessException("Selecciona una resolución válida.");
@@ -117,11 +118,12 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
     private void AutoAudit(long id,string action,string result,object data)=>db.Add(new EventoAuditoria{Fecha=Formats.Now(),Origen="tarea_automatica",Accion=action,Entidad="SolicitudImpresion",EntidadId=id.ToString(),ClaveOperacion=Guid.NewGuid().ToString(),Resultado=result,DatosCambio=Formats.Json(data),VersionFormato=1});
 }
 
-public sealed class PrintDispatcher(IServiceScopeFactory scopes,IPrintTransport transport)
+public sealed class PrintDispatcher(IServiceScopeFactory scopes,IPrintTransport transport,RecoveryGate recovery)
 {
     private readonly SemaphoreSlim gate=new(1,1);
     public async Task<bool> RunOnceAsync()
     {
+        using var databaseLease=recovery.TryWorker();if(databaseLease is null)return false;
         if(!await gate.WaitAsync(0))return false;
         try
         {

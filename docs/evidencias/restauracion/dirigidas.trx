@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="035d44e0-5628-4386-9b43-234fd17d39f8" name="SOF.IA@SOFTIA 2026-11-14 00:21:31" runUser="SOFTIA\SOF.IA" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-14T00:21:31.1313752-06:00" queuing="2026-11-14T00:21:31.1313756-06:00" start="2026-11-14T00:21:24.1679375-06:00" finish="2026-11-14T00:21:54.9862570-06:00" />
+  <TestSettings name="default" id="655e88e2-c503-46f0-9e28-4a3044e2717f">
+    <Deployment runDeploymentRoot="SOF.IA_SOFTIA_2026-11-14_00_21_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="281c18af-3049-44e9-83b2-fac6316c4b37" testId="e55c2da3-0529-767a-0395-7d36d396aff9" testName="Mega.Tests.RecoveryTests.pending_receipt_approval_is_invalidated_and_can_be_resubmitted_with_new_version" computerName="SOFTIA" duration="00:00:01.5216521" startTime="2026-11-14T00:21:50.2226880-06:00" endTime="2026-11-14T00:21:51.7443889-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="281c18af-3049-44e9-83b2-fac6316c4b37" />
+    <UnitTestResult executionId="a4616652-a043-4d5b-9764-e3aeda32aef3" testId="489a3d84-0850-88aa-4387-a2084a79fd5b" testName="Mega.Tests.RecoveryTests.second_instance_and_corrupt_recovery_control_fail_closed" computerName="SOFTIA" duration="00:00:00.7543541" startTime="2026-11-14T00:21:49.4680374-06:00" endTime="2026-11-14T00:21:50.2222237-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4616652-a043-4d5b-9764-e3aeda32aef3" />
+    <UnitTestResult executionId="9029f5aa-d37a-40c2-af69-4091b1a1f7c8" testId="24daaa97-75ae-5ab5-82c3-9455244211b3" testName="Mega.Tests.RecoveryTests.persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" computerName="SOFTIA" duration="00:00:01.5118338" startTime="2026-11-14T00:21:31.1111312-06:00" endTime="2026-11-14T00:21:32.5969422-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9029f5aa-d37a-40c2-af69-4091b1a1f7c8" />
+    <UnitTestResult executionId="b3656df6-8406-4f72-9869-5b1bc98a7502" testId="b19db119-3925-3328-51e3-405154aae0f0" testName="Mega.Tests.RecoveryTests.T15_restore_preserves_current_rewinds_data_quarantines_and_requires_owner_reopen" computerName="SOFTIA" duration="00:00:02.8007365" startTime="2026-11-14T00:21:39.0872673-06:00" endTime="2026-11-14T00:21:41.8880955-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3656df6-8406-4f72-9869-5b1bc98a7502" />
+    <UnitTestResult executionId="c34d1e17-4c23-43cf-93c2-a0c3bb9377b1" testId="e4a6a1de-f792-03cb-5200-9a3e7e4c7855" testName="Mega.Tests.RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" computerName="SOFTIA" duration="00:00:01.0207550" startTime="2026-11-14T00:21:35.1663723-06:00" endTime="2026-11-14T00:21:36.1865889-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c34d1e17-4c23-43cf-93c2-a0c3bb9377b1" />
+    <UnitTestResult executionId="05078dcc-6014-4d9c-a4e2-4712c6dd1747" testId="2ff5de97-d16b-984d-822d-8b045e004422" testName="Mega.Tests.RecoveryTests.restart_keeps_pending_conciliation_and_recognizes_committed_reopening" computerName="SOFTIA" duration="00:00:01.3650847" startTime="2026-11-14T00:21:41.8887102-06:00" endTime="2026-11-14T00:21:43.2552121-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05078dcc-6014-4d9c-a4e2-4712c6dd1747" />
+    <UnitTestResult executionId="9e265c5b-d7b5-4be1-ab8f-4fc193c63829" testId="45e10780-8ff3-ca29-429c-99d29609eecd" testName="Mega.Tests.RecoveryTests.current_owner_only_password_and_stale_review_are_enforced_without_replacing_data" computerName="SOFTIA" duration="00:00:02.5682697" startTime="2026-11-14T00:21:32.5991859-06:00" endTime="2026-11-14T00:21:35.1655848-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e265c5b-d7b5-4be1-ab8f-4fc193c63829" />
+    <UnitTestResult executionId="86e9a3a4-ba4b-471c-8b67-64730b59b5c6" testId="d59ae43c-1bc9-fcc0-270f-e546b96d017d" testName="Mega.Tests.RecoveryTests.file_installation_failure_rolls_back_and_keeps_a_verified_preservation" computerName="SOFTIA" duration="00:00:01.5017817" startTime="2026-11-14T00:21:47.9662802-06:00" endTime="2026-11-14T00:21:49.4671344-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86e9a3a4-ba4b-471c-8b67-64730b59b5c6" />
+    <UnitTestResult executionId="a92ca160-117a-4fb9-8cf0-4bae6b37e371" testId="40a33599-9202-99e2-4f37-d66d2a30c305" testName="Mega.Tests.RecoveryTests.HTTP_restore_and_reopen_pause_commerce_and_invalidate_previous_sessions" computerName="SOFTIA" duration="00:00:02.8290824" startTime="2026-11-14T00:21:43.2554706-06:00" endTime="2026-11-14T00:21:46.0848112-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a92ca160-117a-4fb9-8cf0-4bae6b37e371" />
+    <UnitTestResult executionId="432c9a0f-2330-4298-9ce5-5b8d6a256aae" testId="1f595de4-6b66-b16c-ce35-a0fe33e9cf00" testName="Mega.Tests.RecoveryTests.restored_numbering_never_reuses_ids_or_receipt_sequence_and_survives_next_backup" computerName="SOFTIA" duration="00:00:02.0895110" startTime="2026-11-14T00:21:52.7781858-06:00" endTime="2026-11-14T00:21:54.8680021-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="432c9a0f-2330-4298-9ce5-5b8d6a256aae" />
+    <UnitTestResult executionId="c7db5579-d7ca-4c60-a686-35e2dc06c4a3" testId="b626710d-ed64-e90d-d64c-74cf1d8daa99" testName="Mega.Tests.RecoveryTests.pause_drains_leases_and_blocks_new_work_without_touching_data" computerName="SOFTIA" duration="00:00:00.9410298" startTime="2026-11-14T00:21:38.1453956-06:00" endTime="2026-11-14T00:21:39.0867533-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7db5579-d7ca-4c60-a686-35e2dc06c4a3" />
+    <UnitTestResult executionId="c502394e-a6f9-4d2e-b251-fb9517b7b21e" testId="254b5a03-ba86-1f1c-58f6-32cd49452241" testName="Mega.Tests.RecoveryTests.in_flight_attempts_become_uncertain_and_quarantine_cannot_retry_the_same_job" computerName="SOFTIA" duration="00:00:01.9578123" startTime="2026-11-14T00:21:36.1869540-06:00" endTime="2026-11-14T00:21:38.1450309-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c502394e-a6f9-4d2e-b251-fb9517b7b21e" />
+    <UnitTestResult executionId="e2a79dbb-6da0-489a-8680-28125af58282" testId="2abef913-959c-90e5-4b58-e6043122ead4" testName="Mega.Tests.RecoveryTests.missing_selected_medium_and_missing_preservation_fail_without_silent_reopening" computerName="SOFTIA" duration="00:00:01.0329063" startTime="2026-11-14T00:21:51.7447345-06:00" endTime="2026-11-14T00:21:52.7778824-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2a79dbb-6da0-489a-8680-28125af58282" />
+    <UnitTestResult executionId="ef0f04b4-fdd2-4d7a-8ae0-822b7d049850" testId="9f67c3aa-f7fa-229a-f435-ee3aaf663842" testName="Mega.Tests.RecoveryTests.interrupted_installation_is_reverted_at_startup_without_external_dispatch" computerName="SOFTIA" duration="00:00:05.4848693" startTime="2026-11-14T00:21:25.5826134-06:00" endTime="2026-11-14T00:21:31.0819633-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef0f04b4-fdd2-4d7a-8ae0-822b7d049850" />
+    <UnitTestResult executionId="cf103ade-c3ef-4b3c-9352-ff6d10036fe9" testId="8d7cc426-d9fb-438b-7397-fadf28f93224" testName="Mega.Tests.RecoveryTests.credentials_deactivations_and_support_revocations_do_not_rewind_with_business_data" computerName="SOFTIA" duration="00:00:01.8794386" startTime="2026-11-14T00:21:46.0857469-06:00" endTime="2026-11-14T00:21:47.9647884-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf103ade-c3ef-4b3c-9352-ff6d10036fe9" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Mega.Tests.RecoveryTests.missing_selected_medium_and_missing_preservation_fail_without_silent_reopening" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2abef913-959c-90e5-4b58-e6043122ead4">
+      <Execution id="e2a79dbb-6da0-489a-8680-28125af58282" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="missing_selected_medium_and_missing_preservation_fail_without_silent_reopening" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.in_flight_attempts_become_uncertain_and_quarantine_cannot_retry_the_same_job" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="254b5a03-ba86-1f1c-58f6-32cd49452241">
+      <Execution id="c502394e-a6f9-4d2e-b251-fb9517b7b21e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="in_flight_attempts_become_uncertain_and_quarantine_cannot_retry_the_same_job" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="24daaa97-75ae-5ab5-82c3-9455244211b3">
+      <Execution id="9029f5aa-d37a-40c2-af69-4091b1a1f7c8" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.HTTP_restore_and_reopen_pause_commerce_and_invalidate_previous_sessions" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="40a33599-9202-99e2-4f37-d66d2a30c305">
+      <Execution id="a92ca160-117a-4fb9-8cf0-4bae6b37e371" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="HTTP_restore_and_reopen_pause_commerce_and_invalidate_previous_sessions" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.credentials_deactivations_and_support_revocations_do_not_rewind_with_business_data" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="8d7cc426-d9fb-438b-7397-fadf28f93224">
+      <Execution id="cf103ade-c3ef-4b3c-9352-ff6d10036fe9" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="credentials_deactivations_and_support_revocations_do_not_rewind_with_business_data" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.current_owner_only_password_and_stale_review_are_enforced_without_replacing_data" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="45e10780-8ff3-ca29-429c-99d29609eecd">
+      <Execution id="9e265c5b-d7b5-4be1-ab8f-4fc193c63829" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="current_owner_only_password_and_stale_review_are_enforced_without_replacing_data" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.restored_numbering_never_reuses_ids_or_receipt_sequence_and_survives_next_backup" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="1f595de4-6b66-b16c-ce35-a0fe33e9cf00">
+      <Execution id="432c9a0f-2330-4298-9ce5-5b8d6a256aae" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="restored_numbering_never_reuses_ids_or_receipt_sequence_and_survives_next_backup" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.restart_keeps_pending_conciliation_and_recognizes_committed_reopening" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2ff5de97-d16b-984d-822d-8b045e004422">
+      <Execution id="05078dcc-6014-4d9c-a4e2-4712c6dd1747" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="restart_keeps_pending_conciliation_and_recognizes_committed_reopening" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.pending_receipt_approval_is_invalidated_and_can_be_resubmitted_with_new_version" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e55c2da3-0529-767a-0395-7d36d396aff9">
+      <Execution id="281c18af-3049-44e9-83b2-fac6316c4b37" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="pending_receipt_approval_is_invalidated_and_can_be_resubmitted_with_new_version" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e4a6a1de-f792-03cb-5200-9a3e7e4c7855">
+      <Execution id="c34d1e17-4c23-43cf-93c2-a0c3bb9377b1" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.interrupted_installation_is_reverted_at_startup_without_external_dispatch" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="9f67c3aa-f7fa-229a-f435-ee3aaf663842">
+      <Execution id="ef0f04b4-fdd2-4d7a-8ae0-822b7d049850" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="interrupted_installation_is_reverted_at_startup_without_external_dispatch" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.pause_drains_leases_and_blocks_new_work_without_touching_data" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b626710d-ed64-e90d-d64c-74cf1d8daa99">
+      <Execution id="c7db5579-d7ca-4c60-a686-35e2dc06c4a3" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="pause_drains_leases_and_blocks_new_work_without_touching_data" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.T15_restore_preserves_current_rewinds_data_quarantines_and_requires_owner_reopen" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b19db119-3925-3328-51e3-405154aae0f0">
+      <Execution id="b3656df6-8406-4f72-9869-5b1bc98a7502" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="T15_restore_preserves_current_rewinds_data_quarantines_and_requires_owner_reopen" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.second_instance_and_corrupt_recovery_control_fail_closed" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="489a3d84-0850-88aa-4387-a2084a79fd5b">
+      <Execution id="a4616652-a043-4d5b-9764-e3aeda32aef3" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="second_instance_and_corrupt_recovery_control_fail_closed" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.file_installation_failure_rolls_back_and_keeps_a_verified_preservation" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="d59ae43c-1bc9-fcc0-270f-e546b96d017d">
+      <Execution id="86e9a3a4-ba4b-471c-8b67-64730b59b5c6" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="file_installation_failure_rolls_back_and_keeps_a_verified_preservation" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e55c2da3-0529-767a-0395-7d36d396aff9" executionId="281c18af-3049-44e9-83b2-fac6316c4b37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="489a3d84-0850-88aa-4387-a2084a79fd5b" executionId="a4616652-a043-4d5b-9764-e3aeda32aef3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24daaa97-75ae-5ab5-82c3-9455244211b3" executionId="9029f5aa-d37a-40c2-af69-4091b1a1f7c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b19db119-3925-3328-51e3-405154aae0f0" executionId="b3656df6-8406-4f72-9869-5b1bc98a7502" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4a6a1de-f792-03cb-5200-9a3e7e4c7855" executionId="c34d1e17-4c23-43cf-93c2-a0c3bb9377b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2ff5de97-d16b-984d-822d-8b045e004422" executionId="05078dcc-6014-4d9c-a4e2-4712c6dd1747" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45e10780-8ff3-ca29-429c-99d29609eecd" executionId="9e265c5b-d7b5-4be1-ab8f-4fc193c63829" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d59ae43c-1bc9-fcc0-270f-e546b96d017d" executionId="86e9a3a4-ba4b-471c-8b67-64730b59b5c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="40a33599-9202-99e2-4f37-d66d2a30c305" executionId="a92ca160-117a-4fb9-8cf0-4bae6b37e371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f595de4-6b66-b16c-ce35-a0fe33e9cf00" executionId="432c9a0f-2330-4298-9ce5-5b8d6a256aae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b626710d-ed64-e90d-d64c-74cf1d8daa99" executionId="c7db5579-d7ca-4c60-a686-35e2dc06c4a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="254b5a03-ba86-1f1c-58f6-32cd49452241" executionId="c502394e-a6f9-4d2e-b251-fb9517b7b21e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2abef913-959c-90e5-4b58-e6043122ead4" executionId="e2a79dbb-6da0-489a-8680-28125af58282" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f67c3aa-f7fa-229a-f435-ee3aaf663842" executionId="ef0f04b4-fdd2-4d7a-8ae0-822b7d049850" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d7cc426-d9fb-438b-7397-fadf28f93224" executionId="cf103ade-c3ef-4b3c-9352-ff6d10036fe9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)&#xD;
+[xUnit.net 00:00:00.19]   Discovering: Mega.Tests&#xD;
+[xUnit.net 00:00:00.34]   Discovered:  Mega.Tests&#xD;
+[xUnit.net 00:00:00.41]   Starting:    Mega.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Mega.Web.Services.RecoveryService[0]&#xD;
+      Se recuper� el estado anterior de una intervenci�n interrumpida. Revisa la bit�cora y la preservaci�n antes de volver a intentar.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+fail: Mega.Web.Services.RecoveryGate[0]&#xD;
+      No se pudo conservar el control de continuidad&#xD;
+      System.UnauthorizedAccessException: Access to the path is denied.&#xD;
+         at System.IO.FileSystem.MoveFile(String sourceFullPath, String destFullPath, Boolean overwrite)&#xD;
+         at Mega.Web.Services.RecoveryGate.ReplaceControl(String temporary, String destination) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryGate.cs:line 111&#xD;
+         at Mega.Web.Services.RecoveryGate.Store(RecoveryControl value) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryGate.cs:line 103&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+fail: Mega.Web.Services.RecoveryService[0]&#xD;
+      Fall� la recuperaci�n autorizada 886d2291-a704-4fe6-9775-db63f257ac63; se conserva la preservaci�n&#xD;
+      System.IO.IOException: The target file 'C:\Users\SOF.IA\AppData\Local\Temp\mega-tests-fbd6548e-986c-4306-b31b-1d3dca493a4f.archivos\Reportes\5d9cdf8814924fdcb314491d612b5c8a.pdf' is a directory, not a file.&#xD;
+         at System.IO.FileSystem.CopyFile(String sourceFullPath, String destFullPath, Boolean overwrite)&#xD;
+         at Mega.Web.Services.RecoveryService.InstallFilesAsync(String stage, BackupManifest manifest) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryService.cs:line 111&#xD;
+         at Mega.Web.Services.RecoveryService.RestoreAsync(Int64 ownerId, RecoveryRequest request, HttpContext context) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryService.cs:line 60&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+crit: Mega.Web.Services.RecoveryService[0]&#xD;
+      La recuperaci�n interrumpida requiere revisi�n&#xD;
+      System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\SOF.IA\AppData\Local\Temp\mega-tests-8d6c0046-8dd2-4c9e-bcdb-7052cbd10a96.archivos\Preservaciones\16b5d9d8a4944b5a8ef3765394979a27.zip'.&#xD;
+         at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)&#xD;
+         at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+         at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+         at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)&#xD;
+         at Mega.Web.Services.BackupArchive.ExtractVerifiedAsync(String path, String destination, String expectedHash) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\BackupArchive.cs:line 72&#xD;
+         at Mega.Web.Services.RecoveryService.RollbackAsync() in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryService.cs:line 119&#xD;
+         at Mega.Web.Services.RecoveryService.RecoverInterruptedAsync() in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryService.cs:line 137&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:29.75]   Finished:    Mega.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -4,7 +4,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.19.0**, con respaldos verificables, correo de reportes, exportaciones y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.20.0**, con restauración autorizada, preservación, conciliación, cuarentena y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -40,10 +40,10 @@ Módulos incorporados y sus instrucciones/evidencias:
 
 - [Catálogo y precios](docs/Catalogo.md), [configuración](docs/Configuracion.md) y [cuentas/delegación/soporte](docs/Cuentas.md).
 - [Proveedores, recepciones y revisiones](docs/Abastecimiento.md).
-- [Valoración](docs/Valoracion.md), [condiciones comerciales](docs/Condiciones_Comerciales.md), [anulaciones](docs/Anulaciones.md), [auditoría](docs/Auditoria.md), [impresión](docs/Impresion.md), [gastos](docs/Gastos.md), [reportes](docs/Reportes.md) y [correo](docs/Correo.md) y [respaldos](docs/Respaldos.md).
+- [Valoración](docs/Valoracion.md), [condiciones comerciales](docs/Condiciones_Comerciales.md), [anulaciones](docs/Anulaciones.md), [auditoría](docs/Auditoria.md), [impresión](docs/Impresion.md), [gastos](docs/Gastos.md), [reportes](docs/Reportes.md), [correo](docs/Correo.md), [respaldos](docs/Respaldos.md) y [restauración/conciliación](docs/Restauracion.md).
 - [Conteos y lotes](docs/Conteos_y_Lotes.md) y [cargas, ajustes y salidas autorizadas](docs/Solicitudes_Inventario.md).
 
-La suite actual contiene **208 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación.
+La suite actual contiene **223 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación.
 
 - `src/Mega.Web`: aplicación y copia del esquema corregido de 39 tablas.
 - `src/Mega.Web/App_Data/mega-demo.db`: base persistente de demostración, creada automáticamente; no se incluye en control de versiones.
@@ -71,7 +71,7 @@ El registro histórico del avance 01 y sus capturas están en `docs/evidencias`;
 
 ## Límites de este avance
 
-Este es un avance del cuarto corte. Siguen pendientes impresión, valoración de costos, reportes, correo, impresión automática y respaldo/restauración. Las ventas asignan lotes y conservan costos, promociones e impuestos históricos; las tasas se configuran expresamente y no acreditan fiscalidad real. La venta conserva costos históricos conocidos o desconocidos; la ausencia de costo no equivale a cero. No se inventan tasas fiscales. Tarjeta y transferencia no están habilitadas.
+Este es un avance del cuarto corte. Los módulos previstos de impresión, valoración de costos, reportes, correo y respaldo/restauración están integrados y ensayados con datos ficticios. Siguen pendientes la entrega consolidada, la validación integral en equipo objetivo y la aceptación del negocio. Las ventas asignan lotes y conservan costos, promociones e impuestos históricos; las tasas se configuran expresamente y no acreditan fiscalidad real. La venta conserva costos históricos conocidos o desconocidos; la ausencia de costo no equivale a cero. No se inventan tasas fiscales. Tarjeta y transferencia no están habilitadas.
 
 Las pruebas realizadas son automatizadas y usan datos ficticios; la aceptación con el negocio y los periféricos reales sigue pendiente. El documento final, manuales definitivos, presentación y demostración de todo el alcance se completarán con los siguientes avances.
 

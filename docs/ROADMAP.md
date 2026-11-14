@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 13 de noviembre de 2026, con la versión de código 0.19.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 14 de noviembre de 2026, con la versión de código 0.20.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -8,14 +8,14 @@ Están implementados el acceso por rol, apertura/cierre de caja, preparación y 
 
 La consulta de existencias y la estructura de una tabla no equivalen a un módulo operativo completo. Siguen pendientes los recorridos de negocio que se detallan a continuación.
 
-Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 208 pruebas aprobadas, además de recorridos de navegador por módulo. La valoración ponderada confirmada y las integraciones hasta correo (0.18.0) cuentan con documentos y evidencias propios. La aceptación del negocio continúa pendiente.
+Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0), cuentas/soporte (0.5.0), recepciones/revisiones (0.6.0), conteos/lotes (0.7.0) y solicitudes básicas de inventario (0.8.0). La suite actual tiene 223 pruebas aprobadas, además de recorridos de navegador por módulo. La valoración ponderada confirmada y las integraciones hasta restauración (0.20.0) cuentan con documentos y evidencias propios. La aceptación del negocio continúa pendiente.
 
 ## Secuencia de implementación
 
 | Orden | Hito | Funciones pendientes | Resultado para darlo por terminado |
 |---|---|---|---|
 | 1 | Catálogo — completado en 0.3.0 | Categorías; productos; presentaciones, equivalencias y códigos; precios con vigencias | Alta y venta real en base de prueba, cambios conservando historia y permisos comprobados; 65 pruebas aprobadas y recorrido de navegador |
-| 2 | Configuración y cuentas — completado en 0.4.0/0.5.0 | Configuración versionada, cuentas/credenciales, roles/delegación y soporte temporal de diagnóstico | 83 pruebas y recorridos de navegador aprobados. Restauración por soporte continúa en el hito 11; aceptación del negocio pendiente |
+| 2 | Configuración y cuentas — completado en 0.4.0/0.5.0 | Configuración versionada, cuentas/credenciales, roles/delegación y soporte temporal de diagnóstico | 83 pruebas y recorridos de navegador aprobados. Restauración autorizada por Propietario completada en 0.20.0; soporte sigue limitado a diagnóstico; aceptación del negocio pendiente |
 | 3 | Autorizaciones — recepciones e inventario en 0.6.0/0.8.0 | Extender revisión por contenido/versión a anulaciones | T10 comprobado en recepciones e inventario: versiones y saldos anteriores se rechazan sin efectos; anulaciones se prueban en su módulo |
 | 4 | Proveedores y recepciones — completado en 0.6.0 | Mantenimiento, borradores, aceptación, costo de entrada, lotes, revisión y entrada única | T02 comprobado con 99 pruebas totales y navegador; integración de costo/lotes con salidas se conserva en los hitos 5/6 |
 | 5 | Inventario operativo y valoración — integrado en 0.9.0/0.10.0 | Promedio ponderado móvil confirmado por el usuario; ventas, cargas, ajustes y salidas con lotes y costos históricos | 132 pruebas y navegador aprobados. Aceptación y conciliación física real pendientes |
@@ -24,7 +24,7 @@ Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0)
 | 8 | Impresión y reimpresión — implementado en 0.15.0 | Agente local, impresión automática tras confirmar, intentos y estados, copia del mismo folio y contingencia | La falla de impresora no repite venta/cobro. La aceptación de la cola no se confunde con papel físico. T07, 175 pruebas y controlador PDF comprobados; ensayo de impresora física pendiente |
 | 9 | Gastos y reportes implementados en 0.16.0/0.17.0 | Gastos con corrección/anulación, reportes y descargas con 189 pruebas; ventas, inventario, costos/márgenes y caja; filtros; exportación PDF/Excel; vista limitada para Inventario | Reportes reconciliados con operaciones; costo desconocido muestra margen no calculable; permisos y T11 comprobados |
 | 10 | Correo implementado en 0.18.0 | Configuración protegida, envío de reportes, pendientes sin conexión, intentos y resultado incierto | El núcleo funciona sin Internet; no hay reenvío automático de un correo posiblemente aceptado. T12 y 200 pruebas comprobados con SMTP TLS local; cuenta real pendiente |
-| 11 | Respaldo implementado en 0.19.0; restauración pendiente | Copia consistente a medio externo, verificación y errores visibles; restauración autorizada; preservación, conciliación y cuarentena de colas | Restaurar una copia de prueba sin duplicar impresiones/correos y con revisión de actividad posterior. T14/T15 y objetivos acordados ensayados |
+| 11 | Respaldo y restauración implementados en 0.19.0/0.20.0 | Copia consistente a medio externo, verificación y errores visibles; restauración autorizada; preservación, conciliación y cuarentena de colas | Restaurar una copia de prueba sin duplicar impresiones/correos y con revisión de actividad posterior. T14/T15 comprobados con 223 pruebas y navegador en base aislada; objetivos con volumen/medio real pendientes |
 | 12 | Validación integral y ejecución final | Regresión de todos los módulos; datos válidos/inválidos; permisos, rendimiento y operación sin Internet; periféricos; instalación/arranque local y aceptación con el negocio | Sistema reproducible en el equipo objetivo, matriz completa con resultados/evidencias, incidencias resueltas o limitaciones explícitas y demostración ensayada |
 
 Los hitos 2 y 3 habilitan las autorizaciones de recepciones, inventario y anulaciones. El hito 5 aporta la valoración necesaria para márgenes de gestión. La recuperación de los trabajos de impresión/correo se cierra cuando esos componentes ya pueden probarse conjuntamente.

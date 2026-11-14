@@ -1,0 +1,21 @@
+{
+  "estado": "Aprobado",
+  "version": "0.20.0",
+  "fecha": "2026-11-14T06:21:20.119Z",
+  "datos": "Base aislada. No se restauró la base de demostración habitual. Sin impresora física, correo externo ni USB real.",
+  "casos": [
+    "comparación previa de 2 ventas frente a 1 en copia",
+    "preservación y recuperación autorizada por Propietario",
+    "venta bloqueada mientras falta conciliación",
+    "sesiones anteriores invalidadas",
+    "reapertura expresa con cuarentena conservada",
+    "nuevo identificador y folio posteriores a la venta preservada",
+    "móvil sin desbordamiento"
+  ],
+  "ventaInicial": "https://localhost:7365/Comprobante/1",
+  "ventaPosteriorPreservada": "https://localhost:7365/Comprobante/2",
+  "ventaNueva": "https://localhost:7365/Comprobante/3",
+  "milisegundosRecorrido": 20223,
+  "milisegundosDesdeRecuperacion": 7148,
+  "erroresJavaScript": []
+}

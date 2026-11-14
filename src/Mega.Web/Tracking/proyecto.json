@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.19.0",
-  "updatedAt": "2026-11-14T05:11:35Z",
+  "version": "0.20.0",
+  "updatedAt": "2026-11-14T06:21:21Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 208,
+  "testsPassed": 223,
   "tasks": [
     {
       "id": "BD",
@@ -692,32 +692,32 @@
         {
           "id": "1",
           "label": "Autorización y preservación de base actual",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Restauracion.md"
         },
         {
           "id": "2",
           "label": "Restauración comprobada",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Restauracion.md"
         },
         {
           "id": "3",
           "label": "Cuarentena de impresión y correo",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Restauracion.md"
         },
         {
           "id": "4",
           "label": "Conciliación y reapertura explícita",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Restauracion.md"
         },
         {
           "id": "5",
           "label": "Ensayo sin duplicar trabajos",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Restauracion.md"
         }
       ]
     },

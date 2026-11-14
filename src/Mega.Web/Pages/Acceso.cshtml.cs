@@ -11,12 +11,12 @@ using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Pages;
 [AllowAnonymous,EnableRateLimiting("acceso")]
-public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher,Operations operations,IConfiguration config,SessionAccess sessions):PageModel
+public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher,Operations operations,IConfiguration config,SessionAccess sessions,RecoveryGate recovery):PageModel
 {
     [BindProperty] public string Account {get;set;}="";
     [BindProperty] public string Password {get;set;}="";
     public bool Demo=>config.GetValue<bool>("MEGA:DemoData");
-    public IActionResult OnGet()=>User.Identity?.IsAuthenticated==true?RedirectToPage("/Index"):Page();
+    public IActionResult OnGet()=>User.Identity?.IsAuthenticated==true?RedirectToPage(recovery.State.Mode=="conciliar"?"/Recuperacion":"/Index"):Page();
     public async Task<IActionResult> OnPostAsync()
     {
         if(!ModelState.IsValid || Account.Length>100 || Password.Length>200) return Page();
@@ -33,6 +33,7 @@ public sealed class AccesoModel(MegaDbContext db,IPasswordHasher<Usuario> hasher
         var claims=await sessions.ClaimsAsync(user);
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,new ClaimsPrincipal(new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme)));
         operations.Audit(user.Id,"Iniciar sesión","Usuario",user.Id.ToString(),Guid.NewGuid().ToString(),new {cuenta=user.NombreCuenta});await db.SaveChangesAsync();
+        if(recovery.State.Mode=="conciliar")return RedirectToPage("/Recuperacion");
         return RedirectToPage(user.TipoCuenta == "soporte_temporal" ? "/Soporte" : "/Index");
     }
     private static readonly string DummyHash=new PasswordHasher<Usuario>().HashPassword(new Usuario(),Guid.NewGuid().ToString());

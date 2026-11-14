@@ -88,19 +88,20 @@ public sealed class BackupService(MegaDbContext db,AccessControl access,Operatio
     {if(userId is long user)operations.Audit(user,action,"RespaldoEjecucion",id.ToString(),Guid.NewGuid().ToString(),data,result);else db.Add(new EventoAuditoria{Fecha=Formats.Now(),Origen="tarea_automatica",Accion=action,Entidad="RespaldoEjecucion",EntidadId=id.ToString(),ClaveOperacion=Guid.NewGuid().ToString(),Resultado=result,DatosCambio=Formats.Json(data),VersionFormato=1});}
     private static string ErrorText(Exception error)=>error switch{BusinessException b=>b.Message,UnauthorizedAccessException=>"Sin permiso para leer o escribir en el medio seleccionado.",IOException io when io.HResult==unchecked((int)0x80070070)=>"El medio no tiene espacio suficiente. La última copia comprobada se conserva.",IOException=>"No se pudo acceder, escribir o comprobar la copia en el medio. Revisa conexión, espacio y permisos; la última copia comprobada se conserva.",_=>"La copia no superó el diagnóstico o no pudo registrarse. Revisa el medio y los registros antes de intentar de nuevo."};
 }
-public sealed class BackupDispatcher(IServiceScopeFactory scopes,DatabaseLocation location,OperationalFiles files,ILogger<BackupDispatcher> logger)
+public sealed class BackupDispatcher(IServiceScopeFactory scopes,DatabaseLocation location,OperationalFiles files,ILogger<BackupDispatcher> logger,RecoveryGate recovery)
 {
     private readonly SemaphoreSlim gate=new(1,1);
     public async Task<long> ManualAsync(long userId,string key)
-    {await gate.WaitAsync();try{await using var s=scopes.CreateAsyncScope();return await s.ServiceProvider.GetRequiredService<BackupService>().RunAsync(userId,key);}finally{gate.Release();}}
+    {using var lease=recovery.TryWorker();if(lease is null)throw new BusinessException("La recuperación mantiene pausados los respaldos.");await gate.WaitAsync();try{await using var s=scopes.CreateAsyncScope();return await s.ServiceProvider.GetRequiredService<BackupService>().RunAsync(userId,key);}finally{gate.Release();}}
     public async Task<bool> TickAsync()
     {
+        using var lease=recovery.TryWorker();if(lease is null)return false;
         if(!await gate.WaitAsync(0))return false;
         try{await using var s=scopes.CreateAsyncScope();var service=s.ServiceProvider.GetRequiredService<BackupService>();var origin=await service.DueOriginAsync();if(origin is null)return false;await service.RunAsync(null,Guid.NewGuid().ToString(),origin);return true;}finally{gate.Release();}
     }
     public async Task BeforeUpdateAsync()
     {
-        if(!File.Exists(location.Path))return;var marker=Path.Combine(files.Root,"VersionAplicada.txt");if(File.Exists(marker)&&File.ReadAllText(marker).Trim()==AppRelease.Version)return;
+        if(recovery.State.Mode!="normal"||!File.Exists(location.Path))return;var marker=Path.Combine(files.Root,"VersionAplicada.txt");if(File.Exists(marker)&&File.ReadAllText(marker).Trim()==AppRelease.Version)return;
         await using(var connection=BackupArchive.OpenRead(location.Path)){await connection.OpenAsync();await using var version=connection.CreateCommand();version.CommandText="PRAGMA user_version";if(Convert.ToInt32(await version.ExecuteScalarAsync())!=DatabaseContract.CurrentVersion)return;}
         await using var scope=scopes.CreateAsyncScope();var config=await scope.ServiceProvider.GetRequiredService<SettingsService>().CurrentAsync();BackupPolicy? policy;try{policy=BackupService.Policy(config);}catch(BusinessException){logger.LogWarning("La pauta previa a actualización requiere revisión del Propietario; no se generó una copia externa.");return;}if(policy?.BeforeUpdate!=true)return;
         await gate.WaitAsync();try{await scope.ServiceProvider.GetRequiredService<BackupService>().RunAsync(null,Guid.NewGuid().ToString(),"preactualizacion");}finally{gate.Release();}

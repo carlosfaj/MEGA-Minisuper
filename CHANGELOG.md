@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.20.0 — 14 de noviembre de 2026
+
+- Restauración de copia comprobada autorizada por Propietario, con revisión previa, contraseña actual, pausa de procesos y preservación descargable del estado anterior.
+- Preparación fuera de la base activa, comprobación e instalación mediante SQLite; reversión comprobada ante fallos y reconocimiento de intervenciones interrumpidas al arrancar.
+- Conciliación documentada y reapertura expresa. Impresión, correo y pauta quedan desactivados; los trabajos recuperados conservan cuarentena y requieren resolución individual.
+- Numeración/folios conservados, sesiones revocadas, seguridad de cuentas actuales preservada, soporte temporal revocado y revisiones pendientes invalidadas.
+- 223 pruebas acumuladas, 15 de recuperación, y recorrido Edge en base aislada: dos ventas frente a una en la copia, segunda preservada y siguiente venta con identificador mayor. No acredita medios, equipo ni aceptación comercial reales.
+
 ## 0.19.0 — 13 de noviembre de 2026
 
 - Respaldo desde la aplicación con copia consistente SQLite, archivos asociados, manifiesto, SHA-256 y diagnóstico antes de considerarlo comprobado.

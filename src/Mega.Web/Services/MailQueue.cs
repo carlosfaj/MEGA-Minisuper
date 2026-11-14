@@ -34,7 +34,8 @@ public sealed class MailQueue(MegaDbContext db,AccessControl access,Operations o
     public async Task ResolveAsync(long userId,long id,string hash,string resolution,string reason,bool checkedServer)
     {
         await using var tx=await db.Database.BeginTransactionAsync();await access.ManagerAsync(userId);var row=await db.Set<SolicitudCorreo>().SingleOrDefaultAsync(x=>x.Id==id)??throw new BusinessException("La solicitud no existe.");
-        if(ReviewHash(row)!=hash||row.Estado is not ("Fallida" or "Incierta" or "Pendiente"))throw new BusinessException("La solicitud cambió o requiere finalizar su reserva/conciliación. Revisa el estado actual.");
+        if(ReviewHash(row)!=hash||row.Estado is not ("Fallida" or "Incierta" or "Pendiente" or "En_cuarentena"))throw new BusinessException("La solicitud cambió o requiere finalizar su reserva/conciliación. Revisa el estado actual.");
+        if(row.Estado=="En_cuarentena"&&!await db.Set<Restauracion>().AnyAsync(x=>x.Id==row.RestauracionId&&x.Estado=="Validada"&&x.ConciliacionEstado=="Completada"&&x.NucleoReabiertoEn!=null))throw new BusinessException("El Propietario debe conciliar y reabrir antes de resolver la cuarentena.");
         if(!checkedServer)throw new BusinessException("Comprueba el servidor y el destinatario antes de resolver.");reason=AccessControl.Text(reason,"Motivo de resolución",1000);
         if(resolution is not ("reintentar_mismo" or "no_reenviar" or "nueva_solicitud"))throw new BusinessException("Selecciona una resolución válida.");
         if(resolution=="reintentar_mismo"&&row.Estado!="Fallida")throw new BusinessException("El resultado incierto no permite reintentar el mismo envío. Puedes cerrar o solicitar explícitamente uno nuevo advirtiendo el posible duplicado.");
@@ -74,11 +75,12 @@ public sealed class MailQueue(MegaDbContext db,AccessControl access,Operations o
     }
     private void AutoAudit(long id,string action,string result,object data)=>db.Add(new EventoAuditoria{Fecha=Formats.Now(),Origen="tarea_automatica",Accion=action,Entidad="SolicitudCorreo",EntidadId=id.ToString(),ClaveOperacion=Guid.NewGuid().ToString(),Resultado=result,DatosCambio=Formats.Json(data),VersionFormato=1});
 }
-public sealed class MailDispatcher(IServiceScopeFactory scopes,IMailTransport transport)
+public sealed class MailDispatcher(IServiceScopeFactory scopes,IMailTransport transport,RecoveryGate recovery)
 {
     private readonly SemaphoreSlim gate=new(1,1);
     public async Task<bool> RunOnceAsync()
     {
+        using var databaseLease=recovery.TryWorker();if(databaseLease is null)return false;
         if(!await gate.WaitAsync(0))return false;
         try
         {

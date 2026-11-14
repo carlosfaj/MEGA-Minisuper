@@ -163,7 +163,7 @@ public sealed class ReceivingService(MegaDbContext db, AccessControl access, Ope
             await db.SaveChangesAsync(); await tx.CommitAsync(); return null;
         }
         // Decisión, procedencia, lotes y entrada se confirman juntos; ningún estado intermedio queda publicado.
-        var now = Formats.Now(); var operation = new OperacionInventario { Tipo = "entrada_recepcion", Fecha = now, ConfirmadoEn = now, SecuenciaConfirmacion = checked((await db.Set<OperacionInventario>().MaxAsync(x => (long?)x.SecuenciaConfirmacion) ?? 0) + 1), CreadoPor = r.CreadoPor, EjecutadoPor = userId, AutorizacionId = auth.Id, ClaveOperacion = "recepcion-" + r.ClaveSolicitud, Motivo = reason };
+        var now = Formats.Now(); var operation = new OperacionInventario { Tipo = "entrada_recepcion", Fecha = now, ConfirmadoEn = now, SecuenciaConfirmacion = await operations.NextInventorySequenceAsync(), CreadoPor = r.CreadoPor, EjecutadoPor = userId, AutorizacionId = auth.Id, ClaveOperacion = "recepcion-" + r.ClaveSolicitud, Motivo = reason };
         db.Add(operation); await db.SaveChangesAsync(); r.OperacionId = operation.Id; r.Estado = "Confirmada"; r.ModificadoEn = now; await db.SaveChangesAsync();
         var sequence = 0;
         foreach (var d in review.Lines.Where(x => x.BaseQuantity > 0))

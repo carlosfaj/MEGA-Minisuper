@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a8de0181-2f42-4e97-b0da-a2fa85aff0b3" name="SOF.IA@SOFTIA 2026-11-14 00:17:58" runUser="SOFTIA\SOF.IA" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-14T00:17:58.8052078-06:00" queuing="2026-11-14T00:17:58.8052089-06:00" start="2026-11-14T00:17:51.2587923-06:00" finish="2026-11-14T00:18:00.4420479-06:00" />
+  <TestSettings name="default" id="68c7d335-c404-4986-a93e-dbde602ab9c0">
+    <Deployment runDeploymentRoot="SOF.IA_SOFTIA_2026-11-14_00_17_58" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="1735fb82-32ce-495a-af27-de26a0faf05e" testId="24daaa97-75ae-5ab5-82c3-9455244211b3" testName="Mega.Tests.RecoveryTests.persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" computerName="SOFTIA" duration="00:00:05.8408694" startTime="2026-11-14T00:17:52.8648510-06:00" endTime="2026-11-14T00:17:58.7180977-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1735fb82-32ce-495a-af27-de26a0faf05e" />
+    <UnitTestResult executionId="1ffb6646-cb05-4c12-9742-361e666bd554" testId="e4a6a1de-f792-03cb-5200-9a3e7e4c7855" testName="Mega.Tests.RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" computerName="SOFTIA" duration="00:00:01.5618332" startTime="2026-11-14T00:17:58.7760130-06:00" endTime="2026-11-14T00:18:00.2810533-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ffb6646-cb05-4c12-9742-361e666bd554" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Mega.Tests.RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e4a6a1de-f792-03cb-5200-9a3e7e4c7855">
+      <Execution id="1ffb6646-cb05-4c12-9742-361e666bd554" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.RecoveryTests.persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="24daaa97-75ae-5ab5-82c3-9455244211b3">
+      <Execution id="1735fb82-32ce-495a-af27-de26a0faf05e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.RecoveryTests" name="persistent_windows_reader_rejects_reservation_and_keeps_previous_counter" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="24daaa97-75ae-5ab5-82c3-9455244211b3" executionId="1735fb82-32ce-495a-af27-de26a0faf05e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4a6a1de-f792-03cb-5200-9a3e7e4c7855" executionId="1ffb6646-cb05-4c12-9742-361e666bd554" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)&#xD;
+[xUnit.net 00:00:00.28]   Discovering: Mega.Tests&#xD;
+[xUnit.net 00:00:00.47]   Discovered:  Mega.Tests&#xD;
+[xUnit.net 00:00:00.54]   Starting:    Mega.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+fail: Mega.Web.Services.RecoveryGate[0]&#xD;
+      No se pudo conservar el control de continuidad&#xD;
+      System.UnauthorizedAccessException: Access to the path is denied.&#xD;
+         at System.IO.FileSystem.MoveFile(String sourceFullPath, String destFullPath, Boolean overwrite)&#xD;
+         at Mega.Web.Services.RecoveryGate.ReplaceControl(String temporary, String destination) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryGate.cs:line 111&#xD;
+         at Mega.Web.Services.RecoveryGate.Store(RecoveryControl value) in C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web\Services\RecoveryGate.cs:line 103&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:08.02]   Finished:    Mega.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

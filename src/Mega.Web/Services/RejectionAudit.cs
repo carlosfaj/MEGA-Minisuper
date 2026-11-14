@@ -21,12 +21,12 @@ public sealed class RejectionPageFilter:IAsyncPageFilter
     public async Task OnPageHandlerExecutionAsync(PageHandlerExecutingContext context,PageHandlerExecutionDelegate next)
     {await next();if(HttpMethods.IsPost(context.HttpContext.Request.Method)&&!context.ModelState.IsValid)RejectionCapture.Record("Formulario o solicitud con datos inválidos.");}
 }
-public sealed class RejectionAuditWriter(IServiceScopeFactory scopes,ILogger<RejectionAuditWriter> logger)
+public sealed class RejectionAuditWriter(IServiceScopeFactory scopes,ILogger<RejectionAuditWriter> logger,RecoveryGate recovery)
 {
     private readonly SemaphoreSlim gate=new(1,1);
     public async Task WriteAsync(HttpContext context,string reason,string result="rechazado")
     {
-        if(context.Items.ContainsKey("MEGA.RejectionAudited"))return;
+        if(!recovery.DatabaseSafe||!context.Items.ContainsKey(RecoveryGate.LeaseKey)||context.Items.ContainsKey("MEGA.RejectionAudited"))return;
         context.Items["MEGA.RejectionAudited"]=true;
         await gate.WaitAsync();
         try

@@ -41,3 +41,7 @@ La implementación parte del modelo corregido del 11 de noviembre de 2026: 39 ta
 - Equipo/impresora reales y contingencias; objetivos de recuperación sujetos a ensayo.
 
 Estas validaciones no impiden probar el recorrido con datos ficticios. Deben resolverse antes de implantar las funciones afectadas o acreditar aceptación real.
+
+## Continuidad implementada en 0.20.0
+
+La restauración de interfaz exige Propietario, copia registrada comprobada e identidad coincidente; conserva el estado anterior, drena agentes/solicitudes y mantiene pausa hasta conciliación. El núcleo no fusiona operaciones posteriores. Conserva numeración alcanzada y seguridad actual de cuentas coincidentes; revoca sesiones, soporte temporal y revisiones pendientes. La reapertura conserva cuarentena y requiere reautorizar periféricos/pauta. Detalles y límites: [Restauracion.md](Restauracion.md). Los ensayos aislados no sustituyen la aprobación de pauta, retención y recuperación con medios/volumen reales.

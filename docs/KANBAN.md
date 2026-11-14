@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 73.7% — 98/133 criterios.**
-Versión 0.19.0 · actualizado 2026-11-14T05:11:35Z · 208 pruebas aprobadas.
+**Avance global: 77.4% — 103/133 criterios.**
+Versión 0.20.0 · actualizado 2026-11-14T06:21:21Z · 223 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 78/83 | 94% |
+| Software | 83/83 | 100% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,16 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### RESTORE · Restauración y conciliación — 0%
-
-Área: Software.
-Depende de: BACKUP, PRINT, CORREO.
-
-- [ ] Autorización y preservación de base actual
-- [ ] Restauración comprobada
-- [ ] Cuarentena de impresión y correo
-- [ ] Conciliación y reapertura explícita
-- [ ] Ensayo sin duplicar trabajos
 ### SLIDES · Presentación de defensa — 0%
 
 Área: Documentación.
@@ -290,6 +280,16 @@ Depende de: BD.
 - [x] Destino y pauta configurables ([evidencia](../docs/Respaldos.md))
 - [x] Checksum, manifiesto y diagnóstico ([evidencia](../docs/Respaldos.md))
 - [x] Fallos visibles y ensayo ([evidencia](../docs/Respaldos.md))
+### RESTORE · Restauración y conciliación — 100%
+
+Área: Software.
+Depende de: BACKUP, PRINT, CORREO.
+
+- [x] Autorización y preservación de base actual ([evidencia](../docs/Restauracion.md))
+- [x] Restauración comprobada ([evidencia](../docs/Restauracion.md))
+- [x] Cuarentena de impresión y correo ([evidencia](../docs/Restauracion.md))
+- [x] Conciliación y reapertura explícita ([evidencia](../docs/Restauracion.md))
+- [x] Ensayo sin duplicar trabajos ([evidencia](../docs/Restauracion.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.

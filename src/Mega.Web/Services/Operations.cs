@@ -4,8 +4,10 @@ using Mega.Web.Data;
 using Microsoft.EntityFrameworkCore;
 namespace Mega.Web.Services;
 
-public sealed class Operations(MegaDbContext db, IConfiguration configuration, ValuationService valuation, CommercialCalculator commercial)
+public sealed class Operations(MegaDbContext db, IConfiguration configuration, ValuationService valuation, CommercialCalculator commercial,RecoveryGate? recovery=null)
 {
+    public async Task<long> NextInventorySequenceAsync()
+    {var observed=await db.Set<OperacionInventario>().MaxAsync(x=>(long?)x.SecuenciaConfirmacion)??0;return recovery?.ReserveOperation(observed)??checked(observed+1);}
     public string Station => configuration["MEGA:Station"] ?? "MEGA-LOCAL-01";
     public async Task<Usuario> RequireCashAsync(long userId)
     {
@@ -153,7 +155,7 @@ public sealed class Operations(MegaDbContext db, IConfiguration configuration, V
             _=checked(checked(shift.FondoRealCentavos+net)+quote.Total);
         }
         catch(OverflowException){throw new BusinessException("La venta supera la capacidad de existencias o caja.");}
-        var operation=new OperacionInventario {Tipo="venta",Fecha=now,ConfirmadoEn=now,SecuenciaConfirmacion=checked((await db.Set<OperacionInventario>().MaxAsync(x=>(long?)x.SecuenciaConfirmacion)??0)+1),CreadoPor=userId,EjecutadoPor=userId,ClaveOperacion=input.Key};
+        var operation=new OperacionInventario {Tipo="venta",Fecha=now,ConfirmadoEn=now,SecuenciaConfirmacion=await NextInventorySequenceAsync(),CreadoPor=userId,EjecutadoPor=userId,ClaveOperacion=input.Key};
         db.Add(operation); await db.SaveChangesAsync();
         var folio=$"MEGA-{operation.SecuenciaConfirmacion:00000000}";
         var snapshot=Formats.Json(new {versionFormato=1,intentHash,folio,fecha=now,negocio=config.Nombre,direccion=config.Direccion,telefono=config.Telefono,

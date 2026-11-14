@@ -169,7 +169,7 @@ public sealed class InventoryRequestService(MegaDbContext db, AccessControl acce
         if (!approve) r.Estado = "Rechazada";
         else
         {
-            var op = new OperacionInventario { Tipo = r.Tipo, Fecha = now, ConfirmadoEn = now, SecuenciaConfirmacion = checked((await db.Set<OperacionInventario>().MaxAsync(x => (long?)x.SecuenciaConfirmacion) ?? 0) + 1), CreadoPor = r.SolicitadoPor, EjecutadoPor = userId, AutorizacionId = auth.Id, ClaveOperacion = "inventario-" + r.ClaveSolicitud, Motivo = r.Motivo };
+            var op = new OperacionInventario { Tipo = r.Tipo, Fecha = now, ConfirmadoEn = now, SecuenciaConfirmacion = await operations.NextInventorySequenceAsync(), CreadoPor = r.SolicitadoPor, EjecutadoPor = userId, AutorizacionId = auth.Id, ClaveOperacion = "inventario-" + r.ClaveSolicitud, Motivo = r.Motivo };
             db.Add(op); await db.SaveChangesAsync(); r.OperacionId = op.Id; r.Estado = "Autorizada"; await db.SaveChangesAsync();
             foreach (var d in review.Lines) db.Add(new MovimientoInventario { OperacionId = op.Id, ProductoId = d.ProductId,LoteId=d.LotId, Secuencia = d.Number, SolicitudInventarioDetalleId = d.DetailId, CantidadEscalada = d.Quantity, Escala = d.Scale, EstadoCosto = d.CostState, CostoUnitEscalado = d.BaseCost, EscalaCosto = d.CostScale,CostoReferenciaId=d.CostReferenceId });
         }
