@@ -1,0 +1,43 @@
+{
+  "fechaUTC": "2026-11-14T15:41:27+00:00",
+  "version": "0.21.0",
+  "origen": "Sesion del usuario en MEGA, https://localhost:7248/Correos, navegador Brave",
+  "metodo": "Capturas JPEG del navegador, encuadradas sobre parametros SMTP e intentos; sin modificar valores DOM ni imagenes",
+  "privacidad": "Los encuadres excluyen remitente, usuario SMTP, destinatarios y campo de credencial. Message-ID interno visible en los detalles de intentos.",
+  "alcance": "Comprobacion visual posterior de la configuracion y solicitudes existentes; no se enviaron mensajes ni se guardo configuracion. No prueba recepcion ni lectura.",
+  "capturas": [
+    {
+      "archivo": "03_gmail_configuracion_activa.jpg",
+      "caso": "GM-01",
+      "solicitudId": null,
+      "dimensiones": [
+        1490,
+        265
+      ],
+      "bytes": 21540,
+      "sha256": "a2d84338cd0ac3dcea73ecb14b64f5a635fbc4ea3d86e8440218c822f51771b1"
+    },
+    {
+      "archivo": "04_gmail_resultados_aceptado.jpg",
+      "caso": "GM-02",
+      "solicitudId": 1,
+      "dimensiones": [
+        1438,
+        139
+      ],
+      "bytes": 14726,
+      "sha256": "75c7adcb443a143a88d70e910bf9b4268a26103c34f3188f19c18b7e27282189"
+    },
+    {
+      "archivo": "05_gmail_inventario_aceptado.jpg",
+      "caso": "GM-03",
+      "solicitudId": 3,
+      "dimensiones": [
+        1438,
+        139
+      ],
+      "bytes": 14991,
+      "sha256": "2f7346dee835e85eb80494704051dbbcc486fa005fb711eaee0b00251172d6f9"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 
 ## Evidencia adicional de correo de 0.21.0 — 14 de noviembre de 2026
 
+- Complemento visual posterior: tres capturas reales de la configuración Gmail activa y de los intentos SMTP aceptados de resultados e inventario, con encuadres sin direcciones personales ni credenciales y manifiesto SHA-256. Se añaden para respaldar visualmente la prueba manual ya registrada.
 - Incorporada prueba manual con Gmail real: cuatro aceptaciones SMTP, resolución mediante nueva solicitud e integridad de los PDF conservados, extraídas de la base local en modo de solo lectura y sin publicar direcciones ni secretos.
 - Matriz de pruebas, alcance del módulo y kanban actualizados para distinguir aceptación SMTP de recepción/lectura y aceptación comercial. Se conservan los ensayos históricos y las 223 pruebas automatizadas; sin cambio de versión de código.
 

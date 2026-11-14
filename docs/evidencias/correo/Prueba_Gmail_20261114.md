@@ -23,6 +23,28 @@ Horas del 14 de noviembre de 2026 en Guatemala (UTC−06:00); el JSON conserva l
 
 Los cuatro intentos registrados terminan en `respuesta_final`, con resultado `aceptada_SMTP` y sin error registrado. La solicitud 2 no tiene intento SMTP; su resolución no se presenta como rechazo, fallo de autenticación ni envío incierto comprobado.
 
+## Capturas de la comprobación posterior
+
+Capturadas en la sesión local de MEGA el 14 de noviembre de 2026. Son vistas del estado ya registrado: no se enviaron ni reintentaron correos para obtenerlas. Los encuadres excluyen direcciones personales y credenciales; no se sustituyeron valores de la interfaz. El [manifiesto de capturas](capturas-gmail-20261114.json) conserva sus huellas SHA-256 y dimensiones.
+
+### Figura GM-01 — Configuración Gmail habilitada
+
+La casilla está activada y los campos muestran `smtp.gmail.com`, puerto 587 y STARTTLS obligatorio. Complementa el caso GM-01 y la configuración vigente del registro JSON.
+
+![Configuración Gmail activa con puerto 587 y STARTTLS](03_gmail_configuracion_activa.jpg)
+
+### Figura GM-02 — Intento del reporte de resultados
+
+Detalle de la solicitud 1: intento único iniciado a las 09:14:02, resultado `aceptada_SMTP` y etapa `respuesta_final`. El Message-ID es la referencia interna del mensaje, no una dirección de destinatario. El código SMTP aparece vacío; no se le atribuye un valor numérico.
+
+![Intento aceptado del reporte de resultados](04_gmail_resultados_aceptado.jpg)
+
+### Figura GM-03 — Intento de la nueva solicitud de inventario
+
+Detalle de la solicitud 3: intento único iniciado a las 09:14:12, resultado `aceptada_SMTP` y etapa `respuesta_final`. Su Message-ID es distinto del reporte de resultados. La relación de resolución 2 → 3 y la igualdad del adjunto se respaldan con el registro JSON, no se deducen de esta captura.
+
+![Intento aceptado de la nueva solicitud de inventario](05_gmail_inventario_aceptado.jpg)
+
 ## Límites y pendientes
 
 - Se acredita comunicación con SMTP externo real y aceptación registrada por MEGA. No se conservó un código numérico de respuesta SMTP; no se infiere uno.
