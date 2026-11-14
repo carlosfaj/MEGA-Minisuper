@@ -63,8 +63,8 @@ La documentación avanza en paralelo y se cierra con resultados reales del siste
 | Código fuente | Mantener el repositorio y etiquetar la versión final comprobada |
 | Base y archivos de ejecución | Paquete Windows con entorno incluido preparado y ensayado en 0.21.0; verificar instalación y arranque en otro equipo objetivo. Las bases operativas y secretos no se publican en GitHub |
 | Diagramas y prototipos editables | Actualizar las fuentes para que correspondan al sistema implementado y conservar su editabilidad |
-| Manual técnico y manual de usuario PDF | Instalar/configurar/operar los módulos reales; incluir procedimientos y limitaciones verificadas |
-| Matriz de pruebas y evidencias PDF o Excel | Completar casos por requisito con esperado/obtenido/estado, incidencias, correcciones y capturas numeradas/tituladas/explicadas |
+| Manual técnico y manual de usuario PDF | Completados para 0.21.0: instalación, operación, contingencias, recuperación y 28 páginas revisadas; actualizar al cambiar el sistema. [Documentos y fuentes](Manuales_y_Validacion.md) |
+| Matriz de pruebas y evidencias PDF o Excel | PDF de 12 páginas revisado: T01–T15, esperado/obtenido/estado, incidencias, evidencias y registro de 223 pruebas. Aceptación y equipo reales pendientes. [Matriz y fuentes](Manuales_y_Validacion.md) |
 | Presentación PowerPoint o PDF | Actualizar el contenido con desarrollo, pruebas, resultados y límites reales |
 | Demostración funcional | Preparar y ensayar un recorrido de negocio integrado, con instalación y datos controlados |
 

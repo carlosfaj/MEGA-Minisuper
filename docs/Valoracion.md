@@ -16,4 +16,4 @@ Productos sin control pueden consumir saldo sin lote. La contingencia física de
 
 127 pruebas aprobadas en `evidencias/valoracion/valoracion.trx`: promedio, desconocido, cero, saldo negativo, orden, capacidad, costo histórico, lotes múltiples, vencimiento, disponibilidad compartida y cotización obsoleta. `tools/valuation-check.cjs` verificó una recepción con costo/lote y venta antes restringida, con saldo del lote 3 a 2; dos capturas y JSON en la misma carpeta. Base aislada, datos ficticios.
 
-Las regularizaciones por lotes/costo conocido se integran en su módulo. La política técnica confirmada no acredita aceptación comercial, fiscal ni de periféricos reales.
+Las regularizaciones por lotes/costo conocido están integradas desde 0.10.0 en [Inventario integrado](Inventario_Integrado.md). La política técnica confirmada no acredita aceptación comercial, fiscal ni de periféricos reales.

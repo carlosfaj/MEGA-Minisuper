@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 78.2% — 104/133 criterios.**
-Versión 0.21.0 · actualizado 2026-11-14T06:43:51Z · 223 pruebas aprobadas.
+**Avance global: 82.7% — 110/133 criterios.**
+Versión 0.21.0 · actualizado 2026-11-14T13:27:35Z · 223 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -12,9 +12,9 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 | Área | Criterios | Avance |
 |---|---|---|
 | Software | 83/83 | 100% |
-| Calidad | 9/13 | 69.2% |
+| Calidad | 10/13 | 76.9% |
 | Entrega | 6/11 | 54.5% |
-| Documentación | 5/19 | 26.3% |
+| Documentación | 10/19 | 52.6% |
 | Validación | 1/7 | 14.3% |
 
 ## Pendiente
@@ -29,14 +29,14 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## En curso
 
-### PRUEBAS · Pruebas integrales — 60%
+### PRUEBAS · Pruebas integrales — 80%
 
 Área: Calidad.
 
 - [x] Pruebas de integración con bases aisladas ([evidencia](../docs/Matriz_Pruebas.md))
 - [x] Recorridos de navegador con evidencias ([evidencia](../docs/Matriz_Pruebas.md))
 - [x] Datos válidos, inválidos y concurrencia ([evidencia](../docs/Matriz_Pruebas.md))
-- [ ] Regresión T01–T15 de todo el alcance
+- [x] Regresión T01–T15 de todo el alcance ([evidencia](../docs/Manuales_y_Validacion.md))
 - [ ] Rendimiento y fallos en equipo objetivo
 ### SEGURIDAD · Revisión de seguridad final — 50%
 
@@ -63,14 +63,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 - [ ] Resultados, conclusiones y recomendaciones
 - [ ] APA 7 e índices automáticos
 - [ ] PDF final revisado
-### MANUAL · Manuales técnico y de usuario — 25%
-
-Área: Documentación.
-
-- [x] Guías de módulos implementados ([evidencia](../README.md))
-- [ ] Instalación y operación final consolidadas
-- [ ] Procedimientos de contingencia y recuperación
-- [ ] PDF de ambos manuales revisados
 ### DIAGRAMAS · Diagramas y prototipos — 33.3%
 
 Área: Documentación.
@@ -78,14 +70,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 - [x] Modelo de datos original conservado ([evidencia](../docs/Procedencia_Modelo.json))
 - [ ] Fuentes editables actualizadas al sistema final
 - [ ] Correspondencia RF/CU/pantalla revisada
-### MATRIZ · Matriz y evidencias finales — 50%
-
-Área: Documentación.
-
-- [x] Matriz parcial con resultados reales ([evidencia](../docs/Matriz_Pruebas.md))
-- [x] TRX y capturas por módulo ([evidencia](../docs/Matriz_Pruebas.md))
-- [ ] Cobertura completa T01–T15
-- [ ] PDF o Excel final revisado
 
 ## Por validar
 
@@ -305,6 +289,22 @@ Depende de: BACKUP, PRINT, CORREO.
 - [x] Repositorio e historia conservados ([evidencia](../AGENTS.md))
 - [x] Push por funcionalidad estable ([evidencia](../AGENTS.md))
 - [x] Compilación, pruebas y etiquetas automáticas ([evidencia](../AGENTS.md))
+### MANUAL · Manuales técnico y de usuario — 100%
+
+Área: Documentación.
+
+- [x] Guías de módulos implementados ([evidencia](../README.md))
+- [x] Instalación y operación final consolidadas ([evidencia](../docs/Manuales_y_Validacion.md))
+- [x] Procedimientos de contingencia y recuperación ([evidencia](../docs/Manuales_y_Validacion.md))
+- [x] PDF de ambos manuales revisados ([evidencia](../docs/Manuales_y_Validacion.md))
+### MATRIZ · Matriz y evidencias finales — 100%
+
+Área: Documentación.
+
+- [x] Matriz parcial con resultados reales ([evidencia](../docs/Matriz_Pruebas.md))
+- [x] TRX y capturas por módulo ([evidencia](../docs/Matriz_Pruebas.md))
+- [x] Cobertura completa T01–T15 ([evidencia](../docs/Manuales_y_Validacion.md))
+- [x] PDF o Excel final revisado ([evidencia](../docs/Manuales_y_Validacion.md))
 ### KANBAN · Kanban y avance del proyecto — 100%
 
 Área: Software.

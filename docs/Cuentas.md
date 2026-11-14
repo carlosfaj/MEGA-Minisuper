@@ -12,11 +12,11 @@ Todos los usuarios comerciales pueden cambiar su propia contraseña desde **Mi c
 
 Solo el Propietario puede autorizar un usuario técnico nuevo con motivo, contraseña temporal y duración de 1 a 24 horas (límite técnico conservador). La cuenta tiene `rolId` nulo, sin caja ni delegación; no constituye un quinto rol comercial. Su alcance actual es `diagnostico_integridad_lectura`: revisar integridad física, relaciones y versión del esquema. La consulta se audita y no muestra datos comerciales o secretos.
 
-El vencimiento y la autorización no revocada se comprueban al iniciar sesión y en cada petición posterior. La revocación desactiva la cuenta y sus sesiones inmediatamente. Este acceso no permite restaurar una base; esa operación requiere el módulo y procedimiento de recuperación pendientes.
+El vencimiento y la autorización no revocada se comprueban al iniciar sesión y en cada petición posterior. La revocación desactiva la cuenta y sus sesiones inmediatamente. Este acceso no permite restaurar una base. Desde 0.20.0, la [restauración](Restauracion.md) exige al Propietario actual, contraseña, copia comprobada, preservación y conciliación; no amplía las facultades de soporte temporal.
 
 ## Evidencias
 
-83 pruebas aprobadas en `evidencias/cuentas/cuentas.trx`. Comprueban permisos directos y HTTP, delegación, sesiones revocadas, último Propietario, turno abierto, contraseñas, formularios y soporte vencido/revocado. `tools/accounts-check.cjs` ejecutó seis comprobaciones en una base aislada:
+El registro histórico de 0.5.0 conserva 83 pruebas aprobadas en `evidencias/cuentas/cuentas.trx`. Comprueban permisos directos y HTTP, delegación, sesiones revocadas, último Propietario, turno abierto, contraseñas, formularios y soporte vencido/revocado. `tools/accounts-check.cjs` ejecutó seis comprobaciones en una base aislada:
 
 - `evidencias/cuentas/01_cuentas.png`: cuenta nueva y lista de responsables.
 - `evidencias/cuentas/02_soporte_autorizado.png`: autorización temporal explícita.

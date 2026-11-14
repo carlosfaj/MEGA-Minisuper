@@ -1,0 +1,117 @@
+{
+  "version": "0.21.0",
+  "fecha": "2026-11-14",
+  "suite": "docs/evidencias/distribucion/suite.trx",
+  "sha256TrxNormalizadoLF": "8fdfe03fff1dbea8ab339ef6d9b829aa3cc9714def08ca10b122f62e2a9381e5",
+  "total": 223,
+  "aprobadas": 223,
+  "fallidas": 0,
+  "omitidas": 0,
+  "criterios": [
+    {
+      "id": "T01",
+      "requisito": "RF01",
+      "pruebasRelacionadas": 30,
+      "evidencia": "docs/evidencias/catalogo/resultado.json",
+      "limite": "Precios, emisor y tasas usados son ficticios; fiscalidad y datos maestros reales pendientes."
+    },
+    {
+      "id": "T02",
+      "requisito": "RF02",
+      "pruebasRelacionadas": 16,
+      "evidencia": "docs/evidencias/abastecimiento/resultado.json",
+      "limite": "No acredita recepción ni comprobación de mercadería real."
+    },
+    {
+      "id": "T03",
+      "requisito": "RF03",
+      "pruebasRelacionadas": 14,
+      "evidencia": "docs/evidencias/conteos/resultado.json",
+      "limite": "La declaración física del ensayo es ficticia; no representa un conteo del negocio."
+    },
+    {
+      "id": "T04",
+      "requisito": "RF03",
+      "pruebasRelacionadas": 24,
+      "evidencia": "docs/evidencias/inventario_integrado/resultado.json",
+      "limite": "Causas, cantidades y referencias de evidencia corresponden a bases aisladas."
+    },
+    {
+      "id": "T05",
+      "requisito": "RF04",
+      "pruebasRelacionadas": 16,
+      "evidencia": "docs/evidencias/resultado_navegador.json",
+      "limite": "Los importes se aplican a las condiciones ficticias indicadas; no a todo catálogo o configuración."
+    },
+    {
+      "id": "T06",
+      "requisito": "RF04",
+      "pruebasRelacionadas": 11,
+      "evidencia": "docs/evidencias/anulaciones/resultado.json",
+      "limite": "No se entregó efectivo ni se reincorporó mercadería real durante el ensayo."
+    },
+    {
+      "id": "T07",
+      "requisito": "RF04",
+      "pruebasRelacionadas": 13,
+      "evidencia": "docs/evidencias/impresion/resultado.json",
+      "limite": "Ensayo técnico aprobado; papel, ancho, corte e impresora física del negocio pendientes."
+    },
+    {
+      "id": "T08",
+      "requisito": "RF05",
+      "pruebasRelacionadas": 2,
+      "evidencia": "docs/evidencias/pruebas/avance01.trx",
+      "limite": "Las verificaciones utilizan fondos ficticios; conciliación con responsables reales pendiente."
+    },
+    {
+      "id": "T09",
+      "requisito": "RF05",
+      "pruebasRelacionadas": 4,
+      "evidencia": "docs/evidencias/pruebas/avance01.trx",
+      "limite": "No representa arqueo ni entrega de caja del negocio."
+    },
+    {
+      "id": "T10",
+      "requisito": "RF06",
+      "pruebasRelacionadas": 14,
+      "evidencia": "docs/evidencias/abastecimiento/03_revision_obsoleta_rechazada.png",
+      "limite": "La excepción de responsabilidad directa del Propietario permanece deshabilitada."
+    },
+    {
+      "id": "T11",
+      "requisito": "RF07",
+      "pruebasRelacionadas": 9,
+      "evidencia": "docs/evidencias/reportes/resultado.json",
+      "limite": "La guía ilustra 86-66=20; el navegador usó el escenario equivalente 60-20=40 documentado aquí. No son cifras contables reales."
+    },
+    {
+      "id": "T12",
+      "requisito": "RF07",
+      "pruebasRelacionadas": 11,
+      "evidencia": "docs/evidencias/correo/resultado.json",
+      "limite": "No se enviaron mensajes a personas; servidor, cuenta y destinatario reales pendientes."
+    },
+    {
+      "id": "T13",
+      "requisito": "RF08",
+      "pruebasRelacionadas": 6,
+      "evidencia": "docs/evidencias/auditoria/resultado.json",
+      "limite": "La protección corresponde a la operación de la aplicación; no certifica inviolabilidad física del archivo SQLite."
+    },
+    {
+      "id": "T14",
+      "requisito": "RF09",
+      "pruebasRelacionadas": 8,
+      "evidencia": "docs/evidencias/respaldo/resultado.json",
+      "limite": "Se utilizó carpeta de ensayo. USB real, capacidad, rotación y objetivo condicionado de 30 minutos pendientes."
+    },
+    {
+      "id": "T15",
+      "requisito": "RF09",
+      "pruebasRelacionadas": 15,
+      "evidencia": "docs/evidencias/restauracion/resultado.json",
+      "limite": "Ensayo aislado sin restaurar la demostración habitual. RTO de cuatro horas, volumen/medio real y conciliación del negocio pendientes."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "MEGA · Cuarto corte",
   "version": "0.21.0",
-  "updatedAt": "2026-11-14T06:43:51Z",
+  "updatedAt": "2026-11-14T13:27:35Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
   "testsPassed": 223,
   "tasks": [
@@ -784,8 +784,8 @@
         {
           "id": "4",
           "label": "Regresión T01–T15 de todo el alcance",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         },
         {
           "id": "5",
@@ -948,20 +948,20 @@
         {
           "id": "2",
           "label": "Instalación y operación final consolidadas",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         },
         {
           "id": "3",
           "label": "Procedimientos de contingencia y recuperación",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         },
         {
           "id": "4",
           "label": "PDF de ambos manuales revisados",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         }
       ]
     },
@@ -1016,14 +1016,14 @@
         {
           "id": "3",
           "label": "Cobertura completa T01–T15",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         },
         {
           "id": "4",
           "label": "PDF o Excel final revisado",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Manuales_y_Validacion.md"
         }
       ]
     },

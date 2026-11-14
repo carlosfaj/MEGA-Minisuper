@@ -1,0 +1,225 @@
+{
+  "edicion": "2026-11-14",
+  "versionCodigo": "0.21.0",
+  "commitCodigo": "16feab8ca3c20752ba27c5db8459fc2406f8486f",
+  "metodo": "Renderizado PNG con Poppler y revisión visual de todas las páginas; extracción de texto, márgenes, fuentes y destinos del índice.",
+  "documentos": [
+    {
+      "archivo": "docs/entregables/Manual_Usuario_MEGA.pdf",
+      "paginas": 14,
+      "orientacion": "vertical",
+      "tamanoPagina": "Carta",
+      "margenesPuntos": 72,
+      "sha256": "0ff1efba92d0a40b7209ad8aa5444f713fa909c8e4476ee14f1a48ec1bc53984",
+      "fuentesUsadas": [
+        "Arial-BoldMT",
+        "Arial-ItalicMT",
+        "ArialMT"
+      ],
+      "revisionVisualTodasLasPaginas": true,
+      "margenesHorizontalesSinDesbordamiento": true,
+      "sinPaginasVaciasNiMarcadores": true,
+      "destinosIndice": [
+        {
+          "titulo": "Acceso y responsabilidades",
+          "pagina": 3
+        },
+        {
+          "titulo": "Inicio de la jornada",
+          "pagina": 4
+        },
+        {
+          "titulo": "Preparar y confirmar una venta",
+          "pagina": 4
+        },
+        {
+          "titulo": "Cierre y consulta de ventas",
+          "pagina": 5
+        },
+        {
+          "titulo": "Comprobantes y fallos de impresión",
+          "pagina": 5
+        },
+        {
+          "titulo": "Comprobante de la venta de ejemplo",
+          "pagina": 7
+        },
+        {
+          "titulo": "Catálogo y condiciones comerciales",
+          "pagina": 8
+        },
+        {
+          "titulo": "Proveedores y recepciones",
+          "pagina": 8
+        },
+        {
+          "titulo": "Existencias y lotes",
+          "pagina": 9
+        },
+        {
+          "titulo": "Conteos y solicitudes de inventario",
+          "pagina": 9
+        },
+        {
+          "titulo": "Anular y devolver efectivo",
+          "pagina": 10
+        },
+        {
+          "titulo": "Gastos y reportes",
+          "pagina": 11
+        },
+        {
+          "titulo": "Correo de reportes",
+          "pagina": 11
+        },
+        {
+          "titulo": "Respaldar y recuperar",
+          "pagina": 12
+        },
+        {
+          "titulo": "Administración y seguimiento",
+          "pagina": 13
+        },
+        {
+          "titulo": "Atención de incidencias",
+          "pagina": 14
+        },
+        {
+          "titulo": "Fuentes y vigencia",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "archivo": "docs/entregables/Manual_Tecnico_MEGA.pdf",
+      "paginas": 14,
+      "orientacion": "vertical",
+      "tamanoPagina": "Carta",
+      "margenesPuntos": 72,
+      "sha256": "568f8ede34cf27b11e994091ff8bf58840781035a35cbe6a3e66b6596e1ea41f",
+      "fuentesUsadas": [
+        "Arial-BoldMT",
+        "Arial-ItalicMT",
+        "ArialMT"
+      ],
+      "revisionVisualTodasLasPaginas": true,
+      "margenesHorizontalesSinDesbordamiento": true,
+      "sinPaginasVaciasNiMarcadores": true,
+      "destinosIndice": [
+        {
+          "titulo": "Arquitectura y componentes",
+          "pagina": 3
+        },
+        {
+          "titulo": "Versiones y requisitos",
+          "pagina": 4
+        },
+        {
+          "titulo": "Instalación del paquete",
+          "pagina": 5
+        },
+        {
+          "titulo": "Datos y archivos que deben conservarse",
+          "pagina": 6
+        },
+        {
+          "titulo": "Ejecución desde las fuentes",
+          "pagina": 7
+        },
+        {
+          "titulo": "Configuración y control de acceso",
+          "pagina": 8
+        },
+        {
+          "titulo": "Integridad comercial y valoración",
+          "pagina": 8
+        },
+        {
+          "titulo": "Agentes y resultados externos",
+          "pagina": 9
+        },
+        {
+          "titulo": "Respaldo operativo",
+          "pagina": 10
+        },
+        {
+          "titulo": "Restauración y reapertura",
+          "pagina": 11
+        },
+        {
+          "titulo": "Fallos e intervención técnica",
+          "pagina": 12
+        },
+        {
+          "titulo": "Diagnóstico y mantenimiento",
+          "pagina": 13
+        },
+        {
+          "titulo": "Construcción y actualización",
+          "pagina": 13
+        },
+        {
+          "titulo": "Referencias operativas",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "archivo": "docs/entregables/Matriz_Validacion_MEGA.pdf",
+      "paginas": 12,
+      "orientacion": "horizontal",
+      "tamanoPagina": "Carta",
+      "margenesPuntos": 72,
+      "sha256": "fc984fe8fcf4590f016a0eebac9a926b441175d42e64a67c29b3e59b09b0cdb5",
+      "fuentesUsadas": [
+        "Arial-BoldMT",
+        "Arial-ItalicMT",
+        "ArialMT"
+      ],
+      "revisionVisualTodasLasPaginas": true,
+      "margenesHorizontalesSinDesbordamiento": true,
+      "sinPaginasVaciasNiMarcadores": true,
+      "destinosIndice": []
+    }
+  ],
+  "fuentes": [
+    {
+      "archivo": "docs/manuales/Manual_Usuario.md",
+      "sha256": "604d6c8da08e26bf8fc0f706b357632c550a7b23c084b9fb7477925975ff7ad4",
+      "normalizacion": "LF"
+    },
+    {
+      "archivo": "docs/manuales/Manual_Tecnico.md",
+      "sha256": "3f1107e691b264fe8c7c209b7048d63570a5384793521964422d7f96bbfbc85e",
+      "normalizacion": "LF"
+    },
+    {
+      "archivo": "docs/validacion/criterios_resultados.json",
+      "sha256": "14d3672a14455b9a55ce628e73be15d4f5ae6dc9eb5ec5a320794663dbe0bf04",
+      "normalizacion": "LF"
+    },
+    {
+      "archivo": "docs/validacion/Criterios_Aceptacion_20261111.csv",
+      "sha256": "a3d8018ca71338c0d29fd5b9e982cd7de4351dcf35c4c0273a082922b681d5bf",
+      "normalizacion": "LF"
+    },
+    {
+      "archivo": "tools/build-manuals.py",
+      "sha256": "e95a5a834dd1556c4b0e17fad4ff941bc9d0fcea89933795533099659fe4ce08",
+      "normalizacion": "LF"
+    }
+  ],
+  "pruebas": {
+    "registro": "docs/validacion/Registro_223_Pruebas.csv",
+    "ejecucionesUnicas": 223,
+    "criteriosTrazados": 15,
+    "suite": "docs/evidencias/distribucion/suite.trx",
+    "sha256TrxNormalizadoLF": "8fdfe03fff1dbea8ab339ef6d9b829aa3cc9714def08ca10b122f62e2a9381e5"
+  },
+  "limites": "Revisión propia; no acredita aceptación del negocio, ensayos de equipo físico ni nueva ejecución de la suite. Los TRX históricos conservan sus fechas y entorno.",
+  "criteriosOriginales": {
+    "rutaRelativaEspacioAcademico": "Proyecto/00_OFICIALES/Tercer_Corte/Correccion_20261111/Criterios_Aceptacion_Diseno_MEGA_Web.csv",
+    "copiaIdenticaAlPrepararEdicion": true,
+    "sha256BytesOriginales": "7cc5d5bbe70738f20a64262681ae061c0b102a74de387b051c2169196bfc5f84"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "version": "0.21.0",
+  "fecha": "2026-11-14",
+  "suite": "docs/evidencias/distribucion/suite.trx",
+  "criteriosFuente": "docs/validacion/Criterios_Aceptacion_20261111.csv",
+  "criterios": [
+    {
+      "id": "T01",
+      "clases": [
+        "CatalogTests",
+        "SettingsTests",
+        "CommercialTests"
+      ],
+      "resultado": "El catálogo conserva vigencias e historia. El recorrido de catálogo vendió a C$10.50, cambió a C$20.50 y comprobó ambos precios en su contexto; los cambios de configuración no reescribieron comprobantes. Condiciones comerciales y permisos se verifican en las pruebas de la suite.",
+      "evidencia": "docs/evidencias/catalogo/resultado.json",
+      "limite": "Precios, emisor y tasas usados son ficticios; fiscalidad y datos maestros reales pendientes."
+    },
+    {
+      "id": "T02",
+      "clases": [
+        "ReceivingTests"
+      ],
+      "resultado": "Guardar y enviar no movieron stock; la aprobación de otra cuenta creó una entrada única. En navegador, leche pasó de 30 a 40 por diez unidades aceptadas. Se rechazaron revisión obsoleta, aceptación sin costo, documento duplicado y aprobación propia; fallo tardío y reintentos conservaron atomicidad.",
+      "evidencia": "docs/evidencias/abastecimiento/resultado.json",
+      "limite": "No acredita recepción ni comprobación de mercadería real."
+    },
+    {
+      "id": "T03",
+      "clases": [
+        "CountingTests",
+        "IntegratedInventoryTests"
+      ],
+      "resultado": "La consulta mostró unidad, alertas y procedencia por lote sin valoración para Inventario. Un conteo de 28 frente a 30 conservó diferencia -2 sin alterar la existencia. Se probaron alcance total/lote, fechas, saldos y rechazo cuando hubo movimientos posteriores.",
+      "evidencia": "docs/evidencias/conteos/resultado.json",
+      "limite": "La declaración física del ensayo es ficticia; no representa un conteo del negocio."
+    },
+    {
+      "id": "T04",
+      "clases": [
+        "InventoryRequestTests",
+        "IntegratedInventoryTests",
+        "ValuationTests"
+      ],
+      "resultado": "Preparación, envío y conteo no ajustaron stock. La autorización vigente aplicó una sola operación; se comprobaron carga, ajuste, salida, rechazo, cancelación, costo conocido/desconocido, lotes y reversión por fallo tardío. Cambios de saldo o valoración invalidaron revisiones anteriores.",
+      "evidencia": "docs/evidencias/inventario_integrado/resultado.json",
+      "limite": "Causas, cantidades y referencias de evidencia corresponden a bases aisladas."
+    },
+    {
+      "id": "T05",
+      "clases": [
+        "FlowTests"
+      ],
+      "patron": "T05|rollback|price_change|same_key|quantity|amount|negative_stock|concurrent|known_cost",
+      "resultado": "El escenario de arroz 2x24 y leche 1x38 conservó total C$86, recibido C$100, cambio C$14 y un solo efecto comercial. C$80 fue insuficiente. Se probaron reintentos concurrentes, clave con otro contenido, cantidades inválidas y fallo tardío sin efectos parciales.",
+      "evidencia": "docs/evidencias/resultado_navegador.json",
+      "limite": "Los importes se aplican a las condiciones ficticias indicadas; no a todo catálogo o configuración."
+    },
+    {
+      "id": "T06",
+      "clases": [
+        "CancellationTests"
+      ],
+      "resultado": "La anulación conservó comprobante y costo/lotes originales. Reincorporación y devolución efectiva se probaron por separado. Una venta de C$38 y cierre original C$538 se mantuvieron; la devolución desde nueva caja C$500 produjo C$462. Sin evidencia no se inventó entrada o egreso.",
+      "evidencia": "docs/evidencias/anulaciones/resultado.json",
+      "limite": "No se entregó efectivo ni se reincorporó mercadería real durante el ensayo."
+    },
+    {
+      "id": "T07",
+      "clases": [
+        "PrintingTests"
+      ],
+      "resultado": "Fallos conocidos, reservas vencidas y resultados inciertos no repitieron venta o cobro. Copia e intentos conservaron folio y snapshot. El controlador real Microsoft Print to PDF aceptó original y copia en una base aislada, con una venta de C$38 y caja C$538; no se inventó entrega física.",
+      "evidencia": "docs/evidencias/impresion/resultado.json",
+      "limite": "Ensayo técnico aprobado; papel, ancho, corte e impresora física del negocio pendientes."
+    },
+    {
+      "id": "T08",
+      "clases": [
+        "FlowTests",
+        "CancellationTests"
+      ],
+      "patron": "T08|T08_T09",
+      "resultado": "Apertura con fondo C$480 exigió motivo frente al habitual C$500 y conservó el real. Se rechazó segunda caja simultánea. Las devoluciones posteriores utilizaron el turno actual autorizado, sin alterar el fondo o cierre original.",
+      "evidencia": "docs/evidencias/pruebas/avance01.trx",
+      "limite": "Las verificaciones utilizan fondos ficticios; conciliación con responsables reales pendiente."
+    },
+    {
+      "id": "T09",
+      "clases": [
+        "FlowTests",
+        "CancellationTests",
+        "ReportTests"
+      ],
+      "patron": "T09|stale_close|old_closed_cash|cancelled_sale",
+      "resultado": "El caso C$480+C$86 conservó esperado C$566, contado C$560, diferencia -C$6 y motivo al cerrar. Una pantalla obsoleta no ocultó ventas nuevas. Anulación y devolución posteriores conservaron el cierre anterior y su tratamiento en reportes.",
+      "evidencia": "docs/evidencias/pruebas/avance01.trx",
+      "limite": "No representa arqueo ni entrega de caja del negocio."
+    },
+    {
+      "id": "T10",
+      "clases": [
+        "ReceivingTests",
+        "InventoryRequestTests",
+        "CancellationTests",
+        "AccountTests",
+        "RecoveryTests"
+      ],
+      "patron": "T10|stale|edited|invalidates|permissions|self_approval|delegation|last_owner|pending_receipt",
+      "resultado": "La decisión sobre versión/huella anterior se rechazó sin efectos cuando cambió el objeto. Se verificaron edición, saldos, permisos, otra cuenta, delegación y rechazo de autoaprobación. La recuperación invalidó revisiones pendientes y permitió reenviar con nueva versión.",
+      "evidencia": "docs/evidencias/abastecimiento/03_revision_obsoleta_rechazada.png",
+      "limite": "La excepción de responsabilidad directa del Propietario permanece deshabilitada."
+    },
+    {
+      "id": "T11",
+      "clases": [
+        "ReportTests"
+      ],
+      "resultado": "Se conciliaron ingresos, costo histórico, gastos y margen; desconocido mostró No calculable y costo cero mantuvo significado. El navegador observó ingreso C$60, costo C$20, margen C$40, gasto C$10 y resultado C$30. Inventario no obtuvo costos/márgenes en pantalla o archivos. Se verificaron filtros, anulación, caja histórica, PDF y Excel.",
+      "evidencia": "docs/evidencias/reportes/resultado.json",
+      "limite": "La guía ilustra 86-66=20; el navegador usó el escenario equivalente 60-20=40 documentado aquí. No son cifras contables reales."
+    },
+    {
+      "id": "T12",
+      "clases": [
+        "MailTests"
+      ],
+      "resultado": "El reporte congelado y su huella se conservaron sin conexión/configuración. Reintentos acotados mantuvieron Message-ID; resultado incierto exigió nueva decisión. MailKit real se probó contra SMTP TLS local con aceptación, rechazo 550 y pérdida de respuesta final tras DATA. La credencial no se devolvió ni auditó en claro.",
+      "evidencia": "docs/evidencias/correo/resultado.json",
+      "limite": "No se enviaron mensajes a personas; servidor, cuenta y destinatario reales pendientes."
+    },
+    {
+      "id": "T13",
+      "clases": [
+        "RejectionAuditTests"
+      ],
+      "resultado": "La bitácora identificó cuenta o tarea, fecha, acción, objeto y resultado. Se probaron rechazos de permisos, antifalsificación, datos inválidos, acceso y fallos después de rollback. No se registraron cuerpos, contraseñas o secretos; las solicitudes concurrentes conservaron actor y motivo correspondientes.",
+      "evidencia": "docs/evidencias/auditoria/resultado.json",
+      "limite": "La protección corresponde a la operación de la aplicación; no certifica inviolabilidad física del archivo SQLite."
+    },
+    {
+      "id": "T14",
+      "clases": [
+        "BackupTests"
+      ],
+      "resultado": "La copia consistente incluyó SQLite/WAL y archivos asociados. Se comprobaron huellas, rutas, tamaños, relaciones y punto de recuperación; medio ausente o copia alterada mostraron fallo y conservaron otra copia válida. Pautas por intervalo, cierre y preactualización se verificaron condicionadas a autorización.",
+      "evidencia": "docs/evidencias/respaldo/resultado.json",
+      "limite": "Se utilizó carpeta de ensayo. USB real, capacidad, rotación y objetivo condicionado de 30 minutos pendientes."
+    },
+    {
+      "id": "T15",
+      "clases": [
+        "RecoveryTests"
+      ],
+      "resultado": "Restauración autorizada preservó la base actual, drenó solicitudes/agentes y recuperó una venta frente a dos previas. El estado anterior conservó las dos; la siguiente venta usó un identificador mayor. Se probaron cuarentena, reapertura expresa, credenciales, revisión obsoleta, fallos, reversión al iniciar y continuidad ante bloqueos de lectura de Windows.",
+      "evidencia": "docs/evidencias/restauracion/resultado.json",
+      "limite": "Ensayo aislado sin restaurar la demostración habitual. RTO de cuatro horas, volumen/medio real y conciliación del negocio pendientes."
+    }
+  ],
+  "incidencias": [
+    {
+      "id": "INC01",
+      "situacion": "La apertura inicial de reportes sin fechas podía rechazarse como si fuera una selección inválida.",
+      "correccion": "Distinguir carga inicial con valores predeterminados de fechas explícitas inválidas.",
+      "verificacion": "ReportTests.initial_report_load_uses_defaults_but_explicit_invalid_dates_are_rejected",
+      "situacionBreve": "Carga inicial de reportes sin fechas rechazada.",
+      "correccionBreve": "Distinguir valores predeterminados de fechas explícitas inválidas.",
+      "verificacionBreve": "ReportTests: carga inicial y fecha explícita inválida."
+    },
+    {
+      "id": "INC02",
+      "situacion": "Un signo menos de Unicode no tenía el glifo esperado en la salida PDF.",
+      "correccion": "Utilizar guion ASCII compatible en ese formato y conservar acentos con la fuente incorporada.",
+      "verificacion": "ReportTests.pdf_paginates_and_excel_preserves_numbers_and_untrusted_text_without_formulas y revisión de PDF exportado",
+      "situacionBreve": "Glifo de signo menos ausente en PDF.",
+      "correccionBreve": "Guion ASCII compatible y fuente Noto Sans incorporada.",
+      "verificacionBreve": "ReportTests y revisión visual de exportaciones."
+    },
+    {
+      "id": "INC03",
+      "situacion": "Las rutas largas de respaldos producían desbordamiento en móvil.",
+      "correccion": "Permitir quiebre de rutas en el componente correspondiente.",
+      "verificacion": "docs/evidencias/respaldo/03_movil.png y resultado.json",
+      "situacionBreve": "Rutas de respaldo desbordaban en móvil.",
+      "correccionBreve": "Quiebre de rutas largas en su componente.",
+      "verificacionBreve": "Captura móvil y resultado del ensayo de respaldo."
+    },
+    {
+      "id": "INC04",
+      "situacion": "Windows podía bloquear brevemente la sustitución del archivo de continuidad mientras existía un lector.",
+      "correccion": "Escritura sincronizada, reemplazo atómico y reintentos acotados; si persiste el bloqueo, rechazar reserva sin insertar.",
+      "verificacion": "RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id y persistent_windows_reader_rejects_reservation_and_keeps_previous_counter",
+      "situacionBreve": "Un lector de Windows bloqueaba la sustitución del control de continuidad.",
+      "correccionBreve": "Sincronizar escritura y reintentar de forma acotada; si persiste el bloqueo, rechazar la reserva.",
+      "verificacionBreve": "RecoveryTests: bloqueo temporal y permanente sin reutilizar identificadores."
+    },
+    {
+      "id": "INC05",
+      "situacion": "El iniciador preliminar no podía asignar KeySize mediante la implementación RSA de Windows PowerShell 5.1.",
+      "correccion": "Crear la clave mediante RSACng con tamaño indicado en su constructor.",
+      "verificacion": "Inicio real del paquete mediante Windows PowerShell 5.1 y conservación de venta/caja tras reinicio",
+      "situacionBreve": "KeySize no se podía asignar en Windows PowerShell 5.1.",
+      "correccionBreve": "Crear RSACng con el tamaño indicado en su constructor.",
+      "verificacionBreve": "Inicio y reinicio reales mediante Windows PowerShell 5.1."
+    },
+    {
+      "id": "INC06",
+      "situacion": "La publicación web necesitaba excluir explícitamente JSON y otros archivos de ejecución bajo App_Data.",
+      "correccion": "Retirar rutas operativas de Content y None y rechazar bases/certificados al verificar el paquete.",
+      "verificacion": "docs/evidencias/distribucion/paquete_ensayo.json y manifiesto del paquete estable",
+      "situacionBreve": "La publicación podía incluir JSON operativos de App_Data.",
+      "correccionBreve": "Excluir Content y None operativos y comprobar los archivos del paquete.",
+      "verificacionBreve": "Manifiesto verificado sin bases, certificados ni archivos de operación."
+    }
+  ],
+  "origenCriterios": "Proyecto/00_OFICIALES/Tercer_Corte/Correccion_20261111/Criterios_Aceptacion_Diseno_MEGA_Web.csv"
+}

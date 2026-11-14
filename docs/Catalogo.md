@@ -11,7 +11,7 @@ Disponible desde 0.3.0 para Propietario y Administrador. Ingresar con `admin` en
 5. En **Precios**, registrar un importe positivo por presentación. Puede aplicarse ahora o programarse a futuro usando la hora local provisional UTC−6.
 6. El producto activo con presentación/precio vigentes aparece en la búsqueda de venta cuando cumple las condiciones admitidas por el módulo de venta actual.
 
-No se crea stock al registrar un producto o su mínimo. Si el saldo digital es insuficiente, el recorrido de venta actual exige comprobar físicamente disponibilidad y registrar la discrepancia. Las entradas autorizadas se implementarán con recepciones/inventario.
+No se crea stock al registrar un producto o su mínimo. Las entradas se confirman mediante [recepciones](Abastecimiento.md) o [solicitudes de inventario](Solicitudes_Inventario.md) autorizadas. La venta con saldo digital insuficiente solo admite la contingencia física en productos básicos sin historial de lotes, con comprobación y discrepancia registradas; los productos con lotes deben cumplir la disponibilidad de su alcance.
 
 ## Conservación y permisos
 
@@ -23,7 +23,7 @@ Las ediciones comparan la versión o contenido leído y rechazan pantallas desac
 
 ## Validación
 
-65 pruebas aprobadas en la versión, incluidas alta completa, venta, T01, historia de precio, cambio concurrente, códigos desactivados, entradas inválidas y permisos HTTP. El recorrido automatizado de navegador creó un producto, vendió con C$10.50, cambió a C$20.50 y comprobó ambos importes en su contexto correcto.
+El registro histórico de 0.3.0 conserva 65 pruebas aprobadas, incluidas alta completa, venta, T01, historia de precio, cambio concurrente, códigos desactivados, entradas inválidas y permisos HTTP. El recorrido automatizado de navegador creó un producto, vendió con C$10.50, cambió a C$20.50 y comprobó ambos importes en su contexto correcto.
 
 - [Resultado de navegador](evidencias/catalogo/resultado.json).
 - [Pruebas ejecutadas](evidencias/catalogo/v0.3.0_pruebas.trx).
@@ -33,4 +33,4 @@ Las ediciones comparan la versión o contenido leído y rechazan pantallas desac
 - [Búsqueda por código](evidencias/catalogo/04_busqueda_codigo.png).
 - [Comprobante anterior conservado](evidencias/catalogo/05_venta_historica_conservada.png).
 
-Las capturas y pruebas usan datos ficticios en una base aislada. Promociones, impuestos, valoración y venta con lotes continúan pendientes; no se habilitan por dar de alta un producto ni se atribuye validación fiscal.
+Las capturas y pruebas usan datos ficticios en una base aislada. [Promociones e impuestos](Condiciones_Comerciales.md), [valoración y venta con lotes](Valoracion.md) ya están integrados y exigen su configuración y reglas propias. Dar de alta un producto no acredita fiscalidad, disponibilidad física ni aceptación comercial.

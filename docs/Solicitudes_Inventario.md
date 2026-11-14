@@ -12,13 +12,13 @@ Editar o cancelar invalida revisiones. Cambios del producto, proveedor de devolu
 
 ## Alcance y límites
 
-El recorrido actual permite regularizaciones de productos sin lotes y con historia de costo desconocido. Se bloquean productos con lotes/control de vencimiento o movimientos de costo conocido hasta integrar la asignación y valoración de salidas. No se degrada su costo conocido ni se inventa un costo para permitir la operación. Una carga que declara costo conocido conserva esa entrada, y sus salidas posteriores requieren el módulo de valoración. La solicitud tampoco puede dejar existencias negativas.
+Desde 0.10.0, las regularizaciones admiten costo conocido y lotes según [Inventario integrado](Inventario_Integrado.md). Las salidas conservan el promedio ponderado móvil vigente; no se inventa un costo para permitir la operación. Las cargas pueden identificar un lote existente o preparar uno nuevo, cuya existencia solo cambia al aprobar. Sin lote identifica saldo no asignado, y el ajuste de producto distribuido en lotes exige conteo por lote. La solicitud no puede dejar existencias negativas por producto ni por alcance. La revisión incorpora valoración, fecha y saldo; un cambio posterior exige nueva revisión.
 
 La evidencia es una referencia al documento, fotografía o acta conservados por el responsable; este avance no almacena archivos adjuntos. La carga inicial ficticia continúa consultable sin reinterpretar su snapshot histórico. Las pruebas no acreditan evidencia física ni aceptación reales.
 
 ## Verificación y evidencia
 
-120 pruebas automatizadas aprobadas en `evidencias/solicitudes/solicitudes.trx`. Incluyen T04/T10 para el alcance implementado, permisos, contenido obsoleto, saldo cambiado, conteo antiguo, costo conocido/desconocido, salida sin causa, cancelación, rechazo, fallo tardío, concurrencia y formularios con protección antifalsificación.
+El registro histórico de 0.8.0 conserva 120 pruebas automatizadas aprobadas en `evidencias/solicitudes/solicitudes.trx`. Incluyen T04/T10 para ese alcance, permisos, contenido obsoleto, saldo cambiado, conteo antiguo, costo conocido/desconocido, salida sin causa, cancelación, rechazo, fallo tardío, concurrencia y formularios con protección antifalsificación. La integración posterior y la regresión acumulada se documentan en [Inventario integrado](Inventario_Integrado.md) y [Manuales y validación](Manuales_y_Validacion.md).
 
 `tools/inventory-check.cjs` usa una base ficticia aislada. Se registraron cuatro capturas:
 
@@ -27,4 +27,4 @@ La evidencia es una referencia al documento, fotografía o acta conservados por 
 - `03_salida_justificada.png`: después de carga de 3, salida justificada de 1; saldo final 30.
 - `04_cancelacion.png`: preparación cancelada sin efecto; la revisión anterior abierta rechaza aplicar.
 
-Capturas y `resultado.json` en `evidencias/solicitudes`. Se mantienen pendientes valoración/lotes en regularizaciones, anulación de ventas y aceptación del negocio.
+Capturas y `resultado.json` en `evidencias/solicitudes`. Las regularizaciones con valoración/lotes y las [anulaciones](Anulaciones.md) ya están integradas; la aceptación del negocio y las evidencias físicas siguen pendientes.

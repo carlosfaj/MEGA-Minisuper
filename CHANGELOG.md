@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## Edición documental de 0.21.0 — 14 de noviembre de 2026
+
+- Manuales de usuario y técnico en PDF, con instalación, operación, contingencias, recuperación e índices automáticos; fuentes editables y dependencias documentales fijadas.
+- Matriz T01–T15 en PDF con esperado/obtenido/estado, evidencias y seis incidencias corregidas; registro derivado de 223 pruebas únicas y cobertura verificable, sin atribuir aceptación comercial a ensayos ficticios.
+- Revisión visual de las 40 páginas y registro de huellas, navegación, fuentes y márgenes. Guías de módulos actualizadas para reflejar integraciones terminadas, conservando los resultados históricos.
+- Kanban actualizado con seis criterios documentados. El código conserva versión 0.21.0; documento académico consolidado, presentación y validaciones reales siguen pendientes.
+
 ## 0.21.0 — 14 de noviembre de 2026
 
 - Paquete Windows x64 con .NET incluido, manifiesto de origen/huellas y SHA-256; generación desde árbol limpio y versiones fijadas, con licencias y avisos del entorno.

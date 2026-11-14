@@ -10,7 +10,7 @@ Cada guardado exige declarar una comprobación física y conserva, dentro de la 
 
 La consulta presenta saldos por lote y unidad base, fecha, estado y enlace a su recepción de procedencia. El umbral próximo a vencer se obtiene de Configuración; si no está definido se informa, sin inventar un número de días. Se distinguen vencidos, próximos, disponibles, saldos negativos, fechas faltantes y agotados. Los lotes sin saldo se incluyen con un filtro.
 
-Los productos con control de vencimiento y saldo sin lote se muestran por separado para conciliación; no se altera la carga histórica ni se inventan lotes para ella. Consultar no hace salidas automáticas. Inventario no recibe costos ni márgenes en esta vista. La salida por lotes, la valoración y las regularizaciones requieren los módulos y políticas pendientes.
+Los productos con control de vencimiento y saldo sin lote se muestran por separado para conciliación; no se altera la carga histórica ni se inventan lotes para ella. Consultar no hace salidas automáticas. Inventario no recibe costos ni márgenes en esta vista. La [venta con lotes y valoración](Valoracion.md) está integrada desde 0.9.0, y las [regularizaciones por lote](Inventario_Integrado.md) desde 0.10.0. Un ajuste de producto distribuido en lotes requiere conteo por lote; el total no identifica cuál difiere. La conciliación física real sigue pendiente.
 
 ## Verificación
 

@@ -1,0 +1,224 @@
+﻿codigo,clase,prueba,criterios,estado,duracion,idEjecucion
+PA-001,AccountTests,Mega.Tests.AccountTests.delegation_change_revokes_cookie_and_policy_rechecks_after_login,T10,Aprobado,00:00:02.8332729,720ade38-dd0c-4fbf-a1b5-c71416603bde
+PA-002,AccountTests,Mega.Tests.AccountTests.delegation_is_explicit_and_admin_cannot_promote_owner_or_delegate,T10,Aprobado,00:00:02.0604239,1e3a19e9-273e-4e36-a452-973c590e9175
+PA-003,AccountTests,Mega.Tests.AccountTests.invalid_role_permissions_or_weak_password_create_nothing,T10,Aprobado,00:00:01.7655451,afe42e09-59e1-4acf-b56a-7dc4346d52c8
+PA-004,AccountTests,Mega.Tests.AccountTests.last_owner_cannot_be_disabled_or_demoted_and_stale_edits_fail,T10,Aprobado,00:00:02.3506394,4677dda1-d73b-4854-85a4-fbfe7a1ecb6a
+PA-005,AccountTests,Mega.Tests.AccountTests.open_shift_keeps_operator_permissions_but_password_reset_remains_possible,T10,Aprobado,00:00:02.6460635,32e13989-e09e-4eba-ac76-7577e411ba67
+PA-006,AccountTests,Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 2),,Aprobado,00:00:04.5592553,45cb562f-fa82-41f1-b1a4-aa57d07cbf78
+PA-007,AccountTests,Mega.Tests.AccountTests.operational_roles_cannot_manage_accounts(id: 3),,Aprobado,00:00:01.6932518,2f78332f-5d1a-4634-83e5-feb2c7f74d11
+PA-008,AccountTests,Mega.Tests.AccountTests.owner_creates_account_hashed_and_deactivated_names_are_not_reused,,Aprobado,00:00:02.2207125,0259b1f5-ab28-46b3-bc48-940a717be9aa
+PA-009,AccountTests,Mega.Tests.AccountTests.password_change_revokes_other_sessions_and_requires_current_password,,Aprobado,00:00:03.6561754,e7e204d1-2aea-4668-8a4a-0a7589ac983b
+PA-010,AccountTests,Mega.Tests.AccountTests.real_account_form_creates_and_self_password_form_signs_out,,Aprobado,00:00:03.9674094,5b48b839-6164-4efb-b084-5f9670948d51
+PA-011,AccountTests,Mega.Tests.AccountTests.support_expiration_is_checked_on_every_request_and_login,,Aprobado,00:00:02.8761964,bcebecb7-4493-450d-842f-d4228892309a
+PA-012,AccountTests,Mega.Tests.AccountTests.support_has_explicit_scope_no_commercial_role_and_revocation_kills_cookie,,Aprobado,00:00:03.5086954,8ee24ba9-99e4-4f84-81d2-4677261ccb74
+PA-013,BackupTests,Mega.Tests.BackupTests.T14_consistent_wal_copy_includes_committed_sale_and_frozen_files,T14,Aprobado,00:00:02.7690194,edea366e-4ef1-4fb3-9891-2f0dba62fb73
+PA-014,BackupTests,Mega.Tests.BackupTests.T14_missing_medium_is_visible_and_previous_copy_remains_valid,T14,Aprobado,00:00:02.9275805,d1a71a20-1937-46bd-996f-741eaec6a566
+PA-015,BackupTests,"Mega.Tests.BackupTests.altered_manifest_paths_or_recovery_points_are_rejected_before_restore(alteration: ""path"")",T14,Aprobado,00:00:02.2207816,b81fc95e-0242-466f-99c2-3cfab14a06d0
+PA-016,BackupTests,"Mega.Tests.BackupTests.altered_manifest_paths_or_recovery_points_are_rejected_before_restore(alteration: ""point"")",T14,Aprobado,00:00:02.4906134,08751dd4-0b40-43f6-a3d2-b6f60b25e081
+PA-017,BackupTests,Mega.Tests.BackupTests.corrupt_archive_does_not_replace_or_invalidate_other_good_copies,T14,Aprobado,00:00:03.1315601,1ae3b82e-1193-4cf3-9b78-b0c4d90b194f
+PA-018,BackupTests,Mega.Tests.BackupTests.owner_policy_permissions_and_destination_boundaries_are_enforced,T14,Aprobado,00:00:02.0552354,7ab4e94e-0efb-4f45-8ece-ff197d3b28d1
+PA-019,BackupTests,Mega.Tests.BackupTests.periodic_close_and_preupdate_policy_are_conditional_and_do_not_repeat_unnecessarily,T14,Aprobado,00:00:03.8224478,86c0afd5-fa61-4064-b023-f8e72f5b9058
+PA-020,BackupTests,Mega.Tests.BackupTests.repeated_and_concurrent_request_recover_one_copy_without_overwriting,T14,Aprobado,00:00:02.8157129,e3e7094b-977e-4c33-81f9-27e2aec37ff6
+PA-021,CancellationTests,Mega.Tests.CancellationTests.T06_restock_and_cash_return_are_separate_atomic_and_idempotent,T06,Aprobado,00:00:02.5065268,c1402cc6-c71e-45d1-b1a9-bcc972b5744b
+PA-022,CancellationTests,Mega.Tests.CancellationTests.T08_T09_old_closed_cash_is_preserved_and_real_return_uses_current_shift,T06;T08;T09,Aprobado,00:00:02.5839586,afccee50-4330-4b99-835b-d3483c644c88
+PA-023,CancellationTests,Mega.Tests.CancellationTests.T10_edited_request_invalidates_open_review_before_any_effect,T06;T10,Aprobado,00:00:01.7993953,b8674587-33f6-4858-a11f-03b705a9eb0b
+PA-024,CancellationTests,Mega.Tests.CancellationTests.actual_forms_review_and_refund_preserve_receipt_and_permissions,T06;T10,Aprobado,00:00:04.8305099,9d913184-d962-4a06-a4ff-a779de9d44bf
+PA-025,CancellationTests,Mega.Tests.CancellationTests.concurrent_decisions_and_cash_retries_create_one_effect_each,T06,Aprobado,00:00:02.9075806,0d9e9868-a0f6-4c85-b631-1112c5c3a195
+PA-026,CancellationTests,Mega.Tests.CancellationTests.late_refund_failure_rolls_back_money_request_state_and_shift_version,T06,Aprobado,00:00:02.7123062,69bb40ca-467f-4119-8c59-9d1c26564bb6
+PA-027,CancellationTests,Mega.Tests.CancellationTests.late_restock_failure_rolls_back_sale_state_authorization_and_operation,T06,Aprobado,00:00:02.8687406,f42bdc50-f37f-4c93-be02-a46542940cc3
+PA-028,CancellationTests,Mega.Tests.CancellationTests.no_restock_does_not_invent_stock_and_missing_cash_evidence_does_not_invent_egress,T06,Aprobado,00:00:02.2074233,a2dfd661-5212-47d4-80b6-788cc979919a
+PA-029,CancellationTests,Mega.Tests.CancellationTests.permissions_self_approval_and_foreign_sales_are_rejected,T06;T10,Aprobado,00:00:02.0968393,7274c6a3-32e9-46f0-9112-52309d3b426a
+PA-030,CancellationTests,Mega.Tests.CancellationTests.rejection_or_cancellation_does_not_change_sale_cash_or_stock,T06,Aprobado,00:00:02.4683040,17f7f4df-35ce-4d00-87d2-713d4a6f80c4
+PA-031,CancellationTests,Mega.Tests.CancellationTests.reversal_uses_sale_historical_cost_after_new_receipts_change_average,T06,Aprobado,00:00:02.5479078,15fea42c-dbd1-4458-9e32-c4c5c78c3641
+PA-032,CatalogTests,Mega.Tests.CatalogTests.T01_price_and_name_changes_preserve_receipt_and_disable_only_future_sales,T01,Aprobado,00:00:01.7418095,a04f3b6e-cd94-40b7-96e3-d9a047cf72f1
+PA-033,CatalogTests,Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 2),T01,Aprobado,00:00:01.0925497,c0bdf3f0-6178-4dce-a6a2-1b8a0e90b838
+PA-034,CatalogTests,Mega.Tests.CatalogTests.cashier_and_inventory_cannot_change_catalog(actor: 3),T01,Aprobado,00:00:01.0083389,9ff9e300-2f00-4e6c-adb2-b6e90eb6248e
+PA-035,CatalogTests,Mega.Tests.CatalogTests.catalog_can_create_category_product_presentation_code_price_and_sell_it,T01,Aprobado,00:00:01.5466329,6496403c-4e4b-46fc-acb2-1334529e9cc8
+PA-036,CatalogTests,Mega.Tests.CatalogTests.category_names_are_normalized_and_stale_edits_are_rejected,T01,Aprobado,00:00:01.7218708,6920f189-d010-4a60-bbbf-447b20d6aa97
+PA-037,CatalogTests,Mega.Tests.CatalogTests.management_forms_create_real_records_and_enforce_http_permissions,T01,Aprobado,00:00:01.9966640,d45c4791-f62f-4f76-9f10-f6a95fc77edd
+PA-038,CatalogTests,Mega.Tests.CatalogTests.opening_login_page_does_not_consume_password_attempt_limit,T01,Aprobado,00:00:01.4539352,8da70ee1-44c9-441f-a6a3-1624bc1b8acb
+PA-039,CatalogTests,"Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: ""-1"")",T01,Aprobado,00:00:01.6493062,6e91bb00-c075-46ce-9de8-c90326d5f935
+PA-040,CatalogTests,"Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: ""0"")",T01,Aprobado,00:00:01.6513457,3a277c10-3695-4d04-b39b-1b279236ca9a
+PA-041,CatalogTests,"Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: ""1.123"")",T01,Aprobado,00:00:01.2898530,5aba497b-0185-45f8-ac97-fbec387f13ad
+PA-042,CatalogTests,"Mega.Tests.CatalogTests.prices_reject_invalid_money_without_changing_existing_condition(amount: ""9999999999999999999999999999"")",T01,Aprobado,00:00:01.5255777,fe5d85b3-77f9-482a-bf1f-78f4f21b3593
+PA-043,CatalogTests,Mega.Tests.CatalogTests.repeated_wrong_passwords_are_still_limited,T01,Aprobado,00:00:01.7911242,6ae40558-9beb-48cb-b003-a62556571729
+PA-044,CatalogTests,Mega.Tests.CatalogTests.scheduled_prices_preserve_neighbors_and_cannot_be_backdated,T01,Aprobado,00:00:01.2803388,0d40763b-1b7d-42d4-a145-055bb4c1ae4d
+PA-045,CatalogTests,Mega.Tests.CatalogTests.stale_product_version_and_reused_disabled_codes_are_rejected,T01,Aprobado,00:00:00.6494308,c724d904-209e-4898-977e-44c884d56304
+PA-046,CatalogTests,Mega.Tests.CatalogTests.used_units_and_factors_cannot_be_rewritten,T01,Aprobado,00:00:00.7370904,f04625e4-3d9e-40a9-81d1-8f81100656f8
+PA-047,CommercialTests,Mega.Tests.CommercialTests.discount_then_tax_are_visible_and_frozen_in_sale_and_receipt,T01,Aprobado,00:00:02.2726782,e841f9f8-e469-4d29-8570-1388376f315c
+PA-048,CommercialTests,Mega.Tests.CommercialTests.exemptions_are_distinct_from_zero_rate_and_conflicts_block_checkout,T01,Aprobado,00:00:02.3979587,dff48787-e3a9-4ef0-8f65-b51a1ec6fb0d
+PA-049,CommercialTests,Mega.Tests.CommercialTests.future_inactive_and_expired_conditions_do_not_change_sale,T01,Aprobado,00:00:01.7668000,42c9f666-3dae-49d0-94d7-7a31a5ef8e5e
+PA-050,CommercialTests,Mega.Tests.CommercialTests.management_forms_and_receipt_render_applied_conditions,T01,Aprobado,00:00:03.6254796,2efa1bb8-ff99-40ff-809d-2a63e1b59c5f
+PA-051,CommercialTests,Mega.Tests.CommercialTests.only_management_changes_commercial_conditions(user: 2),T01,Aprobado,00:00:01.7336929,c6aee6cb-513f-4a5d-ba56-49d6618ef42b
+PA-052,CommercialTests,Mega.Tests.CommercialTests.only_management_changes_commercial_conditions(user: 3),T01,Aprobado,00:00:02.0722828,febbca8d-2147-4636-abea-8fa76077f39d
+PA-053,CommercialTests,Mega.Tests.CommercialTests.promotions_are_exclusive_priority_is_stable_and_fixed_discount_is_per_presentation,T01,Aprobado,00:00:01.9096387,78a6226e-5aa3-468c-addd-e5c14219e11d
+PA-054,CommercialTests,Mega.Tests.CommercialTests.stale_edits_and_changed_quote_require_a_new_review_without_effects,T01,Aprobado,00:00:02.0835018,6d3c4456-2338-4ed3-b2aa-ccd8c37c24cd
+PA-055,CommercialTests,Mega.Tests.CommercialTests.zero_total_and_invalid_percent_exemption_or_dates_are_rejected,T01,Aprobado,00:00:05.2368701,3a260b0a-a9bc-43af-a8e6-dc942af11722
+PA-056,CountingTests,Mega.Tests.CountingTests.T04_save_and_finalize_preserve_difference_without_changing_stock_or_cost,T03,Aprobado,00:00:02.1136311,b14450d8-dde7-474c-89af-7fbccc2e19ca
+PA-057,CountingTests,Mega.Tests.CountingTests.actual_count_form_requires_physical_confirmation_and_can_finalize,T03,Aprobado,00:00:06.3880752,2366bb03-2985-4435-8433-a3ec6a16c129
+PA-058,CountingTests,Mega.Tests.CountingTests.counted_product_keeps_its_unit_even_without_any_stock_movement,T03,Aprobado,00:00:01.8270049,db2f0977-9e18-47ac-887e-46c6293da877
+PA-059,CountingTests,Mega.Tests.CountingTests.invalid_counts_duplicates_mixed_scope_and_missing_physical_declaration_fail,T03,Aprobado,00:00:01.5010301,0b0a6ddd-41fb-433c-8b69-a25dc87bb6af
+PA-060,CountingTests,Mega.Tests.CountingTests.lot_alerts_use_configured_threshold_without_exposing_cost_or_mutating_stock,T03,Aprobado,00:00:03.1725989,b1d13571-2a76-48bc-97a9-1fdedb7b21f8
+PA-061,CountingTests,Mega.Tests.CountingTests.lot_count_checks_product_scope_and_keeps_total_distinct,T03,Aprobado,00:00:02.1527980,d1fd306b-7888-497c-bb16-949be7aedffc
+PA-062,CountingTests,Mega.Tests.CountingTests.movement_after_count_requires_new_physical_check_and_version,T03,Aprobado,00:00:02.0711765,11966a0f-c8c8-4fdb-97e8-1ee1fc405e02
+PA-063,CountingTests,Mega.Tests.CountingTests.other_products_moving_do_not_invalidate_a_count,T03,Aprobado,00:00:01.9952390,8497520d-7103-46a6-932f-eda73b0b262d
+PA-064,CountingTests,Mega.Tests.CountingTests.permissions_owner_and_stale_edits_are_checked_in_service_and_http,T03,Aprobado,00:00:02.4445793,dc939b33-a84e-48db-8e6b-05c65817b169
+PA-065,DatabaseTests,Mega.Tests.DatabaseTests.closed_shift_cannot_be_rewritten_and_view_preserves_expected,,Aprobado,00:00:00.7486811,cacf93e5-d180-40c5-9ac6-cd4149cb166f
+PA-066,DatabaseTests,Mega.Tests.DatabaseTests.complete_schema_and_ef_mapping_match_39_tables_499_columns_103_relations,,Aprobado,00:00:00.9053514,b1381f2b-9a16-49e1-85ee-a06f3379181a
+PA-067,DatabaseTests,Mega.Tests.DatabaseTests.composite_keys_allow_multiple_products_in_one_promotion_and_multiple_tax_periods,,Aprobado,00:00:01.1398075,ad5153a9-ea3c-4224-9989-896874915a04
+PA-068,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""DELETE FROM MovimientoCaja"", message: ""caja"")",,Aprobado,00:00:02.4501023,739643ee-3ef1-423f-b837-42ab0af707a2
+PA-069,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""DELETE FROM Pago"", message: ""pagos"")",,Aprobado,00:00:02.0897735,66017686-5b31-41e7-948d-0de364c5042f
+PA-070,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""DELETE FROM Venta"", message: ""ventas"")",,Aprobado,00:00:01.4972274,e66fde78-9e5a-465b-b2e7-afa64803556e
+PA-071,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""DELETE FROM VentaDetalle"", message: ""detalle"")",,Aprobado,00:00:01.6034666,2afc7a64-1b78-4d0d-89d4-2158b08cad45
+PA-072,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""UPDATE MovimientoCaja SET importeCentavos=1"", message: ""caja"")",,Aprobado,00:00:02.2151818,f13be658-946c-4304-b4cd-bf68a65ce2a7
+PA-073,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""UPDATE Pago SET recibidoCentavos=99999"", message: ""pagos"")",,Aprobado,00:00:01.3776141,a5b3963f-9938-437f-b641-49f8dd4602f2
+PA-074,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""UPDATE Venta SET comprobanteSnapshot='{}'"", message: ""comprobante"")",,Aprobado,00:00:01.9709381,45054577-ad4e-466b-8816-de494ca28158
+PA-075,DatabaseTests,"Mega.Tests.DatabaseTests.confirmed_sale_payment_and_cash_history_are_preserved(sql: ""UPDATE VentaDetalle SET totalCentavos=1"", message: ""detalle"")",,Aprobado,00:00:01.5794119,acc0cac3-4253-408e-9a6a-609eae8ca6f5
+PA-076,DatabaseTests,"Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: ""DELETE FROM EventoAuditoria WHERE id=1"", message: ""auditoria"")",,Aprobado,00:00:00.6874161,4a8a1c4b-e904-4b1d-a2b7-7c6e6cd2658f
+PA-077,DatabaseTests,"Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: ""DELETE FROM MovimientoInventario WHERE id=1"", message: ""inventario"")",,Aprobado,00:00:00.5831843,9805aff8-3cf1-42c6-9fa0-7c10062f3592
+PA-078,DatabaseTests,"Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: ""UPDATE EventoAuditoria SET accion='alterado' WHERE""···, message: ""auditoria"")",,Aprobado,00:00:00.8328960,2fb6338b-cd3c-4efd-9fa9-0e3e9cb5f2ee
+PA-079,DatabaseTests,"Mega.Tests.DatabaseTests.database_rejects_mutation_of_audit_and_stock_history(sql: ""UPDATE MovimientoInventario SET cantidadEscalada=1""···, message: ""cantidad"")",,Aprobado,00:00:00.6809692,4871cca4-1b36-4f6e-9c76-a8a61a7b7334
+PA-080,DatabaseTests,Mega.Tests.DatabaseTests.detail_cannot_use_a_presentation_belonging_to_another_product,,Aprobado,00:00:00.6719982,045d3608-bc31-49b9-9f3d-65adcdc931b3
+PA-081,DatabaseTests,Mega.Tests.DatabaseTests.extra_payment_cannot_exceed_sale_total,,Aprobado,00:00:01.2123450,2c5b51ae-0c3c-4b71-83ca-a37c771b1644
+PA-082,DatabaseTests,Mega.Tests.DatabaseTests.failed_migration_rolls_back_objects_version_and_rows,,Aprobado,00:00:00.7062678,8cc11bb7-61c3-41fa-b52b-8ad3f710c891
+PA-083,DatabaseTests,Mega.Tests.DatabaseTests.foreign_keys_alone_do_not_allow_a_lot_from_another_product,,Aprobado,00:00:00.6558502,e858601c-e132-4d44-8d5e-b98ba5144f84
+PA-084,DatabaseTests,Mega.Tests.DatabaseTests.inspector_detects_missing_guards_and_does_not_repair_them_silently,,Aprobado,00:00:00.5535261,283110f7-f3cd-4f6a-b5d8-ecd1cc48c621
+PA-085,DatabaseTests,Mega.Tests.DatabaseTests.non_demo_initialization_uses_supplied_password_owner_and_no_fictitious_products,,Aprobado,00:00:00.3035532,2bced085-b41c-4b6a-b874-3ec020c4f63f
+PA-086,DatabaseTests,Mega.Tests.DatabaseTests.overlapping_legacy_prices_block_upgrade_before_modifying_data,,Aprobado,00:00:00.6609334,e58dcaf0-c532-4f71-9535-8341c9c1c253
+PA-087,DatabaseTests,Mega.Tests.DatabaseTests.price_intervals_reject_overlap_and_accept_adjacent_periods,,Aprobado,00:00:01.0780539,01368c70-572e-4fc1-affb-aac5c08cc1a3
+PA-088,DatabaseTests,Mega.Tests.DatabaseTests.readonly_diagnosis_keeps_file_and_business_records_unchanged,,Aprobado,00:00:00.6297524,fb5658ec-4718-4aea-bd7c-05a28e7bf4be
+PA-089,DatabaseTests,Mega.Tests.DatabaseTests.repeated_initialization_does_not_duplicate_seed_or_migration_events,,Aprobado,00:00:00.6409989,e3c464d2-a766-49dd-9dd0-b47a26cc9578
+PA-090,DatabaseTests,Mega.Tests.DatabaseTests.unrecognized_version_or_unversioned_existing_data_is_never_overwritten,,Aprobado,00:00:00.5510394,de2d5e90-bc22-4b61-87e5-dde01cb1f70c
+PA-091,DatabaseTests,Mega.Tests.DatabaseTests.upgrade_preserves_legacy_sales_and_makes_a_valid_previous_copy,,Aprobado,00:00:01.3385378,b63b3977-6a21-4969-9283-24a9e061baea
+PA-092,ExpenseTests,Mega.Tests.ExpenseTests.concurrent_same_key_and_corrections_never_duplicate_effects,,Aprobado,00:00:02.0745636,84132503-6a49-4474-bc4b-74b9425fd36b
+PA-093,ExpenseTests,Mega.Tests.ExpenseTests.correction_preserves_original_and_cancellation_never_reactivates_it,,Aprobado,00:00:04.9603195,c8f8ce5e-f0c5-4189-b727-d622d22b303c
+PA-094,ExpenseTests,Mega.Tests.ExpenseTests.create_and_retry_record_one_expense_without_cash_effect,,Aprobado,00:00:01.5869890,91c039a3-cb43-41ac-9ae7-e218a316cb61
+PA-095,ExpenseTests,Mega.Tests.ExpenseTests.invalid_values_permissions_and_stale_reviews_leave_no_partial_expense,,Aprobado,00:00:02.4912017,db248b18-50a4-4e3a-8975-d8dcfefa425e
+PA-096,ExpenseTests,Mega.Tests.ExpenseTests.late_correction_failure_rolls_back_previous_state_and_new_record,,Aprobado,00:00:01.6641135,0a4b274b-9e80-4237-b28a-6e7d39c2382e
+PA-097,FlowTests,Mega.Tests.FlowTests.T05_insufficient_payment_leaves_no_partial_effects,T05,Aprobado,00:00:02.5970246,c921ae1a-3663-45b0-bbf3-cf6c5bfc06a6
+PA-098,FlowTests,Mega.Tests.FlowTests.T05_sale_is_atomic_and_repeat_recovers_one_sale,T05,Aprobado,00:00:02.6608772,dc3e2a20-7062-4ca9-bde8-24eb5c0547cc
+PA-099,FlowTests,Mega.Tests.FlowTests.T08_one_station_rejects_two_open_shifts_and_requires_difference_reason,T08,Aprobado,00:00:01.7009887,2ec7c678-20f2-4380-82c3-ce549ca72ce3
+PA-100,FlowTests,Mega.Tests.FlowTests.T09_close_saves_expected_count_difference_and_keeps_snapshot,T09,Aprobado,00:00:02.5590921,12aeb3b1-801f-4aba-8d4a-12d2c46b2388
+PA-101,FlowTests,Mega.Tests.FlowTests.concurrent_retries_create_a_single_business_operation,T05,Aprobado,00:00:02.6991955,39ab0ae4-f5d3-4f3a-8b6f-33c199017a61
+PA-102,FlowTests,Mega.Tests.FlowTests.credential_version_change_invalidates_existing_session,,Aprobado,00:00:02.4469659,a855a8c2-aa30-415c-a766-7e0a53ee3362
+PA-103,FlowTests,Mega.Tests.FlowTests.database_foreign_keys_and_39_tables_match_reference,,Aprobado,00:00:01.6280733,91b69962-f4e2-430b-a204-0fe13f699fee
+PA-104,FlowTests,Mega.Tests.FlowTests.existing_demo_database_cannot_be_switched_to_real_mode,,Aprobado,00:00:01.9270957,699e08d4-0253-4719-a9eb-7f753bffda7d
+PA-105,FlowTests,Mega.Tests.FlowTests.known_cost_product_preserves_valuation_when_sold,T05,Aprobado,00:00:02.4071817,56cbfa45-d8fb-431d-bc72-caedf70efccd
+PA-106,FlowTests,Mega.Tests.FlowTests.negative_stock_requires_physical_check_without_blocking_by_sign,T05,Aprobado,00:00:02.2361698,13b55275-036c-44ff-b1ec-1adf95f2316b
+PA-107,FlowTests,Mega.Tests.FlowTests.price_change_requires_review_before_payment,T05,Aprobado,00:00:05.3633189,c1da1048-1bfa-4a7d-aeff-4036bad1b019
+PA-108,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""desconocida"", value: ""1"", presentation: 1)",T05,Aprobado,00:00:01.6412090,f324079d-26ca-4eab-9c8f-978375643afa
+PA-109,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""importe"", value: ""2"", presentation: 2)",T05,Aprobado,00:00:01.6702917,a0ea7ece-879d-4d25-948b-d530cdc0f6e5
+PA-110,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""peso_manual"", value: ""-1"", presentation: 1)",T05,Aprobado,00:00:01.5760787,d03d2f98-9ba9-45da-843f-f4e6ffe416a8
+PA-111,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""peso_manual"", value: ""0"", presentation: 1)",T05,Aprobado,00:00:01.5864978,b92ff15a-6d83-4202-9df8-c5bb537c3270
+PA-112,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""peso_manual"", value: ""1.0001"", presentation: 1)",T05,Aprobado,00:00:01.6925479,6ef8f8da-4780-4ec3-8f0d-9a6749ae3ace
+PA-113,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""peso_manual"", value: ""9999999999999999999999999999"", presentation: 1)",T05,Aprobado,00:00:01.7877445,2636d6e6-1d25-4179-abc4-d964041e4904
+PA-114,FlowTests,"Mega.Tests.FlowTests.quantity_mode_and_overflow_are_validated(mode: ""unidad"", value: ""1.5"", presentation: 2)",T05,Aprobado,00:00:01.9701525,a2f37b83-fde3-4275-bc3f-0c707086d764
+PA-115,FlowTests,Mega.Tests.FlowTests.real_http_flow_checks_login_csrf_sale_and_role_boundaries,,Aprobado,00:00:04.2374091,84a3757c-7074-4eb8-83df-90c9a041e0de
+PA-116,FlowTests,Mega.Tests.FlowTests.rollback_after_late_database_failure_removes_sale_payment_and_stock_effects,T05,Aprobado,00:00:02.4970338,1d80a70f-c570-459c-afba-c0d5f6d45020
+PA-117,FlowTests,Mega.Tests.FlowTests.sales_by_amount_show_actual_rounded_quantity_and_total,T05,Aprobado,00:00:01.9009418,aba5a28f-3ff4-4161-9b9f-06f7e5e10c70
+PA-118,FlowTests,Mega.Tests.FlowTests.same_key_with_other_content_or_account_is_rejected,T05,Aprobado,00:00:02.3740663,2b232076-a5b6-494b-9e88-f2444da67b97
+PA-119,FlowTests,Mega.Tests.FlowTests.stale_close_cannot_hide_a_new_sale,T09,Aprobado,00:00:02.4912936,81945526-841f-4524-8761-4a46bcb5de54
+PA-120,IntegratedInventoryTests,Mega.Tests.IntegratedInventoryTests.changed_average_after_preparation_requires_saving_a_new_cost_version,T03;T04,Aprobado,00:00:02.4974006,5e09eeb6-1b77-4637-bf63-09b39d75c5c9
+PA-121,IntegratedInventoryTests,Mega.Tests.IntegratedInventoryTests.counted_lot_adjustment_preserves_scope_and_known_historical_cost,T03;T04,Aprobado,00:00:02.5334856,d2869e4e-25af-456d-9303-817faadbe60d
+PA-122,IntegratedInventoryTests,Mega.Tests.IntegratedInventoryTests.invalid_lot_and_insufficient_lot_stock_cannot_apply,T03;T04,Aprobado,00:00:02.1004806,4c02f644-ecb6-487a-a390-c21449a425bf
+PA-123,IntegratedInventoryTests,Mega.Tests.IntegratedInventoryTests.load_with_new_lot_has_no_stock_until_approved_and_known_output_keeps_cost,T03;T04,Aprobado,00:00:02.1253394,e4deeac9-d9bf-4e0d-a72d-9dd31a9e4777
+PA-124,IntegratedInventoryTests,Mega.Tests.IntegratedInventoryTests.total_count_cannot_guess_lot_and_unidentified_controlled_load_is_rejected,T03;T04,Aprobado,00:00:02.0567763,3f53fe81-15cf-42b4-95d9-35bb19a22f3c
+PA-125,InventoryRequestTests,Mega.Tests.InventoryRequestTests.T04_count_adjustment_requires_review_and_applies_exact_difference_once,T04,Aprobado,00:00:02.0753791,e150592f-de49-4c96-979d-0046d8bd87ad
+PA-126,InventoryRequestTests,Mega.Tests.InventoryRequestTests.T10_edit_invalidates_old_inventory_approval,T04;T10,Aprobado,00:00:01.7692574,c86dff92-195f-43ad-aa12-fd9a16aa2d00
+PA-127,InventoryRequestTests,Mega.Tests.InventoryRequestTests.concurrent_retries_apply_one_load,T04,Aprobado,00:00:01.3178434,1f778f60-0427-423b-9c79-577d6f106950
+PA-128,InventoryRequestTests,Mega.Tests.InventoryRequestTests.http_preparation_and_review_form_use_antiforgery_and_seed_history_is_readable,T04,Aprobado,00:00:04.4576665,bd0e6bea-71fc-4205-b837-caf4cace2dcc
+PA-129,InventoryRequestTests,Mega.Tests.InventoryRequestTests.late_failure_rolls_back_approval_and_all_inventory_effects,T04,Aprobado,00:00:01.3020451,7b8fb8f5-717a-4559-b362-70c98a30052d
+PA-130,InventoryRequestTests,Mega.Tests.InventoryRequestTests.loads_preserve_declared_known_cost_and_never_zero_unknown_cost,T04,Aprobado,00:00:01.5326201,b1c3a27a-640a-4ee7-9b14-4f932e37ce8d
+PA-131,InventoryRequestTests,Mega.Tests.InventoryRequestTests.manager_cannot_approve_own_request_and_cancellation_revokes_review,T04,Aprobado,00:00:01.9380164,91fb4384-2119-4dab-9ec5-46d2ea72f1fd
+PA-132,InventoryRequestTests,Mega.Tests.InventoryRequestTests.movements_after_finalized_count_prevent_preparing_an_old_adjustment,T04,Aprobado,00:00:01.5076485,21addc8d-1ff0-4111-bc34-a03621b381ce
+PA-133,InventoryRequestTests,Mega.Tests.InventoryRequestTests.only_other_management_account_can_apply(user: 2),T04,Aprobado,00:00:01.5389967,6a45ab6a-cda2-4b75-848e-031dd17c554a
+PA-134,InventoryRequestTests,Mega.Tests.InventoryRequestTests.only_other_management_account_can_apply(user: 3),T04,Aprobado,00:00:01.3414619,77f6ddf7-e411-4d71-838b-2765a6228a2b
+PA-135,InventoryRequestTests,Mega.Tests.InventoryRequestTests.rejection_has_no_effect_and_negative_stock_or_missing_cause_is_blocked,T04,Aprobado,00:00:01.9178614,83b5e308-d2fd-4f0d-8b80-4eb6a5c755c9
+PA-136,InventoryRequestTests,Mega.Tests.InventoryRequestTests.stock_changed_after_review_rejects_decision_and_requires_a_new_version,T04,Aprobado,00:00:01.4717890,1c1160a2-c8bd-4452-846c-b7aa71c843a1
+PA-137,MailTests,Mega.Tests.MailTests.T12_disabled_mail_keeps_frozen_report_without_internet_or_commercial_effects,T12,Aprobado,00:00:02.5070446,f02205d5-7756-4a24-91c2-a98e136c13d4
+PA-138,MailTests,Mega.Tests.MailTests.changing_server_requires_new_secret_while_reenabling_same_target_preserves_it,T12,Aprobado,00:00:01.9106586,5a456011-c384-4ef6-8a1d-6be5f4fa449f
+PA-139,MailTests,Mega.Tests.MailTests.concurrent_enqueue_and_dispatch_create_one_request_and_attempt,T12,Aprobado,00:00:02.5099987,70fb2d79-2501-4ea2-a748-894943e33db1
+PA-140,MailTests,Mega.Tests.MailTests.expired_reservation_and_late_acceptance_preserve_manual_resolution,T12,Aprobado,00:00:02.0860744,23bc0974-c5a3-4c09-a02d-3277a5e82d0c
+PA-141,MailTests,Mega.Tests.MailTests.known_connection_failure_retries_three_times_with_same_message_and_attachment,T12,Aprobado,00:00:02.5601601,03f5edde-f441-4cac-97e4-1c5c689b10f6
+PA-142,MailTests,Mega.Tests.MailTests.permissions_integrity_and_late_failure_leave_no_partial_or_untrusted_send,T12,Aprobado,00:00:03.5940011,fa810af3-9c5b-4377-8a11-9f9adc119945
+PA-143,MailTests,"Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: ""accept"")",T12,Aprobado,00:00:00.3687254,f785cbed-8bfb-4271-9f84-78fde2a25822
+PA-144,MailTests,"Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: ""drop"")",T12,Aprobado,00:00:01.2082937,e63c1bf4-8797-46e9-bccb-ea4b53ef7625
+PA-145,MailTests,"Mega.Tests.MailTests.real_mailkit_tls_loopback_distinguishes_accept_reject_and_lost_final_response(mode: ""reject"")",T12,Aprobado,00:00:00.8194380,ebb5e269-f9b9-4872-ae2a-f0369ee6f8bd
+PA-146,MailTests,Mega.Tests.MailTests.smtp_credentials_are_protected_and_never_stored_in_audit_or_database_values,T12,Aprobado,00:00:01.7854537,5f99f47f-1483-450b-baa6-7fad3ae15d14
+PA-147,MailTests,Mega.Tests.MailTests.uncertain_send_requires_explicit_new_request_and_never_blindly_retries,T12,Aprobado,00:00:02.5241208,304615c5-94bc-42fe-b0db-109d36c3e09b
+PA-148,PrintingTests,Mega.Tests.PrintingTests.T07_known_printer_failure_never_repeats_sale_or_payment_and_requires_retry,T07,Aprobado,00:00:02.6581087,2ea0f447-4c3d-494b-a464-ee36f211ecac
+PA-149,PrintingTests,Mega.Tests.PrintingTests.altered_job_hash_is_not_sent_to_printer,T07,Aprobado,00:00:02.8867919,b377f1a1-15a4-4cdb-b047-93b39bb62396
+PA-150,PrintingTests,Mega.Tests.PrintingTests.cancelled_sale_pending_original_is_paused_before_spooling,T07,Aprobado,00:00:02.8445209,76d3ff5a-4e43-4bf5-85d1-924cec98f8b1
+PA-151,PrintingTests,Mega.Tests.PrintingTests.concurrent_dispatchers_accept_exactly_one_attempt,T07,Aprobado,00:00:02.4593526,fc26585e-9051-4af2-93f6-19998b079b95
+PA-152,PrintingTests,Mega.Tests.PrintingTests.contingency_is_managed_and_stale_review_is_rejected,T07,Aprobado,00:00:02.3910502,9a6f1f29-817d-4703-8a1d-b6ff79d6c2a9
+PA-153,PrintingTests,Mega.Tests.PrintingTests.copy_is_idempotent_keeps_snapshot_folio_totals_and_does_not_charge,T07,Aprobado,00:00:02.4200006,736cd840-662d-43d4-9ae7-b2337ed9568e
+PA-154,PrintingTests,Mega.Tests.PrintingTests.disabled_agent_keeps_pending_sale_and_does_not_dispatch,T07,Aprobado,00:00:05.9144219,c1add8e5-a040-42f9-8f46-9052347bfa66
+PA-155,PrintingTests,Mega.Tests.PrintingTests.expired_lease_becomes_uncertain_and_stale_completion_cannot_overwrite_resolution,T07,Aprobado,00:00:02.6528749,a5aefb08-d411-48d9-b5f5-4c14d88d1b89
+PA-156,PrintingTests,Mega.Tests.PrintingTests.foreign_closed_and_inventory_accounts_cannot_manage_cashier_receipt,T07,Aprobado,00:00:03.2719818,53647ca8-5101-46da-8dad-f1c888b5beaf
+PA-157,PrintingTests,Mega.Tests.PrintingTests.late_contingency_failure_rolls_back_resolution_and_delivery,T07,Aprobado,00:00:02.2445225,4dcb4f76-b799-450f-9849-a57e1fb5845a
+PA-158,PrintingTests,Mega.Tests.PrintingTests.printer_setting_rejects_unknown_device_without_changing_current_version,T07,Aprobado,00:00:01.8106403,e5bff90c-425f-4c30-b277-fc93180bd97c
+PA-159,PrintingTests,Mega.Tests.PrintingTests.uncertain_result_is_never_automatically_resent_or_blindly_retried,T07,Aprobado,00:00:02.3902593,99a3c78d-a90d-44a7-b016-b4fb0f94d555
+PA-160,PrintingTests,Mega.Tests.PrintingTests.windows_acceptance_does_not_invent_physical_delivery,T07,Aprobado,00:00:02.1201774,341810cb-3347-442e-9c39-f8eed2399587
+PA-161,ProjectBoardTests,Mega.Tests.ProjectBoardTests.authenticated_board_and_refresh_are_available_to_commercial_accounts,,Aprobado,00:00:02.6932138,c3e6a6d7-39bc-4d7c-96e0-4b079c47931e
+PA-162,ProjectBoardTests,Mega.Tests.ProjectBoardTests.changing_the_tracking_source_refreshes_progress_without_restart,,Aprobado,00:00:01.7830332,3b3161f5-c5b3-4b08-bf95-69ed3fe0841d
+PA-163,ProjectBoardTests,Mega.Tests.ProjectBoardTests.partial_card_cannot_be_completed_and_each_criterion_counts_once,,Aprobado,00:00:00.0074490,ea268b91-6578-4795-aab6-77c8ca98cdc5
+PA-164,ProjectBoardTests,Mega.Tests.ProjectBoardTests.real_plan_includes_software_quality_docs_delivery_and_business_validation,,Aprobado,00:00:01.7166175,e538ffc3-4bdc-484c-b195-9317199d7ed1
+PA-165,ReceivingTests,Mega.Tests.ReceivingTests.T02_pending_does_not_move_stock_approved_receipt_is_atomic_and_recoverable,T02,Aprobado,00:00:02.1110509,5e6d2e1a-c6c0-4d23-b62e-68a61ad355ef
+PA-166,ReceivingTests,Mega.Tests.ReceivingTests.T10_edit_invalidates_review_and_rejects_previous_version_before_any_effect,T02;T10,Aprobado,00:00:01.5271615,226a906a-32e7-45a3-b5e1-02601201d175
+PA-167,ReceivingTests,Mega.Tests.ReceivingTests.T10_same_account_cannot_self_approve_even_if_manager,T02;T10,Aprobado,00:00:01.0995607,415cbf98-a858-432c-963c-3025b5922171
+PA-168,ReceivingTests,Mega.Tests.ReceivingTests.actual_review_form_posts_the_exact_snapshot_with_antiforgery,T02,Aprobado,00:00:02.7210402,b5c3479f-a340-4b17-abf2-aa22b37d3e8a
+PA-169,ReceivingTests,Mega.Tests.ReceivingTests.cashier_and_inventory_cannot_decide(id: 2),T02,Aprobado,00:00:01.2171233,a0de9624-04d4-4cbd-a3cb-ce86595d22c0
+PA-170,ReceivingTests,Mega.Tests.ReceivingTests.cashier_and_inventory_cannot_decide(id: 3),T02,Aprobado,00:00:01.2280937,2534a441-51b1-4325-a96d-978682bffbd6
+PA-171,ReceivingTests,Mega.Tests.ReceivingTests.concurrent_retry_creates_exactly_one_receiving_operation,T02,Aprobado,00:00:02.1476810,803176f8-5496-4265-b2d7-62269e9fe97d
+PA-172,ReceivingTests,Mega.Tests.ReceivingTests.current_catalog_and_raw_payload_changes_cannot_reuse_an_earlier_review,T02,Aprobado,00:00:01.3225072,5ac0fba8-b914-499a-b09f-60068379d5a7
+PA-173,ReceivingTests,Mega.Tests.ReceivingTests.incomplete_draft_preserves_unknown_cost_and_cannot_be_submitted,T02,Aprobado,00:00:01.8969845,9ac6582e-4808-419c-a7e5-a82fc9aa5e65
+PA-174,ReceivingTests,Mega.Tests.ReceivingTests.invalid_precision_accepted_over_received_duplicate_document_and_other_editor_are_rejected,T02,Aprobado,00:00:01.7398467,7e9ec153-bf93-4321-bc93-4c13735cbee1
+PA-175,ReceivingTests,Mega.Tests.ReceivingTests.late_failure_rolls_back_decision_operation_and_lot,T02,Aprobado,00:00:01.3049860,2e2de6a1-85fc-43c5-890b-f91d563fae64
+PA-176,ReceivingTests,Mega.Tests.ReceivingTests.lot_expiry_partial_acceptance_and_conversion_preserve_origin,T02,Aprobado,00:00:01.9403667,5b0b7552-18a6-43bd-9594-095b4497a635
+PA-177,ReceivingTests,Mega.Tests.ReceivingTests.rejected_receipt_preserves_review_and_no_stock_until_new_version,T02,Aprobado,00:00:01.2084365,391309bf-26d0-4dc7-86b3-bdc0638040d3
+PA-178,ReceivingTests,Mega.Tests.ReceivingTests.required_lot_expiry_and_reason_are_checked_before_submission,T02,Aprobado,00:00:00.9899382,fb098cea-9dbc-4393-b366-784a2ccf2b3a
+PA-179,ReceivingTests,Mega.Tests.ReceivingTests.stock_capacity_is_checked_without_partial_approval,T02,Aprobado,00:00:01.0860498,e80c44c3-e53e-49c0-9ab8-9b60b3eba6ab
+PA-180,ReceivingTests,Mega.Tests.ReceivingTests.supplier_permissions_versions_and_deactivation_block_new_receipts,T02;T10,Aprobado,00:00:01.5679867,f5eedf33-9f9a-4ed6-8cf1-9d5631f7f168
+PA-181,RecoveryTests,Mega.Tests.RecoveryTests.HTTP_restore_and_reopen_pause_commerce_and_invalidate_previous_sessions,T15,Aprobado,00:00:06.3275354,2bd3ce6a-bd43-482c-9416-9f2e3fb1ceef
+PA-182,RecoveryTests,Mega.Tests.RecoveryTests.T15_restore_preserves_current_rewinds_data_quarantines_and_requires_owner_reopen,T15,Aprobado,00:00:05.1364769,87ad124d-6f9f-4f48-be54-598d00b1b3c3
+PA-183,RecoveryTests,Mega.Tests.RecoveryTests.credentials_deactivations_and_support_revocations_do_not_rewind_with_business_data,T15,Aprobado,00:00:04.0614858,428e5af5-e022-441d-a161-0b58e74f5560
+PA-184,RecoveryTests,Mega.Tests.RecoveryTests.current_owner_only_password_and_stale_review_are_enforced_without_replacing_data,T10;T15,Aprobado,00:00:05.6438083,c6f3669e-b3f9-45f4-9ac9-31fecc03c348
+PA-185,RecoveryTests,Mega.Tests.RecoveryTests.file_installation_failure_rolls_back_and_keeps_a_verified_preservation,T15,Aprobado,00:00:02.8257445,a108bc6c-5731-4c59-8746-8a5a3c136326
+PA-186,RecoveryTests,Mega.Tests.RecoveryTests.in_flight_attempts_become_uncertain_and_quarantine_cannot_retry_the_same_job,T15,Aprobado,00:00:04.7353046,9d44bdf5-320c-4fde-a53b-235c8640fa43
+PA-187,RecoveryTests,Mega.Tests.RecoveryTests.interrupted_installation_is_reverted_at_startup_without_external_dispatch,T15,Aprobado,00:00:02.8720374,092d9aee-46a3-4b5b-9b4a-2f7cbc2dbc3e
+PA-188,RecoveryTests,Mega.Tests.RecoveryTests.missing_selected_medium_and_missing_preservation_fail_without_silent_reopening,T15,Aprobado,00:00:01.5570725,99957e89-5e96-46d3-925b-57e35f0fc5c1
+PA-189,RecoveryTests,Mega.Tests.RecoveryTests.pause_drains_leases_and_blocks_new_work_without_touching_data,T15,Aprobado,00:00:01.7875849,70782a7c-7c79-4ccd-b754-dca4c6763752
+PA-190,RecoveryTests,Mega.Tests.RecoveryTests.pending_receipt_approval_is_invalidated_and_can_be_resubmitted_with_new_version,T10;T15,Aprobado,00:00:02.0808890,f826472f-b890-4347-bba2-3e17b3fb08f7
+PA-191,RecoveryTests,Mega.Tests.RecoveryTests.persistent_windows_reader_rejects_reservation_and_keeps_previous_counter,T15,Aprobado,00:00:02.0019512,ab79bb4b-cdf9-46e5-a61f-1adfe62faa52
+PA-192,RecoveryTests,Mega.Tests.RecoveryTests.restart_keeps_pending_conciliation_and_recognizes_committed_reopening,T15,Aprobado,00:00:03.7107696,f6783585-98c5-4432-a5cb-ceb390f74074
+PA-193,RecoveryTests,Mega.Tests.RecoveryTests.restored_numbering_never_reuses_ids_or_receipt_sequence_and_survives_next_backup,T15,Aprobado,00:00:02.6950219,915600e1-4ea0-42ba-9f27-8c4849a40d83
+PA-194,RecoveryTests,Mega.Tests.RecoveryTests.second_instance_and_corrupt_recovery_control_fail_closed,T15,Aprobado,00:00:01.1195517,64080415-a632-4cc0-8125-be75404ffa49
+PA-195,RecoveryTests,Mega.Tests.RecoveryTests.temporary_windows_reader_delays_atomic_counter_replacement_without_reusing_id,T15,Aprobado,00:00:01.9654256,6cb9e8a1-89ab-4ab2-8ce6-625e14354379
+PA-196,RejectionAuditTests,Mega.Tests.RejectionAuditTests.concurrent_requests_keep_actor_and_rejection_reason_separate,T13,Aprobado,00:00:03.2383310,49e93249-e330-45ec-8718-8f9fb4b43248
+PA-197,RejectionAuditTests,Mega.Tests.RejectionAuditTests.denied_permission_and_invalid_antiforgery_are_audited,T13,Aprobado,00:00:02.3692585,78a66300-825f-42d3-b0fb-3816f1e70581
+PA-198,RejectionAuditTests,Mega.Tests.RejectionAuditTests.failed_confirmation_is_audited_in_a_separate_context_after_full_rollback,T13,Aprobado,00:00:03.1486824,9167fa9a-ae76-48b0-963e-727e46175c0e
+PA-199,RejectionAuditTests,Mega.Tests.RejectionAuditTests.intentional_logout_and_successful_password_change_are_not_rejections,T13,Aprobado,00:00:03.0781044,25c147e9-5b77-43ec-b9c1-f54ddefe0ca8
+PA-200,RejectionAuditTests,Mega.Tests.RejectionAuditTests.invalid_form_and_unknown_login_do_not_record_passwords_or_request_bodies,T13,Aprobado,00:00:02.9991317,2a27b7dd-a03c-442c-8248-a43d867fbdf2
+PA-201,RejectionAuditTests,Mega.Tests.RejectionAuditTests.rejected_sale_is_audited_after_rollback_without_any_commercial_effect,T13,Aprobado,00:00:02.9969155,6b370c56-6d6a-4d07-82cd-0f9fe49c21be
+PA-202,ReportTests,"Mega.Tests.ReportTests.T11_historical_cost_profit_and_expenses_reconcile_including_known_zero(cost: ""0"", margin: ""60.00"", result: ""50.00"")",T11,Aprobado,00:00:02.3336640,eb1bde23-f8e8-4557-9dc6-185a04a5aafe
+PA-203,ReportTests,"Mega.Tests.ReportTests.T11_historical_cost_profit_and_expenses_reconcile_including_known_zero(cost: ""10"", margin: ""40.00"", result: ""30.00"")",T11,Aprobado,00:00:02.4547931,86933897-5d6c-45e7-ba4c-803c3670bdc5
+PA-204,ReportTests,Mega.Tests.ReportTests.T11_inventory_role_never_receives_costs_in_data_excel_or_tampered_export,T11,Aprobado,00:00:06.5313185,3baf38e3-7993-4c37-800a-5aac6d7c4489
+PA-205,ReportTests,Mega.Tests.ReportTests.cancelled_sale_is_excluded_but_cash_keeps_original_close_and_real_later_refund,T09;T11,Aprobado,00:00:02.3508574,ed73c377-3790-49c7-84a4-ed0ce75904ec
+PA-206,ReportTests,Mega.Tests.ReportTests.date_product_and_operator_filters_do_not_mix_scopes,T11,Aprobado,00:00:02.6123538,bf6a6909-e38e-4f26-84c0-771f4c564eb7
+PA-207,ReportTests,Mega.Tests.ReportTests.initial_report_load_uses_defaults_but_explicit_invalid_dates_are_rejected,T11,Aprobado,00:00:02.3962026,f54826d7-ff8d-4d98-a84a-919f81fc898b
+PA-208,ReportTests,Mega.Tests.ReportTests.pdf_paginates_and_excel_preserves_numbers_and_untrusted_text_without_formulas,T11,Aprobado,00:00:00.2557161,6eab0d2c-46cd-4021-a2ef-d8315e13b270
+PA-209,ReportTests,Mega.Tests.ReportTests.successful_http_exports_are_audited_and_do_not_change_operations,T11,Aprobado,00:00:02.9106297,4da436de-051d-4e67-b4e4-b06c8ee8b755
+PA-210,ReportTests,Mega.Tests.ReportTests.unknown_cost_never_becomes_zero_or_fabricated_profit,T11,Aprobado,00:00:02.2926836,33ee321d-340e-4e4d-b605-4b5c1b1541e1
+PA-211,SettingsTests,Mega.Tests.SettingsTests.invalid_fund_or_alert_does_not_close_current_settings,T01,Aprobado,00:00:02.1322505,bb6ccbb8-a1d9-45d9-b6b3-1bb5dd3ab001
+PA-212,SettingsTests,Mega.Tests.SettingsTests.new_settings_preserve_existing_sales_and_opening_fund,T01,Aprobado,00:00:05.9452743,1b7962ca-dd05-4227-8f58-bd1f456117b7
+PA-213,SettingsTests,Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 2),T01,Aprobado,00:00:01.5152091,3a16e8f9-ad20-4f9f-9ddc-87de216dadc1
+PA-214,SettingsTests,Mega.Tests.SettingsTests.operational_roles_cannot_change_settings(user: 3),T01,Aprobado,00:00:01.7171299,687d33b3-edd5-4d83-94ce-e330a28cdd33
+PA-215,SettingsTests,Mega.Tests.SettingsTests.settings_change_invalidates_prior_quote_and_stale_edit,T01,Aprobado,00:00:02.1178126,9faea185-a215-457b-b891-4ae00ad85349
+PA-216,SettingsTests,Mega.Tests.SettingsTests.settings_form_is_operational_and_rejects_inventory_access,T01,Aprobado,00:00:02.9514933,da51cc91-9ccf-4c34-bf19-bf42262b5e26
+PA-217,ValuationTests,Mega.Tests.ValuationTests.changed_cost_or_lot_allocation_requires_requote_before_charging,T04,Aprobado,00:00:02.2134038,3a3074b5-ce60-4e80-9051-2715f3d44270
+PA-218,ValuationTests,Mega.Tests.ValuationTests.confirmation_order_controls_average_and_large_convex_average_does_not_overflow,T04,Aprobado,00:00:00.0676900,18a696b6-9145-414f-ad3f-20e44e01e91e
+PA-219,ValuationTests,Mega.Tests.ValuationTests.expired_or_unidentified_lots_cannot_be_sold_and_cart_cannot_overallocate,T04,Aprobado,00:00:02.5004330,16783b35-cf22-4917-a13f-6a39356dca78
+PA-220,ValuationTests,Mega.Tests.ValuationTests.expiry_order_splits_a_sale_across_lots_without_losing_cost_or_quantity,T04,Aprobado,00:00:05.9018069,b1ec7560-b3bf-4ccd-a9b6-2ec1c69928e1
+PA-221,ValuationTests,Mega.Tests.ValuationTests.moving_average_keeps_unknown_zero_and_negative_distinct,T04,Aprobado,00:00:00.0021321,70acbc35-1de4-4e43-9830-7bb36b4c49bd
+PA-222,ValuationTests,Mega.Tests.ValuationTests.received_known_cost_sells_at_moving_average_and_preserves_historical_cost,T04,Aprobado,00:00:02.8377386,4e60b341-83e8-428e-bbc7-1e6eeaee3506
+PA-223,ValuationTests,Mega.Tests.ValuationTests.unknown_initial_stock_mixed_with_known_entry_remains_unknown_in_sale,T04,Aprobado,00:00:02.7715689,415be4b4-b4a0-4ae6-9591-38c380e74cf8

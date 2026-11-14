@@ -11,7 +11,7 @@ Estado comprobado al 14 de noviembre de 2026: **0.21.0**, 223 pruebas acumuladas
 | RF05 Caja | Fondo real, cierre esperado/contado/diferencia y devolución posterior sin alterar cierres | Ensayo con responsables y efectivo reales |
 | RF06 Acceso/autorización | Cuentas, roles/delegación, soporte temporal de diagnóstico, revisiones exactas y restauración autorizada por Propietario | Aceptación del negocio |
 | RF07 Gestión | Gastos, reportes, costos/márgenes, PDF/Excel, vista limitada de Inventario y correo congelado | Cuenta SMTP real y aceptación de resultados |
-| RF08 Auditoría | Eventos transaccionales, rechazos críticos, fallos, intentos, recuperación y resoluciones | Revisión final de seguridad y matriz integral |
+| RF08 Auditoría | Eventos transaccionales, rechazos críticos, fallos, intentos, recuperación y resoluciones; matriz T01–T15 revisada | Revisión final de seguridad |
 | RF09 Continuidad | Copia consistente desde interfaz, pauta autorizada, archivos asociados, manifiesto/huellas, restauración autorizada, preservación, conciliación, cuarentena y numeración conservada | Medio externo real, volumen objetivo y aceptación de recuperación |
 
 El modelo original conserva 39 tablas, 499 columnas y 103 claves externas. Sus bytes y procedencia se mantienen; el esquema 2 agrega restricciones y vistas sin sustituir el diseño. El usuario confirmó promedio ponderado móvil el 12 de noviembre. Efectivo es el medio habilitado.
@@ -21,7 +21,7 @@ El modelo original conserva 39 tablas, 499 columnas y 103 claves externas. Sus b
 1. Respaldo verificable implementado; comprobar el destino y medios físicos con el negocio.
 2. Restauración implementada y ensayada en bases aisladas; comprobar volumen, medios y conciliación con responsables reales.
 3. Paquete Windows reproducible preparado y ensayado sin bases operativas ni credenciales; instalación y rendimiento en equipo objetivo pendientes.
-4. Consolidación de capítulos I–IV, manuales, matriz final, diagramas editables y presentación.
+4. Manuales y matriz T01–T15 consolidados y revisados en [Manuales y validación](Manuales_y_Validacion.md); faltan capítulos I–IV, diagramas editables actualizados y presentación.
 5. Ensayo con equipo, cuenta SMTP y personal del negocio; demostración y aceptación documentadas.
 
 Los [documentos por módulo](../README.md) contienen alcance y evidencias. Los ensayos usan datos ficticios, impresora PDF y SMTP TLS local; no acreditan impresión física, mensajes a personas, entrevistas nuevas, fiscalidad, aceptación del negocio ni despliegue comercial. La guía exige un documento académico consolidado.

@@ -15,13 +15,13 @@ Editar invalida revisiones pendientes. Cambiar datos del proveedor o del catálo
 
 Solo el preparador edita/envía su recepción. Otra cuenta de gestión decide; Inventario y Cajero no aprueban. No se duplica el documento de un mismo proveedor ni se elimina una recepción confirmada. Repetir la misma aprobación, incluso en concurrencia, recupera su operación sin repetir entradas. No se registra un pago de caja por recibir mercadería.
 
-## Límite de integración
+## Integración vigente
 
-El costo de entrada se conserva como fue declarado, con escala y estado. No se ha elegido una política de costo de salida ni se calcula margen. El POS todavía rechaza productos que tengan costo conocido o lotes hasta integrar valoración/asignación; recibirlos no habilita automáticamente su venta. Es una limitación explícita del avance. La aceptación del negocio sobre unidades, costos y fechas sigue pendiente.
+El costo de entrada se conserva como fue declarado, con escala y estado. Desde 0.9.0, la venta aplica el [promedio ponderado móvil y la asignación de lotes](Valoracion.md); desde 0.10.0 también están integradas las [regularizaciones de inventario](Inventario_Integrado.md). La recepción autorizada aporta existencias, procedencia y valoración; vender exige además disponibilidad admisible y condiciones comerciales vigentes. La aceptación del negocio sobre unidades, costos y fechas sigue pendiente.
 
 ## Evidencias y trazabilidad
 
-RF02, RF03, RF06 y RF08; criterios T02 y T10 comprobados para recepciones. Las autorizaciones de solicitudes de inventario y anulaciones se integrarán en sus módulos. 99 pruebas aprobadas en `evidencias/abastecimiento/abastecimiento.trx`, con comprobaciones de atomicidad ante fallo tardío, reintento concurrente, permisos, costo desconocido, precisión/equivalencias, lote, rechazo parcial, documento duplicado y versiones obsoletas.
+RF02, RF03, RF06 y RF08; criterios T02 y T10 comprobados para recepciones. Las autorizaciones de [inventario](Solicitudes_Inventario.md) y [anulaciones](Anulaciones.md) cuentan con sus módulos. El registro histórico de 0.6.0 conserva 99 pruebas aprobadas en `evidencias/abastecimiento/abastecimiento.trx`, con comprobaciones de atomicidad ante fallo tardío, reintento concurrente, permisos, costo desconocido, precisión/equivalencias, lote, rechazo parcial, documento duplicado y versiones obsoletas. La regresión acumulada se consulta en [Manuales y validación](Manuales_y_Validacion.md).
 
 `tools/receiving-check.cjs` usa una base ficticia aislada. Capturas reales:
 

@@ -10,6 +10,10 @@ GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en c
 
 El [kanban con porcentaje de todo el proyecto](docs/KANBAN.md) se consulta en **Avance del proyecto** y se actualiza con evidencia en cada versión. El [roadmap pendiente](docs/ROADMAP.md) ordena las próximas funcionalidades, sus criterios de cierre y los entregables académicos.
 
+## Manuales y matriz de validación
+
+Los [manuales de usuario y técnico, y la matriz T01–T15](docs/Manuales_y_Validacion.md) están disponibles en PDF, con fuentes editables y revisión de sus 40 páginas. La matriz conserva el registro individual de 223 pruebas aprobadas, resultados, incidencias y límites; la aceptación del negocio y los ensayos físicos siguen pendientes.
+
 ## Paquete de ejecución
 
 El [paquete Windows](docs/Distribucion.md) incluye el entorno de ejecución y conserva los datos por separado. Se genera con `tools/build-distribution.ps1` desde una revisión registrada. GitHub Actions conserva ZIP y SHA-256 durante 30 días. No contiene bases ni credenciales. La instalación en otro equipo y la aceptación del negocio siguen pendientes.
@@ -36,7 +40,7 @@ La primera ejecución necesita Internet para descargar dependencias si no están
 - Consulta de ventas del turno y comprobante histórico; cierre con efectivo esperado, contado y diferencia.
 - Consulta de existencias para Inventario/gestión y bitácora para gestión.
 
-Ejemplo: abrir con **480.00**, motivo **Fondo recibido C$20 menor**, vender **2.000 lb de arroz** y **1 leche**, recibir **100.00**. El total es **C$86.00**, cambio **C$14.00**, caja esperada **C$566.00**. Cerrar contando **560.00** exige explicar una diferencia de **−C$6.00**. En la copia de trabajo de esta computadora, una venta de ese ejemplo ya quedó registrada por la comprobación de interfaz y su turno está cerrado; las existencias actuales de arroz/leche son 48 lb y 29 unidades. Una segunda prueba registró un jabón por C$25 para comprobar recuperación de respuesta perdida; también cerró su turno. El ZIP de fuentes excluye la base de trabajo: al extraerlo en otra ubicación, la inicialización crea datos ficticios sin ventas, con 50 lb de arroz y 30 unidades de leche.
+Ejemplo: abrir con **480.00**, motivo **Fondo recibido C$20 menor**, vender **2.000 lb de arroz** y **1 leche**, recibir **100.00**. El total es **C$86.00**, cambio **C$14.00**, caja esperada **C$566.00**. Cerrar contando **560.00** exige explicar una diferencia de **−C$6.00**. El recorrido histórico inicial registró una venta de ese ejemplo y cerró su turno, con saldo de arroz/leche de 48 lb y 29 unidades en ese momento. Otra prueba histórica registró un jabón por C$25 para comprobar recuperación de respuesta perdida y cerró su turno. La copia local puede contener otras comprobaciones posteriores; esos saldos no describen su estado actual. El ZIP de fuentes excluye la base de trabajo: al extraerlo en otra ubicación, la inicialización crea datos ficticios sin ventas, con 50 lb de arroz y 30 unidades de leche.
 
 ## Estructura y continuidad
 
@@ -53,7 +57,8 @@ La suite actual contiene **223 pruebas aprobadas**. Cada módulo incluye recorri
 - `src/Mega.Web/App_Data/mega-demo.db`: base persistente de demostración, creada automáticamente; no se incluye en control de versiones.
 - `tests/Mega.Tests`: pruebas con bases efímeras separadas de la demostración.
 - `docs/Estado_Cuarto_Corte.md`: avance por requisito y trabajo restante.
-- `docs/Matriz_Pruebas.md`: resultados ejecutados, vinculados a RF y criterios.
+- `docs/Manuales_y_Validacion.md`: manuales PDF y matriz T01–T15 con resultados, fuentes y revisión.
+- `docs/Matriz_Pruebas.md`: historial de resultados ejecutados, vinculados a RF y criterios.
 - `docs/Evidencias_Avance01.md`: capturas reales explicadas.
 - `docs/Documento_Final_Estructura.md`: organización del documento consolidado.
 - `docs/Decisiones_y_Pendientes.md`: decisiones técnicas y validaciones del negocio.
@@ -77,7 +82,7 @@ El registro histórico del avance 01 y sus capturas están en `docs/evidencias`;
 
 Este es un avance del cuarto corte. Los módulos previstos de impresión, valoración de costos, reportes, correo y respaldo/restauración están integrados y ensayados con datos ficticios. Siguen pendientes la entrega consolidada, la validación integral en equipo objetivo y la aceptación del negocio. Las ventas asignan lotes y conservan costos, promociones e impuestos históricos; las tasas se configuran expresamente y no acreditan fiscalidad real. La venta conserva costos históricos conocidos o desconocidos; la ausencia de costo no equivale a cero. No se inventan tasas fiscales. Tarjeta y transferencia no están habilitadas.
 
-Las pruebas realizadas son automatizadas y usan datos ficticios; la aceptación con el negocio y los periféricos reales sigue pendiente. El documento final, manuales definitivos, presentación y demostración de todo el alcance se completarán con los siguientes avances.
+Las pruebas realizadas son automatizadas y usan datos ficticios; la aceptación con el negocio y los periféricos reales sigue pendiente. Los manuales y la matriz de la versión 0.21.0 están revisados; el documento académico final, los diagramas actualizados, la presentación y la demostración de todo el alcance se completarán con los siguientes avances.
 
 La aplicación está restringida al equipo local, usa HTTPS, cookies protegidas, protección antifalsificación, hash de contraseñas y límite de intentos de acceso. No está preparada para implantación comercial. El modo de demostración solo arranca en Development o Testing. Las bases ficticia y futura real tienen archivos separados, y se rechaza cambiar de modo sobre una base existente. Antes de una futura implantación deberán definirse configuración, usuarios, copias, fiscalidad y políticas pendientes.
 

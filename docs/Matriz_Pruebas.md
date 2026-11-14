@@ -1,6 +1,6 @@
 # Matriz de pruebas — historial y estado actual
 
-Estado actual **0.20.0: 223/223 pruebas aprobadas**, con respaldo/restauración T14/T15 y recorridos de navegador aislados. [Suite completa](evidencias/restauracion/suite.trx), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+Estado actual **0.21.0: 223/223 pruebas aprobadas**, con matriz completa T01–T15, respaldo/restauración y recorridos de navegador aislados. [Matriz PDF, registro individual y revisión](Manuales_y_Validacion.md), [suite completa](evidencias/distribucion/suite.trx), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
 
 ## Avance 01
 
@@ -80,4 +80,4 @@ La autorización de anulaciones, valoración, promociones/impuestos, impresión 
 | RF04/RF07/RF09 T15 | Colas recuperadas en cuarentena, intentos en curso inciertos, resolución sin reintento automático y reapertura explícita | `evidencias/restauracion/resultado.json` y capturas | Aprobado sin papel ni correo externo |
 | RF04/RF06/RF09 T15 | Identificadores y folios no se reutilizan; sesiones previas inválidas; credenciales/permisos actuales no retroceden; soporte y revisiones pendientes revocados | `RecoveryTests`, suite acumulada 223/223 | Aprobado |
 
-RTO/RPO con volumen y medios reales, rendimiento en equipo objetivo y aceptación por el negocio conservan sus criterios pendientes. La matriz final de todo T01–T15 y su exportación revisada siguen como entregables en el kanban.
+RTO/RPO con volumen y medios reales, rendimiento en equipo objetivo y aceptación por el negocio conservan sus criterios pendientes. La matriz T01–T15 y su exportación PDF revisada están consolidadas en [Manuales y validación](Manuales_y_Validacion.md).
