@@ -1,0 +1,11 @@
+{
+  "estado": "Aprobado",
+  "version": "0.21.0",
+  "fase": "initial",
+  "fecha": "2026-11-14T06:36:45.008Z",
+  "alcance": "Carpeta y base aisladas. Navegador bloquea destinos externos. No acredita otro equipo fisico.",
+  "ventas": 1,
+  "cajaEsperadaCentavos": 53800,
+  "recursosExternos": [],
+  "erroresJavaScript": []
+}

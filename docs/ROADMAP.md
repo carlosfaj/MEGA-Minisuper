@@ -1,6 +1,6 @@
 # Roadmap pendiente de MEGA
 
-Estado al 14 de noviembre de 2026, con la versión de código 0.20.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
+Estado al 14 de noviembre de 2026, con la versión de código 0.21.0. El orden sigue las dependencias del sistema y los entregables del cuarto corte. Cada hito puede requerir varias funcionalidades y versiones; las próximas versiones se asignan al publicar cada funcionalidad comprobada.
 
 ## Punto de partida
 
@@ -25,7 +25,7 @@ Desde ese punto inicial se completaron catálogo (0.3.0), configuración (0.4.0)
 | 9 | Gastos y reportes implementados en 0.16.0/0.17.0 | Gastos con corrección/anulación, reportes y descargas con 189 pruebas; ventas, inventario, costos/márgenes y caja; filtros; exportación PDF/Excel; vista limitada para Inventario | Reportes reconciliados con operaciones; costo desconocido muestra margen no calculable; permisos y T11 comprobados |
 | 10 | Correo implementado en 0.18.0 | Configuración protegida, envío de reportes, pendientes sin conexión, intentos y resultado incierto | El núcleo funciona sin Internet; no hay reenvío automático de un correo posiblemente aceptado. T12 y 200 pruebas comprobados con SMTP TLS local; cuenta real pendiente |
 | 11 | Respaldo y restauración implementados en 0.19.0/0.20.0 | Copia consistente a medio externo, verificación y errores visibles; restauración autorizada; preservación, conciliación y cuarentena de colas | Restaurar una copia de prueba sin duplicar impresiones/correos y con revisión de actividad posterior. T14/T15 comprobados con 223 pruebas y navegador en base aislada; objetivos con volumen/medio real pendientes |
-| 12 | Validación integral y ejecución final | Regresión de todos los módulos; datos válidos/inválidos; permisos, rendimiento y operación sin Internet; periféricos; instalación/arranque local y aceptación con el negocio | Sistema reproducible en el equipo objetivo, matriz completa con resultados/evidencias, incidencias resueltas o limitaciones explícitas y demostración ensayada |
+| 12 | Validación integral y ejecución final — paquete preparado en 0.21.0 | Regresión de todos los módulos; datos válidos/inválidos; permisos, rendimiento y operación sin Internet; periféricos; instalación/arranque local y aceptación con el negocio | Sistema reproducible en el equipo objetivo, matriz completa con resultados/evidencias, incidencias resueltas o limitaciones explícitas y demostración ensayada |
 
 Los hitos 2 y 3 habilitan las autorizaciones de recepciones, inventario y anulaciones. El hito 5 aporta la valoración necesaria para márgenes de gestión. La recuperación de los trabajos de impresión/correo se cierra cuando esos componentes ya pueden probarse conjuntamente.
 
@@ -61,7 +61,7 @@ La documentación avanza en paralelo y se cierra con resultados reales del siste
 |---|---|
 | Documento técnico-académico consolidado PDF | Integrar capítulos I–IV; actualizar requisitos/diseño cuando cambie la implementación; completar introducción, resumen/abstract, marco teórico, resultados, conclusiones, recomendaciones, APA 7 e índices automáticos |
 | Código fuente | Mantener el repositorio y etiquetar la versión final comprobada |
-| Base y archivos de ejecución | Preparar distribución reproducible y datos apropiados para entrega; verificar dependencias y arranque en el equipo objetivo. Las bases operativas y secretos no se publican en GitHub |
+| Base y archivos de ejecución | Paquete Windows con entorno incluido preparado y ensayado en 0.21.0; verificar instalación y arranque en otro equipo objetivo. Las bases operativas y secretos no se publican en GitHub |
 | Diagramas y prototipos editables | Actualizar las fuentes para que correspondan al sistema implementado y conservar su editabilidad |
 | Manual técnico y manual de usuario PDF | Instalar/configurar/operar los módulos reales; incluir procedimientos y limitaciones verificadas |
 | Matriz de pruebas y evidencias PDF o Excel | Completar casos por requisito con esperado/obtenido/estado, incidencias, correcciones y capturas numeradas/tituladas/explicadas |

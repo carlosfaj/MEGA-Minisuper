@@ -1,0 +1,7 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-14T06:46:07.664158+00:00",
+  "puerto": 7248,
+  "comprobacion": "El iniciador rechaza un puerto ocupado antes de crear la carpeta de datos.",
+  "datosCreados": false
+}

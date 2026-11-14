@@ -1,6 +1,6 @@
 # Estado del cuarto corte de MEGA
 
-Estado comprobado al 14 de noviembre de 2026: **0.20.0**, 223 pruebas acumuladas aprobadas y recorridos de navegador en bases aisladas. El [kanban](KANBAN.md) es la referencia del porcentaje y de todos los criterios, incluidos entregables y validaciones reales. La implementación es local; los recursos del núcleo no requieren Internet.
+Estado comprobado al 14 de noviembre de 2026: **0.21.0**, 223 pruebas acumuladas aprobadas y recorridos de navegador en bases aisladas. El [kanban](KANBAN.md) es la referencia del porcentaje y de todos los criterios, incluidos entregables y validaciones reales. La implementación es local; los recursos del núcleo no requieren Internet.
 
 | Requisito | Implementado y comprobado | Pendiente real |
 |---|---|---|
@@ -20,7 +20,7 @@ El modelo original conserva 39 tablas, 499 columnas y 103 claves externas. Sus b
 
 1. Respaldo verificable implementado; comprobar el destino y medios físicos con el negocio.
 2. Restauración implementada y ensayada en bases aisladas; comprobar volumen, medios y conciliación con responsables reales.
-3. Regresión integrada y distribución reproducible sin bases operativas ni credenciales.
+3. Paquete Windows reproducible preparado y ensayado sin bases operativas ni credenciales; instalación y rendimiento en equipo objetivo pendientes.
 4. Consolidación de capítulos I–IV, manuales, matriz final, diagramas editables y presentación.
 5. Ensayo con equipo, cuenta SMTP y personal del negocio; demostración y aceptación documentadas.
 

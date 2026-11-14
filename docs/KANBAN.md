@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 77.4% — 103/133 criterios.**
-Versión 0.20.0 · actualizado 2026-11-14T06:21:21Z · 223 pruebas aprobadas.
+**Avance global: 78.2% — 104/133 criterios.**
+Versión 0.21.0 · actualizado 2026-11-14T06:43:51Z · 223 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -13,7 +13,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 |---|---|---|
 | Software | 83/83 | 100% |
 | Calidad | 9/13 | 69.2% |
-| Entrega | 5/11 | 45.5% |
+| Entrega | 6/11 | 54.5% |
 | Documentación | 5/19 | 26.3% |
 | Validación | 1/7 | 14.3% |
 
@@ -46,13 +46,13 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 - [x] Secretos y bases excluidos del repositorio ([evidencia](../AGENTS.md))
 - [ ] Permisos de todos los módulos finales
 - [ ] Dependencias y configuración final revisadas
-### DIST · Instalación y distribución — 50%
+### DIST · Instalación y distribución — 75%
 
 Área: Entrega.
 
 - [x] Arranque local documentado ([evidencia](../README.md))
 - [x] Fuentes y dependencias fijadas ([evidencia](../README.md))
-- [ ] Distribución reproducible preparada
+- [x] Distribución reproducible preparada ([evidencia](../docs/Distribucion.md))
 - [ ] Instalación limpia en equipo objetivo
 ### DOC · Documento académico consolidado — 20%
 

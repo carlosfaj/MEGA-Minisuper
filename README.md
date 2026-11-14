@@ -4,13 +4,17 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.20.0**, con restauración autorizada, preservación, conciliación, cuarentena y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.21.0**, con paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
 El [kanban con porcentaje de todo el proyecto](docs/KANBAN.md) se consulta en **Avance del proyecto** y se actualiza con evidencia en cada versión. El [roadmap pendiente](docs/ROADMAP.md) ordena las próximas funcionalidades, sus criterios de cierre y los entregables académicos.
 
-## Abrir la aplicación
+## Paquete de ejecución
+
+El [paquete Windows](docs/Distribucion.md) incluye el entorno de ejecución y conserva los datos por separado. Se genera con `tools/build-distribution.ps1` desde una revisión registrada. GitHub Actions conserva ZIP y SHA-256 durante 30 días. No contiene bases ni credenciales. La instalación en otro equipo y la aceptación del negocio siguen pendientes.
+
+## Abrir desde el código fuente
 
 1. Ejecutar **Iniciar_MEGA.cmd** desde esta carpeta y conservar su ventana abierta.
 2. Abrir **https://localhost:7248**. El certificado HTTPS de desarrollo ya existe en esta computadora; todavía no está marcado como confiable. Si aparece el aviso del navegador, corresponde al certificado local de desarrollo. El iniciador no cambia certificados de confianza del sistema.

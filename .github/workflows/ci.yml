@@ -37,12 +37,38 @@ jobs:
           "value=$megaVersion" >> $env:GITHUB_OUTPUT
       - name: Restaurar dependencias fijadas
         run: dotnet restore MEGA.sln --locked-mode
+      - name: Revisar scripts y dependencias
+        shell: pwsh
+        run: |
+          Get-ChildItem tools -Filter *.ps1 -Recurse | ForEach-Object {
+            $megaTokens = $null; $megaErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$megaTokens, [ref]$megaErrors)
+            if ($megaErrors.Count -gt 0) { throw ('Error de sintaxis en ' + $_.FullName) }
+          }
+          New-Item TestResults -ItemType Directory -Force | Out-Null
+          dotnet list MEGA.sln package --vulnerable --include-transitive --format json | Set-Content TestResults/dependencias.json -Encoding utf8
+          if ($LASTEXITCODE -ne 0) { throw 'No se pudo consultar la auditoria de dependencias.' }
+          $megaAudit = Get-Content TestResults/dependencias.json -Raw | ConvertFrom-Json
+          $megaFindings = @($megaAudit.projects | ForEach-Object { $_.frameworks } | ForEach-Object { @($_.topLevelPackages) + @($_.transitivePackages) } | ForEach-Object { $_.vulnerabilities } | Where-Object { $_ -and $_.severity -in @('High','Critical') })
+          if ($megaFindings.Count -gt 0) { throw 'La auditoria detecto vulnerabilidades altas o criticas.' }
       - name: Verificar kanban y evidencias
         run: python tools/update_kanban.py --check
       - name: Compilar
         run: dotnet build MEGA.sln --configuration Release --no-restore --nologo
       - name: Ejecutar pruebas
         run: dotnet test MEGA.sln --configuration Release --no-build --no-restore --nologo --logger "trx;LogFileName=mega.trx" --results-directory TestResults
+      - name: Preparar ejecucion Windows con entorno incluido
+        shell: pwsh
+        run: ./tools/build-distribution.ps1 -OutputDirectory TestResults
+      - name: Conservar paquete de ejecucion
+        uses: actions/upload-artifact@v7
+        with:
+          name: ejecucion-windows-${{ steps.version.outputs.value }}
+          path: |
+            TestResults/MEGA_Ejecucion_*.zip
+            TestResults/MEGA_Ejecucion_*.zip.sha256
+          if-no-files-found: error
+          retention-days: 30
       - name: Conservar resultado de pruebas
         if: always()
         uses: actions/upload-artifact@v7

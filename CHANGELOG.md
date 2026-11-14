@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.21.0 — 14 de noviembre de 2026
+
+- Paquete Windows x64 con .NET incluido, manifiesto de origen/huellas y SHA-256; generación desde árbol limpio y versiones fijadas, con licencias y avisos del entorno.
+- Iniciador compatible con Windows PowerShell 5.1: datos persistentes separados del programa y certificado localhost protegido por el perfil, sin instalar confianza en el equipo.
+- Exclusión explícita de App_Data y archivos operativos al publicar; el paquete rechaza bases, certificados y credenciales de ejecución.
+- GitHub comprueba scripts y dependencias, genera el paquete y conserva el artefacto durante 30 días. Ensayo de venta/reinicio desde otra carpeta con recursos externos bloqueados; 223 pruebas acumuladas aprobadas. Otro equipo físico y aceptación pendientes.
+
 ## 0.20.0 — 14 de noviembre de 2026
 
 - Restauración de copia comprobada autorizada por Propietario, con revisión previa, contraseña actual, pausa de procesos y preservación descargable del estado anterior.

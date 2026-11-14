@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json",
+    "C:/Program Files (x86)/Microsoft SDKs/NuGetPackages/"
+  ],
+  "projects": [
+    {
+      "path": "C:/Users/SOF.IA/Documents/UNI 2026 2S/Ingenieria de software/Proyecto/01_DESARROLLO/MEGA/src/Mega.Web/Mega.Web.csproj"
+    },
+    {
+      "path": "C:/Users/SOF.IA/Documents/UNI 2026 2S/Ingenieria de software/Proyecto/01_DESARROLLO/MEGA/tests/Mega.Tests/Mega.Tests.csproj"
+    }
+  ]
+}

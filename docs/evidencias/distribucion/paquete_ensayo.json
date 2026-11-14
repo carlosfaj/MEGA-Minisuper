@@ -1,0 +1,30 @@
+{
+  "estado": "Aprobado",
+  "version": "0.21.0",
+  "fecha": "2026-11-14T06:40:07.635488+00:00",
+  "archivos": 575,
+  "bytes": 64406625,
+  "sha256Ensayo": "05d973428755d71115926595aeccfa9198ec1f6434fed74110f48f95df5876fd",
+  "entornos": [
+    {
+      "name": "Microsoft.NETCore.App",
+      "version": "10.0.14"
+    },
+    {
+      "name": "Microsoft.AspNetCore.App",
+      "version": "10.0.14"
+    }
+  ],
+  "sdk": "10.0.403",
+  "ensayoConArbolSinRegistrar": true,
+  "verificaciones": [
+    "huellas y tamanos completos",
+    "sin base, App_Data, archivos de operacion ni certificados",
+    "entorno win-x64 incluido",
+    "licencias del entorno incluidas",
+    "inicio mediante Windows PowerShell 5.1",
+    "venta, caja y datos persistentes desde otra carpeta",
+    "DOTNET_ROOT no disponible y recursos externos bloqueados en navegador",
+    "reinicio con PATH limitado a Windows y sin instalacion de dotnet accesible"
+  ]
+}
