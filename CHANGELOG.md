@@ -1,5 +1,10 @@
 # Historial de versiones de MEGA
 
+## Evidencia adicional de correo de 0.21.0 — 14 de noviembre de 2026
+
+- Incorporada prueba manual con Gmail real: cuatro aceptaciones SMTP, resolución mediante nueva solicitud e integridad de los PDF conservados, extraídas de la base local en modo de solo lectura y sin publicar direcciones ni secretos.
+- Matriz de pruebas, alcance del módulo y kanban actualizados para distinguir aceptación SMTP de recepción/lectura y aceptación comercial. Se conservan los ensayos históricos y las 223 pruebas automatizadas; sin cambio de versión de código.
+
 ## Edición documental de 0.21.0 — 14 de noviembre de 2026
 
 - Manuales de usuario y técnico en PDF, con instalación, operación, contingencias, recuperación e índices automáticos; fuentes editables y dependencias documentales fijadas.

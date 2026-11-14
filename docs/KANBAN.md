@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 82.7% — 110/133 criterios.**
-Versión 0.21.0 · actualizado 2026-11-14T13:27:35Z · 223 pruebas aprobadas.
+**Avance global: 83.5% — 111/133 criterios.**
+Versión 0.21.0 · actualizado 2026-11-14T15:28:00Z · 223 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -15,7 +15,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 | Calidad | 10/13 | 76.9% |
 | Entrega | 6/11 | 54.5% |
 | Documentación | 10/19 | 52.6% |
-| Validación | 1/7 | 14.3% |
+| Validación | 2/7 | 28.6% |
 
 ## Pendiente
 
@@ -90,13 +90,13 @@ La aceptación requiere participación real del negocio.
 - [ ] Unidades, redondeos y discrepancias validados
 - [ ] Fiscalidad y transferencia definidas
 - [ ] Pauta de respaldo y recuperación aceptada
-### EQUIPO · Periféricos y servicios reales — 0%
+### EQUIPO · Periféricos y servicios reales — 33.3%
 
 Área: Validación.
-Actualmente solo se detectaron impresoras virtuales; faltan equipo y configuración reales.
+Gmail real configurado y aceptaciones SMTP comprobadas en prueba personal. Recepcion/lectura, impresora fisica, medio externo y aceptacion del negocio pendientes.
 
 - [ ] Impresora física instalada y ensayada
-- [ ] Correo real configurado y probado
+- [x] Correo real configurado y probado ([evidencia](../docs/evidencias/correo/Prueba_Gmail_20261114.md))
 - [ ] Medio externo y recuperación ensayados
 
 ## Completado

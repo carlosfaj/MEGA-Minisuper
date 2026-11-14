@@ -2,6 +2,10 @@
 
 Estado actual **0.21.0: 223/223 pruebas aprobadas**, con matriz completa T01–T15, respaldo/restauración y recorridos de navegador aislados. [Matriz PDF, registro individual y revisión](Manuales_y_Validacion.md), [suite completa](evidencias/distribucion/suite.trx), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
 
+## Complemento manual de correo — 14 de noviembre de 2026
+
+La [matriz GM-01–GM-06](evidencias/correo/Prueba_Gmail_20261114.md) y su [registro extraído](evidencias/correo/resultado-gmail-20261114.json) incorporan configuración Gmail real, cuatro aceptaciones SMTP, una resolución con nueva solicitud y comprobación de integridad de cinco referencias PDF (cuatro archivos). Son pruebas manuales del usuario, sin nueva ejecución automatizada: se conserva el total histórico de 223. Recepción, lectura, envío real de Excel y aceptación comercial permanecen pendientes. Este complemento no modifica los TRX ni los PDF documentales anteriores.
+
 ## Avance 01
 
 Ejecución finalizada en 2026-11-12T05:32:38.167068+00:00 (UTC). Resultado: **23/23 pruebas aprobadas**.
