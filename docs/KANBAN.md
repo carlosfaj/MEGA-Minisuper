@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 70.7% — 94/133 criterios.**
-Versión 0.18.0 · actualizado 2026-11-12T21:20:44Z · 200 pruebas aprobadas.
+**Avance global: 73.7% — 98/133 criterios.**
+Versión 0.19.0 · actualizado 2026-11-14T05:11:35Z · 208 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 74/83 | 89.2% |
+| Software | 78/83 | 94% |
 | Calidad | 9/13 | 69.2% |
 | Entrega | 5/11 | 45.5% |
 | Documentación | 5/19 | 26.3% |
@@ -19,15 +19,6 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 ## Pendiente
 
-### BACKUP · Respaldo verificable — 0%
-
-Área: Software.
-Depende de: BD.
-
-- [ ] Copia consistente desde la aplicación
-- [ ] Destino y pauta configurables
-- [ ] Checksum, manifiesto y diagnóstico
-- [ ] Fallos visibles y ensayo
 ### RESTORE · Restauración y conciliación — 0%
 
 Área: Software.
@@ -290,6 +281,15 @@ Depende de: REPORTES.
 - [x] Cola con reportes congelados ([evidencia](../docs/Correo.md))
 - [x] Reintentos seguros y estado incierto ([evidencia](../docs/Correo.md))
 - [x] Pruebas sin conexión y errores ([evidencia](../docs/Correo.md))
+### BACKUP · Respaldo verificable — 100%
+
+Área: Software.
+Depende de: BD.
+
+- [x] Copia consistente desde la aplicación ([evidencia](../docs/Respaldos.md))
+- [x] Destino y pauta configurables ([evidencia](../docs/Respaldos.md))
+- [x] Checksum, manifiesto y diagnóstico ([evidencia](../docs/Respaldos.md))
+- [x] Fallos visibles y ensayo ([evidencia](../docs/Respaldos.md))
 ### AUDIT · Auditoría integral — 100%
 
 Área: Calidad.

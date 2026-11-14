@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.19.0 — 13 de noviembre de 2026
+
+- Respaldo desde la aplicación con copia consistente SQLite, archivos asociados, manifiesto, SHA-256 y diagnóstico antes de considerarlo comprobado.
+- Destino/pauta autorizados por Propietario; ejecución por gestión, opciones periódicas, al cierre y previas a otra versión, todas condicionadas a autorización.
+- Historial, descarga y nueva comprobación. Medio ausente o archivo alterado muestran fallo sin borrar copias anteriores.
+- 208 pruebas acumuladas: WAL, adjuntos/credenciales protegidas, permisos, concurrencia, medios ausentes, pautas y manifiestos alterados; recorrido de navegador en carpeta de ensayo.
+
 ## 0.18.0 — 12 de noviembre de 2026
 
 - Correo de reportes PDF/Excel con archivo congelado, huella, Message-ID, permisos y cola persistente.

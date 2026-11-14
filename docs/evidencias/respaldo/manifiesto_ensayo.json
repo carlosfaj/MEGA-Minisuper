@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "executionId": 1,
+  "appVersion": "0.19.0",
+  "schemaVersion": 2,
+  "point": {
+    "startedUtc": "2026-11-14T05:07:43.321Z",
+    "finishedUtc": "2026-11-14T05:07:43.340Z",
+    "lastSale": 1,
+    "lastOperation": 2,
+    "lastMovement": 7,
+    "lastCashMovement": 1,
+    "lastClosedShift": 0,
+    "lastAudit": 9,
+    "rows": {
+      "Categoria": 1,
+      "Producto": 6,
+      "Presentacion": 6,
+      "CodigoProducto": 6,
+      "PrecioProducto": 6,
+      "Promocion": 0,
+      "PromocionProducto": 0,
+      "Impuesto": 0,
+      "ProductoImpuesto": 0,
+      "ConfiguracionNegocio": 2,
+      "Proveedor": 0,
+      "Recepcion": 0,
+      "RecepcionDetalle": 0,
+      "LoteExistencia": 0,
+      "OperacionInventario": 2,
+      "MovimientoInventario": 7,
+      "Conteo": 0,
+      "ConteoDetalle": 0,
+      "SolicitudInventario": 1,
+      "SolicitudInventarioDetalle": 6,
+      "Venta": 1,
+      "VentaDetalle": 1,
+      "Pago": 1,
+      "TurnoCaja": 1,
+      "MovimientoCaja": 1,
+      "GastoOperativo": 0,
+      "SolicitudAnulacion": 0,
+      "Usuario": 5,
+      "Rol": 4,
+      "Autorizacion": 1,
+      "AccesoSoporte": 0,
+      "EventoAuditoria": 9,
+      "SolicitudImpresion": 1,
+      "IntentoImpresion": 0,
+      "EntregaComprobante": 0,
+      "SolicitudCorreo": 1,
+      "IntentoCorreo": 0,
+      "RespaldoEjecucion": 1,
+      "Restauracion": 0
+    }
+  },
+  "files": [
+    {
+      "name": "base.db",
+      "bytes": 917504,
+      "hash": "5950b1c6d8f6a21e02d4587a65f02091299964126fc2bbb47fb9823d903fecba"
+    },
+    {
+      "name": "archivos/Reportes/89f2dc6ce222476db06718d306a3ee55.pdf",
+      "bytes": 22263,
+      "hash": "bb24e87fbb163ab65ac41f100b7872848667b23b7f2aef0d00f3505acaaad38f"
+    }
+  ],
+  "warnings": []
+}

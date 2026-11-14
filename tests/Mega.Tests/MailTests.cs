@@ -80,7 +80,7 @@ public sealed class MailTests
         var configuration=new ConfiguracionNegocio{SmtpHost="127.0.0.1",SmtpPuerto=server.Port,SmtpSeguridad="tls",CorreoRemitente="mega@example.invalid"};var document=new MailDocument(configuration,"destino@example.invalid","prueba-fija@mega.local","inventario","prueba.pdf",Encoding.ASCII.GetBytes("PDF ficticio de prueba SMTP"));
         if(mode=="accept")Assert.NotEmpty((await transport.SendAsync(document)).Reference);else{var error=await Assert.ThrowsAsync<MailDispatchException>(()=>transport.SendAsync(document));Assert.Equal(mode=="drop",error.Uncertain);Assert.False(error.Retryable);if(mode=="reject")Assert.Equal("550",error.SmtpCode);}
         var content=await server.Content.Task.WaitAsync(TimeSpan.FromSeconds(5));Assert.Contains("prueba-fija@mega.local",content);Assert.Contains("prueba.pdf",content);
-        using var message=MimeKit.MimeMessage.Load(new MemoryStream(Encoding.UTF8.GetBytes(content)));var attachment=Assert.IsType<MimeKit.MimePart>(message.Attachments.Single());using var decoded=new MemoryStream();attachment.Content.DecodeTo(decoded);Assert.Equal(document.Content,decoded.ToArray());
+        using var message=MimeKit.MimeMessage.Load(new MemoryStream(Encoding.UTF8.GetBytes(content)));var attachment=Assert.IsType<MimeKit.MimePart>(message.Attachments.Single());using var decoded=new MemoryStream();Assert.NotNull(attachment.Content);attachment.Content.DecodeTo(decoded);Assert.Equal(document.Content,decoded.ToArray());
     }
     private sealed class LoopbackSmtp:IAsyncDisposable
     {

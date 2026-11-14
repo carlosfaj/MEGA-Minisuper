@@ -1,0 +1,15 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-14T05:07:45.598Z",
+  "datos": "Base aislada y carpeta de ensayo; no acredita USB real",
+  "casos": [
+    "pauta autorizada por Propietario y generación por Admin",
+    "venta y reporte conservado dentro de la copia",
+    "descarga coincide con SHA-256 registrado",
+    "medio ausente visible sin borrar copia previa",
+    "medio repuesto permite comprobar la copia anterior",
+    "móvil sin desbordamiento"
+  ],
+  "checksum": "2d8a1717ef9d79b7c8cc1b5ee6a48f78f5957252add2463db4de953c7ea1fa00",
+  "erroresJavaScript": []
+}

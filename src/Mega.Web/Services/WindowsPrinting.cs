@@ -49,7 +49,7 @@ public static class ReceiptText
     }
 }
 
-public sealed class WindowsPrintTransport(IWebHostEnvironment environment):IPrintTransport
+public sealed class WindowsPrintTransport(OperationalFiles files):IPrintTransport
 {
     public IReadOnlyList<string> Printers()
     {
@@ -72,7 +72,7 @@ public sealed class WindowsPrintTransport(IWebHostEnvironment environment):IPrin
         if(document.Printer.Contains("OneNote",StringComparison.OrdinalIgnoreCase))throw new PrintDispatchException("Esta impresora requiere interacción y no admite el agente automático.",false);
         string? output=null;
         if(document.Printer.Equals("Microsoft Print to PDF",StringComparison.OrdinalIgnoreCase))
-        {var dir=Path.Combine(environment.ContentRootPath,"App_Data","Impresiones");Directory.CreateDirectory(dir);output=Path.Combine(dir,$"comprobante-{document.RequestId}-{Guid.NewGuid():N}.pdf");}
+        {var dir=Path.Combine(files.Root,"Impresiones");Directory.CreateDirectory(dir);output=Path.Combine(dir,$"comprobante-{document.RequestId}-{Guid.NewGuid():N}.pdf");}
         var dc=Native.CreateDC(null,document.Printer,null,IntPtr.Zero);if(dc==IntPtr.Zero)throw new PrintDispatchException("Windows no pudo abrir la impresora.",false);
         var started=false;IntPtr font=IntPtr.Zero,previousFont=IntPtr.Zero;
         try

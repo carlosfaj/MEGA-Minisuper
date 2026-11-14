@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.18.0",
-  "updatedAt": "2026-11-12T21:20:44Z",
+  "version": "0.19.0",
+  "updatedAt": "2026-11-14T05:11:35Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 200,
+  "testsPassed": 208,
   "tasks": [
     {
       "id": "BD",
@@ -654,26 +654,26 @@
         {
           "id": "1",
           "label": "Copia consistente desde la aplicación",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Respaldos.md"
         },
         {
           "id": "2",
           "label": "Destino y pauta configurables",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Respaldos.md"
         },
         {
           "id": "3",
           "label": "Checksum, manifiesto y diagnóstico",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Respaldos.md"
         },
         {
           "id": "4",
           "label": "Fallos visibles y ensayo",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "docs/Respaldos.md"
         }
       ]
     },

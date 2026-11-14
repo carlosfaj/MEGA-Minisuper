@@ -69,6 +69,7 @@ builder.Services.AddScoped<ExpenseService>();
 builder.Services.AddScoped<ReportService>();
 builder.Services.AddSingleton<OperationalFiles>();builder.Services.AddSingleton<ISecretVault,WindowsSecretVault>();
 builder.Services.AddScoped<MailConfiguration>();builder.Services.AddScoped<MailQueue>();builder.Services.AddSingleton<IMailTransport,MailTransport>();builder.Services.AddSingleton<MailDispatcher>();builder.Services.AddHostedService<MailWorker>();
+builder.Services.AddScoped<BackupArchive>();builder.Services.AddScoped<BackupService>();builder.Services.AddSingleton<BackupDispatcher>();builder.Services.AddHostedService<BackupWorker>();
 builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton<DatabaseContract>();
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()));
@@ -76,7 +77,7 @@ var app = builder.Build();
 if (databaseCommands.Length == 1)
 {
     using var scope = app.Services.CreateScope();
-    if (databaseCommands[0] == "--db-upgrade") await scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
+    if (databaseCommands[0] == "--db-upgrade") {await app.Services.GetRequiredService<BackupDispatcher>().BeforeUpdateAsync();await scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();app.Services.GetRequiredService<BackupDispatcher>().RecordVersion();}
     using var connection = new SqliteConnection(scope.ServiceProvider.GetRequiredService<DatabaseLocation>().ConnectionString(readOnly: true));
     await connection.OpenAsync();
     var report = await scope.ServiceProvider.GetRequiredService<DatabaseInspector>().InspectAsync(connection, scope.ServiceProvider.GetRequiredService<MegaDbContext>().Model);
@@ -84,7 +85,9 @@ if (databaseCommands.Length == 1)
     Environment.ExitCode = report.Healthy ? 0 : 1;
     return;
 }
+await app.Services.GetRequiredService<BackupDispatcher>().BeforeUpdateAsync();
 using (var scope = app.Services.CreateScope()) await scope.ServiceProvider.GetRequiredService<DatabaseInitializer>().InitializeAsync();
+app.Services.GetRequiredService<BackupDispatcher>().RecordVersion();
 app.Use(async (context, next) =>
 {
     if (context.Connection.RemoteIpAddress is { } remote && !IPAddress.IsLoopback(remote)) { context.Response.StatusCode = 403; return; }

@@ -1,6 +1,6 @@
 # Impresión, copias y entregas
 
-La versión 0.15.0 integra un agente local con la cola de Windows. Gestión consulta las impresoras instaladas en **Impresión y entregas**, escribe el nombre exacto en Configuración y habilita la impresión automática. La opción permanece deshabilitada en la base de trabajo hasta configurarla expresamente. Microsoft Print to PDF genera archivos únicos en `App_Data/Impresiones`; OneNote no admite este envío automático.
+La versión 0.15.0 integra un agente local con la cola de Windows. Gestión consulta las impresoras instaladas en **Impresión y entregas**, escribe el nombre exacto en Configuración y habilita la impresión automática. La opción permanece deshabilitada en la base de trabajo hasta configurarla expresamente. Desde 0.19.0 Microsoft Print to PDF genera archivos únicos en `<nombre-base>.archivos/Impresiones`, junto a la base; OneNote no admite este envío automático.
 
 Cada venta crea su solicitud original en la misma transacción comercial. El agente funciona cada cinco segundos y reserva un trabajo y su intento en la base antes de llamar al controlador. La reserva dura tres minutos. El comprobante se produce desde el contenido histórico y su huella, con texto de 40 columnas y páginas según el área imprimible; el tamaño de papel lo aporta la configuración de Windows.
 
