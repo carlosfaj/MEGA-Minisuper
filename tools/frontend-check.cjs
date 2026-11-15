@@ -120,7 +120,10 @@ const fs = require('node:fs'), path = require('node:path'), assert = require('no
         await page.setViewportSize({width:390,height:844}); await shot('14_existencias_movil');
         await page.setViewportSize({width:1440,height:1120});
         await page.getByRole('button',{name:'Salir',exact:true}).click();
-        await login('admin'); await shot('15_inicio_administracion');
+        await login('admin');
+        assert.equal(await page.getByRole('heading',{level:1}).innerText(),'Inicio de administración');
+        assert.equal(await page.locator('.welcome-banner').count(),0);
+        await shot('15_inicio_administracion');
         await page.getByRole('button',{name:'Salir',exact:true}).click();
         await login('propietario');
         const routes=[...new Set(await page.locator('.work-navigation a').evaluateAll(links=>links.map(a=>new URL(a.href).pathname)))];

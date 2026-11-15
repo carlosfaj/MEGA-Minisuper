@@ -2,7 +2,7 @@
 @model Mega.Web.Pages.IndexModel
 @using Mega.Web.Services
 @{ ViewData["Title"] = "Inicio"; var management = User.IsInRole("Administrador") || User.IsInRole("Propietario"); }
-@if (Model.Cash is {} cash)
+@if (Model.Cash is {} cash && !management)
 {
     <div class="page-heading"><div><span class="eyebrow">TU TIENDA, EN ORDEN</span><h1>¡Todo listo para tu turno!</h1><p class="muted">Elige una tarea y sigue con tu día.</p></div></div>
     <section class="welcome-banner">
@@ -19,7 +19,7 @@
 }
 @if (management)
 {
-    @if(Model.Cash is null){<div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de administración</h1></div></div>}
+    <div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de administración</h1></div></div>
     <section class="card table-card" aria-label="Áreas de administración"><div class="table-wrap"><table><thead><tr><th>Área</th><th>Tarea</th><th>Disponibilidad</th></tr></thead><tbody>
         <tr><td><a asp-page="/Catalogo/Index">Catálogo</a></td><td>Productos, precios y proveedores</td><td>Según permisos</td></tr>
         <tr><td><a asp-page="/Existencias">Inventario</a></td><td>Existencias y operaciones pendientes</td><td>Según permisos</td></tr>

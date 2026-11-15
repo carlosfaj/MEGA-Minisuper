@@ -1,6 +1,6 @@
 {
   "estado": "Aprobado",
-  "fecha": "2026-11-15T20:34:52.411Z",
+  "fecha": "2026-11-15T20:39:27.761Z",
   "version": "0.23.0",
   "datos": "Ficticios; base aislada; sin impresión física ni envío de correos",
   "checks": [
@@ -1889,14 +1889,6 @@
           "height": 24,
           "naturalWidth": 24,
           "naturalHeight": 24
-        },
-        {
-          "src": "/brand/mascot.svg",
-          "loaded": true,
-          "width": 280,
-          "height": 280,
-          "naturalWidth": 280,
-          "naturalHeight": 280
         }
       ]
     },
