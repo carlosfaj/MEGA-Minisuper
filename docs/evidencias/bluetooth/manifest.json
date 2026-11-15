@@ -3,8 +3,8 @@
   "archivos": [
     {
       "archivo": "bluetooth.trx",
-      "bytes": 582995,
-      "sha256": "8fee93299a7cd85fc50748fe7011999d7889752e7669bf938c6c221037f17566"
+      "bytes": 581440,
+      "sha256": "b17103882726a2067a56eb431bd472760483eca9daa91eabdc2ad12b1060758e"
     },
     {
       "archivo": "navegador/00_configuracion_bluetooth_movil.png",
@@ -38,8 +38,8 @@
     },
     {
       "archivo": "validacion.json",
-      "bytes": 735,
-      "sha256": "3db969a7de7b2e8099e67ea02ca5a428ffe16bec5295b9190d86d2b360ac4799"
+      "bytes": 710,
+      "sha256": "da7d2879239ddb29e1b90c0931e7b85e66478140c13d399e91ca486277442df5"
     }
   ]
 }
