@@ -1,5 +1,12 @@
 # Historial de versiones de MEGA
 
+## 0.22.0 — 15 de noviembre de 2026
+
+- Soporte optativo de MP58-16 por Bluetooth clásico mediante puerto COM saliente y ESC/POS: 32 columnas, español PC850, envío fragmentado y aperturas/escrituras con espera limitada. Compatibilidad y papel pendientes de ensayo en la unidad real.
+- Destinos disponibles y guía de conexión en Configuración/Impresión. El controlador Windows, Microsoft Print to PDF y sus 40 columnas conservan su comportamiento; sin migración de datos ni habilitación automática sobre la configuración existente.
+- Reutiliza cola, permisos, historial, auditoría y contingencias. Una interrupción parcial queda incierta, sin reenvío automático, cambio de destino o repetición de venta/cobro. Una apertura tardía se cierra sin enviar datos.
+- 255/255 pruebas aprobadas (32 nuevas), auditoría de dependencias sin vulnerabilidades conocidas, recorrido de Edge con PDF y comprobación móvil de la configuración. Evidencia y límites en `docs/Impresion_Bluetooth.md`; el criterio de impresora física permanece pendiente.
+
 ## Evidencia adicional de correo de 0.21.0 — 14 de noviembre de 2026
 
 - Complemento visual posterior: tres capturas reales de la configuración Gmail activa y de los intentos SMTP aceptados de resultados e inventario, con encuadres sin direcciones personales ni credenciales y manifiesto SHA-256. Se añaden para respaldar visualmente la prueba manual ya registrada.

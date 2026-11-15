@@ -1,6 +1,6 @@
 # Estado del cuarto corte de MEGA
 
-Estado comprobado al 14 de noviembre de 2026: **0.21.0**, 223 pruebas acumuladas aprobadas y recorridos de navegador en bases aisladas. El [kanban](KANBAN.md) es la referencia del porcentaje y de todos los criterios, incluidos entregables y validaciones reales. La implementación es local; los recursos del núcleo no requieren Internet.
+Estado comprobado al 15 de noviembre de 2026: **0.22.0**, 255 pruebas acumuladas aprobadas y recorridos de navegador en bases aisladas. Se incorpora [MP58-16 por Bluetooth](Impresion_Bluetooth.md) con conexiones simuladas, pendiente de ensayo en la unidad real. El [kanban](KANBAN.md) es la referencia del porcentaje y de todos los criterios, incluidos entregables y validaciones reales. La implementación es local; los recursos del núcleo no requieren Internet.
 
 | Requisito | Implementado y comprobado | Pendiente real |
 |---|---|---|

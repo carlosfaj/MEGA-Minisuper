@@ -64,7 +64,11 @@ builder.Services.AddSingleton<ProjectBoardService>();
 builder.Services.AddScoped<CommercialService>(); builder.Services.AddScoped<CommercialCalculator>();
 builder.Services.AddScoped<CancellationService>();
 builder.Services.AddSingleton<RejectionAuditWriter>();
-builder.Services.AddSingleton<IPrintTransport,WindowsPrintTransport>();
+builder.Services.AddSingleton<WindowsPrintTransport>();
+builder.Services.AddSingleton<ISerialPrinterPorts,WindowsSerialPrinterPorts>();
+builder.Services.AddSingleton<BluetoothPrintTransport>();
+builder.Services.AddSingleton<IPrintTransport>(services=>new LocalPrintTransport(
+    services.GetRequiredService<WindowsPrintTransport>(),services.GetRequiredService<BluetoothPrintTransport>()));
 builder.Services.AddScoped<PrintQueue>();builder.Services.AddSingleton<PrintDispatcher>();builder.Services.AddHostedService<PrintWorker>();
 builder.Services.AddScoped<ExpenseService>();
 builder.Services.AddScoped<ReportService>();

@@ -42,7 +42,7 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
         if(ReviewHash(row)!=hash)throw new BusinessException("El trabajo cambió. Revisa su estado actual.");
         if(row.Estado is not ("Fallida" or "Incierta" or "Pendiente" or "En_cuarentena"))throw new BusinessException("Este estado no admite resolución manual. Los trabajos en proceso deben finalizar o vencer; la cuarentena requiere conciliación.");
         if(row.Estado=="En_cuarentena"&&!await db.Set<Restauracion>().AnyAsync(x=>x.Id==row.RestauracionId&&x.Estado=="Validada"&&x.ConciliacionEstado=="Completada"&&x.NucleoReabiertoEn!=null))throw new BusinessException("El Propietario debe conciliar y reabrir antes de resolver la cuarentena.");
-        if(!checkedQueue)throw new BusinessException("Comprueba la cola de Windows y el papel antes de resolver.");
+        if(!checkedQueue)throw new BusinessException("Comprueba la conexión, la cola de Windows si corresponde y el papel antes de resolver.");
         reason=AccessControl.Text(reason,"Motivo de resolución",1000);evidence=AccessControl.Text(evidence,"Evidencia",1000);
         if(resolution is not ("reintentar_mismo" or "no_reenviar" or "emitir_copia" or "contingencia_manual"))throw new BusinessException("Selecciona una resolución válida.");
         if(resolution=="reintentar_mismo"&&row.Estado!="Fallida")throw new BusinessException("Solo se reintenta el mismo trabajo cuando consta que no fue aceptado. Un resultado incierto necesita otra resolución explícita.");
@@ -62,7 +62,7 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
     {
         await using var tx=await db.Database.BeginTransactionAsync();
         var row=await db.Set<SolicitudImpresion>().SingleOrDefaultAsync(x=>x.Id==id)??throw new BusinessException("El trabajo no existe.");await RequireSaleAsync(userId,row.VentaId);
-        if(row.Estado!="Aceptada")throw new BusinessException("La entrega impresa requiere un trabajo aceptado por Windows.");
+        if(row.Estado!="Aceptada")throw new BusinessException("La entrega impresa requiere un envío aceptado por Windows o por el puerto Bluetooth.");
         if(!handedOver)throw new BusinessException("Confirma que se entregó el comprobante físico.");
         var existing=await db.Set<EntregaComprobante>().SingleOrDefaultAsync(x=>x.SolicitudImpresionId==id&&x.Tipo!="manual_contingencia");if(existing is not null)return existing.Id;
         var delivery=new EntregaComprobante{VentaId=row.VentaId,SolicitudImpresionId=id,Tipo=row.Tipo=="original"?"impreso_original":"copia",Fecha=Formats.Now(),RegistradoPor=userId,EvidenciaReferencia=AccessControl.Text(evidence,"Evidencia de entrega",1000)};
@@ -90,7 +90,7 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
             var token=Guid.NewGuid().ToString();row.Estado="En_proceso";row.LeaseToken=token;row.LeaseHasta=DateTime.UtcNow.AddMinutes(3).ToString("yyyy-MM-dd'T'HH:mm:ss.fff'Z'");row.UltimoError=null;
             var attempt=new IntentoImpresion{SolicitudImpresionId=row.Id,Numero=checked((await db.Set<IntentoImpresion>().Where(x=>x.SolicitudImpresionId==row.Id).MaxAsync(x=>(long?)x.Numero)??0)+1),Inicio=now,Resultado="en_curso",Impresora=row.ImpresoraHistorica,AgenteIdentidad=Environment.MachineName+"/MEGA",LeaseToken=token};
             db.Add(attempt);await db.SaveChangesAsync();AutoAudit(row.Id,"Reservar impresión","pendiente",new{intentoId=attempt.Id,attempt.Numero,row.LeaseHasta});await db.SaveChangesAsync();await tx.CommitAsync();
-            return new(row.Id,token,attempt.Id,new(row.Id,row.ImpresoraHistorica,sale.Folio,row.CopiaNumero,ReceiptText.Build(sale.ComprobanteSnapshot,row.CopiaNumero)));
+            return new(row.Id,token,attempt.Id,new(row.Id,row.ImpresoraHistorica,sale.Folio,row.CopiaNumero,ReceiptText.Build(sale.ComprobanteSnapshot,row.CopiaNumero,BluetoothPrinterTarget.TryPort(row.ImpresoraHistorica,out _)?32:40)));
         }
         await db.SaveChangesAsync();await tx.CommitAsync();return null;
     }
@@ -111,7 +111,7 @@ public sealed class PrintQueue(MegaDbContext db,AccessControl access,Operations 
         var uncertain=failure?.Uncertain==true||string.CompareOrdinal(row.LeaseHasta,Formats.Now())<=0;
         row.Estado=uncertain?"Incierta":acceptance is not null?"Aceptada":"Fallida";
         attempt.Resultado=uncertain?"incierta":acceptance is not null?"aceptada_SO":"no_aceptada";
-        row.AceptadaEn=row.Estado=="Aceptada"?attempt.Fin:null;row.UltimoError=uncertain?"Resultado incierto. Comprueba la cola de Windows y el papel antes de resolver.":failure?.Code;
+        row.AceptadaEn=row.Estado=="Aceptada"?attempt.Fin:null;row.UltimoError=uncertain?"Resultado incierto. Comprueba la conexión, la cola de Windows si corresponde y el papel antes de resolver.":failure?.Code;
         row.LeaseToken=null;row.LeaseHasta=null;
         AutoAudit(row.Id,"Resultado de impresión",uncertain?"incierto":acceptance is not null?"exito":"fallo",new{intentoId=attempt.Id,attempt.Resultado,attempt.IdTrabajoSO,attempt.ErrorCodigo});await db.SaveChangesAsync();await tx.CommitAsync();
     }

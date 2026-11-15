@@ -25,10 +25,11 @@ public sealed class SettingsInput
 }
 
 [Authorize(Policy = "Gestion")]
-public sealed class ConfiguracionModel(MegaDbContext db, SettingsService service) : ManagementPage
+public sealed class ConfiguracionModel(MegaDbContext db, SettingsService service,IPrintTransport printing) : ManagementPage
 {
     [BindProperty] public SettingsInput Input { get; set; } = new();
     public List<ConfiguracionNegocio> History { get; private set; } = [];
+    public IReadOnlyList<string> Printers{get;private set;}=[];
     public async Task OnGetAsync()
     {
         var c = await service.CurrentAsync();
@@ -52,5 +53,9 @@ public sealed class ConfiguracionModel(MegaDbContext db, SettingsService service
         catch (BusinessException e) { ModelState.AddModelError("", e.Message); }
         await LoadHistoryAsync(); return Page();
     }
-    private async Task LoadHistoryAsync() => History = await db.Set<ConfiguracionNegocio>().AsNoTracking().OrderByDescending(x => x.Version).Take(30).ToListAsync();
+    private async Task LoadHistoryAsync()
+    {
+        History=await db.Set<ConfiguracionNegocio>().AsNoTracking().OrderByDescending(x=>x.Version).Take(30).ToListAsync();
+        try{Printers=printing.Printers();}catch(PrintDispatchException error){ModelState.AddModelError("",error.Message);}
+    }
 }

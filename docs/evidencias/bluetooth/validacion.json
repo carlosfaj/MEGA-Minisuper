@@ -1,0 +1,25 @@
+{
+  "version": "0.22.0",
+  "fechaUtc": "2026-11-15T12:53:04.9751804Z",
+  "pruebasAprobadas": 255,
+  "pruebasNuevas": 32,
+  "vulnerabilidadesConocidas": 0,
+  "impresoraBluetoothRealProbada": false,
+  "aceptacionNegocio": false,
+  "ensayos": [
+    "Puerto simulado y router real con base efímera",
+    "Edge con PDF de Windows y base aislada",
+    "Paquete Windows de ensayo con System.IO.Ports.dll incluido"
+  ],
+  "pruebaMutacion": {
+    "fallosDetectados": 3,
+    "cambioTemporal": "Desactivar clasificación incierta después de iniciar escritura",
+    "restaurado": true
+  },
+  "kanban": {
+    "criterioImpresoraFisicaCerrado": false,
+    "total": 133,
+    "porcentaje": 83.5,
+    "completados": 111
+  }
+}

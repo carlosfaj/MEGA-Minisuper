@@ -2,6 +2,8 @@
 
 Edición documental del **14 de noviembre de 2026**, correspondiente al código 0.21.0. Consolida instalación, operación, contingencias y resultados comprobados; no modifica el programa ni sustituye el documento académico de capítulos I–IV.
 
+El código 0.22.0 añade el [complemento de impresión MP58-16 Bluetooth](Impresion_Bluetooth.md) y actualiza la [matriz de pruebas actual](Matriz_Pruebas.md) a 255 casos aprobados. Esta edición PDF conserva sus 223 casos y su versión histórica; no se presenta como reeditada para Bluetooth.
+
 ## Documentos para entregar
 
 | Documento | Contenido | Extensión |

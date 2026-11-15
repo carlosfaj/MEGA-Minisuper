@@ -28,7 +28,7 @@ public sealed class SettingsService(MegaDbContext db, AccessControl access, Oper
         var issuerId = AccessControl.Optional(input.IssuerId, "Identificación del emisor", 100);
         var regime = AccessControl.Optional(input.FiscalRegime, "Régimen fiscal", 200);
         var printer = AccessControl.Optional(input.Printer, "Impresora", 200);
-        if(input.EnablePrint&&(printer is null||!printing.Printers().Contains(printer)||printer.Contains("OneNote",StringComparison.OrdinalIgnoreCase)))throw new BusinessException("Selecciona una impresora instalada compatible antes de habilitar la impresión automática.");
+        if(input.EnablePrint&&(printer is null||!printing.Printers().Contains(printer)||printer.Contains("OneNote",StringComparison.OrdinalIgnoreCase)))throw new BusinessException("Selecciona una impresora instalada compatible o el puerto saliente de la MP58-16 Bluetooth antes de habilitar la impresión automática.");
         var fund = Formats.Scaled(Formats.Parse(input.UsualFund), 2);
         if (input.ExpirationDays < 0) throw new BusinessException("Los días de próximo vencimiento no pueden ser negativos.");
         var old = await db.Set<ConfiguracionNegocio>().SingleAsync(x => x.Id == current.Id);

@@ -20,3 +20,4 @@
 .backup-destination{overflow-wrap:anywhere}
 
 .recovery-card form,.recovery-card>details{margin-top:14px}.recovery-card h2+p{margin:8px 0 18px}
+.settings-editor>.card{min-width:0}.settings-editor .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:600px){.settings-editor .field-grid{grid-template-columns:minmax(0,1fr)}}

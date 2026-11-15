@@ -1,0 +1,45 @@
+{
+  "version": "0.22.0",
+  "archivos": [
+    {
+      "archivo": "bluetooth.trx",
+      "bytes": 582995,
+      "sha256": "8fee93299a7cd85fc50748fe7011999d7889752e7669bf938c6c221037f17566"
+    },
+    {
+      "archivo": "navegador/00_configuracion_bluetooth_movil.png",
+      "bytes": 109330,
+      "sha256": "3b46cc6b4797c63589b954714570995f01ca88c0b922fca6ac7b5fb30bfa4c15"
+    },
+    {
+      "archivo": "navegador/00_configuracion_bluetooth.png",
+      "bytes": 133565,
+      "sha256": "19f24b0395ff96395dacb64c43b428f4882936f53b172fd649cc3a56a29d99cf"
+    },
+    {
+      "archivo": "navegador/01_original_aceptado_sin_entrega_fisica.png",
+      "bytes": 80384,
+      "sha256": "1be3634ab098784bf443d519e5ee1f5f831a888342c02fdceef3a89e9bbdc9e7"
+    },
+    {
+      "archivo": "navegador/02_copia_mismo_folio.png",
+      "bytes": 84788,
+      "sha256": "a36723fed7fafc3683fa44f6493799eaf911293258559fa3bd48adee3ac595ca"
+    },
+    {
+      "archivo": "navegador/03_movil.png",
+      "bytes": 66395,
+      "sha256": "2b58fcde02b189656fd6e6061b6b3aabe3850beeb56bbb06f21ca6c611ce4aea"
+    },
+    {
+      "archivo": "navegador/resultado.json",
+      "bytes": 618,
+      "sha256": "46644c3d82780854545785a97e1c8e0b40aa6ec77558c1f0bd377326d07e47b3"
+    },
+    {
+      "archivo": "validacion.json",
+      "bytes": 735,
+      "sha256": "3db969a7de7b2e8099e67ea02ca5a428ffe16bec5295b9190d86d2b360ac4799"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Configuración del negocio
 
+Desde 0.22.0, el destino también puede ser [MP58-16 Bluetooth con su puerto COM saliente](Impresion_Bluetooth.md). El campo ofrece nombres de impresoras y puertos disponibles, sin abrirlos al consultar. La habilitación sigue siendo explícita y requiere que el destino exista; el equipo real debe ensayarse antes de operar con clientes.
+
 Disponible para Administrador y Propietario desde Configuración. Se pueden cambiar los datos del negocio, fondo habitual, umbral de vencimiento y datos previstos del emisor/impresora. Cada guardado cierra la vigencia anterior y crea una nueva versión, con responsable y auditoría en una transacción. Un formulario anterior se rechaza si otro usuario ya cambió la configuración.
 
 El fondo habitual nuevo se propone en la siguiente apertura; no cambia el efectivo real ni esperado de un turno existente. Los comprobantes anteriores conservan los datos de su confirmación. Cambiar datos fiscales o la impresora invalida las respectivas marcas de validación. Desde 0.15.0 puede habilitarse expresamente la [impresión automática](Impresion.md) con un nombre exacto de impresora admitida e instalada. La configuración no acredita fiscalidad ni entrega de papel. Efectivo sigue siendo el único medio habilitado.

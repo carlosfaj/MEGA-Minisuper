@@ -1,6 +1,12 @@
 # Matriz de pruebas — historial y estado actual
 
-Estado actual **0.21.0: 223/223 pruebas aprobadas**, con matriz completa T01–T15, respaldo/restauración y recorridos de navegador aislados. [Matriz PDF, registro individual y revisión](Manuales_y_Validacion.md), [suite completa](evidencias/distribucion/suite.trx), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+Estado actual **0.22.0: 255/255 pruebas aprobadas**, con matriz T01–T15, respaldo/restauración, impresión Bluetooth simulada y recorridos de navegador aislados. [Suite completa actual](evidencias/bluetooth/bluetooth.trx), [matriz PDF histórica de 0.21.0](Manuales_y_Validacion.md), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+
+## Impresión Bluetooth — 15 de noviembre de 2026
+
+32 casos nuevos verifican 32 columnas sin truncar folio/importes, acentos PC850, rechazo de texto no representable/control de comandos, puertos canónicos, selección HTTP autorizada, apertura lenta con cierre tardío sin envío, errores antes/después de escribir, no cambio automático de destino, original/copia, habilitación explícita y conservación de venta/pago/caja/existencias. Los errores parciales conservan la resolución manual y no permiten reintento ciego.
+
+El [recorrido real de Edge](evidencias/bluetooth/navegador/resultado.json) verifica ayuda/configuración en escritorio y móvil y la ruta de Windows con Microsoft Print to PDF, sin duplicar cobro ni declarar entrega física. La [guía de Bluetooth](Impresion_Bluetooth.md) conserva requisitos y límites: la compatibilidad de la MP58-16 real y el papel siguen pendientes.
 
 ## Complemento manual de correo — 14 de noviembre de 2026
 

@@ -16,12 +16,13 @@ public interface IPrintTransport
 
 public static class ReceiptText
 {
-    public static string Build(string snapshot,long copy)
+    public static string Build(string snapshot,long copy,int columns=40)
     {
+        if(columns is not (32 or 40))throw new ArgumentOutOfRangeException(nameof(columns));
         using var doc=JsonDocument.Parse(snapshot);var r=doc.RootElement;
         var rows=new List<string>{r.GetProperty("negocio").GetString()??"MEGA",r.GetProperty("direccion").GetString()??"",
             "COMPROBANTE INTERNO", "Sin validez fiscal acreditada",r.GetProperty("folio").GetString()??"",copy==0?"ORIGINAL":$"COPIA #{copy}",
-            Formats.Date(r.GetProperty("fecha").GetString()!),"Operador: "+r.GetProperty("operador").GetString(),new('-',40)};
+            Formats.Date(r.GetProperty("fecha").GetString()!),"Operador: "+r.GetProperty("operador").GetString(),new('-',columns)};
         foreach(var line in r.GetProperty("lineas").EnumerateArray())
         {
             rows.Add(line.GetProperty("name").GetString()??"");
@@ -29,20 +30,20 @@ public static class ReceiptText
             rows.Add($"{quantity.ToString("0.###",CultureInfo.InvariantCulture)} {line.GetProperty("presentation").GetString()} x {Formats.Money(line.GetProperty("price").GetInt64())}");
             rows.Add("Importe: "+Formats.Money(line.TryGetProperty("total",out var total)?total.GetInt64():line.GetProperty("subtotal").GetInt64()));
         }
-        rows.Add(new('-',40));
+        rows.Add(new('-',columns));
         foreach(var (name,key) in new[]{("Subtotal","subtotalCentavos"),("Descuento","descuentoCentavos"),("Impuesto","impuestoCentavos"),("TOTAL","totalCentavos")})
             rows.Add(name+": "+Formats.Money(r.GetProperty(key).GetInt64()));
         foreach(var payment in r.GetProperty("pagos").EnumerateArray())
         {rows.Add("Recibido: "+Formats.Money(payment.GetProperty("recibidoCentavos").GetInt64()));rows.Add("Cambio: "+Formats.Money(payment.GetProperty("cambioCentavos").GetInt64()));}
-        return string.Join('\n',rows.SelectMany(Wrap));
+        return string.Join('\n',rows.SelectMany(row=>Wrap(row,columns)));
     }
-    private static IEnumerable<string> Wrap(string value)
+    private static IEnumerable<string> Wrap(string value,int columns)
     {
         var text=new string(value.Select(c=>char.IsControl(c)?' ':c).ToArray());
         if(text.Length==0){yield return "";yield break;}
-        while(text.Length>40)
+        while(text.Length>columns)
         {
-            var cut=text.LastIndexOf(' ',40);if(cut<=0)cut=40;
+            var cut=text.LastIndexOf(' ',columns);if(cut<=0)cut=columns;
             yield return text[..cut];text=text[cut..].TrimStart();
         }
         if(text.Length>0)yield return text;

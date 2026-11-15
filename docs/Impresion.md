@@ -1,5 +1,7 @@
 # Impresión, copias y entregas
 
+Desde **0.22.0** también está disponible el destino optativo [MP58-16 por Bluetooth](Impresion_Bluetooth.md), con puerto COM saliente, perfil ESC/POS de 32 columnas y los mismos controles de cola/contingencia. La compatibilidad de la unidad real y el papel siguen pendientes de ensayo. Los párrafos siguientes describen la ruta Windows original, que conserva sus 40 columnas.
+
 La versión 0.15.0 integra un agente local con la cola de Windows. Gestión consulta las impresoras instaladas en **Impresión y entregas**, escribe el nombre exacto en Configuración y habilita la impresión automática. La opción permanece deshabilitada en la base de trabajo hasta configurarla expresamente. Desde 0.19.0 Microsoft Print to PDF genera archivos únicos en `<nombre-base>.archivos/Impresiones`, junto a la base; OneNote no admite este envío automático.
 
 Cada venta crea su solicitud original en la misma transacción comercial. El agente funciona cada cinco segundos y reserva un trabajo y su intento en la base antes de llamar al controlador. La reserva dura tres minutos. El comprobante se produce desde el contenido histórico y su huella, con texto de 40 columnas y páginas según el área imprimible; el tamaño de papel lo aporta la configuración de Windows.

@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
 **Avance global: 83.5% — 111/133 criterios.**
-Versión 0.21.0 · actualizado 2026-11-14T15:28:00Z · 223 pruebas aprobadas.
+Versión 0.22.0 · actualizado 2026-11-15T12:52:15Z · 255 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
