@@ -1,0 +1,132 @@
+@model Mega.Web.Services.HomeDashboard
+@using Mega.Web.Services
+@{
+    var owner = Model.Role == "Propietario";
+    var inventory = Model.Role == "Inventario";
+    var reviews = Model.Tasks.Count(x => x.CanReview);
+    var expired = Model.LotAlerts.Count(x => x.State == "Vencido");
+    var soon = Model.LotAlerts.Count(x => x.State == "Próximo a vencer");
+    var title = owner ? "Resumen del negocio" : inventory ? "Trabajo de inventario" : "Operación del día";
+}
+<div class="page-heading dashboard-intro">
+    <div><span class="eyebrow">@Model.Role · @Model.Day</span><h1>@title</h1>
+        <p class="muted">@(owner ? "Resultados de hoy y asuntos que necesitan tu atención." : inventory ? "Revisa las existencias y continúa el trabajo pendiente." : "Atiende las revisiones y supervisa la jornada de la tienda.")</p>
+    </div>
+    @if (!inventory && !owner) { <a class="button primary" href="#solicitudes">Atender solicitudes</a> }
+    else { <a class="button primary" asp-page="@(inventory ? "/Recepciones/Editar" : "/Reportes")" asp-route-Kind="@(owner ? "resultados" : null)" asp-route-From="@(owner ? Model.Day : null)" asp-route-To="@(owner ? Model.Day : null)">@(inventory ? "Registrar recepción" : "Ver resultados")</a> }
+</div>
+<div class="stats dashboard-stats">
+@if (owner)
+{
+    <div class="card stat"><span>Ingreso de hoy sin impuesto</span><strong>@Model.Metric("Ingreso sin impuesto")</strong><small>@Model.Metric("Ventas incluidas") ventas vigentes</small></div>
+    <div class="card stat"><span>Gastos de hoy</span><strong>@Model.Metric("Gastos vigentes")</strong><small>Gastos operativos vigentes</small></div>
+    <div class="card stat"><span>Margen bruto de hoy</span><strong>@Model.Metric("Margen bruto")</strong><small>Ingreso menos costo histórico</small></div>
+    <div class="card stat"><span>Resultado después de gastos</span><strong>@Model.Metric("Resultado después de gastos")</strong><small>Margen bruto menos gastos</small></div>
+}
+else if (inventory)
+{
+    <div class="card stat"><span>Productos en mínimo</span><strong>@Model.LowStock.Count</strong><small>Existencia igual o menor al mínimo</small></div>
+    <div class="card stat"><span>Lotes vencidos</span><strong>@expired</strong><small>Con saldo pendiente de revisar</small></div>
+    <div class="card stat"><span>Próximos a vencer</span><strong>@(Model.ExpirationDays is null ? "Sin definir" : soon.ToString())</strong><small>@(Model.ExpirationDays is long days ? $"Umbral configurado: {days} días" : "Administración debe definir el umbral")</small></div>
+    <div class="card stat"><span>Mi trabajo pendiente</span><strong>@Model.Tasks.Count</strong><small>Preparaciones, conteos y envíos en revisión</small></div>
+}
+else
+{
+    <div class="card stat"><span>Revisiones disponibles para ti</span><strong>@reviews</strong><small>@Model.Tasks.Count(x => !x.CanReview) esperan otra cuenta</small></div>
+    <div class="card stat"><span>Turnos abiertos</span><strong>@Model.OpenShifts</strong><small>En las estaciones del negocio</small></div>
+    <div class="card stat"><span>Cierres de hoy con diferencia</span><strong>@Model.DifferentClosings</strong><small>Conservan el importe y motivo registrados</small></div>
+    <div class="card stat"><span>Ingreso de hoy sin impuesto</span><strong>@Model.Metric("Ingreso sin impuesto")</strong><small>@Model.Metric("Ventas incluidas") ventas vigentes</small></div>
+}
+</div>
+@if (Model.ResultsError is not null)
+{
+    <p class="alert warning" role="status">El resumen de resultados no está disponible: @Model.ResultsError Consulta Reportes con un alcance menor.</p>
+}
+else if (owner && Model.Metric("Margen bruto") == "No calculable")
+{
+    <p class="alert warning">Hay líneas de venta sin costo calculable. El margen y el resultado permanecen como «No calculable» hasta contar con información válida.</p>
+}
+else if (!inventory && Model.Metric("Ventas incluidas") == "0")
+{
+    <p class="alert info">Todavía no hay ventas vigentes registradas hoy.</p>
+}
+<div class="dashboard-columns @(inventory ? "dashboard-inventory" : "")">
+    <section class="card dashboard-panel dashboard-work" id="solicitudes">
+        <div class="card-heading"><h2>@(inventory ? "Mi trabajo pendiente" : "Solicitudes por atender")</h2><span class="badge neutral">@Model.Tasks.Count</span></div>
+        <p class="muted small">@(inventory ? "Tus registros en curso, empezando por los más antiguos." : "Recepciones, inventario y anulaciones. Las solicitudes propias requieren otra cuenta de gestión.")</p>
+        @if (Model.Tasks.Count == 0)
+        {
+            <div class="dashboard-empty"><strong>@(inventory ? "No tienes trabajo pendiente" : "No hay solicitudes pendientes")</strong><p class="muted">@(inventory ? "Las recepciones y los conteos que prepares aparecerán aquí." : "Las nuevas solicitudes enviadas para revisión aparecerán aquí.")</p></div>
+        }
+        else
+        {
+            <ul class="dashboard-list">
+            @foreach (var task in Model.Tasks.Take(6))
+            {
+                <li><div><strong>@task.Reference</strong><span>@task.Type · @task.Responsible</span><small>@Formats.Date(task.Date) · @task.State</small></div><a class="button secondary" asp-page="@task.Page" asp-route-id="@task.Id">@(task.CanReview ? "Revisar" : task.State == "Espera otra cuenta" ? "Consultar" : "Continuar")</a></li>
+            }
+            </ul>
+            @if (Model.Tasks.Count > 6) { <p class="muted small">Se muestran los 6 más antiguos de @Model.Tasks.Count. Consulta los módulos para ver todos.</p> }
+        }
+        <div class="button-row dashboard-actions"><a class="button secondary" asp-page="/Recepciones/Index">Recepciones</a><a class="button secondary" asp-page="/Solicitudes/Index">Solicitudes de inventario</a><a class="button secondary" asp-page="@(inventory ? "/Conteos/Index" : "/Anulaciones/Index")">@(inventory ? "Conteos físicos" : "Anulaciones")</a></div>
+    </section>
+    @if (!inventory)
+    {
+        <section class="card dashboard-panel">
+            <div class="card-heading"><h2>Caja y cierres</h2><a asp-page="/Reportes" asp-route-Kind="caja" asp-route-From="@Model.Day" asp-route-To="@Model.Day">Ver detalle →</a></div>
+            <p class="muted small">@Model.OpenShifts turnos abiertos · @Model.DifferentClosings cierres de hoy con diferencia</p>
+            @if (Model.Shifts.Count == 0)
+            {
+                <div class="dashboard-empty"><strong>Sin asuntos de caja por revisar</strong><p class="muted">No hay turnos abiertos ni cierres con diferencia hoy.</p></div>
+            }
+            else
+            {
+                <ul class="dashboard-list">
+                @foreach (var shift in Model.Shifts.Take(5))
+                {
+                    <li><div><strong>T-@shift.Id.ToString("0000") · @shift.Operator</strong><span>@shift.State · @Formats.Date(shift.Date)</span></div><span class="badge @(shift.State == "Abierto" ? "success" : "warning")">@(shift.State == "Abierto" ? "Abierto" : Formats.Money(shift.Difference ?? 0))</span></li>
+                }
+                </ul>
+                @if (Model.Shifts.Count > 5) { <p class="muted small">Se muestran 5 de @Model.Shifts.Count turnos. El reporte contiene el detalle.</p> }
+            }
+            <p class="dashboard-refunds"><a asp-page="/Anulaciones/Index">Devoluciones de efectivo pendientes: <strong>@Model.PendingRefunds</strong> →</a></p>
+        </section>
+    }
+    <section class="card dashboard-panel">
+        <div class="card-heading"><h2>Productos en mínimo</h2><a asp-page="/Existencias">Ver existencias →</a></div>
+        @if (Model.LowStock.Count == 0)
+        {
+            <div class="dashboard-empty"><strong>Sin productos activos en mínimo</strong><p class="muted">Aquí aparecerán los productos que alcancen su mínimo configurado.</p></div>
+        }
+        else
+        {
+            <div class="table-wrap"><table><thead><tr><th>Producto</th><th>Existencia</th><th>Mínimo</th></tr></thead><tbody>
+            @foreach (var stock in Model.LowStock.Take(5))
+            {
+                <tr><td><strong>@stock.Product</strong><small>@(stock.Quantity < 0 ? "Revisar discrepancia" : stock.Quantity == 0 ? "Sin existencias" : "En mínimo")</small></td><td>@stock.Quantity.ToString("0.###") @stock.Unit</td><td>@stock.Minimum.ToString("0.###") @stock.Unit</td></tr>
+            }
+            </tbody></table></div>
+            <p class="muted small">Total en mínimo: @Model.LowStock.Count. Se muestran hasta 5.</p>
+        }
+    </section>
+    <section class="card dashboard-panel">
+        <div class="card-heading"><h2>Lotes que requieren atención</h2><a asp-page="/Lotes">Ver lotes →</a></div>
+        <p class="muted small">@expired vencidos · @soon próximos a vencer · @Model.LotAlerts.Count(x => x.State != "Vencido" && x.State != "Próximo a vencer") por conciliar</p>
+        @if (Model.ExpirationDays is null) { <p class="dashboard-hint">El plazo de aviso de próximos vencimientos todavía no está configurado.</p> }
+        @if (Model.LotAlerts.Count == 0)
+        {
+            <div class="dashboard-empty"><strong>Sin alertas de lotes registradas</strong><p class="muted">Las alertas usan saldos, fechas y parámetros registrados.</p></div>
+        }
+        else
+        {
+            <ul class="dashboard-list">
+            @foreach (var lot in Model.LotAlerts.Take(5))
+            {
+                <li><div><strong>@lot.Product</strong><span>@lot.Reference · @lot.Quantity.ToString("0.###") @lot.Unit</span><small>@lot.State · @(lot.Expiry ?? "Sin fecha")</small></div></li>
+            }
+            </ul>
+            @if (Model.LotAlerts.Count > 5) { <p class="muted small">Se muestran 5 de @Model.LotAlerts.Count alertas. Consulta Lotes para ver todas.</p> }
+        }
+    </section>
+</div>
+<p class="muted small dashboard-footnote">Actualizado al abrir esta página: @Formats.DateWithSeconds(Model.GeneratedAt) · hora UTC−6. <a asp-page="/Index">Actualizar resumen</a>. @(inventory ? "Los conteos y preparaciones no modifican existencias hasta completar su autorización." : "Resultados del día; las ventas anuladas se excluyen. Los pendientes e inventario muestran el estado actual.")</p>

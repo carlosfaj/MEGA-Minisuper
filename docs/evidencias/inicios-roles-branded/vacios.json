@@ -1,0 +1,11 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-15T21:33:09.905Z",
+  "casos": [
+    "Sin ventas del día",
+    "Sin pendientes propios",
+    "Umbral sin configurar",
+    "Cuatro indicadores en escritorio"
+  ],
+  "errores": []
+}

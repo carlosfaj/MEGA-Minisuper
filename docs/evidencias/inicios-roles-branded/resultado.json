@@ -1,0 +1,26 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-15T21:31:02.235Z",
+  "base": "Ficticia aislada",
+  "checks": [
+    "inventario sin desbordamiento a 320 px",
+    "inventario sin desbordamiento a 390 px",
+    "inventario sin desbordamiento a 768 px",
+    "inventario sin desbordamiento a 1024 px",
+    "inventario sin desbordamiento a 1440 px",
+    "administrador sin desbordamiento a 320 px",
+    "administrador sin desbordamiento a 390 px",
+    "administrador sin desbordamiento a 768 px",
+    "administrador sin desbordamiento a 1024 px",
+    "administrador sin desbordamiento a 1440 px",
+    "propietario sin desbordamiento a 320 px",
+    "propietario sin desbordamiento a 390 px",
+    "propietario sin desbordamiento a 768 px",
+    "propietario sin desbordamiento a 1024 px",
+    "propietario sin desbordamiento a 1440 px"
+  ],
+  "erroresInicio": [],
+  "consolaPreparacion": [],
+  "respuestasFallidas": [],
+  "solicitudesExternas": []
+}

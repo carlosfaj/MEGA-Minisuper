@@ -1,5 +1,11 @@
 # Historial de versiones de MEGA
 
+## 0.24.0 — 15 de noviembre de 2026 · rama frontend-branded
+
+- Adapta a la identidad de esta rama los inicios operativos implementados primero en main 0.23.0: Inventario con alertas y trabajo propio, Administrador con revisiones/caja y Propietario con resultados del día.
+- Comparte servicio, vista de datos y pruebas con la media fidelidad; conserva el inicio de Cajero, navegación y recursos de marca. Sin cambios de esquema, políticas o datos operativos.
+- 273 pruebas aprobadas y recorrido de las cuatro cuentas con base aislada, enlaces, restricciones y anchos de 320 a 1440 px. Evidencias en `docs/evidencias/inicios-roles-branded/`. Aprobación visual pendiente; sin fusionar esta rama con main.
+
 ## 0.23.0 — 15 de noviembre de 2026 · rama frontend-branded
 
 - Integra la identidad vigente de Figma: principal ovalado original, compacta minimalista v02, verde/crema/naranja, Nunito Sans y DynaPuff Bold locales, sin dependencias de red para usar la interfaz.

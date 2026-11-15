@@ -162,3 +162,9 @@ footer{font-size:12px;padding:16px 40px;color:var(--muted);border-top:0;gap:16px
 @media(max-width:370px){.field-grid{grid-template-columns:1fr}.basket{padding:20px 16px}.cart-line{gap:8px}.topbar-right{gap:8px}.welcome-banner>img{max-width:100%;height:auto}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 @media print{.sidebar,.topbar,.mobile-navigation,footer,.skip{display:none!important}.shell{margin:0!important}body{padding:0!important;background:white}main{padding:0;max-width:none}.card{break-inside:avoid}}
+
+/* Operational home: preserve four metrics and align panels after shared brand rules. */
+main .stats.dashboard-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+.dashboard-columns>.card{margin:0}
+@media(max-width:1150px){main .stats.dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){main .stats.dashboard-stats{grid-template-columns:minmax(0,1fr)}}

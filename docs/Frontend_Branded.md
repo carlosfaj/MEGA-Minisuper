@@ -1,5 +1,7 @@
 # Frontend branded de MEGA · 0.23.0
 
+Actualización posterior 0.24.0: [inicios operativos por rol](Inicios_por_Rol.md), implementados primero en main con media fidelidad y adaptados después a esta rama. Cajero conserva su bienvenida; Inventario, Administrador y Propietario reciben contenido distinto con datos persistidos. La aprobación visual permanece pendiente.
+
 Implementación en `feature/frontend-branded`, solicitada el 15 de noviembre de 2026. Se conserva `main` en 0.22.0; esta rama no se fusiona ni genera una etiqueta de main.
 
 ## Fuente y criterio visual

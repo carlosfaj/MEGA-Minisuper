@@ -4,9 +4,9 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-**Rama de revisión `feature/frontend-branded`, versión 0.23.0.** Integra el [frontend branded de Figma](docs/Frontend_Branded.md), con identidad local y navegación adaptable. Este trabajo permanece separado de `main`, que conserva 0.22.0.
+**Rama de revisión `feature/frontend-branded`, versión 0.24.0.** Integra el [frontend branded de Figma](docs/Frontend_Branded.md) y los [inicios operativos por rol](docs/Inicios_por_Rol.md), con identidad local y navegación adaptable. Este trabajo permanece separado de `main`, que conserva la media fidelidad en 0.23.0. Aprobación visual pendiente.
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión de `main` es **0.22.0**, con soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión de `main` es **0.23.0**, con inicios operativos por rol, soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -53,7 +53,7 @@ Módulos incorporados y sus instrucciones/evidencias:
 - [Valoración](docs/Valoracion.md), [condiciones comerciales](docs/Condiciones_Comerciales.md), [anulaciones](docs/Anulaciones.md), [auditoría](docs/Auditoria.md), [impresión](docs/Impresion.md), [gastos](docs/Gastos.md), [reportes](docs/Reportes.md), [correo](docs/Correo.md), [respaldos](docs/Respaldos.md) y [restauración/conciliación](docs/Restauracion.md).
 - [Conteos y lotes](docs/Conteos_y_Lotes.md) y [cargas, ajustes y salidas autorizadas](docs/Solicitudes_Inventario.md).
 
-La suite de esta rama contiene **266 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación. La integración Bluetooth está ensayada con puertos simulados; no acredita impresión en la unidad MP58-16 real.
+La suite de esta rama contiene **273 pruebas aprobadas**. Cada módulo incluye recorridos de navegador con bases aisladas. Los parámetros de negocio y periféricos reales siguen pendientes de aceptación. La integración Bluetooth está ensayada con puertos simulados; no acredita impresión en la unidad MP58-16 real.
 
 - `src/Mega.Web`: aplicación y copia del esquema corregido de 39 tablas.
 - `src/Mega.Web/App_Data/mega-demo.db`: base persistente de demostración, creada automáticamente; no se incluye en control de versiones.

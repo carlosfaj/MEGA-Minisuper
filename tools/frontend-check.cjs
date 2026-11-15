@@ -121,7 +121,7 @@ const fs = require('node:fs'), path = require('node:path'), assert = require('no
         await page.setViewportSize({width:1440,height:1120});
         await page.getByRole('button',{name:'Salir',exact:true}).click();
         await login('admin');
-        assert.equal(await page.getByRole('heading',{level:1}).innerText(),'Inicio de administración');
+        assert.equal(await page.getByRole('heading',{level:1}).innerText(),'Operación del día');
         assert.equal(await page.locator('.welcome-banner').count(),0);
         await shot('15_inicio_administracion');
         await page.getByRole('button',{name:'Salir',exact:true}).click();

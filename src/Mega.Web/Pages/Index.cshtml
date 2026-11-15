@@ -17,24 +17,8 @@
     </div>
     <section class="card quick-access"><h2>A la mano</h2><div class="button-row"><a class="button secondary" asp-page="/Ventas">Ventas del turno</a><a class="button primary" asp-page="/Caja">Mi caja</a></div></section>
 }
-@if (management)
+@if (Model.Dashboard is {} dashboard)
 {
-    <div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de administración</h1></div></div>
-    <section class="card table-card" aria-label="Áreas de administración"><div class="table-wrap"><table><thead><tr><th>Área</th><th>Tarea</th><th>Disponibilidad</th></tr></thead><tbody>
-        <tr><td><a asp-page="/Catalogo/Index">Catálogo</a></td><td>Productos, precios y proveedores</td><td>Según permisos</td></tr>
-        <tr><td><a asp-page="/Existencias">Inventario</a></td><td>Existencias y operaciones pendientes</td><td>Según permisos</td></tr>
-        <tr><td><a asp-page="/Reportes">Gestión</a></td><td>Reportes y autorizaciones</td><td>Según permisos</td></tr>
-    </tbody></table></div></section>
-    <div class="button-row home-actions"><a class="button secondary" asp-page="/Existencias">Existencias</a><a class="button secondary" asp-page="/Reportes">Reportes</a><a class="button secondary" asp-page="/Solicitudes/Index">Solicitudes por revisar</a><a class="button primary" asp-page="/Catalogo/Index">Productos</a></div>
-}
-else if(User.IsInRole("Inventario"))
-{
-    <div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de inventario</h1></div></div>
-    <section class="card table-card" aria-label="Áreas de inventario"><div class="table-wrap"><table><thead><tr><th>Área</th><th>Tarea</th><th>Alcance</th></tr></thead><tbody>
-        <tr><td><a asp-page="/Existencias">Existencias</a></td><td>Cantidades y alertas</td><td>Consulta</td></tr>
-        <tr><td><a asp-page="/Recepciones/Index">Recepciones</a></td><td>Preparar entrada</td><td>Requiere autorización</td></tr>
-        <tr><td><a asp-page="/Conteos/Index">Conteos físicos</a></td><td>Documentar diferencias</td><td>Sin aplicar ajuste</td></tr>
-    </tbody></table></div></section>
-    <div class="button-row home-actions"><a class="button secondary" asp-page="/Recepciones/Index">Recepciones</a><a class="button secondary" asp-page="/Conteos/Index">Conteos físicos</a><a class="button primary" asp-page="/Existencias">Existencias</a></div>
+    <partial name="_RoleDashboard" model="dashboard" />
 }
 <p class="muted small home-note">Solo se muestran las operaciones disponibles para tu cuenta.</p>
