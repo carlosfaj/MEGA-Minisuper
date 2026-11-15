@@ -72,6 +72,7 @@ builder.Services.AddSingleton<IPrintTransport>(services=>new LocalPrintTransport
 builder.Services.AddScoped<PrintQueue>();builder.Services.AddSingleton<PrintDispatcher>();builder.Services.AddHostedService<PrintWorker>();
 builder.Services.AddScoped<ExpenseService>();
 builder.Services.AddScoped<ReportService>();
+builder.Services.AddScoped<HomeDashboardService>();
 builder.Services.AddSingleton<OperationalFiles>();builder.Services.AddSingleton<ISecretVault,WindowsSecretVault>();
 builder.Services.AddScoped<MailConfiguration>();builder.Services.AddScoped<MailQueue>();builder.Services.AddSingleton<IMailTransport,MailTransport>();builder.Services.AddSingleton<MailDispatcher>();builder.Services.AddHostedService<MailWorker>();
 builder.Services.AddScoped<BackupArchive>();builder.Services.AddScoped<BackupService>();builder.Services.AddSingleton<BackupDispatcher>();builder.Services.AddHostedService<BackupWorker>();

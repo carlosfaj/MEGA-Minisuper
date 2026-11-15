@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.22.0",
-  "updatedAt": "2026-11-15T12:52:15Z",
+  "version": "0.23.0",
+  "updatedAt": "2026-11-15T21:25:22Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 255,
+  "testsPassed": 262,
   "tasks": [
     {
       "id": "BD",

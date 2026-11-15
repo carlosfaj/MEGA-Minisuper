@@ -1,5 +1,11 @@
 # Historial de versiones de MEGA
 
+## 0.23.0 — 15 de noviembre de 2026 · media fidelidad
+
+- Inicios distintos para Inventario, Administrador y Propietario, con datos persistidos de existencias, lotes, trabajo propio, autorizaciones, caja y resultados del día. Cajero conserva su inicio.
+- Acceso al registro pendiente correspondiente, revisión por otra cuenta, estados vacíos y avisos de umbral/costo desconocido. Resultados reutiliza los cálculos y alcances de Reportes; no se modifican existencias desde Inicio.
+- Conserva el prototipo de media fidelidad de main. Compilación sin advertencias, 262 pruebas aprobadas y recorrido de escritorio/móvil con base aislada; alcance y evidencias en `docs/Inicios_por_Rol.md`. Aprobación visual pendiente.
+
 ## 0.22.0 — 15 de noviembre de 2026
 
 - Soporte optativo de MP58-16 por Bluetooth clásico mediante puerto COM saliente y ESC/POS: 32 columnas, español PC850, envío fragmentado y aperturas/escrituras con espera limitada. Compatibilidad y papel pendientes de ensayo en la unidad real.
