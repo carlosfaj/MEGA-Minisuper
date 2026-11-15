@@ -3,7 +3,7 @@
 @using Mega.Web.Services
 @{ViewData["Title"]="Recuperación";var pending=Model.Rows.FirstOrDefault(x=>x.Id==Model.State.RestorationId&&x.NucleoReabiertoEn==null);}
 <div class="page-heading"><div><div class="eyebrow">CONTINUIDAD · PROPIETARIO</div><h1>Recuperación</h1><p>Recupera una copia comprobada y revisa las novedades antes de reabrir la operación.</p></div></div>
-<div asp-validation-summary="All" class="validation" role="alert"></div>
+@if (!ViewData.ModelState.IsValid) { <div asp-validation-summary="All" class="alert error" role="alert"></div> }
 @if(TempData["Message"] is string message){<div class="alert info" role="status">@message</div>}
 @if(pending is not null){
 <section class="card recovery-card"><h2>Operación pausada para conciliar</h2><p>Intervención #@pending.Id. La base fue comprobada. Los trabajos recuperados de impresión y correo están retenidos y no se enviarán automáticamente.</p><p>Las operaciones posteriores al punto recuperado permanecen en la preservación. Debes revisar su efecto real en inventario, efectivo y documentos; la recuperación no las vuelve a registrar.</p>

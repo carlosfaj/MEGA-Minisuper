@@ -1,0 +1,7944 @@
+{
+  "estado": "Aprobado",
+  "fecha": "2026-11-15T20:34:52.411Z",
+  "version": "0.23.0",
+  "datos": "Ficticios; base aislada; sin impresión física ni envío de correos",
+  "checks": [
+    "Acceso, error de credenciales, identidad y permisos de cajero",
+    "Menú 248/80 px, grupos, panel relacionado, Escape y preferencia tras navegar",
+    "Anchos 320/390/768/1024/1440, menú móvil, foco, Escape y acceso rápido fijo",
+    "Apertura 480, venta arroz/leche 86, pago insuficiente, recibido 100/cambio 14, caja 566 y cierre 560",
+    "Inicio por rol y todas las rutas del menú de propietario en escritorio y móvil: 21"
+  ],
+  "routes": [
+    "/",
+    "/Anulaciones",
+    "/Impresiones",
+    "/Existencias",
+    "/Recepciones",
+    "/Conteos",
+    "/Lotes",
+    "/Solicitudes",
+    "/Catalogo",
+    "/Comercial",
+    "/Proveedores",
+    "/Reportes",
+    "/Gastos",
+    "/Configuracion",
+    "/Correos",
+    "/Respaldos",
+    "/Bitacora",
+    "/Recuperacion",
+    "/Cuentas",
+    "/MiCuenta",
+    "/Proyecto"
+  ],
+  "erroresJavaScript": [],
+  "erroresConsola": [],
+  "respuestasFallidas": [],
+  "solicitudesExternas": [],
+  "geometriaRecursos": [
+    {
+      "page": "/Acceso",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 480,
+          "height": 255,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 320,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 240,
+          "height": 127.5,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 240,
+          "height": 127.5,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 768,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 320,
+          "height": 170,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 1024,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 448,
+          "height": 238,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 480,
+          "height": 255,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Acceso",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo-negative.svg",
+          "loaded": true,
+          "width": 480,
+          "height": 255,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/mascot.svg",
+          "loaded": true,
+          "width": 280,
+          "height": 280,
+          "naturalWidth": 280,
+          "naturalHeight": 280
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/compact.svg",
+          "loaded": true,
+          "width": 56,
+          "height": 56,
+          "naturalWidth": 56,
+          "naturalHeight": 56
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/mascot.svg",
+          "loaded": true,
+          "width": 280,
+          "height": 280,
+          "naturalWidth": 280,
+          "naturalHeight": 280
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/mascot.svg",
+          "loaded": true,
+          "width": 280,
+          "height": 280,
+          "naturalWidth": 280,
+          "naturalHeight": 280
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 320,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 768,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 1024,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Venta",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Comprobante/1",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/logo-receipt.svg",
+          "loaded": true,
+          "width": 170,
+          "height": 91,
+          "naturalWidth": 170,
+          "naturalHeight": 91
+        },
+        {
+          "src": "/brand/receipt-art.svg",
+          "loaded": true,
+          "width": 51,
+          "height": 77.25,
+          "naturalWidth": 51,
+          "naturalHeight": 77
+        }
+      ]
+    },
+    {
+      "page": "/Comprobante/1",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/logo-receipt.svg",
+          "loaded": true,
+          "width": 170,
+          "height": 91,
+          "naturalWidth": 170,
+          "naturalHeight": 91
+        },
+        {
+          "src": "/brand/receipt-art.svg",
+          "loaded": true,
+          "width": 51,
+          "height": 77.25,
+          "naturalWidth": 51,
+          "naturalHeight": 77
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Existencias",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Existencias",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/cart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/cash.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/mascot.svg",
+          "loaded": true,
+          "width": 280,
+          "height": 280,
+          "naturalWidth": 280,
+          "naturalHeight": 280
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Anulaciones",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Anulaciones",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Impresiones",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Impresiones",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Existencias",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Existencias",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Recepciones",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Recepciones",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Conteos",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Conteos",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Lotes",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Lotes",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Solicitudes",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Solicitudes",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Catalogo",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Catalogo",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Comercial",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Comercial",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Proveedores",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Proveedores",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Reportes",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Reportes",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Gastos",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Gastos",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Configuracion",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Configuracion",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Correos",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Correos",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Respaldos",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Respaldos",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Bitacora",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Bitacora",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Recuperacion",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Recuperacion",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Cuentas",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Cuentas",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/MiCuenta",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/MiCuenta",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Proyecto",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Proyecto",
+      "viewport": 390,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 92,
+          "height": 48.875,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        }
+      ]
+    },
+    {
+      "page": "/Catalogo",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/logo.svg",
+          "loaded": true,
+          "width": 120,
+          "height": 63.75,
+          "naturalWidth": 1600,
+          "naturalHeight": 850
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/chevron.svg",
+          "loaded": true,
+          "width": 16,
+          "height": 16,
+          "naturalWidth": 16,
+          "naturalHeight": 16
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    },
+    {
+      "page": "/Catalogo",
+      "viewport": 1440,
+      "assets": [
+        {
+          "src": "/brand/compact.svg",
+          "loaded": true,
+          "width": 56,
+          "height": 56,
+          "naturalWidth": 56,
+          "naturalHeight": 56
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/home.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/receipt.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/box.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/tag.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/arrow.svg",
+          "loaded": true,
+          "width": 20,
+          "height": 20,
+          "naturalWidth": 20,
+          "naturalHeight": 20
+        },
+        {
+          "src": "/brand/chart.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/settings.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        },
+        {
+          "src": "/brand/account.svg",
+          "loaded": true,
+          "width": 21,
+          "height": 18.5,
+          "naturalWidth": 21,
+          "naturalHeight": 19
+        },
+        {
+          "src": "/brand/available.svg",
+          "loaded": true,
+          "width": 6,
+          "height": 6,
+          "naturalWidth": 6,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/brand/logout.svg",
+          "loaded": true,
+          "width": 24,
+          "height": 24,
+          "naturalWidth": 24,
+          "naturalHeight": 24
+        }
+      ]
+    }
+  ]
+}

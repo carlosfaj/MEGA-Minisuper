@@ -1,9 +1,9 @@
 {
   "name": "MEGA · Cuarto corte",
-  "version": "0.22.0",
-  "updatedAt": "2026-11-15T12:52:15Z",
+  "version": "0.23.0",
+  "updatedAt": "2026-11-15T20:33:30Z",
   "methodology": "Porcentaje = criterios completados / criterios totales. Cada criterio tiene el mismo peso. No representa tiempo restante ni aceptación del negocio.",
-  "testsPassed": 255,
+  "testsPassed": 266,
   "tasks": [
     {
       "id": "BD",
@@ -1176,6 +1176,38 @@
           "label": "Actualización y registro en GitHub",
           "done": true,
           "evidence": "docs/evidencias/kanban/resultado.json"
+        }
+      ]
+    },
+    {
+      "id": "FRONTEND",
+      "title": "Frontend branded de Figma",
+      "area": "Software",
+      "lane": "completado",
+      "dependsOn": [
+        "ACCESO",
+        "VENTA",
+        "CAJA"
+      ],
+      "blocker": null,
+      "criteria": [
+        {
+          "id": "1",
+          "label": "Identidad vigente y recursos originales locales integrados",
+          "done": true,
+          "evidence": "docs/Frontend_Branded.md"
+        },
+        {
+          "id": "2",
+          "label": "Navegación por rol, compacta y móvil comprobada",
+          "done": true,
+          "evidence": "docs/evidencias/frontend-branded/resultado.json"
+        },
+        {
+          "id": "3",
+          "label": "Regresión funcional, visual y rama separada verificadas",
+          "done": true,
+          "evidence": "docs/Frontend_Branded.md"
         }
       ]
     }

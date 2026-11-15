@@ -1,11 +1,40 @@
 @page
 @model Mega.Web.Pages.IndexModel
 @using Mega.Web.Services
-@{ViewData["Title"]="Inicio";}
-<div class="page-heading"><div><span class="eyebrow">TU ESPACIO DE TRABAJO</span><h1>Todo listo para empezar.</h1><p class="muted">Elige una tarea para continuar con la operación.</p></div><span class="badge success"><span class="status-dot"></span> Servicio disponible</span></div>
-@if(Model.Cash is {} cash){
-<div class="stats"><div class="card stat"><span>Mi turno</span><strong>@(cash.Shift is null?"Sin abrir":"Abierto")</strong><small>@(cash.Shift is null?"Abre caja para comenzar a vender.":$"T-{cash.Shift.Id:0000} · fondo {Formats.Money(cash.Shift.FondoRealCentavos)}")</small></div><div class="card stat"><span>Ventas netas en efectivo</span><strong>@Formats.Money(cash.Net)</strong><small>Del turno propio actual</small></div><div class="card stat"><span>Efectivo esperado</span><strong>@Formats.Money(cash.Expected)</strong><small>Fondo real más ventas netas</small></div></div>
-<div class="section-heading"><h2>Accesos rápidos</h2><span class="muted">Tu caja y tus ventas</span></div><div class="action-grid"><a class="card action-card featured" asp-page="/Venta"><span class="tile-icon">＋</span><h2>Nueva venta</h2><p>Prepara la compra y registra el cobro en efectivo.</p><span>Comenzar venta →</span></a><a class="card action-card" asp-page="/Caja"><span class="tile-icon">▤</span><h2>Mi caja</h2><p>Abre tu turno, revisa el efectivo o prepara el cierre.</p><span>Revisar caja →</span></a><a class="card action-card" asp-page="/Ventas"><span class="tile-icon">≡</span><h2>Ventas del turno</h2><p>Consulta ventas confirmadas y sus comprobantes.</p><span>Ver ventas →</span></a></div>
+@{ ViewData["Title"] = "Inicio"; var management = User.IsInRole("Administrador") || User.IsInRole("Propietario"); }
+@if (Model.Cash is {} cash)
+{
+    <div class="page-heading"><div><span class="eyebrow">TU TIENDA, EN ORDEN</span><h1>¡Todo listo para tu turno!</h1><p class="muted">Elige una tarea y sigue con tu día.</p></div></div>
+    <section class="welcome-banner">
+        <div><h2>Aquí empieza<br />un buen día.</h2><p>Tu caja, tus ventas y cada detalle en orden.</p><a class="button accent" asp-page="/Venta">Nueva venta</a></div>
+        <img src="~/brand/mascot.svg" alt="" />
+    </section>
+    <div class="stats home-stats">
+        <div class="card stat"><span>Turno activo</span><strong>@(cash.Shift is null ? "Sin abrir" : $"T-{cash.Shift.Id:0000}")</strong>@if(cash.Shift is null){<small>Abre caja para comenzar a vender.</small>}</div>
+        <div class="card stat"><span>Fondo real</span><strong>@Formats.Money(cash.Shift?.FondoRealCentavos ?? 0)</strong></div>
+        <div class="card stat"><span>Ventas netas en efectivo</span><strong>@Formats.Money(cash.Net)</strong></div>
+        <div class="card stat"><span>Efectivo esperado</span><strong>@Formats.Money(cash.Expected)</strong></div>
+    </div>
+    <section class="card quick-access"><h2>A la mano</h2><div class="button-row"><a class="button secondary" asp-page="/Ventas">Ventas del turno</a><a class="button primary" asp-page="/Caja">Mi caja</a></div></section>
 }
-@if(User.IsInRole("Inventario") || User.IsInRole("Administrador") || User.IsInRole("Propietario")){<div class="card callout"><div><h2>Existencias del negocio</h2><p class="muted">Consulta cantidades y alertas a partir de los movimientos registrados.</p></div><a class="button secondary" asp-page="/Existencias">Consultar existencias →</a></div>}
-<div class="alert info"><strong>Operación local.</strong> Las operaciones registradas conservan responsables e historia. Consulta las tareas disponibles en el menú de tu cuenta.</div>
+@if (management)
+{
+    @if(Model.Cash is null){<div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de administración</h1></div></div>}
+    <section class="card table-card" aria-label="Áreas de administración"><div class="table-wrap"><table><thead><tr><th>Área</th><th>Tarea</th><th>Disponibilidad</th></tr></thead><tbody>
+        <tr><td><a asp-page="/Catalogo/Index">Catálogo</a></td><td>Productos, precios y proveedores</td><td>Según permisos</td></tr>
+        <tr><td><a asp-page="/Existencias">Inventario</a></td><td>Existencias y operaciones pendientes</td><td>Según permisos</td></tr>
+        <tr><td><a asp-page="/Reportes">Gestión</a></td><td>Reportes y autorizaciones</td><td>Según permisos</td></tr>
+    </tbody></table></div></section>
+    <div class="button-row home-actions"><a class="button secondary" asp-page="/Existencias">Existencias</a><a class="button secondary" asp-page="/Reportes">Reportes</a><a class="button secondary" asp-page="/Solicitudes/Index">Solicitudes por revisar</a><a class="button primary" asp-page="/Catalogo/Index">Productos</a></div>
+}
+else if(User.IsInRole("Inventario"))
+{
+    <div class="page-heading"><div><span class="eyebrow">INICIO</span><h1>Inicio de inventario</h1></div></div>
+    <section class="card table-card" aria-label="Áreas de inventario"><div class="table-wrap"><table><thead><tr><th>Área</th><th>Tarea</th><th>Alcance</th></tr></thead><tbody>
+        <tr><td><a asp-page="/Existencias">Existencias</a></td><td>Cantidades y alertas</td><td>Consulta</td></tr>
+        <tr><td><a asp-page="/Recepciones/Index">Recepciones</a></td><td>Preparar entrada</td><td>Requiere autorización</td></tr>
+        <tr><td><a asp-page="/Conteos/Index">Conteos físicos</a></td><td>Documentar diferencias</td><td>Sin aplicar ajuste</td></tr>
+    </tbody></table></div></section>
+    <div class="button-row home-actions"><a class="button secondary" asp-page="/Recepciones/Index">Recepciones</a><a class="button secondary" asp-page="/Conteos/Index">Conteos físicos</a><a class="button primary" asp-page="/Existencias">Existencias</a></div>
+}
+<p class="muted small home-note">Solo se muestran las operaciones disponibles para tu cuenta.</p>

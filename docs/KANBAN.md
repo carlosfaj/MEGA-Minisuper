@@ -1,7 +1,7 @@
 # Kanban de MEGA
 
-**Avance global: 83.5% — 111/133 criterios.**
-Versión 0.22.0 · actualizado 2026-11-15T12:52:15Z · 255 pruebas aprobadas.
+**Avance global: 83.8% — 114/136 criterios.**
+Versión 0.23.0 · actualizado 2026-11-15T20:33:30Z · 266 pruebas aprobadas.
 
 [Abrir tablero interactivo local](https://localhost:7248/Proyecto)
 
@@ -11,7 +11,7 @@ Porcentaje = criterios completados / criterios totales. Cada criterio tiene el m
 
 | Área | Criterios | Avance |
 |---|---|---|
-| Software | 83/83 | 100% |
+| Software | 86/86 | 100% |
 | Calidad | 10/13 | 76.9% |
 | Entrega | 6/11 | 54.5% |
 | Documentación | 10/19 | 52.6% |
@@ -312,3 +312,11 @@ Depende de: BACKUP, PRINT, CORREO.
 - [x] Tablero de todo el alcance ([evidencia](../docs/evidencias/kanban/resultado.json))
 - [x] Porcentajes calculados y filtros comprobados ([evidencia](../docs/evidencias/kanban/resultado.json))
 - [x] Actualización y registro en GitHub ([evidencia](../docs/evidencias/kanban/resultado.json))
+### FRONTEND · Frontend branded de Figma — 100%
+
+Área: Software.
+Depende de: ACCESO, VENTA, CAJA.
+
+- [x] Identidad vigente y recursos originales locales integrados ([evidencia](../docs/Frontend_Branded.md))
+- [x] Navegación por rol, compacta y móvil comprobada ([evidencia](../docs/evidencias/frontend-branded/resultado.json))
+- [x] Regresión funcional, visual y rama separada verificadas ([evidencia](../docs/Frontend_Branded.md))

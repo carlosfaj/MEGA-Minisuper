@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cart">
+<path id="Vector" d="M3 3H5L7.4 14.5C7.51338 14.94 7.77322 15.3284 8.13675 15.601C8.50028 15.8736 8.94582 16.0144 9.4 16H18C18.4679 16.0094 18.9243 15.8545 19.2897 15.5621C19.6552 15.2698 19.9065 14.8586 20 14.4L21 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#F7F0DD"/>
+<path id="Vector_2" d="M11 21C11 21.5523 10.5523 22 10 22C9.44772 22 9 21.5523 9 21C9 20.4477 9.44772 20 10 20C10.5523 20 11 20.4477 11 21Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#F7F0DD"/>
+<path id="Vector_3" d="M19 21C19 21.5523 18.5523 22 18 22C17.4477 22 17 21.5523 17 21C17 20.4477 17.4477 20 18 20C18.5523 20 19 20.4477 19 21Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#F7F0DD"/>
+</g>
+</svg>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="7ec25957-bc47-43cd-af3c-4ad74b5d28c5" name="SOF.IA@SOFTIA 2026-11-15 14:34:09" runUser="SOFTIA\SOF.IA" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-15T14:34:09.2014286-06:00" queuing="2026-11-15T14:34:09.2014292-06:00" start="2026-11-15T14:34:08.4284320-06:00" finish="2026-11-15T14:34:13.0477754-06:00" />
+  <TestSettings name="default" id="8015b66f-2f43-4046-aa6f-0769a7299508">
+    <Deployment runDeploymentRoot="SOF.IA_SOFTIA_2026-11-15_14_34_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f876f395-288b-4062-b9ad-951ea85596d0" testId="f2aad828-4eb0-4fb0-6673-a2db90a15deb" testName="Mega.Tests.ProjectBoardTests.changing_the_tracking_source_refreshes_progress_without_restart" computerName="SOFTIA" duration="00:00:00.4797773" startTime="2026-11-15T14:34:12.4888188-06:00" endTime="2026-11-15T14:34:12.9685613-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f876f395-288b-4062-b9ad-951ea85596d0" />
+    <UnitTestResult executionId="fead0bcf-a901-4010-875a-5ca289eb7158" testId="09e2a378-938a-78b0-51d2-8eb32dd915b7" testName="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Administrador&quot;, cash: False)" computerName="SOFTIA" duration="00:00:00.0000259" startTime="2026-11-15T14:34:09.1624067-06:00" endTime="2026-11-15T14:34:09.1624442-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fead0bcf-a901-4010-875a-5ca289eb7158" />
+    <UnitTestResult executionId="113e4e81-6c60-4c0f-9a50-bf70d7cdbb37" testId="4a699aba-46a5-69e9-d9f3-f1f74f109aff" testName="Mega.Tests.ProjectBoardTests.authenticated_board_and_refresh_are_available_to_commercial_accounts" computerName="SOFTIA" duration="00:00:02.8124650" startTime="2026-11-15T14:34:09.1284626-06:00" endTime="2026-11-15T14:34:11.9307449-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="113e4e81-6c60-4c0f-9a50-bf70d7cdbb37" />
+    <UnitTestResult executionId="7778f1c2-a02d-4567-8bfb-3d6a647a07b1" testId="cc065e48-a07d-206e-f7e4-df73ca41c392" testName="Mega.Tests.ProjectBoardTests.real_plan_includes_software_quality_docs_delivery_and_business_validation" computerName="SOFTIA" duration="00:00:00.5567128" startTime="2026-11-15T14:34:11.9317413-06:00" endTime="2026-11-15T14:34:12.4885756-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7778f1c2-a02d-4567-8bfb-3d6a647a07b1" />
+    <UnitTestResult executionId="171bb0fb-c536-46c7-9734-967290503588" testId="e722864e-b6d3-eeb3-7032-8a21ee50c569" testName="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Cajero&quot;, cash: True)" computerName="SOFTIA" duration="00:00:00.0001988" startTime="2026-11-15T14:34:09.1293034-06:00" endTime="2026-11-15T14:34:09.1293369-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="171bb0fb-c536-46c7-9734-967290503588" />
+    <UnitTestResult executionId="83e86011-25e1-4e35-a4e8-997bcc974b47" testId="71737fa0-c6da-7e1c-7c06-e6c2edc526b5" testName="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Cajero&quot;, delegated: False, inventory: False, accounts: False)" computerName="SOFTIA" duration="00:00:00.0000069" startTime="2026-11-15T14:34:09.1289769-06:00" endTime="2026-11-15T14:34:09.1290105-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83e86011-25e1-4e35-a4e8-997bcc974b47" />
+    <UnitTestResult executionId="6bf320af-2db0-42a8-91bb-217a11fc3748" testId="55e7c79f-7578-e8b9-5c31-c04d1ce072df" testName="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Cajero&quot;, cash: False)" computerName="SOFTIA" duration="00:00:00.0002321" startTime="2026-11-15T14:34:09.1292041-06:00" endTime="2026-11-15T14:34:09.1292376-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6bf320af-2db0-42a8-91bb-217a11fc3748" />
+    <UnitTestResult executionId="81039e75-443f-4b05-8558-1fc279670b0e" testId="991fce7b-5f67-84eb-5969-160a011e17b9" testName="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Inventario&quot;, delegated: False, inventory: True, accounts: False)" computerName="SOFTIA" duration="00:00:00.0003766" startTime="2026-11-15T14:34:09.1272528-06:00" endTime="2026-11-15T14:34:09.1285085-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81039e75-443f-4b05-8558-1fc279670b0e" />
+    <UnitTestResult executionId="25a9de5c-eced-4611-94e1-fd174b5c1698" testId="dc14ecea-99fe-dc9b-5562-b9b6b4a26ad2" testName="Mega.Tests.ProjectBoardTests.partial_card_cannot_be_completed_and_each_criterion_counts_once" computerName="SOFTIA" duration="00:00:00.0107749" startTime="2026-11-15T14:34:09.1000008-06:00" endTime="2026-11-15T14:34:09.1199809-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25a9de5c-eced-4611-94e1-fd174b5c1698" />
+    <UnitTestResult executionId="ebf9e2a4-1dc8-429e-b3d0-de9a6179c87a" testId="06a30caa-1675-b17e-4e2a-2b6966b0f75e" testName="Mega.Tests.NavigationTests.Temporary_support_has_only_its_own_navigation" computerName="SOFTIA" duration="00:00:00.0125820" startTime="2026-11-15T14:34:09.1625421-06:00" endTime="2026-11-15T14:34:09.1625739-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ebf9e2a4-1dc8-429e-b3d0-de9a6179c87a" />
+    <UnitTestResult executionId="2d1382eb-fb5d-4fd5-97d2-e3412555a17f" testId="b3dd4364-ad60-e709-bb80-3050271f78ab" testName="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Administrador&quot;, delegated: False, inventory: True, accounts: False)" computerName="SOFTIA" duration="00:00:00.0000186" startTime="2026-11-15T14:34:09.1290694-06:00" endTime="2026-11-15T14:34:09.1291015-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d1382eb-fb5d-4fd5-97d2-e3412555a17f" />
+    <UnitTestResult executionId="73d37a61-258a-42fc-8267-d2800249f59d" testId="2ec73261-5cc6-be3c-9a81-90e722fdb127" testName="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Administrador&quot;, cash: True)" computerName="SOFTIA" duration="00:00:00.0000392" startTime="2026-11-15T14:34:09.1620476-06:00" endTime="2026-11-15T14:34:09.1621383-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73d37a61-258a-42fc-8267-d2800249f59d" />
+    <UnitTestResult executionId="235bac21-00b2-41bc-bc49-2069decab3f0" testId="16df9e4b-4334-a2bf-c8b4-1a75a310ec02" testName="Mega.Tests.NavigationTests.Detail_page_selects_its_area_without_selecting_home" computerName="SOFTIA" duration="00:00:00.0022865" startTime="2026-11-15T14:34:09.1626480-06:00" endTime="2026-11-15T14:34:09.1626780-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="235bac21-00b2-41bc-bc49-2069decab3f0" />
+    <UnitTestResult executionId="57f989db-75d1-4636-b2ac-e4ace9c1042d" testId="4055021b-6961-afa3-b081-790a9d283bcc" testName="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Propietario&quot;, delegated: False, inventory: True, accounts: True)" computerName="SOFTIA" duration="00:00:00.0088159" startTime="2026-11-15T14:34:09.0985121-06:00" endTime="2026-11-15T14:34:09.1151300-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57f989db-75d1-4636-b2ac-e4ace9c1042d" />
+    <UnitTestResult executionId="90c9235d-4372-412c-8087-9873ee6cbfce" testId="633b6d46-a60a-b8bf-ac19-8e3cc0e6778f" testName="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Administrador&quot;, delegated: True, inventory: True, accounts: True)" computerName="SOFTIA" duration="00:00:00.0000160" startTime="2026-11-15T14:34:09.1288592-06:00" endTime="2026-11-15T14:34:09.1289003-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90c9235d-4372-412c-8087-9873ee6cbfce" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Cajero&quot;, cash: True)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="e722864e-b6d3-eeb3-7032-8a21ee50c569">
+      <Execution id="171bb0fb-c536-46c7-9734-967290503588" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Cash_shortcuts_require_the_operational_claim" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Administrador&quot;, cash: True)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="2ec73261-5cc6-be3c-9a81-90e722fdb127">
+      <Execution id="73d37a61-258a-42fc-8267-d2800249f59d" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Cash_shortcuts_require_the_operational_claim" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Temporary_support_has_only_its_own_navigation" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="06a30caa-1675-b17e-4e2a-2b6966b0f75e">
+      <Execution id="ebf9e2a4-1dc8-429e-b3d0-de9a6179c87a" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Temporary_support_has_only_its_own_navigation" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Administrador&quot;, delegated: True, inventory: True, accounts: True)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="633b6d46-a60a-b8bf-ac19-8e3cc0e6778f">
+      <Execution id="90c9235d-4372-412c-8087-9873ee6cbfce" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Navigation_preserves_role_and_delegation_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Administrador&quot;, delegated: False, inventory: True, accounts: False)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="b3dd4364-ad60-e709-bb80-3050271f78ab">
+      <Execution id="2d1382eb-fb5d-4fd5-97d2-e3412555a17f" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Navigation_preserves_role_and_delegation_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.ProjectBoardTests.changing_the_tracking_source_refreshes_progress_without_restart" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="f2aad828-4eb0-4fb0-6673-a2db90a15deb">
+      <Execution id="f876f395-288b-4062-b9ad-951ea85596d0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.ProjectBoardTests" name="changing_the_tracking_source_refreshes_progress_without_restart" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.ProjectBoardTests.partial_card_cannot_be_completed_and_each_criterion_counts_once" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="dc14ecea-99fe-dc9b-5562-b9b6b4a26ad2">
+      <Execution id="25a9de5c-eced-4611-94e1-fd174b5c1698" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.ProjectBoardTests" name="partial_card_cannot_be_completed_and_each_criterion_counts_once" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.ProjectBoardTests.authenticated_board_and_refresh_are_available_to_commercial_accounts" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="4a699aba-46a5-69e9-d9f3-f1f74f109aff">
+      <Execution id="113e4e81-6c60-4c0f-9a50-bf70d7cdbb37" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.ProjectBoardTests" name="authenticated_board_and_refresh_are_available_to_commercial_accounts" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Cajero&quot;, delegated: False, inventory: False, accounts: False)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="71737fa0-c6da-7e1c-7c06-e6c2edc526b5">
+      <Execution id="83e86011-25e1-4e35-a4e8-997bcc974b47" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Navigation_preserves_role_and_delegation_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Propietario&quot;, delegated: False, inventory: True, accounts: True)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="4055021b-6961-afa3-b081-790a9d283bcc">
+      <Execution id="57f989db-75d1-4636-b2ac-e4ace9c1042d" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Navigation_preserves_role_and_delegation_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.ProjectBoardTests.real_plan_includes_software_quality_docs_delivery_and_business_validation" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="cc065e48-a07d-206e-f7e4-df73ca41c392">
+      <Execution id="7778f1c2-a02d-4567-8bfb-3d6a647a07b1" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.ProjectBoardTests" name="real_plan_includes_software_quality_docs_delivery_and_business_validation" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Administrador&quot;, cash: False)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="09e2a378-938a-78b0-51d2-8eb32dd915b7">
+      <Execution id="fead0bcf-a901-4010-875a-5ca289eb7158" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Cash_shortcuts_require_the_operational_claim" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Cash_shortcuts_require_the_operational_claim(role: &quot;Cajero&quot;, cash: False)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="55e7c79f-7578-e8b9-5c31-c04d1ce072df">
+      <Execution id="6bf320af-2db0-42a8-91bb-217a11fc3748" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Cash_shortcuts_require_the_operational_claim" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Navigation_preserves_role_and_delegation_boundaries(role: &quot;Inventario&quot;, delegated: False, inventory: True, accounts: False)" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="991fce7b-5f67-84eb-5969-160a011e17b9">
+      <Execution id="81039e75-443f-4b05-8558-1fc279670b0e" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Navigation_preserves_role_and_delegation_boundaries" />
+    </UnitTest>
+    <UnitTest name="Mega.Tests.NavigationTests.Detail_page_selects_its_area_without_selecting_home" storage="c:\users\sof.ia\documents\uni 2026 2s\ingenieria de software\proyecto\01_desarrollo\mega\tests\mega.tests\bin\release\net10.0\mega.tests.dll" id="16df9e4b-4334-a2bf-c8b4-1a75a310ec02">
+      <Execution id="235bac21-00b2-41bc-bc49-2069decab3f0" />
+      <TestMethod codeBase="C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\tests\Mega.Tests\bin\Release\net10.0\Mega.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Mega.Tests.NavigationTests" name="Detail_page_selects_its_area_without_selecting_home" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f2aad828-4eb0-4fb0-6673-a2db90a15deb" executionId="f876f395-288b-4062-b9ad-951ea85596d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09e2a378-938a-78b0-51d2-8eb32dd915b7" executionId="fead0bcf-a901-4010-875a-5ca289eb7158" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4a699aba-46a5-69e9-d9f3-f1f74f109aff" executionId="113e4e81-6c60-4c0f-9a50-bf70d7cdbb37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc065e48-a07d-206e-f7e4-df73ca41c392" executionId="7778f1c2-a02d-4567-8bfb-3d6a647a07b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e722864e-b6d3-eeb3-7032-8a21ee50c569" executionId="171bb0fb-c536-46c7-9734-967290503588" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71737fa0-c6da-7e1c-7c06-e6c2edc526b5" executionId="83e86011-25e1-4e35-a4e8-997bcc974b47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55e7c79f-7578-e8b9-5c31-c04d1ce072df" executionId="6bf320af-2db0-42a8-91bb-217a11fc3748" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="991fce7b-5f67-84eb-5969-160a011e17b9" executionId="81039e75-443f-4b05-8558-1fc279670b0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc14ecea-99fe-dc9b-5562-b9b6b4a26ad2" executionId="25a9de5c-eced-4611-94e1-fd174b5c1698" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06a30caa-1675-b17e-4e2a-2b6966b0f75e" executionId="ebf9e2a4-1dc8-429e-b3d0-de9a6179c87a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3dd4364-ad60-e709-bb80-3050271f78ab" executionId="2d1382eb-fb5d-4fd5-97d2-e3412555a17f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2ec73261-5cc6-be3c-9a81-90e722fdb127" executionId="73d37a61-258a-42fc-8267-d2800249f59d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16df9e4b-4334-a2bf-c8b4-1a75a310ec02" executionId="235bac21-00b2-41bc-bc49-2069decab3f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4055021b-6961-afa3-b081-790a9d283bcc" executionId="57f989db-75d1-4636-b2ac-e4ace9c1042d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="633b6d46-a60a-b8bf-ac19-8e3cc0e6778f" executionId="90c9235d-4372-412c-8087-9873ee6cbfce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)&#xD;
+[xUnit.net 00:00:00.09]   Discovering: Mega.Tests&#xD;
+[xUnit.net 00:00:00.16]   Discovered:  Mega.Tests&#xD;
+[xUnit.net 00:00:00.19]   Starting:    Mega.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\SOF.IA\Documents\UNI 2026 2S\Ingenieria de software\Proyecto\01_DESARROLLO\MEGA\src\Mega.Web&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:04.08]   Finished:    Mega.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,5 +1,13 @@
 # Historial de versiones de MEGA
 
+## 0.23.0 — 15 de noviembre de 2026 · rama frontend-branded
+
+- Integra la identidad vigente de Figma: principal ovalado original, compacta minimalista v02, verde/crema/naranja, Nunito Sans y DynaPuff Bold locales, sin dependencias de red para usar la interfaz.
+- Navegación por áreas y rol, vistas de 248/80 px, panel relacionado, preferencia de tamaño, navegación móvil y control de foco/teclado.
+- Acceso, bienvenida e inicios por rol, comprobante y componentes de formularios, productos, tablas y estados alineados con el diseño. Los importes y las operaciones siguen siendo dinámicos.
+- Evita emitir resúmenes de validación vacíos que el framework convierte en estilos en línea bloqueados por la política de seguridad existente.
+- 266/266 pruebas y recorrido de Edge con datos ficticios aislados; evidencia y alcance en `docs/Frontend_Branded.md`. Esta versión permanece en `feature/frontend-branded`, sin merge, etiqueta ni push a main.
+
 ## 0.22.0 — 15 de noviembre de 2026
 
 - Soporte optativo de MP58-16 por Bluetooth clásico mediante puerto COM saliente y ESC/POS: 32 columnas, español PC850, envío fragmentado y aperturas/escrituras con espera limitada. Compatibilidad y papel pendientes de ensayo en la unidad real.

@@ -6,3 +6,5 @@
 # Mantener las huellas de procedencia de las fuentes académicas.
 src/Mega.Web/Data/Schema.sql -text
 src/Mega.Web/Data/Modelo_Datos_MEGA.json -text
+# Conservar exactamente los recursos originales y sus huellas de procedencia.
+src/Mega.Web/wwwroot/brand/*.svg -text whitespace=cr-at-eol

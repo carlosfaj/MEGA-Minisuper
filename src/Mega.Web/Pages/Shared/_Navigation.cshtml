@@ -1,0 +1,28 @@
+@model Mega.Web.Presentation.Navigation
+<nav id="navigation" class="work-navigation" aria-label="Navegación principal">
+    <div class="nav-shortcuts">
+        @foreach (var link in Model.Shortcuts)
+        {
+            <a asp-page="@link.Page" class="nav-link @(link.Primary ? "nav-primary" : "") @(Model.IsActive(link) ? "active" : "")" aria-current="@(Model.IsActive(link) ? "page" : null)" title="@link.Label">
+                <span class="nav-icon"><img src="~/brand/@(link.Icon).svg" alt="" /></span><span class="nav-text">@link.Label</span>
+            </a>
+        }
+    </div>
+    <p class="nav-label">Áreas de trabajo</p>
+    @foreach (var group in Model.Groups)
+    {
+        var active = group.Links.Any(Model.IsActive);
+        <details class="nav-group" open="@active">
+            <summary aria-controls="nav-@group.Id" title="@group.Label">
+                <span class="nav-icon"><img src="~/brand/@(group.Icon).svg" alt="" /></span><span class="nav-text">@group.Label</span><img class="nav-chevron" src="~/brand/chevron.svg" alt="" />
+            </summary>
+            <div class="nav-submenu" id="nav-@group.Id">
+                <button type="button" class="submenu-close" aria-label="Cerrar @group.Label"><img src="~/brand/arrow.svg" alt="" />@group.Label</button>
+                @foreach (var link in group.Links)
+                {
+                    <a asp-page="@link.Page" class="nav-link @(Model.IsActive(link) ? "active" : "")" aria-current="@(Model.IsActive(link) ? "page" : null)">@link.Label</a>
+                }
+            </div>
+        </details>
+    }
+</nav>

@@ -1,6 +1,10 @@
 # Matriz de pruebas — historial y estado actual
 
-Estado actual **0.22.0: 255/255 pruebas aprobadas**, con matriz T01–T15, respaldo/restauración, impresión Bluetooth simulada y recorridos de navegador aislados. [Suite completa actual](evidencias/bluetooth/bluetooth.trx), [matriz PDF histórica de 0.21.0](Manuales_y_Validacion.md), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+Estado de esta rama **0.23.0: 266/266 pruebas aprobadas**, con matriz T01–T15, respaldo/restauración, impresión Bluetooth simulada y recorridos de navegador aislados. [Suite completa de la rama](evidencias/frontend-branded/suite.trx), [matriz PDF histórica de 0.21.0](Manuales_y_Validacion.md), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+
+## Frontend branded — 15 de noviembre de 2026
+
+La [integración y sus límites](Frontend_Branded.md) conserva los servicios existentes y añade 11 pruebas de navegación por permisos, caja habilitada, delegación de cuentas y área activa. El [recorrido de Edge](evidencias/frontend-branded/resultado.json) comprueba identidad, 21 rutas, geometría de recursos, cinco anchos, teclado y una venta/cierre ficticios completos. Sin errores JavaScript/consola ni solicitudes externas. Trabajo en `feature/frontend-branded`, separado de main.
 
 ## Impresión Bluetooth — 15 de noviembre de 2026
 

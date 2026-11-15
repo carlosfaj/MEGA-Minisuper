@@ -1,31 +1,74 @@
 @using System.Security.Claims
+@using Mega.Web.Presentation
 @inject IConfiguration Configuration
-@{ var signed = User.Identity?.IsAuthenticated == true; var cash = User.HasClaim("caja", "1"); var management = User.IsInRole("Administrador") || User.IsInRole("Propietario"); var inventory = management || User.IsInRole("Inventario"); var current=ViewContext.RouteData.Values["page"]?.ToString(); }
+@{
+    var signed = User.Identity?.IsAuthenticated == true;
+    var cash = User.HasClaim("caja", "1");
+    var current = ViewContext.RouteData.Values["page"]?.ToString() ?? "";
+    var login = current == "/Acceso";
+    var role = User.FindFirstValue(ClaimTypes.Role);
+}
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>@ViewData["Title"] · MEGA</title><link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/></head>
-<body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#18392d" />
+    <title>@ViewData["Title"] · MEGA</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/branded.css" asp-append-version="true" />
+    <script src="~/js/navigation.js" asp-append-version="true" defer></script>
+</head>
+<body class="@(login ? "login-page" : "")">
 <a class="skip" href="#contenido">Ir al contenido</a>
-@if(signed){
-<aside class="sidebar"><a class="brand" asp-page="/Index"><span class="brand-icon">M</span><span>MEGA<small>GESTIÓN LOCAL</small></span></a>
-<div class="nav-label">OPERACIÓN</div><nav aria-label="Navegación principal">
-<a class="@(current=="/Index"?"active":"")" asp-page="/Index">Inicio</a>
-@if(User.HasClaim("tipo","comercial")){<a class="@(current=="/Proyecto"?"active":"")" asp-page="/Proyecto">Avance del proyecto</a>}
-@if(cash){<a class="@(current=="/Venta"?"active":"")" asp-page="/Venta">Nueva venta <span>+</span></a><a class="@(current=="/Caja"?"active":"")" asp-page="/Caja">Mi caja</a><a class="@(current=="/Ventas"?"active":"")" asp-page="/Ventas">Ventas del turno</a>}
-@if(inventory){<a class="@(current=="/Existencias"?"active":"")" asp-page="/Existencias">Existencias</a><a class="@(current=="/Reportes"?"active":"")" asp-page="/Reportes">Reportes</a>}
-@if(inventory){<a class="@(current?.StartsWith("/Recepciones")==true || current=="/Proveedores"?"active":"")" asp-page="/Recepciones/Index">Recepciones</a>}
-@if(inventory){<a class="@(current?.StartsWith("/Conteos")==true?"active":"")" asp-page="/Conteos/Index">Conteos físicos</a><a class="@(current=="/Lotes"?"active":"")" asp-page="/Lotes">Lotes y vencimientos</a>}
-@if(inventory){<a class="@(current?.StartsWith("/Solicitudes")==true?"active":"")" asp-page="/Solicitudes/Index">Ajustes y salidas</a>}
-@if(User.IsInRole("Cajero") || management){<a class="@(current?.StartsWith("/Anulaciones")==true?"active":"")" asp-page="/Anulaciones/Index">Anulaciones y devoluciones</a><a class="@(current=="/Impresiones"?"active":"")" asp-page="/Impresiones">Impresión y entregas</a>}
-@if(User.HasClaim("tipo","soporte_temporal")){<a class="@(current=="/Soporte"?"active":"")" asp-page="/Soporte">Diagnóstico técnico</a>}
-@if(User.HasClaim("tipo","comercial")){<a class="@(current=="/MiCuenta"?"active":"")" asp-page="/MiCuenta">Mi contraseña</a>}
-@if(management){<div class="nav-label">GESTIÓN</div><a class="@(current?.StartsWith("/Catalogo")==true?"active":"")" asp-page="/Catalogo/Index">Catálogo</a><a class="@(current=="/Configuracion"?"active":"")" asp-page="/Configuracion">Configuración</a><a class="@(current?.StartsWith("/Comercial")==true?"active":"")" asp-page="/Comercial/Index">Promociones e impuestos</a><a class="@(current=="/Gastos"?"active":"")" asp-page="/Gastos">Gastos operativos</a><a class="@(current=="/Correos"?"active":"")" asp-page="/Correos">Correo y reportes</a><a class="@(current=="/Respaldos"?"active":"")" asp-page="/Respaldos">Respaldos</a>@if(User.IsInRole("Propietario")){<a class="@(current=="/Recuperacion"?"active":"")" asp-page="/Recuperacion">Recuperación</a>}<div class="nav-label">CONTROL</div><a class="@(current=="/Bitacora"?"active":"")" asp-page="/Bitacora">Bitácora</a>}
-@if(User.IsInRole("Propietario") || User.IsInRole("Administrador") && User.HasClaim("cuentas","1")){<a class="@(current?.StartsWith("/Cuentas")==true?"active":"")" asp-page="/Cuentas/Index">Cuentas</a>}
-</nav><div class="sidebar-bottom"><span class="status-dot"></span> Servicio local disponible<small>Estación @Configuration["MEGA:Station"]</small></div></aside>
+@if (signed)
+{
+    <button class="menu-backdrop" type="button" aria-label="Cerrar menú" hidden></button>
+    <aside id="sidebar" class="sidebar" aria-label="Menú de MEGA">
+        <div class="sidebar-panel">
+            <div class="brand-row">
+                <a class="brand" asp-page="/Index" aria-label="MEGA · Inicio">
+                    <img class="brand-full" src="~/brand/logo.svg" alt="MEGA" width="120" height="63.75" />
+                    <img class="brand-compact" src="~/brand/compact.svg" alt="MEGA" />
+                </a>
+                <button id="sidebar-toggle" class="icon-button" type="button" aria-label="Reducir menú" aria-expanded="true" aria-controls="navigation"><img src="~/brand/arrow.svg" alt="" /></button>
+                <button id="mobile-close" class="button secondary" type="button">Cerrar menú</button>
+            </div>
+            <partial name="_Navigation" model="Navigation.For(User, current)" />
+            <div class="sidebar-bottom"><span class="service-status"><img src="~/brand/available.svg" alt="" /><span class="nav-text">Servicio local disponible</span></span><small class="nav-text">@role · Estación @Configuration["MEGA:Station"]</small></div>
+        </div>
+    </aside>
 }
-<div class="shell @(signed?"":"anonymous")"><header class="topbar"><span class="topbar-title">Minisúper MEGA</span><div class="topbar-right">
-@if(Configuration.GetValue<bool>("MEGA:DemoData")){<span class="badge demo">Demostración · datos ficticios</span>}
-@if(signed){<span class="account">@User.Identity?.Name<small>@User.FindFirstValue(ClaimTypes.Role)</small></span><form method="post" asp-page="/Salir"><button class="button text-button" type="submit">Salir</button></form>}
-</div></header><main id="contenido">@RenderBody()</main><footer>MEGA · Desarrollo del cuarto corte <span>Operación local · hora UTC−6 provisional</span></footer></div>
-@await RenderSectionAsync("Scripts", required:false)
-</body></html>
+<div class="shell @(signed ? "" : "anonymous")">
+    @if (!login)
+    {
+        <header class="topbar">
+            <a class="mobile-brand" asp-page="/Index" aria-label="MEGA · Inicio"><img src="~/brand/logo.svg" alt="MEGA" width="92" height="48.875" /></a>
+            <span class="topbar-title">Minisúper MEGA / @ViewData["Title"]</span>
+            <div class="topbar-right">
+                @if (Configuration.GetValue<bool>("MEGA:DemoData")) { <span class="demo-label" title="Demostración · datos ficticios">DEMO<span class="desktop-demo">STRACIÓN</span></span> }
+                @if (signed)
+                {
+                    <span class="badge success topbar-service">● Servicio local</span>
+                    <span class="account">@User.Identity?.Name <span>· @role</span></span>
+                    <form method="post" asp-page="/Salir"><button class="icon-button logout-button" type="submit" aria-label="Salir" title="Salir"><img src="~/brand/logout.svg" alt="" /></button></form>
+                    <button id="mobile-menu" class="button secondary" type="button" aria-expanded="false" aria-controls="sidebar">Menú</button>
+                }
+            </div>
+        </header>
+    }
+    <main id="contenido">@RenderBody()</main>
+    @if (!login) { <footer>MEGA · Tu tienda, en orden <span>Operación local · hora UTC−6 provisional</span></footer> }
+</div>
+@if (signed && cash)
+{
+    <nav class="mobile-navigation" aria-label="Accesos rápidos móviles">
+        <a class="button @(current == "/Index" ? "primary" : "secondary")" asp-page="/Index" aria-current="@(current == "/Index" ? "page" : null)">Inicio</a>
+        <a class="button @(current == "/Venta" ? "primary" : "secondary")" asp-page="/Venta" aria-current="@(current == "/Venta" ? "page" : null)">Venta</a>
+        <a class="button @(current == "/Caja" ? "primary" : "secondary")" asp-page="/Caja" aria-current="@(current == "/Caja" ? "page" : null)">Mi caja</a>
+    </nav>
+}
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,218 @@
+{
+  "figma": "https://www.figma.com/design/wzTrAOsYPbM6B6WxJdmRsW/MEGA-PROTOTIPO?node-id=46-2",
+  "reviewedAt": "2026-11-15",
+  "references": [
+    "BRIEF.md",
+    "Seleccionados/LEEME.md",
+    "Vectorizado_v02/LEEME.md",
+    "Brandbook_Pop_Street_v01/REFERENCIAS.md",
+    "Brandbook_Pop_Street_v01/SVG: páginas 11–17, 20 y 30",
+    "Recursos_MEGA_v02/LEEME.md",
+    "Prototipo_Alta_Fidelidad/Correccion_Marca_2026-11-15/LEEME.md",
+    "Prototipo_Alta_Fidelidad/Sidebar_Adaptable_2026-11-15/LEEME.md"
+  ],
+  "originalsPreserved": true,
+  "assets": [
+    {
+      "file": "src/Mega.Web/wwwroot/brand/account.svg",
+      "bytes": 676,
+      "sha256": "9584840f076f874202a737d52b3a0b7d8ab22f676e15e7400127efa9e8121e84",
+      "dimensions": {
+        "width": "21",
+        "height": "18.5",
+        "viewBox": "0 0 21 18.5"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/arrow.svg",
+      "bytes": 356,
+      "sha256": "0b545483871ceaf8b6466684c31074b5706500971505c871a1e2f70e6754ef71",
+      "dimensions": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/available.svg",
+      "bytes": 230,
+      "sha256": "0198f7c4fdd0f42e306fc7d34b56af7acf2c158dfef74b4c6e74d44741829a68",
+      "dimensions": {
+        "width": "6",
+        "height": "6",
+        "viewBox": "0 0 6 6"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/box.svg",
+      "bytes": 393,
+      "sha256": "305e0b7657a70abd7ced246964269c5cb38bf1a4f68dadb9c5cb1089b725f316",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/cart.svg",
+      "bytes": 946,
+      "sha256": "1b1faa3c1d05af816975d40c8530de74726e975b5783b2b8505d970e18ab7a31",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/cash.svg",
+      "bytes": 553,
+      "sha256": "09486e2434d017c59b7adb244da159d49ab2e0ecc54e0c2ee99c7c597364d817",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/chart.svg",
+      "bytes": 334,
+      "sha256": "b6d2b4d992ef7381d42c97ed7e5df2e2c96fb9949c713387419d789ed46604b4",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/chevron.svg",
+      "bytes": 321,
+      "sha256": "f9546db846dcb5ac8160a6a79750057a2ba741febcb2aac8a65c15074e7d6c2f",
+      "dimensions": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/compact.svg",
+      "bytes": 15969,
+      "sha256": "109f176fe83643394712bcdd9a4ea693908e4e97d7ebb4d24be56612dafb16f0",
+      "dimensions": {
+        "width": "56",
+        "height": "56",
+        "viewBox": "0 0 56 56"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/home.svg",
+      "bytes": 484,
+      "sha256": "8d572cc4f5905574665fd30edc3315d0b4a96936ac158e271b5874e443e3be80",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/logo-negative.svg",
+      "bytes": 11682,
+      "sha256": "4611257b2df031c5a69823753086bdb5c185f4aa58420656e143fbd01df76876",
+      "dimensions": {
+        "width": "1600",
+        "height": "850",
+        "viewBox": "0 0 1600 850"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/logo-receipt.svg",
+      "bytes": 11030,
+      "sha256": "50d61ffe9cfc7b22af4fdeb62ceb7eddd419efa228e5d6bf9be8ed8ef1026373",
+      "dimensions": {
+        "width": "170",
+        "height": "91",
+        "viewBox": "0 0 170 91"
+      },
+      "sourceNode": "73:9532"
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/logo.svg",
+      "bytes": 11682,
+      "sha256": "44a5e54ee0a9ad14ae53aa5cc0274fdf133a544b8dcb0d05d04eb90beab51568",
+      "dimensions": {
+        "width": "1600",
+        "height": "850",
+        "viewBox": "0 0 1600 850"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/logout.svg",
+      "bytes": 336,
+      "sha256": "27bbd0d1b6b1c7ba3176d17468fe818f264baa2975ec763fcee0fea3cddf1156",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/mascot.svg",
+      "bytes": 15986,
+      "sha256": "44c164804474e14bb037a1437ddbe29e8afafb0d24b3a5a89dae79154a09d8f2",
+      "dimensions": {
+        "width": "280",
+        "height": "280",
+        "viewBox": "0 0 280 280"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/receipt-art.svg",
+      "bytes": 1071,
+      "sha256": "8b2f40bcab998b321d87dfa732eb3ad48eb3fa38144d028188851ef61ce5e004",
+      "dimensions": {
+        "width": "51",
+        "height": "77.25",
+        "viewBox": "0 0 51 77.25"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/receipt.svg",
+      "bytes": 395,
+      "sha256": "c724ba62ab039ac6775ea577d8b23e925e9262d4e850b1a24643d8ca3a673670",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/settings.svg",
+      "bytes": 649,
+      "sha256": "d5e91ea58c2938447792726a4aa250bae74b40c7acee74154e4e5508bfa80097",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/brand/tag.svg",
+      "bytes": 569,
+      "sha256": "9a98134aa4f7a319bb8199a182f0f5ef2a19cb0abf83de9f29eb54da7e6bd7c0",
+      "dimensions": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/fonts/DynaPuff-Bold.ttf",
+      "bytes": 91304,
+      "sha256": "c5087ce2cf953a18088f51315b3c0a9cf6d166ee75e6eef193b04abd2aa27296"
+    },
+    {
+      "file": "src/Mega.Web/wwwroot/fonts/NunitoSans.ttf",
+      "bytes": 571240,
+      "sha256": "f934d7142fb4784bf828da485b7dcbd90c0c80d514e9d49a5da0ed3a1ae2491d"
+    }
+  ]
+}
