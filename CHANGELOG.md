@@ -1,5 +1,11 @@
 # Historial de versiones de MEGA
 
+## 0.24.2 — 16 de noviembre de 2026 · acceso desde celular
+
+- Añade `Iniciar_MEGA_Celular.cmd`: escucha por HTTPS en la IP activa, acepta su nombre de host y habilita exclusivamente la subred privada explícita. El inicio habitual mantiene acceso solo desde la computadora.
+- Conserva cookies seguras, autenticación y protección antifalsificación. No usa HTTP para las sesiones.
+- Validación y límites en `docs/Acceso_Celular.md`.
+
 ## 0.24.1 — 15 de noviembre de 2026 · rama frontend-branded
 
 - Corrige `Revisar_Base_Datos.cmd` cuando MEGA está abierto: compila la herramienta en una carpeta temporal propia, sin reemplazar el ejecutable del servidor ni exigir cerrar la aplicación.

@@ -22,6 +22,8 @@ Los [manuales de usuario y técnico, y la matriz T01–T15](docs/Manuales_y_Vali
 
 El [paquete Windows](docs/Distribucion.md) incluye el entorno de ejecución y conserva los datos por separado. Se genera con `tools/build-distribution.ps1` desde una revisión registrada. GitHub Actions conserva ZIP y SHA-256 durante 30 días. No contiene bases ni credenciales. La instalación en otro equipo y la aceptación del negocio siguen pendientes.
 
+Para abrir desde el celular en el mismo Wi-Fi, usar **Iniciar_MEGA_Celular.cmd**. Instrucciones y límites en [Acceso desde celular](docs/Acceso_Celular.md).
+
 ## Abrir desde el código fuente
 
 1. Ejecutar **Iniciar_MEGA.cmd** desde esta carpeta y conservar su ventana abierta.
