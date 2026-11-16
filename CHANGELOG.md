@@ -1,5 +1,9 @@
 # Historial de versiones de MEGA
 
+## Mantenimiento de iniciador — 16 de noviembre de 2026
+
+- Unifica el inicio en `Iniciar_MEGA.cmd`, con acceso HTTPS desde computadora y celular mediante `tools/start-lan.ps1`. Retira el nombre `Iniciar_MEGA_Celular.cmd` y actualiza las instrucciones.
+
 ## 0.24.2 — 16 de noviembre de 2026 · acceso desde celular
 
 - Añade `Iniciar_MEGA_Celular.cmd`: escucha por HTTPS en la IP activa, acepta su nombre de host y habilita exclusivamente la subred privada explícita. El inicio habitual mantiene acceso solo desde la computadora.
