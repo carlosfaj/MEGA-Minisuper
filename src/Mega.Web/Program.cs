@@ -81,6 +81,7 @@ builder.Services.AddSingleton<DatabaseLocation>(); builder.Services.AddSingleton
 builder.Services.AddSingleton<DatabaseInspector>(); builder.Services.AddScoped<DatabaseSchema>();
 builder.Services.AddDbContext<MegaDbContext>((services, o) => o.UseSqlite(services.GetRequiredService<DatabaseLocation>().ConnectionString()).AddInterceptors(services.GetRequiredService<RecoveryIdentityInterceptor>()));
 var app = builder.Build();
+var networkAccess = new LocalNetworkAccess(builder.Configuration["MEGA:AllowedNetwork"]);
 if(databaseCommands.FirstOrDefault()!="--db-check")
 {
     _=app.Services.GetRequiredService<DatabaseInstanceLease>();
@@ -106,7 +107,7 @@ if(app.Services.GetRequiredService<RecoveryGate>().DatabaseSafe)
 }
 app.Use(async (context, next) =>
 {
-    if (context.Connection.RemoteIpAddress is { } remote && !IPAddress.IsLoopback(remote)) { context.Response.StatusCode = 403; return; }
+    if (context.Connection.RemoteIpAddress is { } remote && !networkAccess.Allows(remote)) { context.Response.StatusCode = 403; return; }
     context.Response.Headers.XContentTypeOptions = "nosniff";
     context.Response.Headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'";
     context.Response.Headers["Referrer-Policy"] = "no-referrer"; context.Response.Headers.CacheControl = "no-store";
