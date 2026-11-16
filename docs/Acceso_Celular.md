@@ -1,6 +1,6 @@
 # Acceso de demostración desde celular
 
-Ejecutar `Iniciar_MEGA_Celular.cmd` y conservar el proceso abierto. El iniciador detecta la dirección IPv4 con puerta de enlace y muestra la dirección HTTPS para un celular conectado al mismo Wi-Fi. No ejecutar simultáneamente el iniciador habitual.
+Ejecutar `Iniciar_MEGA.cmd` y conservar el proceso abierto. El iniciador detecta la dirección IPv4 con puerta de enlace y muestra la dirección HTTPS para un celular conectado al mismo Wi-Fi. Se usa el mismo iniciador para la computadora y el celular; ejecutar una sola instancia.
 
 El certificado de desarrollo es local: el navegador del celular pedirá aceptar el aviso para esta demostración. Para operación real se necesita un certificado válido para el nombre del servidor y de confianza en los dispositivos.
 
