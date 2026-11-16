@@ -1,5 +1,11 @@
 # Historial de versiones de MEGA
 
+## 0.24.1 — 15 de noviembre de 2026 · rama frontend-branded
+
+- Corrige `Revisar_Base_Datos.cmd` cuando MEGA está abierto: compila la herramienta en una carpeta temporal propia, sin reemplazar el ejecutable del servidor ni exigir cerrar la aplicación.
+- Conserva el perfil Development y la ruta original de configuración/datos; elimina la compilación temporal y propaga los errores de compilación o diagnóstico. La actualización de esquema conserva sus restricciones de exclusión de instancia.
+- Ensayo real con el servidor abierto: integridad correcta, base actualizada, SHA-256 de la base sin cambios y carpeta temporal eliminada. 273/273 pruebas aprobadas y ensayo de error sin crear una base ausente. Evidencia en `docs/Revision_Base_Datos.md`.
+
 ## 0.24.0 — 15 de noviembre de 2026 · rama frontend-branded
 
 - Adapta a la identidad de esta rama los inicios operativos implementados primero en main 0.23.0: Inventario con alertas y trabajo propio, Administrador con revisiones/caja y Propietario con resultados del día.
