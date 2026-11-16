@@ -13,6 +13,6 @@ La aplicación mantiene cookies Secure, autenticación y antifalsificación. `ME
 - Diez casos automatizados para acceso local, subred habilitada, IP mapeada, direcciones externas y configuraciones inválidas.
 - Proceso iniciado en la copia MEGA con la base de demostración existente.
 - GET de https://192.168.0.13:7248/Acceso devuelve 200; POST de acceso con antifalsificación llega a Inicio y entrega cookie Secure.
-- Confirmación física desde el celular pendiente; la prueba desde esta computadora no verifica aislamiento de clientes del router ni el trayecto externo del firewall.
+- El usuario confirmó desde el celular que, tras aceptar el aviso del certificado, puede entrar y usar el sistema. Esta confirmación verifica el trayecto de red en el Wi-Fi actual.
 
 La impresión sigue a cargo de Windows en la computadora; abrir la web en un celular no empareja su impresora Bluetooth con el servidor.
