@@ -4,9 +4,11 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-**Rama de revisión `feature/frontend-branded`, versión 0.24.1.** Integra el [frontend branded de Figma](docs/Frontend_Branded.md) y los [inicios operativos por rol](docs/Inicios_por_Rol.md), con identidad local y navegación adaptable. Este trabajo permanece separado de `main`, que conserva la media fidelidad en 0.23.0. Aprobación visual pendiente.
+`main` es la versión oficial del programa. Esta rama conserva únicamente la alternativa de frontend pendiente de decisión; las correcciones y funcionalidades generales deben estar también en `main`. No integrar el nuevo frontend sin autorización explícita.
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión de `main` es **0.23.0**, con inicios operativos por rol, soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+**Rama de revisión `feature/frontend-branded`, versión 0.24.1.** Integra el [frontend branded de Figma](docs/Frontend_Branded.md) y los [inicios operativos por rol](docs/Inicios_por_Rol.md), con identidad local y navegación adaptable. Este trabajo permanece separado de `main`, que conserva la media fidelidad en 0.23.1. Aprobación visual pendiente.
+
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión oficial de `main` es **0.23.1**, con inicios operativos por rol, soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
