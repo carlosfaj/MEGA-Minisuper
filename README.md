@@ -4,7 +4,9 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 ## Versiones en GitHub
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión actual es **0.23.0**, con [inicios operativos por rol](docs/Inicios_por_Rol.md), soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+`main` contiene la versión oficial y conserva su interfaz vigente. El nuevo frontend permanece únicamente en `feature/frontend-branded`, pendiente de decidir su integración. Las correcciones y funcionalidades generales se publican en `main` y se comparten con la rama experimental cuando corresponda.
+
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión oficial de `main` es **0.23.1**, con [inicios operativos por rol](docs/Inicios_por_Rol.md), soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -26,6 +28,8 @@ El [paquete Windows](docs/Distribucion.md) incluye el entorno de ejecución y co
 4. Abrir **Mi caja**, registrar el fondo recibido y comenzar una venta.
 
 También existen las cuentas **admin**, **inventario**, **cajero2** y **propietario**, con la misma contraseña de demostración. Las cuentas pertenecen exclusivamente a la base ficticia y sus claves se guardan como hashes, no como texto en la base. Otra cuenta no puede abrir caja mientras exista un turno abierto en la misma estación.
+
+Para comprobar estructura, relaciones y datos, ejecutar **Revisar_Base_Datos.cmd**. Puede usarse con MEGA abierto: compila en una carpeta temporal independiente y revisa la base original en modo de solo lectura. Al terminar, elimina esa compilación temporal. Si aparece `"Healthy": true` y `"UpToDate": true`, la comprobación fue satisfactoria.
 
 La primera ejecución necesita Internet para descargar dependencias si no están disponibles en la computadora. Después de restaurar y compilar, el núcleo no necesita conexión. Se requiere SDK .NET 10; esta computadora tiene 10.0.403.
 

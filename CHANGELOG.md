@@ -1,5 +1,11 @@
 # Historial de versiones de MEGA
 
+## 0.23.1 — 15 de noviembre de 2026 · versión oficial
+
+- Corrige `Revisar_Base_Datos.cmd` con MEGA abierto: compila en una carpeta temporal independiente y ejecuta el diagnóstico de solo lectura sin reemplazar el ejecutable del servidor. Conserva la configuración, selección de base y códigos de salida, y elimina la compilación temporal al terminar.
+- Lleva a `main` la corrección general publicada primero en `feature/frontend-branded` 0.24.1. Conserva íntegra la interfaz oficial de media fidelidad.
+- Registra la regla de publicación: funcionalidades y correcciones generales en `main`; el nuevo frontend sigue separado y requiere decisión explícita antes de integrarlo. Evidencias y comprobaciones en `docs/Revision_Base_Datos.md`.
+
 ## 0.23.0 — 15 de noviembre de 2026 · media fidelidad
 
 - Inicios distintos para Inventario, Administrador y Propietario, con datos persistidos de existencias, lotes, trabajo propio, autorizaciones, caja y resultados del día. Cajero conserva su inicio.

@@ -4,6 +4,13 @@
 
 El usuario autorizó el 12 de noviembre de 2026 usar Git y su conexión personal de GitHub **carlosfaj** para registrar versiones y hacer push de cada versión estable o funcionalidad terminada en **https://github.com/carlosfaj/MEGA-Minisuper.git**. Esta autorización persiste: no pedir de nuevo permiso para commits y pushes dentro de ese alcance.
 
+## Rama oficial y frontend experimental
+
+- `main` es la versión oficial del programa. Publicar allí las funcionalidades y correcciones generales terminadas, conservando la interfaz oficial vigente.
+- `feature/frontend-branded` conserva el nuevo frontend como alternativa pendiente de decisión. No integrarlo en `main` sin autorización explícita del usuario.
+- Los cambios generales que también se necesiten en la rama experimental deben estar igualmente en `main`; no dejar correcciones del programa exclusivamente en la rama de frontend.
+- Mantener documentación y evidencias propias de cada interfaz en su rama. La numeración de versiones de cada rama refleja su propio historial.
+
 ## Flujo obligatorio
 
 1. Trabajar en este repositorio de desarrollo. Antes de editar, revisar estado local, rama y cambios del usuario; conservar todo trabajo ajeno. Consultar el remoto antes de publicar y conciliar cambios si los hubiera.
