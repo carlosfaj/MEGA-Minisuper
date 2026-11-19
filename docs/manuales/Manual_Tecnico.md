@@ -1,186 +1,247 @@
 # Manual técnico de MEGA
 
-Este manual permite instalar, verificar, mantener y atender incidencias de la versión 0.21.0 de MEGA. Está dirigido al responsable técnico y al Propietario que autoriza cambios de operación. La aplicación es web local para una computadora; el servicio y los datos permanecen en ese equipo.
+Instalación y mantenimiento del sistema
 
-Versión 0.21.0. Equipo Frijol Devs. Grupo 3M1-SIS-S. Edición del 14 de noviembre de 2026.
+Versión oficial 0.23.2 | Edición del 18 de noviembre de 2026
 
-La versión dispone de 223 pruebas automatizadas aprobadas y ensayos aislados de navegador. La demostración, los controladores virtuales y el servidor SMTP local de prueba no acreditan instalación en otro equipo, aceptación del negocio, impresión física, fiscalidad ni objetivos de recuperación con volumen real.
+Esta guía permite obtener y ejecutar las fuentes oficiales en Windows, conservar sus datos, diagnosticar fallos y actualizar la aplicación. Está dirigida al responsable técnico. El Propietario autoriza cuentas, pauta de respaldo, recuperación y reapertura.
 
-[TOC]
+## Encuentra el procedimiento
 
-## Arquitectura y componentes
+[CONTENIDO]
 
-La presentación utiliza Razor Pages con recursos estáticos locales. Los servicios de aplicación validan permisos, versiones y reglas de negocio; EF Core persiste mediante SQLite. Venta, autorización y regularización confirman sus efectos comerciales junto con auditoría en transacciones. Los agentes de impresión, correo y respaldo trabajan después de las solicitudes que preparan su información. En la Tabla 1, las rutas de aplicación parten de src/Mega.Web; las de pruebas y herramientas parten de la raíz del repositorio.
+## Arquitectura esencial
 
-| Componente | Responsabilidad | Ubicación de referencia |
-|---|---|---|
-| Páginas Razor | Formularios, consulta y protección antifalsificación | Pages |
-| Servicios | Venta, valoración, recepciones, inventario, anulaciones, reportes y continuidad | Services |
-| Persistencia | Modelo EF, contrato, diagnóstico, esquema y migraciones | Data |
-| Pruebas | Casos automatizados con bases separadas | tests/Mega.Tests |
-| Seguimiento | Criterios y avance calculado | Tracking/proyecto.json |
-| Construcción | Publicación, inicio y empaquetado | tools y tools/distribution |
+MEGA es una aplicación web con **ASP.NET Core y Razor Pages**. Los servicios validan permisos y reglas de negocio; **EF Core con SQLite** persiste los registros. Impresión, correo y respaldo se procesan mediante agentes locales con historial de intentos.
 
-El modelo de procedencia conserva 39 tablas, 499 columnas y 103 claves externas. El esquema operativo es 2. Se conserva el DDL y JSON originales y se agregan restricciones y vistas mediante migración explícita; no se utiliza EnsureCreated para sustituir el contrato.
+El ejecutable aloja el servicio en Windows y el navegador presenta la interfaz. El núcleo funciona sin Internet después de instalarse; SMTP requiere conectividad al servidor configurado.
 
-## Versiones y requisitos
+**Entrega documentada:** versión oficial 0.23.2, esquema 2. La propuesta visual 0.24.2 permanece separada. La instalación en el equipo definitivo, los periféricos físicos y la aceptación comercial siguen pendientes.
 
-| Elemento | Versión o condición de esta entrega |
+Equipo Frijol Devs | Grupo 3M1-SIS-S
+
+[SALTO]
+
+## Obtener y preparar el sistema
+
+### Requisitos
+
+| Elemento | Requisito de ejecución |
 |---|---|
-| SDK de construcción | .NET 10.0.403 fijado en global.json |
-| Aplicación y persistencia | ASP.NET Core 10 y EF Core SQLite 10.0.14 |
-| Ejecución distribuida | Windows x64 con .NET 10.0.14 incluido |
-| Inicio del paquete | Windows PowerShell 5.1 y perfil de usuario con carpeta de datos escribible |
-| Navegador ensayado | Microsoft Edge en el equipo de desarrollo |
-| PDF y Excel | PDFsharp 6.2.4 y ClosedXML 0.105.0 |
-| Correo | MailKit 5.0.0 con validación TLS |
-| Infraestructura local | Puerto disponible, espacio para datos y copias, y política de respaldo autorizada |
+| Sistema | Windows x64; Windows PowerShell 5.1. |
+| Entorno | SDK .NET 10.0.403 para las fuentes de esta entrega. El ejecutable amplio opcional incluye su entorno. |
+| Perfil y disco | Carpeta de datos escribible y espacio para base, archivos y copias. Usa el mismo perfil para conservar secretos protegidos. |
+| Navegador y puerto | Edge fue el navegador ensayado. Puerto local 7248 libre, o uno configurado expresamente. |
+| Equipo de referencia | Mínimo planificado: x64 de cuatro núcleos, 8 GB de RAM y SSD de 240 GB. Rendimiento pendiente en la estación definitiva. |
 
-La ejecución desde fuentes requiere SDK y restaurar dependencias cuando no estén disponibles. El ZIP de ejecución incluye el entorno y se probó sin dotnet accesible en PATH y con DOTNET_ROOT inexistente. Las dependencias están fijadas en archivos de bloqueo. El tamaño observado del paquete de ensayo fue aproximadamente 61.4 MiB; la capacidad de datos y medios debe dimensionarse con el negocio.
+### Obtener las fuentes oficiales
 
-El núcleo no descarga recursos de interfaz ni necesita Internet tras instalarse. SMTP y una futura descarga de dependencias son usos de red diferentes. La revisión de NuGet del 14 de noviembre de 2026 no encontró vulnerabilidades declaradas; esta consulta no garantiza ausencia de vulnerabilidades futuras.
+1. Abre **02_Repositorio_GitHub.txt** y sigue el enlace al [repositorio MEGA](https://github.com/carlosfaj/MEGA-Minisuper). Esta entrega contiene documentos y enlaces; no incluye ejecutable ni base operativa.
+2. Descarga las fuentes oficiales de la revisión **649ecd1372855557ccb40cc7d43b3adc217a9fe1**, o clona el repositorio y selecciona esa revisión. Comprueba **VERSION = 0.23.2**; la rama **feature/frontend-branded** es una alternativa distinta.
+3. Extrae o clona en una carpeta local. Instala el **SDK .NET 10.0.403** fijado en **global.json**. La descarga de fuentes y dependencias requiere Internet; el núcleo puede operar localmente después.
+4. Desde la raíz con **MEGA.sln**, completa la preparación y el arranque de la página siguiente. El primer inicio crea la base ficticia si no existe; conserva los datos en los siguientes arranques.
 
-## Instalación del paquete
+### Paquete ejecutable opcional
 
-1. Obtener el ZIP de una revisión registrada y su archivo SHA-256. Conservar la referencia del commit y comprobar la huella antes de extraer.
-2. Extraer todo el contenido en una carpeta local. Conservar completa la carpeta App, que incluye Licencias, junto al iniciador y paquete.json.
-3. Detener cualquier instancia anterior. Ejecutar **Iniciar_MEGA.cmd** con el mismo perfil de Windows que conservará los datos.
-4. Esperar el aviso de servicio y abrir https://localhost:7248. El iniciador rechaza un puerto ocupado antes de crear datos.
-5. Verificar acceso, permisos, estado de caja y consultas. En una demostración nueva, las existencias son ficticias y no existen ventas.
+**Solo si dispones del paquete amplio por separado:** conserva **App**, **Licencias**, **paquete.json** e iniciadores y ejecuta **Iniciar_MEGA.cmd** desde **03_Base_Datos_y_Ejecucion/Ejecutable_Oficial**. Usa **%LOCALAPPDATA%\MEGA\Demostracion** y escucha en localhost; **08_Demostracion_Funcional** permite un ensayo nuevo aislado. Esas carpetas no están en esta entrega documental.
 
-El paquete usa por defecto %LOCALAPPDATA%\MEGA\Demostracion. Cambiar de carpeta el programa no cambia esa ubicación. No importa automáticamente la base que utiliza el desarrollo ni una base de otro perfil. Las cuentas ficticias se describen en el Manual de usuario.
+Su certificado localhost se protege con **DPAPI CurrentUser** y un PFX cifrado temporal. Ningún iniciador instala confianza en Windows. El aviso del navegador se limita a la demostración; una operación real requiere certificados y confianza adecuados.
 
-El iniciador crea un certificado para localhost y sus direcciones de bucle local. Protege el material con DPAPI CurrentUser y utiliza un PFX cifrado con contraseña aleatoria durante la ejecución. No instala confianza en el sistema; el navegador puede presentar su aviso local. Un cierre forzado puede dejar un PFX cifrado residual. Una credencial protegida no puede trasladarse sin revisión a otro perfil.
+[SALTO]
 
-Para un ensayo aislado se admite el iniciador PowerShell con **-DataRoot RUTA_COMPLETA -Port 7366**. La ruta debe ser completa y el puerto admitido estar libre. No utilices una base de operación para ejecutar herramientas que preparan ventas o simulan restauraciones.
+## Ejecutar desde fuentes y habilitar la red
 
-## Datos y archivos que deben conservarse
+### Preparar las fuentes
 
-| Elemento | Función | Conservación |
-|---|---|---|
-| mega-demo.db o base configurada | Registros, historia y efectos comerciales | Mantener mediante copias consistentes de SQLite |
-| carpeta con nombre de base y sufijo .archivos | Reportes, secretos protegidos, salidas PDF y preservaciones | Conservar junto a la base |
-| Recuperacion.json | Fase de recuperación, sesiones y numeración | No borrar ni sustituir para forzar el acceso |
-| Preservaciones | ZIP del estado anterior a recuperar | Custodiar con sus huellas; no sobrescribir |
-| HTTPS en la carpeta del iniciador | Certificado local protegido por el perfil | Conservar o tratar mediante intervención supervisada |
-| Programa y paquete.json | Archivos distribuibles y procedencia | Mantener completos y separados de datos |
+La entrega oficial parte del commit **649ecd1372855557ccb40cc7d43b3adc217a9fe1**. Comprueba **VERSION**, **global.json** y los archivos de bloqueo antes de reconstruir. Ejecuta desde la raíz del repositorio:
 
-Reportes y secretos usan referencias de nombre controladas. Las credenciales SMTP se guardan protegidas fuera de las columnas de configuración; la base contiene la referencia. Los reportes enviados conservan su archivo exacto y SHA-256. Las salidas de Microsoft Print to PDF administradas se ubican junto a la base.
+```powershell
+dotnet restore MEGA.sln --locked-mode
+dotnet build MEGA.sln -c Release --no-restore
+dotnet test MEGA.sln -c Release --no-build
+```
 
-No copiar únicamente un archivo .db mientras la aplicación escribe. Un archivo WAL puede contener cambios confirmados. No borrar WAL, SHM, la base ni el control de recuperación para resolver un bloqueo. El mecanismo de respaldo obtiene una instantánea consistente y conserva los archivos asociados.
-
-## Ejecución desde las fuentes
-
-Clona la revisión correspondiente y comprueba VERSION y global.json. Desde la raíz del repositorio, restaura con **dotnet restore MEGA.sln --locked-mode**, compila con **dotnet build MEGA.sln -c Release --no-restore** y ejecuta las pruebas antes de modificar una instalación.
-
-El iniciador del repositorio utiliza dotnet run y la base de demostración del proyecto. El paquete tiene un iniciador diferente y almacena datos en el perfil; ambas ubicaciones no deben confundirse. Una segunda instancia sobre la misma base se rechaza aunque se intente utilizar otro puerto.
-
-| Ajuste | Uso previsto |
+| Dependencia | Versión fijada |
 |---|---|
-| MEGA__DatabasePath | Ruta completa de base en configuración por entorno |
-| MEGA__DemoData | Selección explícita de demostración; no cambiar el modo de una base existente |
-| MEGA__ProjectPlanPath | Fuente del tablero cuando se mantiene externamente al programa |
-| MEGA__PrintAgentEnabled | Control del agente en un ensayo aislado |
-| MEGA__MailAgentEnabled | Control del agente para evitar contactos durante pruebas de interfaz |
-| MEGA__BackupAgentEnabled | Control de la pauta automática en pruebas |
+| SDK de construcción | .NET 10.0.403 |
+| ASP.NET Core y entorno distribuido | .NET 10.0.14 |
+| Persistencia | EF Core SQLite 10.0.14 |
+| Documentos | PDFsharp 6.2.4 y ClosedXML 0.105.0 |
+| Correo | MailKit 5.0.0 |
 
-La aplicación no habilita una base con datos ficticios bajo el modo real ni permite demostración fuera de Development o Testing. Una base nueva sin demostración exige MEGA_BOOTSTRAP_PASSWORD de al menos 12 caracteres, crea un Propietario inicial y no agrega productos ni ventas ficticios. Ese modo requiere preparación y aceptación propias; el paquete entregado inicia demostración. No guardar una contraseña real en scripts versionados ni en el historial de consola.
+### Elegir el modo de acceso
 
-## Configuración y control de acceso
+**Inicio local desde fuentes**, sin depender de una red Wi-Fi: ejecuta desde la raíz **powershell.exe -NoProfile -File tools/start.ps1** y abre **https://localhost:7248**. Conserva la ventana abierta; **Ctrl+C** detiene el servicio.
 
-Los roles comerciales son Propietario, Administrador, Cajero e Inventario. El permiso de caja es adicional y se verifica en el servidor. La administración de cuentas por Administrador exige delegación expresa; el Propietario conserva sus facultades reservadas. Soporte temporal solo dispone de diagnóstico de integridad de lectura y no sustituye autorización del Propietario.
+**Inicio en LAN desde fuentes:** ejecuta **Iniciar_MEGA.cmd**. Usa **tools/start-lan.ps1**, detecta IPv4 con puerta de enlace y muestra la dirección HTTPS para el mismo Wi-Fi. Limita acceso a la subred privada y conserva autenticación y antifalsificación. Si no hay red activa, usa el modo local anterior.
 
-Se utiliza cookie segura, HttpOnly y SameSite Strict, protección antifalsificación, contraseñas con hash y validación de credenciales en cada solicitud. El inicio de sesión limita intentos por dirección local. Cambiar contraseña, permisos o versión de credenciales invalida sesiones anteriores. El servicio rechaza conexiones de origen que no sean de bucle local y añade encabezados de seguridad.
+Si cambia la IP, reinicia. Revisa permiso de Windows para la red privada y certificado del servidor; el iniciador no configura reglas de Windows ni confianza. No publiques el servicio en Internet ni compartas SQLite entre equipos.
 
-Cada formulario relevante compara la versión o huella revisada. Una aprobación requiere otra cuenta facultada y el mismo contenido y saldo. No se habilita la responsabilidad directa del Propietario pendiente de validación. Los rechazos y fallos HTTP críticos se auditan después de revertir la operación, sin registrar cuerpos, contraseñas ni secretos.
+**Configuración de base:** **MEGA__DatabasePath** define la ruta completa y **MEGA__DemoData** el modo. Una base nueva sin demostración exige **MEGA_BOOTSTRAP_PASSWORD** de al menos 12 caracteres; crea Propietario sin productos ficticios. No cambia el modo de una base existente. Evita guardar credenciales en scripts o historial.
 
-Antes de una operación real, verificar cuentas, unidades, equivalencias, costos, configuración del negocio, fondo, vencimientos, periféricos y pauta. La moneda es NIO y el desplazamiento de hora es UTC-6 provisional. El sistema no define fiscalidad ni habilita transferencia o tarjeta por introducir datos del emisor.
+[SALTO]
 
-## Integridad comercial y valoración
+## Conservar datos y controlar accesos
 
-La confirmación de venta registra detalle, pago, caja, inventario, costos históricos, auditoría y solicitud original de impresión de manera atómica. La clave de operación recupera un resultado ya confirmado y rechaza reutilización con otro contenido. Después de una respuesta incierta, se recupera esa operación; no se ejecuta una venta nueva como reparación.
+### Archivos que forman el estado
 
-Las recepciones y solicitudes preparadas no afectan saldos antes de aprobar. Las anulaciones conservan el original y su cierre previo. La reversión de mercadería y la entrega efectiva de dinero son efectos separados y documentados. Los gastos alimentan resultados sin inventar una salida de caja.
+| Elemento | Tratamiento |
+|---|---|
+| Base configurada, normalmente mega-demo.db | Respaldar con el mecanismo consistente de SQLite. |
+| Carpeta de la base con sufijo .archivos | Conservar reportes, secretos protegidos, PDF y preservaciones junto con la base. |
+| Recuperacion.json | Conservar: controla fase, sesiones y continuidad de numeración. |
+| Preservaciones | Custodiar ZIP y huellas del estado anterior a una recuperación. |
+| Carpeta HTTPS del iniciador | Mantener vinculada al perfil de Windows que protege el certificado. |
+| Programa y paquete.json | Conservar completos y separados de los datos. |
 
-La política confirmada es promedio ponderado móvil por producto en unidad base, ordenada por confirmación de operaciones. Usa seis decimales de costo y conserva estado conocido o desconocido. Un costo desconocido no se convierte en cero; costo cero declarado conserva significado. Los costos de venta quedan congelados antes de su salida. Los lotes disponibles se asignan por vencimiento más próximo y luego identidad, con restricciones de fecha y saldo.
+**No copies solo el .db mientras el servicio escribe.** WAL puede contener cambios confirmados. No borres WAL, SHM ni Recuperacion.json para quitar un bloqueo.
 
-Inventario no recibe valoración monetaria ni márgenes en consultas o exportaciones. Los reportes de ventas excluyen anuladas y los de caja conservan cobros y devoluciones efectivos; sus alcances deben explicarse al conciliar. Si falta costo, el resultado global no se publica como utilidad cero.
+Las credenciales SMTP se protegen fuera de la base, que conserva su referencia. Tras cambiar de perfil o equipo, revisa su disponibilidad y configura nuevamente cuando corresponda. Los reportes enviados conservan archivo exacto y SHA-256.
 
-## Agentes y resultados externos
+### Esquema y seguridad
 
-| Agente | Reserva y ejecución | Tratamiento de incertidumbre |
-|---|---|---|
-| Impresión | Consulta cada 5 segundos; guarda reserva e intento antes del controlador; reserva de 3 minutos | Una reserva vencida o envío sin resultado se vuelve incierto; no se reenvía automáticamente |
-| Correo | Consulta cada 10 segundos; conserva adjunto, huella y Message-ID; reserva de 3 minutos | Pérdida de respuesta tras transmisión exige revisión, no reintento ciego |
-| Respaldo | Revisa pauta y cierres cada 30 segundos; ejecución serializada | Registra fallo visible y conserva copias anteriores |
+El modelo de procedencia contiene **39 tablas, 499 columnas y 103 claves externas**. El esquema operativo es **2**. DDL y JSON originales se conservan; las modificaciones de esquema se realizan mediante migraciones explícitas.
 
-Impresión requiere nombre exacto de equipo instalado y habilitación. Un trabajo conserva su impresora histórica. Microsoft Print to PDF produce un archivo administrado y no prueba papel entregado; OneNote no se admite como destino automático. La aceptación del sistema operativo y la entrega física son registros diferentes.
+La autorización se verifica en el servidor. Caja requiere permiso adicional; Administrador necesita delegación para cuentas. Soporte temporal solo dispone de diagnóstico de lectura. Las solicitudes propias requieren otra cuenta de gestión para aprobarse.
 
-SMTP exige STARTTLS o TLS desde la conexión con validación de certificado. No existe opción de interfaz para omitirla. Un fallo conocido previo al envío o rechazo temporal explícito admite como máximo tres intentos con esperas de dos y cuatro minutos. La falta de configuración conserva solicitudes. Un cambio de servidor o usuario exige nueva credencial.
+Las sesiones usan cookies Secure, HttpOnly y SameSite Strict y protección antifalsificación. Cambios de contraseña, permisos o credenciales invalidan sesiones anteriores. La bitácora conserva decisiones y rechazos sin guardar contraseñas ni cuerpos completos de solicitudes.
 
-Los resultados externos no forman parte de la transacción de venta. Si una respuesta llega después de una resolución manual, se conserva la decisión y se registra la referencia; no se sobrescribe para fingir una certeza que no existía. La aplicación no garantiza una única impresión física ni lectura de un correo; controla intentos y exige resolución de resultados inciertos.
+Antes del uso real, valida cuentas, unidades, equivalencias, costos, precios, NIO, UTC-6, datos del negocio y respaldo. El programa no determina validez fiscal ni habilita cobros por tarjeta o transferencia.
 
-## Respaldo operativo
+[SALTO]
 
-El Propietario autoriza destino existente fuera del almacén operativo, identifica el medio y decide las opciones periódica, por cierre o previa a actualización. Gestión puede generar una copia manual. El intervalo propuesto no activa una política sin autorización y los objetivos de continuidad dependen de medios y ensayos reales.
+## Verificar operaciones y servicios externos
 
-La copia contiene SQLite, reportes congelados, secretos protegidos y salidas PDF administradas referenciadas. El manifiesto registra aplicación, esquema, momento, cantidades de filas, últimos identificadores, tamaños y SHA-256. Se comprueba el ZIP completo, sus archivos, rutas admitidas, integridad física, relaciones y punto recuperable antes de marcarlo Comprobada.
+### Reglas que deben conservarse
 
-El formato 2 incorpora continuidad de numeración y preservaciones anteriores como archivos opacos; se admite lectura del formato 1. Se limita cantidad y tamaño de archivos y se rechazan rutas no admitidas, duplicados y contenido alterado. No se sobrescriben ni eliminan copias anteriores automáticamente. Si el medio falta, se conserva el último registro comprobado y se documenta el fallo actual.
+La confirmación de venta registra detalle, pago, caja, inventario, costos, auditoría y solicitud original de impresión en una transacción. La clave de operación recupera una venta confirmada; una respuesta incierta se resuelve recuperando esa operación.
 
-La fila de ejecución dentro de su propia instantánea puede aparecer En_proceso porque el archivo precede al registro final. Durante restauración, el manifiesto y el registro externo comprobados concilian esa ejecución. No se modifica el ZIP para ocultar esa diferencia.
+Recepciones y solicitudes no cambian saldos antes de aprobarse. La anulación conserva venta y cierre originales; reincorporar mercadería y devolver efectivo son efectos separados. Los gastos alimentan resultados sin crear una salida de caja.
 
-## Restauración y reapertura
+La valoración usa **promedio ponderado móvil** por producto y unidad base, con seis decimales de costo. Los costos de venta quedan históricos. Costo desconocido no equivale a cero; un costo faltante impide calcular el resultado global. Los lotes se asignan por vencimiento más próximo e identidad, sin consumir vencidos.
 
-La pantalla exige Propietario, contraseña actual, copia registrada comprobada e identidad activa coincidente en ella. La revisión compara el estado lógico actual; los cambios posteriores obligan a comprobar el punto de nuevo. Los conteos de registros no reemplazan el examen de novedades sobre registros existentes.
+### Impresión y correo
 
-1. El sistema bloquea solicitudes nuevas y espera a que terminen peticiones y agentes. Si no obtiene la pausa en dos minutos, no aplica la copia.
-2. Conserva una preservación comprobada del estado actual con autorización y huella. Puede advertir archivos previamente ausentes o alterados; conserva los disponibles y no se presenta como copia operativa apta para restaurar.
-3. Prepara la copia fuera de la base activa, aplica controles y cuarentena y comprueba integridad. La instalación se realiza mediante la operación de respaldo de SQLite hacia la base destino.
-4. Cierra sesiones anteriores y deja operación pausada para conciliación del Propietario. No reproduce automáticamente las operaciones posteriores al punto: permanecen en la preservación.
-5. Tras documentar inventario, caja, novedades y trabajos externos, el Propietario autoriza reapertura. La cuarentena se conserva y periféricos/pauta requieren nueva autorización.
+| Servicio | Configuración y control |
+|---|---|
+| Impresora Windows | Nombre exacto instalado y habilitación expresa. Microsoft Print to PDF crea archivo; OneNote no es destino automático. |
+| MP58-16 Bluetooth | SPP, COM saliente, ESC/POS y PC850. Perfil de 58 mm y 32 columnas; prueba física pendiente. |
+| Correo SMTP | STARTTLS o TLS con certificado válido; archivo, huella y Message-ID conservados. |
 
-Los identificadores máximos y la secuencia de folios anteriores se conservan fuera de la base y se reservan antes de insertar. Los saltos por intentos fallidos son posibles y no prueban una venta perdida. Conservar Recuperacion.json es necesario para esa continuidad. No ejecutar versiones anteriores a 0.20.0 después de restaurar.
+Impresión consulta cada 5 segundos; correo, cada 10. Ambos registran reserva de 3 minutos antes del envío. Una reserva vencida o transmisión sin resultado queda **Incierta** y necesita revisión; no se reenvía automáticamente.
 
-Las cuentas comerciales coincidentes conservan contraseña, activación y permisos actuales para evitar revivir credenciales o permisos revocados. Cuentas sin coincidencia quedan inactivas; accesos temporales recuperados se revocan y revisiones pendientes se invalidan. Todos los trabajos de impresión/correo recuperados quedan retenidos, incluso los anteriormente terminados, con su estado anterior y vínculo a la intervención.
+Bluetooth directo no aparece en la cola de impresión de Windows. Una aceptación del sistema o del puerto no acredita papel entregado. **Aceptada_SMTP** no acredita recepción ni lectura. Cambiar de impresora no redirige trabajos históricos.
 
-## Fallos e intervención técnica
+SMTP admite hasta tres intentos ante no aceptación conocida o rechazo temporal explícito, con esperas de dos y cuatro minutos. Un cambio de servidor o usuario requiere nueva credencial. Para ensayos aislados, usa **MEGA__PrintAgentEnabled**, **MEGA__MailAgentEnabled** y **MEGA__BackupAgentEnabled** según el escenario.
 
-| Síntoma | Respuesta permitida | Acción que debe evitarse |
-|---|---|---|
-| Resultado externo incierto | Revisar equipo o destinatario y registrar resolución | Reenvío automático sin comprobar |
-| Archivo de reporte alterado | Conservarlo y revisar huella, origen y copia | Sustituirlo silenciosamente por un reporte nuevo |
-| Medio de copia ausente | Conectar medio, revisar permisos y comprobar copia | Borrar la última copia válida |
-| Intervención interrumpida | Permitir reconocimiento y reversión comprobada al iniciar | Borrar Recuperacion.json o WAL |
-| Conciliación pendiente | Continuar como Propietario y documentar novedades | Forzar el modo normal en archivos |
-| Base dañada o identidad ausente | Custodiar original y copias para intervención supervisada | Sobrescribir para hacer funcionar la pantalla |
+[SALTO]
 
-El control de continuidad se escribe y sincroniza antes de reemplazarse atómicamente. Tolera breves bloqueos de lectura de Windows con reintentos acotados; si persisten, rechaza la reserva y no inserta la operación. Una segunda instancia sobre la misma base se rechaza.
+## Generar y comprobar respaldos
 
-Si falla la preparación o instalación, se intenta volver a la preservación comprobada y se conserva la evidencia. Si no puede comprobarse la reversión, el núcleo permanece pausado. Al reiniciar una intervención en aplicación se reconoce la autorización ya registrada y se revierte; una conciliación pendiente sigue bloqueando operación. Una reapertura ya confirmada antes de interrumpir el control se reconoce como tal.
+### Preparar la pauta
 
-El acceso público **/Recuperacion/Estado** muestra la pausa sin consultar la base. La recuperación de interfaz requiere una base actual legible y coherente; una base físicamente dañada, pérdida del almacén o identidad ausente necesita tratamiento técnico supervisado. No se acredita recuperación frente a corte eléctrico o daño físico con los ensayos de interrupción de proceso.
+Propietario autoriza un destino existente fuera del almacén operativo e identifica el medio. Decide las opciones periódica, al cierre o previa a actualización. El intervalo propuesto no activa una política sin autorización.
 
-## Diagnóstico y mantenimiento
+1. Confirma medio conectado, permisos y espacio disponible.
+2. En **Respaldos**, gestión selecciona **Generar y comprobar respaldo**.
+3. Revisa el registro final y exige estado **Comprobada**.
+4. Custodia ZIP, manifiesto y huellas. Comprueba nuevamente la copia si cambia el medio o aparece una alerta.
 
-Para una lectura sin modificar la base, utilizar **Revisar_Base_Datos.cmd** o el modo **--db-check** con la ruta y modo correctos. El diagnóstico revisa integridad física, claves externas, contrato del modelo, saldos y hashes. Healthy distingue integridad de UpToDate, que indica esquema vigente. Soporte temporal puede realizar el diagnóstico de lectura mediante su pantalla autorizada.
+**Contenido:** instantánea consistente de SQLite, reportes congelados, secretos protegidos, PDF administrados referenciados y manifiesto con versión, esquema, fecha, registros, identificadores, tamaños y SHA-256.
 
-Las actualizaciones de esquema se ejecutan explícitamente al iniciar o con **--db-upgrade**, con copia previa cuando corresponde. No editar la base para simular una migración aprobada. En 0.21.0 no se cambia el esquema 2 ni se modifica el DDL/JSON de procedencia.
+La comprobación revisa ZIP, rutas, archivos, huellas, integridad física, relaciones y punto recuperable. El formato 2 conserva continuidad de numeración y preservaciones anteriores; se admite lectura del formato 1.
 
-Supervisar fallos visibles de colas, copia más reciente comprobada, espacio, permisos del perfil y eventos de bitácora. No borrar auditoría, historial o credenciales referenciadas como limpieza ordinaria. La política de retención y medios alternados debe ser aceptada por el negocio.
+### Si falla una copia
 
-## Construcción y actualización
+Conserva la última copia comprobada. Revisa conexión del medio, permisos, espacio y detalle del fallo. Usa **Comprobar de nuevo** cuando corresponda. No sobrescribas una copia válida para ocultar el problema.
 
-Para preparar fuentes, usar **tools/package.ps1**. Solo empaqueta archivos versionados y rechaza rutas operativas. Para el paquete Windows usar **pwsh -File tools/build-distribution.ps1** desde una revisión registrada. Un árbol sin registrar solo admite ensayo privado bajo TestResults con AllowDirty, identificado como tal en el manifiesto.
+El agente revisa pauta y cierres cada 30 segundos y serializa la ejecución. El sistema no elimina automáticamente copias anteriores. Una carpeta del mismo disco permite ensayo, pero no protege frente a pérdida de ese disco.
 
-El paquete registra commit, versión, SDK, entornos incluidos y huellas de archivos y añade SHA-256 externo. La huella permite detectar cambios respecto del archivo comprobado; no constituye una firma digital del editor. Las licencias y avisos del entorno y bibliotecas acompañan la distribución.
+**Detalle del registro:** dentro de su propia instantánea, la ejecución puede figurar **En_proceso** porque el ZIP precede al resultado final. La recuperación concilia el manifiesto con el registro externo comprobado; no edites el ZIP para cambiarlo.
 
-Antes de actualizar, confirmar ausencia de trabajos en curso, generar copia autorizada, detener el programa y conservar su carpeta. Extraer el nuevo programa aparte y utilizar el mismo perfil y carpeta de datos. Si no inicia, detener y volver a una versión compatible conservando los datos. No restaurar una base únicamente para reemplazar el programa. Los cambios futuros de esquema requieren su procedimiento específico.
+Acuerda medios alternos, retención y una prueba de restauración con el negocio. Los tiempos y la pérdida de datos admisibles dependen de ese ensayo; no se dan por verificados con datos ficticios.
 
-GitHub comprueba dependencias fijadas, sintaxis PowerShell, auditoría de dependencias, kanban, compilación, 223 pruebas y preparación del paquete. Solo tras éxito registra la etiqueta si no existe; las etiquetas existentes no se mueven. Conserva artefactos de ejecución y resultados durante 30 días. El repositorio y las copias del responsable conservan la historia independiente de esa retención temporal.
+[SALTO]
 
-## Referencias operativas
+## Recuperar y reabrir la operación
 
-La fuente de esta edición es MEGA-Minisuper, código 0.21.0, junto con sus documentos de Base de datos, Valoración, Inventario integrado, Impresión, Correo, Respaldos, Restauración y Distribución. Los resultados acumulados se consultan en la Matriz de validación y los TRX conservados. El Manual de usuario contiene los procedimientos de operación.
+**Requisitos:** Propietario activo, contraseña actual, copia registrada comprobada e identidad coincidente en ella. La base actual debe ser legible y coherente. Daño físico, pérdida del almacén o ausencia de identidad requieren intervención supervisada.
 
-La documentación oficial de publicación .NET está en https://learn.microsoft.com/en-us/dotnet/core/deploying/. La API de copia SQLite se describe en https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/backup. Estas referencias amplían decisiones técnicas; el código y los ensayos de la versión determinan el comportamiento aquí documentado.
+### Aplicar una copia
+
+1. Selecciona **Comprobar y revisar punto**. Revisa fecha y novedades posteriores. Si cambió el estado, repite la revisión.
+2. Registra motivo, contraseña y reconocimiento; selecciona **Autorizar y recuperar copia**.
+3. El servicio bloquea solicitudes y espera a peticiones y agentes. Si no obtiene pausa en dos minutos, no aplica la copia.
+4. Conserva una preservación comprobada del estado actual; prepara y valida la copia fuera de la base activa y la instala mediante la API de respaldo de SQLite.
+5. Invalida sesiones y deja la operación pausada para conciliación. Las novedades posteriores al punto permanecen en la preservación; no se reproducen solas.
+
+### Conciliar y reabrir
+
+Propietario vuelve a entrar, descarga la preservación y documenta inventario, caja, novedades y trabajos externos. Completa las declaraciones y selecciona **Autorizar reapertura**. Impresión, correo y pauta requieren nueva autorización; los trabajos recuperados conservan cuarentena y resolución individual.
+
+Las cuentas coincidentes mantienen contraseñas, activación y permisos actuales. Las no coincidentes quedan inactivas; soporte temporal recuperado se revoca y las revisiones pendientes se invalidan.
+
+**Numeración:** Recuperacion.json conserva máximos y secuencia de folios; los saltos no demuestran una venta perdida. No elimines ese control ni ejecutes versiones anteriores a 0.20.0 después de restaurar.
+
+**Si se interrumpe:** al reiniciar se reconoce la intervención y se intenta la reversión comprobada. Si no puede comprobarse, el núcleo permanece pausado. Conserva original, copias y preservación; no fuerces acceso modificando archivos. **/Recuperacion/Estado** permite consultar la pausa sin acceder a la base.
+
+[SALTO]
+
+## Diagnosticar y actualizar
+
+### Diagnóstico de lectura
+
+Desde las fuentes, utiliza **Revisar_Base_Datos.cmd** con el SDK disponible. También puedes ejecutar el programa en modo **--db-check** con ruta y modo correctos. El iniciador de diagnóstico puede comprobar la base con MEGA abierto: compila en una carpeta temporal independiente y no reemplaza el ejecutable en uso.
+
+Revisa integridad física, claves externas, contrato, saldos y huellas. **Healthy** indica integridad; **UpToDate**, esquema vigente. Un resultado no sustituye al otro. Las migraciones se aplican explícitamente al iniciar o con **--db-upgrade**, con copia previa cuando corresponda.
+
+### Actualizar el programa
+
+1. Comprueba versión de origen, compatibilidad de esquema y ausencia de trabajos en curso.
+2. Genera y comprueba el respaldo autorizado. Detén el servicio y conserva programa y datos anteriores.
+3. Extrae el programa nuevo en otra carpeta. Inicia con el mismo perfil y la misma carpeta de datos.
+4. Comprueba acceso, integridad, permisos y consultas antes de reanudar.
+
+Si falla el inicio, detén el servicio y vuelve a una versión compatible. No restaures la base solo para cambiar el programa; una migración exige su procedimiento de reversión.
+
+| Síntoma | Intervención |
+|---|---|
+| Puerto ocupado o segunda instancia | Detener la instancia identificada o elegir puerto libre. No abrir la misma base dos veces. |
+| Certificado no recuperable | Conservar HTTPS y revisar perfil de Windows; no borrar datos para regenerarlo. |
+| Reporte alterado | Conservar archivo y comprobar huella, origen y copia. |
+| Estado externo incierto | Verificar equipo o destinatario y registrar resolución. |
+| Base dañada o recuperación pausada | Custodiar originales y copias; intervención supervisada. |
+
+Supervisa espacio, permisos, colas, última copia comprobada y bitácora. No borres auditoría o archivos referenciados como mantenimiento ordinario.
+
+[SALTO]
+
+## Consultar referencias y evidencia
+
+### Ubicaciones del código
+
+| Ruta desde la raíz | Contenido |
+|---|---|
+| src/Mega.Web/Pages | Pantallas y manejadores Razor. |
+| src/Mega.Web/Services | Reglas comerciales, reportes y continuidad. |
+| src/Mega.Web/Data | Modelo, contrato, esquema y migraciones. |
+| tests/Mega.Tests | Pruebas con bases separadas. |
+| tools | Inicio, diagnóstico, construcción y distribución. |
+
+Para preparar un paquete desde una revisión registrada, consulta **tools/package.ps1** y **tools/build-distribution.ps1**. Los manifiestos registran versión, commit, entorno y huellas; SHA-256 detecta alteraciones y no equivale a firma digital del editor. Conserva licencias y avisos con la distribución.
+
+### Evidencia de esta entrega
+
+El registro oficial conservado contiene **272 pruebas aprobadas**. La entrega comprobó integridad de la base inicial, cero ventas y acceso HTTPS local con cuenta ficticia. Son resultados históricos documentados, no pruebas reejecutadas durante esta revisión editorial.
+
+El acceso móvil del código fuente se comprobó en el Wi-Fi de desarrollo. El iniciador distribuido sigue siendo local. No se acredita con ello instalación en la estación definitiva, impresión física ni aceptación comercial.
+
+En esta entrega, consulta **06_Matriz_de_Pruebas_y_Evidencias.pdf** y el documento consolidado. En el repositorio, **docs/Base_Datos.md** explica la base y su procedencia. Las carpetas **06_Pruebas_y_Evidencias** y **03_Base_Datos_y_Ejecucion** solo pertenecen al paquete amplio opcional.
+
+### Referencias técnicas
+
+- [Repositorio oficial MEGA](https://github.com/carlosfaj/MEGA-Minisuper) y sus guías de Distribución, Acceso celular, Impresión Bluetooth, Respaldos y Restauración.
+- [Microsoft sobre publicación de aplicaciones .NET](https://learn.microsoft.com/en-us/dotnet/core/deploying/).
+- [Microsoft sobre respaldo de SQLite](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/backup).
+
+**Control documental:** manual técnico de la versión oficial 0.23.2, edición del 18 de noviembre de 2026. Actualiza esta guía cuando cambien inicio, rutas, esquema o recuperación.

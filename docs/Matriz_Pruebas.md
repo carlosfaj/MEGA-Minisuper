@@ -1,6 +1,6 @@
 # Matriz de pruebas — historial y estado actual
 
-Estado actual **0.22.0: 255/255 pruebas aprobadas**, con matriz T01–T15, respaldo/restauración, impresión Bluetooth simulada y recorridos de navegador aislados. [Suite completa actual](evidencias/bluetooth/bluetooth.trx), [matriz PDF histórica de 0.21.0](Manuales_y_Validacion.md), [restauración](Restauracion.md) y [kanban](KANBAN.md). Las secciones siguientes conservan el alcance y los resultados históricos de cada avance; sus pendientes no describen por sí solos la versión actual.
+Estado actual de cierre: **oficial 0.23.2, 272/272 aprobadas**, y **alternativa 0.24.2, 283/283 aprobadas** en suites separadas. La [matriz resumida final](entregables/Matriz_Pruebas_y_Evidencias_MEGA.pdf) conserva los resultados y cuatro validaciones pendientes. Los apartados siguientes son historia de versiones anteriores, incluidos sus 223 o 255 resultados; no sustituyen los contadores finales ni acreditan aceptación física o comercial.
 
 ## Impresión Bluetooth — 15 de noviembre de 2026
 

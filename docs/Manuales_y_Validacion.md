@@ -1,4 +1,12 @@
-# Manuales y validación de MEGA 0.21.0
+# Manuales y validación de MEGA
+
+## Cierre documental del 18 de noviembre de 2026
+
+La versión oficial es 0.23.2. Los manuales finales se encuentran en [usuario](entregables/Manual_Usuario_MEGA.pdf) (10 páginas) y [técnico](entregables/Manual_Tecnico_MEGA.pdf) (9 páginas). La [matriz resumida](entregables/Matriz_Pruebas_y_Evidencias_MEGA.pdf) contiene 15 casos y cuatro validaciones pendientes en 2 páginas. La suite oficial conserva 272 aprobadas y la alternativa 0.24.2 conserva 283, en registros separados. No se ejecutaron nuevas pruebas durante esta corrección editorial.
+
+Las secciones siguientes documentan la edición histórica 0.21.0. Sus recuentos, fuentes y generador corresponden a esa fecha. Sus rutas PDF de manuales ahora abren la edición final; la matriz histórica de 223 se conserva como antecedente. PF01 lector, PF02 impresora, PA01 aceptación y PA02 equipo objetivo permanecen pendientes.
+
+## Archivo histórico de la edición 0.21.0
 
 Edición documental del **14 de noviembre de 2026**, correspondiente al código 0.21.0. Consolida instalación, operación, contingencias y resultados comprobados; no modifica el programa ni sustituye el documento académico de capítulos I–IV.
 

@@ -1,3 +1,7 @@
+## Corrección documental del cierre académico — 18/11/2026
+
+Actualiza referencias de versión, manuales y matriz final, conservando los resultados históricos y las validaciones pendientes. Sin cambios de código ni nueva versión de aplicación.
+
 # Historial de versiones de MEGA
 
 ## Mantenimiento de iniciador — 16 de noviembre de 2026

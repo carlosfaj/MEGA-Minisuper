@@ -1,197 +1,294 @@
 # Manual de usuario de MEGA
 
-Este manual explica cómo operar la versión 0.21.0 de MEGA en una computadora local. Está dirigido a las personas que realizan ventas, controlan inventario o administran el minisúper. Cada procedimiento indica qué revisar antes de confirmar y qué resultado debe quedar registrado.
+Ventas y control del minisúper
 
-Versión 0.21.0. Equipo Frijol Devs. Grupo 3M1-SIS-S. Edición del 14 de noviembre de 2026.
+Versión oficial 0.23.2 | Edición del 18 de noviembre de 2026
 
-La demostración utiliza productos, importes y comprobaciones ficticios. Las pruebas técnicas no acreditan aceptación del personal, fiscalidad, impresión en papel ni recuperación con medios reales. El cobro habilitado es efectivo; transferencia y tarjeta permanecen deshabilitadas.
+Este manual te guía para vender, controlar existencias y administrar el minisúper. Busca la tarea que necesitas y sigue los pasos con tu propia cuenta. Los nombres en **negrita** corresponden a opciones de la aplicación.
 
-[TOC]
+## Encuentra tu tarea
 
-## Acceso y responsabilidades
+[CONTENIDO]
 
-Abre https://localhost:7248 cuando el servicio local esté iniciado. Escribe tu usuario y contraseña y selecciona **Entrar a MEGA**. Cada persona debe usar su propia cuenta para conservar la responsabilidad de los cambios. El menú muestra las funciones permitidas; escribir otra dirección no concede permisos.
+## Qué puedes hacer con tu cuenta
 
-| Cuenta o función | Operaciones permitidas | Restricción principal |
+| Cuenta | Trabajo principal |
+|---|---|
+| Cajero con permiso de caja | Abrir su turno, vender, consultar ventas y cerrar su caja. |
+| Inventario | Consultar existencias y lotes; preparar recepciones, conteos y solicitudes. |
+| Administrador | Gestionar catálogo, revisar solicitudes de otra cuenta, consultar resultados y generar respaldos. La gestión de cuentas exige delegación. |
+| Propietario | Administrar cuentas, delegaciones, respaldo y recuperación. También necesita permiso adicional para operar caja. |
+
+En esta guía, **gestión** significa Administrador o Propietario.
+
+**Alcance.** La entrega funciona en Windows con datos ficticios y cobro en efectivo. Transferencia y tarjeta están deshabilitadas. La impresión física y la aceptación del negocio siguen pendientes. Usa el Manual técnico para instalar o actualizar el programa.
+
+Equipo Frijol Devs | Grupo 3M1-SIS-S
+
+[SALTO]
+
+## Entrar y preparar la jornada
+
+### Iniciar la demostración
+
+1. Esta entrega documental incluye un **enlace GitHub**, sin ejecutable. Pide al responsable técnico descargar la versión oficial **0.23.2** y preparar el **SDK .NET 10.0.403** siguiendo el Manual técnico.
+2. Desde la raíz de las fuentes, el responsable inicia el modo local con **powershell.exe -NoProfile -File tools/start.ps1**. Conserva la ventana abierta y entra en **https://localhost:7248**.
+3. Comprueba la dirección antes de continuar ante el aviso de certificado de desarrollo. Escribe tu usuario y contraseña y selecciona **Entrar a MEGA**.
+
+El primer inicio crea datos ficticios si no existe la base de demostración; los siguientes conservan su estado. No borres la base para reiniciar una jornada.
+
+**Solo si dispones del paquete ejecutable amplio:** usa su iniciador en **03_Base_Datos_y_Ejecucion/Ejecutable_Oficial**. Su opción **08_Demostracion_Funcional** crea ensayos separados. Esas carpetas no forman parte de esta entrega documental.
+
+**Cuentas de demostración:** cajero, cajero2, inventario, admin y propietario. Contraseña ficticia común: **MegaDemo2026!**. No las uses para una operación comercial.
+
+### Orientarte en Inicio
+
+El inicio de Inventario muestra mínimos, vencimientos y trabajo propio. Administrador ve revisiones y caja; Propietario, resultados del día y excepciones. Selecciona un pendiente para abrir su detalle. Recarga la página para actualizar la información.
+
+### Abrir tu turno de caja
+
+1. Comprueba fecha, estación, precios y avisos. Los importes se expresan en córdobas **C$**; la hora usa UTC-6.
+2. Abre **Mi caja** y registra el **Fondo real recibido (C$)**. Explica cualquier diferencia con el fondo habitual.
+3. Selecciona **Abrir mi turno** y comprueba el fondo guardado.
+
+Solo puede existir un turno abierto en la estación. Si aparece otro, identifica al responsable y completa su cierre. El fondo real será la base del efectivo esperado.
+
+**Al terminar:** usa **Salir**. En **Mi contraseña** puedes cambiar la clave; debe tener entre 12 y 200 caracteres y exige volver a entrar.
+
+[SALTO]
+
+## Vender y cerrar caja
+
+### Confirmar una venta
+
+**Antes:** debes tener permiso de caja y un turno propio abierto.
+
+1. Abre **Nueva venta** y busca por nombre o código. Comprueba producto, presentación y precio.
+2. Indica cantidad, peso manual o importe, según la modalidad que admita el producto. Selecciona **Añadir a la compra**.
+3. Revisa las líneas y selecciona **Continuar al cobro**. Comprueba los precios, descuentos, impuestos y total que muestra el sistema.
+4. Introduce el **Efectivo recibido (C$)**. Revisa el cambio y selecciona **Confirmar venta** una vez.
+5. Comprueba el folio y el comprobante. Entrega el cambio y revisa el estado de impresión si corresponde.
+
+**Resultado:** la venta confirmada registra el cobro y descuenta existencias. La impresión se gestiona por separado.
+
+Escribe **38.50**, sin C$ ni separadores de miles. Las unidades indivisibles no admiten fracciones. Si cambió un precio o saldo, actualiza la preparación y vuelve a revisar. Ante una discrepancia de inventario, comprueba físicamente lo solicitado antes de declararlo.
+
+**Si no recibes respuesta al confirmar:** selecciona **Recuperar resultado de la venta** en la misma preparación. Conserva esa operación hasta conocer su resultado. Empezar otra venta puede duplicar el cobro.
+
+### Consultar y cerrar el turno
+
+1. En **Ventas del turno**, abre la venta que necesitas y conserva su folio.
+2. En **Mi caja**, revisa el efectivo esperado y cuenta el dinero disponible.
+3. Registra el efectivo contado. Si hay diferencia, explica el motivo y confirma el cierre.
+
+Si hubo movimientos después de abrir el cierre, recarga y cuenta de nuevo. El cierre conserva sus importes históricos.
+
+**Ejemplo con datos iniciales:** fondo C$480 más una venta de C$86 produce efectivo esperado de C$566. Si recibes C$100, entregas C$14 de cambio. Un conteo final de C$560 genera diferencia de -C$6. El fondo no es ingreso por ventas.
+
+[SALTO]
+
+## Imprimir y entregar comprobantes
+
+La venta queda guardada aunque falle la impresora. Abre **Impresión y entregas** y comprueba el estado antes de solicitar otra salida.
+
+| Estado | Qué hacer |
+|---|---|
+| Pendiente | Revisar que el equipo y la impresión estén habilitados. Esperar antes de crear otra solicitud. |
+| Aceptada | Comprobar el papel. Registrar entrega física solo cuando haya ocurrido. |
+| Fallida | Avisar a gestión para comprobar la causa y autorizar un reintento cuando corresponda. |
+| Incierta | Comprobar papel y conexión; revisar la cola si se usó un controlador de Windows. Solicitar una resolución de gestión. |
+| En_cuarentena | Esperar la conciliación de los trabajos recuperados. |
+| Resuelta | Leer la decisión registrada antes de emitir otra copia. |
+
+**Copia de un comprobante.** Conserva el folio y los importes, añade número de copia y no vuelve a cobrar ni descontar inventario. Primero resuelve los trabajos pendientes o inciertos del mismo comprobante. Gestión puede cerrar sin reenviar, emitir una copia expresa o registrar una contingencia ya entregada, con motivo y evidencia.
+
+### Configurar una impresora
+
+Administrador o Propietario abre **Configuración del negocio**, elige el destino disponible, marca **Habilitar impresión automática de nuevos comprobantes** y guarda. Un cambio de destino no redirige los trabajos anteriores.
+
+Para la **MP58-16 Bluetooth**, empareja la impresora con la computadora donde se ejecuta MEGA. Identifica su puerto COM **saliente** en Windows y elige el destino, por ejemplo **MP58-16 Bluetooth (COM7)**. COM7 es un ejemplo; usa el puerto real.
+
+La conexión necesita Bluetooth clásico SPP y ESC/POS. Si no aparece un puerto compatible, consulta al responsable técnico. La unidad física del negocio todavía requiere prueba de papel, acentos, original y copia.
+
+**Comprueba el resultado.** Una aceptación de Windows o del puerto Bluetooth no demuestra que salió papel. Microsoft Print to PDF genera un archivo. Abrir MEGA en un celular no conecta su impresora al servidor.
+
+[SALTO]
+
+## Recibir mercadería y consultar existencias
+
+### Registrar una recepción
+
+**Responsables:** Inventario o gestión prepara; otra cuenta Administrador o Propietario revisa. Gestión debe haber registrado el proveedor activo.
+
+1. Abre **Recepciones** e indica referencia interna única, proveedor, documento y fecha.
+2. Añade presentación, cantidad recibida y aceptada, costo por unidad base y, si corresponde, lote y vencimiento.
+3. Selecciona **Guardar preparación**. Revisa equivalencias y explica los rechazos parciales. Una cantidad aceptada exige costo conocido; vacío no equivale a cero. Rechaza mercadería vencida.
+4. Selecciona **Enviar versión guardada a revisión**.
+5. Otra cuenta de gestión revisa la versión exacta y decide con motivo. Comprueba la confirmación y la entrada por la cantidad aceptada.
+
+**Resultado:** guardar un borrador no aumenta existencias; aprobar la recepción registra la entrada. Recibir mercadería no registra un pago de caja.
+
+Solo el preparador puede editar o enviar su recepción. Si cambia la información o queda desactualizada, guarda y envía una versión nueva.
+
+### Consultar existencias y lotes
+
+En **Existencias**, revisa cantidad, unidad base, mínimo y alertas. En **Lotes y vencimientos**, consulta saldo, fecha y procedencia. Si falta el umbral de vencimiento, gestión debe configurarlo.
+
+Los lotes disponibles se consumen primero por vencimiento más próximo. El sistema impide vender lotes vencidos. Consultar una alerta no retira mercadería ni cambia existencias.
+
+**Si hay saldo sin lote en un producto que controla vencimiento:** solicita conciliación. No inventes un lote para ocultar la diferencia. Inventario consulta cantidades sin costos ni márgenes.
+
+Para corregir diferencias físicas, usa el procedimiento de conteos y solicitudes de la página siguiente.
+
+[SALTO]
+
+## Contar y solicitar movimientos de inventario
+
+### Registrar un conteo físico
+
+1. Abre **Conteos físicos** e indica referencia única y producto.
+2. Elige el alcance: total del producto o un lote concreto. Registra la cantidad observada y la observación.
+3. Declara la comprobación física únicamente si la realizaste. Guarda y finaliza el conteo completo.
+
+**Resultado:** el conteo queda disponible para revisión; guardar o finalizar no ajusta existencias. Si hubo movimientos después de contar, vuelve a comprobar, guardar y finalizar.
+
+No mezcles total y lotes del mismo producto ni dupliques el alcance. Si el producto está distribuido en lotes, el ajuste requiere conteos por lote.
+
+### Preparar una solicitud
+
+En **Ajustes y salidas**, elige el movimiento que corresponde.
+
+| Tipo | Información necesaria | Efecto al aprobar |
 |---|---|---|
-| Cajero con permiso de caja | Abrir y cerrar su turno, vender, consultar sus ventas y gestionar comprobantes de su turno abierto | No administra catálogo ni aprueba solicitudes |
-| Inventario | Consultar existencias y lotes, preparar recepciones, conteos y solicitudes | No consulta costos o márgenes en reportes ni autoriza sus solicitudes |
-| Administrador | Gestión de catálogo, configuración, revisiones, gastos, reportes, correo y copias | Cuentas requieren delegación; no restaura ni reabre el núcleo |
-| Propietario | Gestión, cuentas, delegación, soporte temporal, pauta de respaldo y recuperación | Caja requiere permiso adicional; tampoco aprueba una solicitud propia |
-| Soporte temporal | Diagnóstico de integridad de lectura durante el periodo autorizado | No tiene rol comercial ni acceso a restauración |
+| Carga | Cantidad, costo conocido o desconocido, motivo, evidencia y lote cuando aplique. | Entrada en unidad base. |
+| Ajuste | Conteo finalizado y vigente. El sistema calcula la diferencia. | Regularización del alcance contado. |
+| Salida justificada | Cantidad, causa, evidencia y proveedor si es devolución. | Salida autorizada. |
 
-En una demostración nueva existen **cajero**, **cajero2**, **inventario**, **admin** y **propietario**; la contraseña ficticia común es **MegaDemo2026!**. No son credenciales para una operación comercial. La cuenta Propietario de la demostración no tiene caja habilitada inicialmente.
+1. Guarda la solicitud y envía su versión a revisión.
+2. Otra cuenta de gestión comprueba cantidades, saldos, lotes, costos y motivo.
+3. Consulta el resultado. Si la información cambió, corrige y vuelve a enviar.
 
-Para cambiar tu contraseña, abre **Mi contraseña**, comprueba la actual y confirma la nueva. La nueva debe tener entre 12 y 200 caracteres. El cambio invalida las sesiones anteriores y exige entrar nuevamente. Usa **Salir** al terminar; no compartas la sesión con otra persona. Si se alcanza el límite de acceso, espera el minuto indicado antes de intentarlo de nuevo.
+**Reglas de revisión.** Nadie aprueba su propia solicitud. Preparar, enviar, rechazar o cancelar no mueve existencias. La aprobación no admite saldo negativo y no registra pagos de caja.
 
-## Inicio de la jornada
+En una solicitud manual, dejar lote vacío indica saldo no asignado, no el total del producto. La evidencia es una referencia a un documento o fotografía: el formulario no guarda ese archivo adjunto; el responsable debe custodiarlo.
 
-1. Comprueba que la estación, fecha y hora mostradas correspondan al trabajo. La aplicación usa un desplazamiento provisional UTC-6 y moneda NIO, indicada con C$.
-2. Revisa avisos de existencias y vencimientos y confirma que los precios y condiciones estén vigentes.
-3. Abre **Mi caja**, registra el **Fondo real recibido (C$)** y explica cualquier diferencia respecto del fondo habitual.
-4. Selecciona **Abrir mi turno**. Revisa el fondo guardado antes de comenzar a vender.
+[SALTO]
 
-Solo puede existir un turno abierto en la estación. El fondo habitual es una referencia; el efectivo esperado parte del fondo real que registraste. Si aparece otra caja abierta, identifica a su responsable y completa el cierre correspondiente; no abras otra cuenta para evadirlo.
+## Mantener el catálogo y anular ventas
 
-## Preparar y confirmar una venta
+### Mantener productos y configuración
 
-1. Abre **Nueva venta** y busca el producto por nombre o código. Comprueba la presentación y el precio.
-2. Indica cantidad por unidad, peso manual o importe únicamente cuando el producto admita esa modalidad. Revisa la cantidad resultante y selecciona **Añadir a la compra**.
-3. Revisa todas las líneas y selecciona **Continuar al cobro**. El servidor calcula precios, promociones, impuestos configurados, lotes y disponibilidad.
-4. En **Efectivo recibido (C$)** registra lo entregado por el cliente. Comprueba total y cambio antes de seleccionar **Confirmar venta**.
-5. Verifica el folio y el comprobante. Confirma la entrega del cambio y gestiona la impresión según el procedimiento de comprobantes.
+Administrador o Propietario abre **Catálogo**. Crea el producto, su presentación y código; después registra un precio positivo con vigencia. Dar de alta un producto no crea existencias.
 
-Escribe los números con punto decimal, sin símbolo C$ ni separador de miles; por ejemplo, 38.50. Las unidades indivisibles no admiten fracciones. Un precio o saldo que cambió después de revisar obliga a actualizar la preparación. La asignación por lote utiliza primero el vencimiento más próximo disponible y no permite consumir lotes vencidos. Una advertencia de discrepancia exige comprobar físicamente y documentar lo solicitado; no se debe confirmar una existencia que no se comprobó.
+Conserva los ceros iniciales de los códigos. Un código desactivado no se reasigna. Si un producto o presentación ya tiene movimientos, sus unidades y equivalencias conservan la historia; utiliza otra presentación o producto para una unidad distinta.
 
-**Ejemplo de demostración nueva.** Con fondo C$500, una leche de C$38 y recibido C$50, el cambio es C$12 y el esperado de caja queda C$538. Este ejemplo supone catálogo inicial, sin promociones ni impuestos adicionales. Las condiciones que muestre la revisión de la venta prevalecen si la configuración cambió.
+En **Promociones e impuestos**, registra condiciones y vigencias y comprueba el resultado antes de confirmar una venta. En **Configuración**, revisa datos del negocio, fondo habitual y umbral de vencimiento. Cambiar el fondo habitual afecta aperturas futuras, no turnos existentes.
 
-Si la respuesta se pierde después de confirmar, utiliza **Recuperar resultado de la venta** en la misma preparación. Conserva esa operación hasta conocer su resultado. El sistema recupera la venta ya guardada con su misma clave; volver a comenzar una venta diferente puede registrar otro cobro.
+Las tasas y los datos del emisor deben validarse con el negocio. El comprobante generado no acredita validez fiscal. Si otro usuario guardó antes, recarga y revisa la información vigente.
 
-## Cierre y consulta de ventas
+### Solicitar la anulación de una venta
 
-Desde **Ventas del turno**, abre el comprobante requerido y conserva su folio para cualquier consulta posterior. Sus datos corresponden al momento de confirmación; un cambio posterior de precio o del negocio no los sustituye.
+1. Identifica la venta por su folio e inicia la solicitud de anulación.
+2. Registra motivo y evidencia. Indica si corresponde reincorporar mercadería y declara la comprobación física.
+3. Envía a otra cuenta de gestión para revisión. Comprueba la decisión registrada.
 
-Para cerrar, abre **Mi caja**, revisa el esperado y registra el efectivo realmente contado. Si existe diferencia, escribe su motivo y confirma el cierre. Una pantalla de cierre desactualizada se rechaza cuando hubo nuevos movimientos; revisa y cuenta otra vez. El turno cerrado no se vuelve a calcular con operaciones posteriores.
+**Resultado:** una anulación aprobada conserva el comprobante original y aplica las cantidades, lotes y costos de esa venta. Sin reincorporación no se crea una entrada de mercadería.
 
-**Ejemplo de diferencia.** Fondo real C$480 más venta neta C$86 produce esperado C$566. Si el conteo es C$560, la diferencia es -C$6 y requiere motivo. El fondo inicial no es ingreso por ventas.
+### Registrar la devolución de efectivo
 
-## Comprobantes y fallos de impresión
+La aprobación de la anulación deja el dinero pendiente hasta registrar su entrega. El solicitante o gestión con permiso de caja debe tener turno propio abierto, saldo suficiente y evidencia de la devolución.
 
-La venta queda guardada aunque falle la impresora. Consulta **Impresión y entregas** antes de decidir otra salida de papel. Gestión configura el nombre exacto de la impresora y habilita el agente desde Configuración; cambiar el nombre no convierte automáticamente un trabajo histórico en un trabajo para otro equipo.
+Registra el importe **pagado por la venta**, no el billete recibido antes de dar cambio. Si el turno original cerró, utiliza el turno actual de quien entrega el dinero; el cierre anterior se conserva. Consulta la regularización hasta resolver el pendiente.
 
-| Estado | Qué significa | Qué hacer |
-|---|---|---|
-| Pendiente | Solicitud guardada que todavía no se aceptó | Revisar habilitación y equipo; evitar crear otra solicitud por impaciencia |
-| Aceptada | Windows aceptó el trabajo | Comprobar papel y registrar entrega física solo si ocurrió |
-| Fallida | Existe un fallo identificado | Gestión comprueba la causa y decide si corresponde reintentar |
-| Incierta | No se conoce el resultado final | Comprobar cola y papel; no reenviar ciegamente |
-| En_cuarentena | Trabajo recuperado y retenido | Esperar conciliación y resolver individualmente |
-| Resuelta | Gestión registró una decisión y su evidencia | Consultar la resolución antes de emitir otra copia |
+[SALTO]
 
-La copia conserva folio e importes y agrega un número de copia; no genera otra venta ni salida de inventario. Antes de solicitarla, resuelve los trabajos pendientes o inciertos del mismo comprobante. Gestión puede cerrar sin reenviar, emitir una copia expresa o registrar una contingencia manual ya entregada, con motivo y evidencia. La aceptación de Windows no demuestra entrega de papel ni validez fiscal.
+## Registrar gastos y consultar reportes
 
-[PAGEBREAK]
+### Registrar un gasto
 
-## Comprobante de la venta de ejemplo
+Gestión abre **Gastos operativos**, indica fecha, concepto, importe positivo y referencia cuando corresponda, y guarda. El registro alimenta resultados; no representa una retirada de efectivo de caja.
 
-La Figura 1 muestra el comprobante de la venta utilizada en el ensayo de distribución. El total y el cambio deben revisarse antes de entregar el comprobante al cliente.
+Una corrección queda enlazada con el registro anterior. Para anular, indica motivo. Anular una corrección no reactiva el gasto sustituido.
 
-![Figura 1 Detalle del comprobante de una leche por C$38 con recibido C$50 y cambio C$12. Fuente captura del ensayo de distribución 0.21.0 con datos ficticios.](../evidencias/distribucion/01_venta_paquete.png#xywh=270,257,711,653)
+### Consultar y descargar un reporte
 
-[PAGEBREAK]
+1. Abre **Reportes**, selecciona el tipo y define los filtros.
+2. Comprueba periodo y alcance antes de interpretar las cifras.
+3. Descarga en PDF o Excel. Si excede el límite, reduce los filtros.
 
-## Catálogo y condiciones comerciales
+| Reporte | Cómo interpretarlo |
+|---|---|
+| Ventas | Usa condiciones históricas y excluye ventas anuladas. |
+| Inventario | Muestra existencias actuales al generar. Inventario no accede a costos ni márgenes. |
+| Caja | Refleja cobros y devoluciones en su fecha efectiva; conserva cierres. |
+| Resultados | Combina ingresos, costos y gastos. Si falta algún costo, el margen o resultado global es **No calculable**. |
 
-Administrador o Propietario abre **Catálogo** para administrar categorías, productos, presentaciones, equivalencias, códigos y precios. Primero crea el producto, luego su presentación y código, y registra un precio positivo con su vigencia. Dar de alta un producto no crea existencias.
+No interpretes **No calculable** como cero. La pantalla muestra hasta 250 filas; las descargas admiten hasta 5000. Una anulación puede aparecer de forma distinta en ventas y caja por su fecha y efecto.
 
-Los códigos conservan ceros iniciales y no se reasignan después de desactivarlos. Productos con historia conservan unidad y escala; una presentación utilizada conserva su equivalencia. Para otra unidad se requiere otro producto o presentación. Desactivar conserva la historia y evita nuevas operaciones que requieran una entidad activa.
+### Enviar un reporte por correo
 
-En **Promociones e impuestos**, gestión define las condiciones admitidas y sus vigencias. Comprueba el resultado en la revisión del cobro antes de aplicarlo a una jornada. Las tasas y datos del emisor requieren validación del negocio; la aplicación no inventa una tasa ni acredita fiscalidad.
+Gestión genera el reporte, indica destinatario y solicita el envío en PDF o Excel. El adjunto conserva el archivo exacto generado. Antes del primer envío, configura **Correo y reportes** con servidor, puerto, remitente y TLS; introduce la credencial si se requiere.
 
-En **Configuración**, guarda datos del negocio, fondo habitual, umbral de vencimiento y equipo de impresión. El fondo nuevo se propone en aperturas futuras y no cambia el dinero de un turno existente. Si otro usuario guardó antes, recarga y revisa el formulario actualizado.
+**Aceptada_SMTP** indica que el servidor aceptó el envío, sin demostrar recepción o lectura. Ante **Incierta**, comprueba con servidor y destinatario antes de resolver o solicitar otro envío expreso. Un fallo confirmado anterior a la aceptación puede admitir reintento.
 
-## Proveedores y recepciones
+Si cambias servidor, usuario o perfil de Windows, revisa la credencial. Sin correo configurado, las ventas y el inventario local siguen disponibles.
 
-Gestión registra un proveedor activo. Inventario o gestión abre **Recepciones** y prepara referencia interna única, proveedor, documento y fecha. En cada línea indica presentación, recibido, aceptado, costo por unidad base y, cuando corresponda, lote y vencimiento.
+[SALTO]
 
-1. Selecciona **Guardar preparación**. Guardar un borrador no aumenta existencias.
-2. Revisa equivalencias, aceptado y motivos de rechazo parcial. Lo aceptado exige costo conocido; un campo vacío no significa costo cero. No aceptes mercadería vencida.
-3. Selecciona **Enviar versión guardada a revisión**.
-4. Otra cuenta Administrador o Propietario abre la revisión exacta, verifica su contenido y decide con motivo.
-5. Comprueba que la recepción quede confirmada y que aparezca una sola entrada por la cantidad aceptada.
+## Administrar cuentas y proteger los datos
 
-Solo el preparador edita o envía su recepción. Cambiar el documento, proveedor, producto o versión puede invalidar una revisión abierta. Corrige y vuelve a enviar cuando sea necesario; no apliques una autorización anterior a datos nuevos. Recibir mercadería no registra por sí mismo un pago de caja.
+### Administrar accesos
 
-## Existencias y lotes
+Propietario abre **Cuentas** para crear o desactivar accesos, asignar permisos y delegar gestión de cuentas a un Administrador. Desactivar conserva la historia. Antes de retirar permisos de caja, completa el turno abierto.
 
-En **Existencias** consulta cantidad, unidad base, mínimo y alertas. En **Lotes y vencimientos** revisa fecha, saldo y procedencia. Un umbral próximo a vencer sin configurar se informa como pendiente; no se presume un número de días.
+El soporte temporal necesita motivo y duración y solo permite diagnóstico de integridad de lectura. No autoriza restauración. En **Bitácora**, gestión consulta quién realizó una acción y su resultado.
 
-La consulta no hace ajustes ni retira mercadería vencida. Un producto con control de vencimiento y saldo sin lote requiere conciliación; no se debe inventar un lote para ocultar esa diferencia. Inventario consulta esta información sin costos ni márgenes.
+### Generar un respaldo
 
-La valoración técnica usa promedio ponderado móvil en unidad base. Costos anteriores desconocidos permanecen identificados y no se convierten en cero. Las ventas conservan sus costos históricos aunque se registren nuevas entradas. La confirmación técnica de la política no sustituye el ensayo con datos y responsables del negocio.
+1. Propietario abre **Respaldos**, autoriza una carpeta existente fuera del almacén de operación e identifica el medio y la pauta.
+2. Gestión selecciona **Generar y comprobar respaldo**.
+3. Revisa el estado **Comprobada**. Si falla, conecta el medio y selecciona **Comprobar de nuevo**. Conserva la copia anterior.
 
-## Conteos y solicitudes de inventario
+Una carpeta del mismo disco sirve para ensayo; para proteger los datos se necesita un medio externo y una pauta acordada. Custodia las copias con acceso restringido.
 
-En **Conteos físicos**, registra referencia única, producto, alcance total o lote concreto, cantidad físicamente observada y observación. Declara la comprobación física únicamente si la realizaste. Guarda y luego finaliza el conteo cuando su contenido esté completo.
+### Recuperar una copia
 
-Guardar o finalizar un conteo no ajusta existencias. Si hubo movimientos de esos productos o lotes después de contar, vuelve a comprobar, guardar y finalizar la información vigente. No mezcles total y lotes del mismo producto ni dupliques el alcance.
+**Solo Propietario.** La recuperación reemplaza el estado actual por el punto elegido; las novedades posteriores deben conciliarse.
 
-Desde **Ajustes y salidas**, prepara el movimiento adecuado:
+1. En **Recuperación**, elige una copia comprobada y selecciona **Comprobar y revisar punto**.
+2. Revisa fecha y novedades que quedarían fuera. Indica motivo y contraseña actual y reconoce la revisión.
+3. Selecciona **Autorizar y recuperar copia**. Espera la pausa, preservación y comprobación.
+4. Vuelve a entrar como Propietario. Descarga el estado anterior preservado y revisa las novedades posteriores; no se reproducen automáticamente.
+5. Comprueba inventario, caja, cobros, devoluciones, cuentas y trabajos externos. Documenta los pendientes y completa las cuatro declaraciones de conciliación.
+6. Selecciona **Autorizar reapertura**. Revisa y reautoriza impresora, correo y pauta; resuelve los trabajos retenidos individualmente.
 
-| Tipo | Información que debes comprobar | Efecto al aprobar |
-|---|---|---|
-| Carga | Cantidad, costo conocido o desconocido, motivo, evidencia y lote cuando aplique | Entrada en la unidad base |
-| Ajuste | Conteo finalizado vigente; diferencias calculadas por el sistema | Regularización de los alcances contados |
-| Salida justificada | Cantidad, causa, evidencia y proveedor si es devolución | Salida autorizada, con costo histórico correspondiente |
+La reapertura conserva la cuarentena. Si aparece una pausa por revisión técnica o no puedes completar la conciliación, conserva los archivos y avisa al responsable técnico.
 
-Guarda y envía la versión a otra cuenta de gestión. Preparar, enviar, rechazar o cancelar no mueve existencias. El aprobador debe revisar cantidades, saldos, lotes y estado de costo. Un cambio posterior obliga a revisar de nuevo. Las solicitudes no admiten saldo negativo ni registran pagos de caja.
+[SALTO]
 
-Para productos distribuidos en lotes, un ajuste requiere conteos por lote. Sin lote en una solicitud manual significa saldo no asignado y no el total del producto. La evidencia es la referencia a un documento o fotografía que debe custodiar el responsable; el formulario no almacena ese archivo como adjunto.
+## Resolver problemas frecuentes
 
-## Anular y devolver efectivo
+| Situación | Acción inmediata |
+|---|---|
+| MEGA no abre | Comprueba que la ventana del programa siga abierta y que usas la dirección indicada. Conserva el mensaje y avisa al responsable técnico si persiste. |
+| Usuario bloqueado temporalmente | Espera el minuto indicado antes de volver a intentar. No compartas otra cuenta. |
+| La venta no muestra resultado | Usa **Recuperar resultado de la venta** en la misma preparación. |
+| Precio o saldo desactualizado | Recarga, revisa la información vigente y prepara de nuevo. |
+| Hay otra caja abierta | Identifica al responsable y completa el cierre. |
+| Impresión o correo inciertos | Comprueba el resultado real y pide resolución de gestión antes de otro envío. |
+| No aparece el medio de respaldo | Conecta el medio correcto y comprueba la copia anterior. |
+| El sistema está pausado | Propietario debe continuar la conciliación o pedir revisión técnica. |
 
-Una anulación conserva el comprobante original y requiere solicitud, motivo, evidencia y aprobación por otra cuenta de gestión. El solicitante debe indicar si corresponde reincorporar mercadería y declarar la comprobación física. La aprobación utiliza cantidades, lotes y costos de la venta original.
+### Información para pedir ayuda
 
-Autorizar una anulación no demuestra que se entregó dinero. La regularización de efectivo queda pendiente hasta que el solicitante o una cuenta de gestión con permiso de caja registre la entrega efectiva desde su turno actual abierto, con evidencia y saldo suficiente. Se devuelve el importe pagado por la venta, no el billete recibido antes de dar cambio.
+Conserva la hora, el mensaje exacto, la cuenta utilizada, la tarea en curso y el folio o solicitud si existe. Si tomas una captura, evita incluir contraseñas o información personal innecesaria.
 
-Si el turno original ya cerró, conserva su cierre. La devolución posterior se registra en la caja actual de quien entrega el dinero. Consulta el estado de regularización y deja identificadas las partidas pendientes. Si no se reincorpora mercadería, no se crea una entrada ficticia.
+**Durante una caída:** utiliza la contingencia acordada con el negocio y conserva referencias de ventas, cobros, mercadería y comprobantes. Al volver, comprueba qué quedó registrado antes de ingresar una operación otra vez.
 
-## Gastos y reportes
+### Acceso desde celular
 
-Gestión registra en **Gastos operativos** fecha, concepto, importe positivo y referencia cuando corresponda. El registro alimenta resultados y no representa una retirada de efectivo de caja. Corregir genera un registro enlazado y conserva el anterior; anular requiere motivo. Anular una corrección no reactiva el gasto previo.
+En las fuentes, **Iniciar_MEGA.cmd** muestra la dirección HTTPS para el mismo Wi-Fi. Usa esa dirección; si cambia, consulta al responsable técnico. La impresión se realiza desde Windows en el servidor.
 
-En **Reportes**, selecciona tipo y filtros. Ventas utiliza condiciones históricas de ventas confirmadas; inventario representa existencias actuales al generar. Caja utiliza la fecha efectiva de cobros y devoluciones y conserva los cierres. Por eso una anulación puede tener efectos distintos en un reporte comercial y en caja.
+Esta entrega no incluye ejecutable. El paquete ejecutable opcional solo abre localmente. No sustituyas localhost por una IP sin preparar el acceso.
 
-El margen y resultado global aparecen **No calculable** cuando falta costo de alguna línea. No los interpretes como cero. Descarga PDF o Excel con el alcance y momento de generación indicados. La pantalla muestra hasta 250 filas y la descarga admite hasta 5000; si se supera el límite, reduce filtros. Inventario solo puede consultar y exportar información de inventario sin importes de costo o margen.
-
-## Correo de reportes
-
-Gestión prepara un reporte, indica destinatario y solicita el envío en PDF o Excel. El sistema conserva el archivo exacto que se generó. Cambios posteriores no sustituyen el adjunto de esa solicitud.
-
-La configuración de **Correo y reportes** requiere servidor, puerto, remitente y seguridad TLS admitida. Si se requiere autenticación, introduce su credencial. El valor conservado no se muestra de nuevo; cambiar servidor o usuario obliga a proporcionarlo otra vez. En otro perfil de Windows o equipo se debe revisar y configurar nuevamente.
-
-Sin configuración o conexión, el núcleo local sigue disponible. **Aceptada_SMTP** indica aceptación por el servidor, sin acreditar lectura. Ante **Incierta**, gestión comprueba servidor y destinatario y decide cerrar sin reenviar o solicitar otro envío expreso. Un fallo confirmado no aceptado puede admitir reintento. No confundas una nueva solicitud con la recuperación de una solicitud existente.
-
-## Respaldar y recuperar
-
-El Propietario abre **Respaldos**, autoriza una carpeta existente fuera del almacén de operación, identifica el medio y decide qué opciones automáticas habilitar. El intervalo propuesto no es una política aprobada por sí mismo. Una carpeta del mismo disco sirve para ensayo y no sustituye un medio externo.
-
-Gestión selecciona **Generar y comprobar respaldo** y revisa el resultado. Solo **Comprobada** identifica una copia que superó huellas, archivos e integridad. Un fallo no borra la copia anterior; conecta el medio correcto y utiliza **Comprobar de nuevo**. Custodia las copias y sus archivos asociados con acceso restringido.
-
-La recuperación está reservada al Propietario:
-
-1. En **Recuperación**, selecciona una copia comprobada y pulsa **Comprobar y revisar punto**.
-2. Revisa momento, cantidades y novedades que quedarían fuera del punto. Registra motivo y contraseña actual y reconoce esa revisión.
-3. Selecciona **Autorizar y recuperar copia**. El sistema pausa operaciones, espera procesos, preserva el estado anterior y comprueba la copia aplicada.
-4. Inicia sesión otra vez como Propietario. Descarga el estado anterior conservado y revisa las novedades posteriores; no se vuelven a registrar automáticamente.
-5. Comprueba inventario, caja, cobros, devoluciones, turnos, cuentas y trabajos externos. Documenta el tratamiento de pendientes y completa las cuatro declaraciones.
-6. Selecciona **Autorizar reapertura**. Después revisa y reautoriza impresora, correo y pauta, y resuelve individualmente los trabajos retenidos.
-
-La Figura 2 identifica las cuatro revisiones que el Propietario debe documentar antes de reabrir.
-
-![Figura 2 Revisiones de inventario caja novedades y trabajos externos antes de la reapertura. Fuente detalle de captura del ensayo aislado de restauración 0.20.0 con datos ficticios.](../evidencias/restauracion/03_conciliacion_pendiente.png#xywh=295,563,700,152)
-
-La reapertura conserva la cuarentena; no dispara todos los trabajos recuperados. Las sesiones previas quedan invalidadas, los accesos temporales se revocan y las revisiones pendientes requieren nuevo envío. Se conserva la numeración alcanzada para evitar reutilizar folios. No elimines controles de recuperación para forzar una reapertura. Si aparece pausa por revisión técnica, consulta **Estado de recuperación** y conserva los archivos para el responsable técnico.
-
-## Administración y seguimiento
-
-El Propietario administra **Cuentas**, puede delegar facultad de cuentas a un Administrador y autoriza soporte temporal con motivo y duración. Una cuenta con turno abierto conserva los permisos necesarios hasta cerrar; se protege al último Propietario activo. Desactivar no borra historia ni libera el nombre para reutilizarlo.
-
-Gestión consulta **Bitácora** por cuenta, fecha, acción u objeto. Los registros explican decisiones y rechazos; no se editan desde la operación. En **Avance del proyecto**, consulta el porcentaje y las tareas por área. El porcentaje cuenta criterios terminados y no equivale a aceptación del negocio ni a tiempo restante.
-
-## Atención de incidencias
-
-| Situación | Acción inmediata | Información que debes conservar |
-|---|---|---|
-| Confirmación de venta sin respuesta | Recuperar la misma preparación | Folio si existe y resultado de recuperación |
-| Impresión o correo inciertos | Consultar el resultado real antes de otro envío | Solicitud, intento, comprobación y decisión |
-| Pantalla desactualizada | Recargar, revisar y enviar la versión vigente | Motivo del rechazo y cambios observados |
-| Medio de respaldo ausente | Conectar el medio y comprobar la copia anterior | Ejecución y detalle del fallo |
-| Núcleo pausado por recuperación | Continuar conciliación autorizada o revisión técnica | Intervención y preservación |
-| Aplicación detenida | Conservar datos y avisar al responsable | Momento, mensaje y operación en curso |
-
-El personal debe acordar la contingencia manual, los responsables y la posterior conciliación antes de operar comercialmente. Durante una caída, conserva referencias de ventas, cobros, mercadería y comprobantes conforme al procedimiento aprobado; no supongas que el sistema registró lo que no pudo confirmarse.
-
-## Fuentes y vigencia
-
-Versión documentada 0.21.0 del repositorio MEGA-Minisuper. Para instalación y mantenimiento consulta el Manual técnico. Las comprobaciones reales pendientes y su evidencia necesaria se identifican en la Matriz de validación.
+**Vigencia:** esta guía corresponde a la versión oficial 0.23.2. La propuesta visual 0.24.2 permanece en una rama alternativa. Para instalación, mantenimiento y recuperación técnica, consulta el Manual técnico.

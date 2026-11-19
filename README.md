@@ -6,7 +6,7 @@ Primer avance funcional del 11 de noviembre de 2026. La aplicación utiliza ASP.
 
 `main` contiene la versión oficial y conserva su interfaz vigente. El nuevo frontend permanece únicamente en `feature/frontend-branded`, pendiente de decidir su integración. Las correcciones y funcionalidades generales se publican en `main` y se comparten con la rama experimental cuando corresponda.
 
-Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión oficial de `main` es **0.23.1**, con [inicios operativos por rol](docs/Inicios_por_Rol.md), soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
+Repositorio: [carlosfaj/MEGA-Minisuper](https://github.com/carlosfaj/MEGA-Minisuper). La versión oficial de `main` es **0.23.2**, con [inicios operativos por rol](docs/Inicios_por_Rol.md), soporte optativo de [MP58-16 por Bluetooth](docs/Impresion_Bluetooth.md), paquete de ejecución para Windows, restauración autorizada y operación integrada. `main` conserva avances funcionales comprobados y cada funcionalidad terminada o corrección se registra con commit y push. [CHANGELOG.md](CHANGELOG.md) explica cada versión y `VERSION` declara la actual. [AGENTS.md](AGENTS.md) conserva la autorización y el flujo acordados con el usuario.
 
 GitHub Actions restaura dependencias fijadas, compila y ejecuta las pruebas en cada push y PR configurados. Cuando un push a main aprueba la comprobación, registra `v<VERSION>` si esa etiqueta todavía no existe. Una etiqueta existente conserva su commit; no se sobrescribe. Los resultados de cada ejecución se consultan en [Actions](https://github.com/carlosfaj/MEGA-Minisuper/actions).
 
@@ -14,7 +14,7 @@ El [kanban con porcentaje de todo el proyecto](docs/KANBAN.md) se consulta en **
 
 ## Manuales y matriz de validación
 
-Los [manuales de usuario y técnico, y la matriz T01–T15](docs/Manuales_y_Validacion.md) están disponibles en PDF, con fuentes editables y revisión de sus 40 páginas. La matriz conserva el registro individual de 223 pruebas aprobadas, resultados, incidencias y límites; la aceptación del negocio y los ensayos físicos siguen pendientes.
+Los [manuales y la matriz de validación](docs/Manuales_y_Validacion.md) incluyen el cierre documental del 18 de noviembre: manual de usuario de 10 páginas, técnico de 9 y matriz resumida de 2. La suite oficial 0.23.2 conserva 272 resultados aprobados; la alternativa 0.24.2 conserva 283 en su propia suite. No se suman como pruebas distintas. La aceptación del negocio y los ensayos físicos siguen pendientes.
 
 ## Paquete de ejecución
 
